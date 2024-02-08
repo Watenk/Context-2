@@ -7,10 +7,10 @@ EditorBuildSettings:
   m_Scenes: []
   m_configObjects:
     com.unity.adaptiveperformance.google.android.provider_settings: {fileID: 11400000,
-      guid: 5900c27229ff4f2409581e687db244a0, type: 2}
-    com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: c734a3e0e552d324b81a01b0a6d39321,
+      guid: 27950ff1d5896d54fa1f21935e43b971, type: 2}
+    com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: ff5d444eac68c0d4da001d37e46016a6,
       type: 2}
     com.unity.adaptiveperformance.samsung.android.provider_settings: {fileID: 11400000,
-      guid: 932806c3c2984064596eaf01926a3062, type: 2}
+      guid: 63fe28c715d2bf640a2bce8bcb8b7d45, type: 2}
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000,
-      guid: 959589644820ed64f9bf8f1bd7fe1058, type: 2}
+      guid: 4857079642c28e14aaa5dbe6813a9faa, type: 2}
