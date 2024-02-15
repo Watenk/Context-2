@@ -22,4 +22,5 @@ public class PlayerSettings : ScriptableObject
     //------------------------------------------------------------------
 
     public float Speed;
+    public float RotationSpeed;
 }

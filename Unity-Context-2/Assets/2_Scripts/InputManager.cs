@@ -5,43 +5,13 @@ using UnityEngine;
 
 public class InputManager : IUpdateable
 {
-    public event Action OnW;
-    public event Action OnA;
-    public event Action OnS;
-    public event Action OnD;
+    public event Action<Vector2> OnPlayerMove;
 
     //---------------------------------------------------------
 
     public void OnUpdate(){
-        CheckKey(KeyCode.W, OnW);
-        CheckKey(KeyCode.A, OnA);
-        CheckKey(KeyCode.S, OnS);
-        CheckKey(KeyCode.D, OnD);
+        OnPlayerMove(new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")));
     }
 
     //---------------------------------------------------------
-
-    private void CheckKeyDown(KeyCode keyCode, Action action){
-        if (Input.GetKeyDown(keyCode) && action != null){
-            action.Invoke();
-        }
-    }
-
-    private void CheckKeyDown<T>(KeyCode keyCode, Action<T> action, T data){
-        if (Input.GetKeyDown(keyCode) && action != null){
-            action.Invoke(data);
-        }
-    }
-
-    private void CheckKey(KeyCode keyCode, Action action){
-        if (Input.GetKey(keyCode) && action != null){
-            action.Invoke();
-        }
-    }
-
-    private void CheckKey<T>(KeyCode keyCode, Action<T> action, T data){
-        if (Input.GetKey(keyCode) && action != null){
-            action.Invoke(data);
-        }
-    }
 }
