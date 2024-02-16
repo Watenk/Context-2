@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
         Instance = this;
 
         AddService(new InputManager());
+        AddService(new GroupManager());
     }
 
     public void Update(){
@@ -35,6 +36,10 @@ public class GameManager : MonoBehaviour
         #endif
 
         return (T)service;
+    }
+
+    public GameObject Instantiate(GameObject prefab, Vector3 pos, Quaternion rotation){
+        return GameObject.Instantiate(prefab, pos, rotation);
     }
 
     //-------------------------------------------------------------
