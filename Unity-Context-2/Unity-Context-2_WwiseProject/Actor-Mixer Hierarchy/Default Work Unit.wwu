@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{7170A4AA-0716-459D-A833-37BA2C074759}" SchemaVersion="119">
+	<AudioObjects>
+		<WorkUnit Name="Default Work Unit" ID="{7170A4AA-0716-459D-A833-37BA2C074759}" PersistMode="Standalone">
+			<ChildrenList>
+				<ActorMixer Name="New Actor-Mixer" ID="{9C89A6D4-98A5-419A-B8C4-E456FE1EF824}" ShortID="992716489">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{890C2A6A-F4B0-4F89-9461-EC99F69DD99E}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{07B3C08D-E8AD-4A81-A929-C27B28B93464}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Folder Name="Expl6_Chimes" ID="{EEEC37EE-B3DB-459E-A4D3-7010B8E1A8EE}" ShortID="615949758">
+							<ChildrenList>
+								<Sound Name="Expl6_ChimesUniversal1Long" ID="{0DAE01E0-1FE4-4EA9-8D57-6FF2AF4254D1}" ShortID="427038168">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{890C2A6A-F4B0-4F89-9461-EC99F69DD99E}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{07B3C08D-E8AD-4A81-A929-C27B28B93464}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Expl6_ChimesUniversal1Long" ID="{081FA39B-73E6-46F0-A85C-C30034F29776}">
+											<Language>SFX</Language>
+											<AudioFile>Expl6_Chimes\Expl6_ChimesUniversal1Long.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="191953806"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Expl6_ChimesUniversal1Long" ID="{081FA39B-73E6-46F0-A85C-C30034F29776}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Expl6_ChimesUniversal1Short" ID="{E5265457-352A-401E-8B7A-25DD624E6E0F}" ShortID="103054625">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{890C2A6A-F4B0-4F89-9461-EC99F69DD99E}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{07B3C08D-E8AD-4A81-A929-C27B28B93464}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Expl6_ChimesUniversal1Short" ID="{73CBDCE9-7CF2-4ADD-8FD4-46E77B8CA3BE}">
+											<Language>SFX</Language>
+											<AudioFile>Expl6_Chimes\Expl6_ChimesUniversal1Short.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="311374675"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Expl6_ChimesUniversal1Short" ID="{73CBDCE9-7CF2-4ADD-8FD4-46E77B8CA3BE}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Expl6_ChimesUniversalSinging1+verb" ID="{8BED2F3B-0A21-42B1-8B3B-C049895DEFDE}" ShortID="706998759">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{890C2A6A-F4B0-4F89-9461-EC99F69DD99E}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{07B3C08D-E8AD-4A81-A929-C27B28B93464}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Expl6_ChimesUniversalSinging1+verb" ID="{EE58A09F-F861-4AC9-B3F2-EB27C333FC12}">
+											<Language>SFX</Language>
+											<AudioFile>Expl6_Chimes\Expl6_ChimesUniversalSinging1+verb.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="122435690"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Expl6_ChimesUniversalSinging1+verb" ID="{EE58A09F-F861-4AC9-B3F2-EB27C333FC12}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Expl6_ChimesUniversalSinging1" ID="{9FFEB7F0-0B14-4BE0-99F7-487D2EE3FDC4}" ShortID="581004467">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{890C2A6A-F4B0-4F89-9461-EC99F69DD99E}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{07B3C08D-E8AD-4A81-A929-C27B28B93464}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Expl6_ChimesUniversalSinging1" ID="{3CC5D1EE-D8CD-46B2-9340-DC6CDC6C992B}">
+											<Language>SFX</Language>
+											<AudioFile>Expl6_Chimes\Expl6_ChimesUniversalSinging1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="500640944"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Expl6_ChimesUniversalSinging1" ID="{3CC5D1EE-D8CD-46B2-9340-DC6CDC6C992B}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</Folder>
+					</ChildrenList>
+				</ActorMixer>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

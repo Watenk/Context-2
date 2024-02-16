@@ -1,0 +1,6 @@
+Event	ID	Name			Wwise Object Path	Notes
+	4258653052	Test_Event			\Default Work Unit\Test_Event	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	191953806	Expl6_ChimesUniversal1Long	C:\Users\LvanE\GameDev\Context-2\Unity-Context-2\Unity-Context-2_WwiseProject\.cache\Windows\SFX\Expl6_Chimes\Expl6_ChimesUniversal1Long_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\New Actor-Mixer\Expl6_Chimes\Expl6_ChimesUniversal1Long		727604
+

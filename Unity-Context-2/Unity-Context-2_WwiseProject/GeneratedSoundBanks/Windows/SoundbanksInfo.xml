@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="150">
+	<RootPaths>
+		<ProjectRoot>../..</ProjectRoot>
+		<SourceFilesRoot>../../.cache/Windows</SourceFilesRoot>
+		<SoundBanksRoot>.</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>.</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{9B152627-A587-28DC-50D2-5A8FA2D71DA3}">
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+			<Plugins>
+				<AudioDevices>
+					<Plugin Id="2317455096" Name="No_Output" LibName="No Output" LibId="11862023"/>
+					<Plugin Id="3859886410" Name="System" LibName="System" LibId="11403271"/>
+				</AudioDevices>
+			</Plugins>
+			<Busses>
+				<Bus Id="3803692087" Name="Master Audio Bus"/>
+			</Busses>
+			<StateGroups>
+				<StateGroup Id="2012657067" Name="New_State_Group">
+					<States>
+						<State Id="748895195" Name="None"/>
+						<State Id="2021425847" Name="New_State"/>
+						<State Id="3436006651" Name="New_State_01"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
+		</SoundBank>
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{91D2304F-685C-5A51-312F-886B0110FDE8}">
+			<ShortName>Main</ShortName>
+			<Path>Main.bnk</Path>
+			<Media>
+				<File Id="191953806" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Expl6_Chimes\Expl6_ChimesUniversal1Long.wav</ShortName>
+					<CachePath>SFX/Expl6_Chimes/Expl6_ChimesUniversal1Long_818F3B66.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="4258653052" Name="Test_Event" DurationType="OneShot" DurationMin="3.7891042" DurationMax="3.7891042">
+					<MediaRefs>
+						<MediaRef Id="191953806"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+		</SoundBank>
+	</SoundBanks>
+	<FileHash>{FD7AF8D7-5F96-88F2-BF73-1A56AA0BF76A}</FileHash>
+</SoundBanksInfo>
