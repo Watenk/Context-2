@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum Groups 
+public enum AgentType 
 {
-    blue,
-    red
+    circle,
+    triangle,
+    square
 }

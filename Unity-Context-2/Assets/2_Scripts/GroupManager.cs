@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class GroupManager : IFixedUpdateable
 {
-    private Dictionary<Groups, Group> groupsDict = new Dictionary<Groups, Group>();
+    private Dictionary<AgentType, Group> groupsDict = new Dictionary<AgentType, Group>();
 
     //References
     private GameManager gameManager;
@@ -20,7 +20,7 @@ public class GroupManager : IFixedUpdateable
 
     }
 
-    public void AddGroup(Groups group, Vector3 pos){
+    public void AddGroup(AgentType group, Vector3 pos){
         groupsDict.Add(group, new Group());
     }
 }

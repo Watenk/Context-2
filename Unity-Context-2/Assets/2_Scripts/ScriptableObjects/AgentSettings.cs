@@ -21,4 +21,8 @@ public class AgentSettings : ScriptableObject
 
     //------------------------------------------------------------------
 
+    public float MaxSpeed;
+    public float MinSpeed;
+    [Tooltip("Max Distance between each 'step' in the agents path")]
+    public float StepDistance;
 }

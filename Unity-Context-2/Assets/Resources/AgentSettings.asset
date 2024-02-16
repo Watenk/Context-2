@@ -12,3 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cb3d2d9ce7023f4bb52fba377654e41, type: 3}
   m_Name: AgentSettings
   m_EditorClassIdentifier: 
+  MaxSpeed: 2
+  MinSpeed: 3
+  StepDistance: 2
+  PathRandomness: 1
