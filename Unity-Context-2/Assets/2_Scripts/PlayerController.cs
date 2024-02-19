@@ -33,8 +33,9 @@ public class PlayerController : MonoBehaviour
 
     private void OnPlayerMove(Vector2 playerMovement){
 
-        // Move Player
-        rb.AddForce(new Vector3(playerMovement.x, 0, playerMovement.y).normalized * speed * Time.deltaTime, ForceMode.VelocityChange);
+        Vector3 movementDirection = new Vector3(playerMovement.x, 0, playerMovement.y).normalized;
+        Vector3 worldMovementDirection = transform.TransformDirection(movementDirection);
+        rb.AddForce(worldMovementDirection * speed * Time.deltaTime, ForceMode.VelocityChange);
 
         // Rotate body
         if (playerMovement.x != 0 || playerMovement.y != 0){
