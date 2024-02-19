@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f7f2e4986a5f83142837c1808767b4d1, type: 3}
-  m_Name: A21F005E-32A4-4F0A-B58B-9CA2A6C61696
+  m_Name: 67B8DECF-0FA0-4938-8D45-11996745434B
   m_EditorClassIdentifier: 
-  objectName: Chime1Start
-  id: 3097783492
-  guid: A21F005E-32A4-4F0A-B58B-9CA2A6C61696
+  objectName: Chime1Stop
+  id: 632066680
+  guid: 67B8DECF-0FA0-4938-8D45-11996745434B

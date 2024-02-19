@@ -1,13 +1,11 @@
-State Group	ID	Name			Wwise Object Path	Notes
-	2012657067	New_State_Group			\Default Work Unit\New_State_Group	
-
-State	ID	Name	State Group			Notes
-	748895195	None	New_State_Group			
-	2021425847	New_State	New_State_Group			
-	3436006651	New_State_01	New_State_Group			
-
 Audio Bus	ID	Name			Wwise Object Path	Notes
+	85412153	Ambience			\Default Work Unit\Master Audio Bus\Ambience	
+	1069431850	Player			\Default Work Unit\Master Audio Bus\Player	
+	2590078866	Chimes			\Default Work Unit\Master Audio Bus\Chimes	
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
+
+Auxiliary Bus	ID	Name			Wwise Object Path	Notes
+	3477531017	EmotionsDimension			\Default Work Unit\Master Audio Bus\EmotionsDimension	
 
 Audio Devices	ID	Name	Type				Notes
 	2317455096	No_Output	No Output			

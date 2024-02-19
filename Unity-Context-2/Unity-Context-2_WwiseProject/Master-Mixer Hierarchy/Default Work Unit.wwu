@@ -9,6 +9,32 @@
 							<ObjectRef Name="System" ID="{E67E3161-DF5B-4679-AA14-1F1BA1423F59}" WorkUnitID="{E50427F0-4E2A-45C8-AE4B-96893CD61E6A}"/>
 						</Reference>
 					</ReferenceList>
+					<ChildrenList>
+						<AuxBus Name="EmotionsDimension" ID="{93A5141B-5C95-4F4A-A16D-A914FCD2DC34}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="12"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+						</AuxBus>
+						<Bus Name="Player" ID="{459D6BE7-F0A7-4FC0-A2F9-19390BC8CD30}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="20"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+						</Bus>
+						<Bus Name="Ambience" ID="{6BFDBB45-782B-41E9-86B0-109575DDFB5F}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="4"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+						</Bus>
+						<Bus Name="Chimes" ID="{D0C63F08-8AA6-4FA4-8FBA-ED045E95E039}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="2"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+						</Bus>
+					</ChildrenList>
 				</Bus>
 			</ChildrenList>
 		</WorkUnit>
