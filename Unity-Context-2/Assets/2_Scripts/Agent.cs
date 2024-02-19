@@ -5,10 +5,10 @@ using UnityEngine.AI;
 
 public class Agent : MonoBehaviour
 {
-    public GameObject test;
+    public Group Group { get; private set; }
 
+    // Pathfinding
     private NavMeshAgent agent;
-    private AgentType agentType;
     private List<Vector3> path = new List<Vector3>();
     private int pathIndex;
     private bool destinationReached;
@@ -63,10 +63,6 @@ public class Agent : MonoBehaviour
         path = CalcPathTo(pos);
         pathIndex = 0;
         destinationReached = false;
-
-        foreach (Vector3 current in path){
-            Instantiate(test, current, Quaternion.identity);
-        }
     }
 
     //------------------------------------------

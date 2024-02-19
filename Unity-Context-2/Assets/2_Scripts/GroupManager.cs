@@ -1,11 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class GroupManager : IFixedUpdateable
 {
-    private Dictionary<AgentType, Group> groupsDict = new Dictionary<AgentType, Group>();
+    private List<Group> groups = new List<Group>();
 
     //References
     private GameManager gameManager;
@@ -20,7 +19,7 @@ public class GroupManager : IFixedUpdateable
 
     }
 
-    public void AddGroup(AgentType group, Vector3 pos){
-        groupsDict.Add(group, new Group());
+    public void AddGroup(AgentType agentType, int size, Vector3 homePos){
+        groups.Add(new Group(agentType, homePos));
     }
 }
