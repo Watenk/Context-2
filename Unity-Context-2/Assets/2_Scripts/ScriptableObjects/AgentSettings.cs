@@ -21,8 +21,14 @@ public class AgentSettings : ScriptableObject
 
     //------------------------------------------------------------------
 
+    [Header("Prefabs")]
+    public List<AgentPrefab> Prefabs = new List<AgentPrefab>();
+
+    [Header("Settings")]
     public float MaxSpeed;
     public float MinSpeed;
+
+    [Header("Advanced Settings")]
     [Tooltip("Max Distance between each 'step' in the agents path")]
-    public float StepDistance;
+    public float StepDistance; 
 }

@@ -19,7 +19,12 @@ public class GroupManager : IFixedUpdateable
 
     }
 
-    public void AddGroup(AgentType agentType, int size, Vector3 homePos){
-        groups.Add(new Group(agentType, homePos));
+    public void AddGroup(AgentType agentType, int groupSize, Vector3 homePos, float spawnRadius){
+        groups.Add(new Group(agentType, groupSize, homePos, spawnRadius, this));
+    }
+
+    public void RemoveGroup(Group group){
+        group.DestroyAgents();
+        groups.Remove(group);
     }
 }

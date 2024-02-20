@@ -32,7 +32,7 @@ public class Agent : MonoBehaviour
             if (stepDistance == 0) { Debug.LogError("StepDistance isn't set in AgentSettings"); }
         #endif
 
-        WalkTo(new Vector3(20, 0, 10));
+        //WalkTo(new Vector3(20, 0, 10));
     }
 
     public void FixedUpdate(){
