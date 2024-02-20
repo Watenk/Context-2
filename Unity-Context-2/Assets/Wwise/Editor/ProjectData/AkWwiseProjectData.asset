@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 8dc0b307ade8814aa929c27b28b93464
     GuidInternal: 
-    m_lastTime: -8584932637135835263
+    m_lastTime: -8584931842544906611
     List:
     - name: Ambience
       guid: 45bbfd6b2b78e94186b0109575ddfb5f
@@ -122,6 +122,23 @@ MonoBehaviour:
         ObjectType: 2
         guid: e76b9d45a7f0c04fa2f919390bc8cd30
       Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Player
+    - name: TestVerb
+      guid: a7ad37eddcdc314d95fc1ed7aa1ad070
+      id: 841660990
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 8dc0b307ade8814aa929c27b28b93464
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: TestVerb
+        ObjectType: 1
+        guid: a7ad37eddcdc314d95fc1ed7aa1ad070
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\TestVerb
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     PathAndIcons:
@@ -134,7 +151,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: d7906ce14cf00844a1cf51bb2f3f5324
     GuidInternal: 
-    m_lastTime: -8584932611977686536
+    m_lastTime: -8584931848594872491
     List:
     - name: Main
       guid: edcbdbe24520214883096064fcb95c6c
@@ -162,7 +179,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 1829c11d708c3d4b85382b800fb51260
     GuidInternal: 
-    m_lastTime: -8584932614639973692
+    m_lastTime: -8584931842544721645
     List:
     - name: Chime1Start
       guid: 5e001fa2a4320a4fb58b9ca2a6c61696
@@ -185,8 +202,8 @@ MonoBehaviour:
         guid: 5e001fa2a4320a4fb58b9ca2a6c61696
       Path: Events\Default Work Unit\Chimes\Community1\Chime1Start
       maxAttenuation: 100
-      maxDuration: 3.6987154
-      minDuration: 2.2879748
+      maxDuration: 1.413994
+      minDuration: 1.0245572
     - name: Chime1Stop
       guid: cfdeb867a00f38498d4511996745434b
       id: 632066680
@@ -259,22 +276,8 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: 6e8a3e52955e38448efc5e2b8decd175
     GuidInternal: 
-    m_lastTime: -8584932635564744161
-    List:
-    - name: EastPressed
-      guid: bfea5dd97918e140ad29e6dcd1c3a5db
-      id: 3304885472
-      PathAndIcons:
-      - ElementName: Game Parameters
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: 6e8a3e52955e38448efc5e2b8decd175
-      - ElementName: EastPressed
-        ObjectType: 13
-        guid: bfea5dd97918e140ad29e6dcd1c3a5db
-      Path: Game Parameters\Default Work Unit\EastPressed
+    m_lastTime: -8584931834021291521
+    List: []
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     PathAndIcons:

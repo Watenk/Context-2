@@ -8,7 +8,15 @@
 						<Property Name="3DSpatialization" Type="int16" Value="2"/>
 						<Property Name="Color" Type="int16" Value="2"/>
 						<Property Name="OverrideColor" Type="bool" Value="True"/>
+						<Property Name="UserAuxSendVolume0" Type="Real64">
+							<ValueList>
+								<Value>-8</Value>
+							</ValueList>
+						</Property>
 						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-2</Value>
+							</ValueList>
 							<ModifierList>
 								<ModifierInfo>
 									<Modifier Name="" ID="{7337FB53-C107-47AB-AA3E-C41C62EBC927}"/>
@@ -26,11 +34,20 @@
 						<Reference Name="OutputBus">
 							<ObjectRef Name="Chimes" ID="{D0C63F08-8AA6-4FA4-8FBA-ED045E95E039}" WorkUnitID="{07B3C08D-E8AD-4A81-A929-C27B28B93464}"/>
 						</Reference>
+						<Reference Name="UserAuxSend0">
+							<ObjectRef Name="TestVerb" ID="{ED37ADA7-DCDC-4D31-95FC-1ED7AA1AD070}" WorkUnitID="{07B3C08D-E8AD-4A81-A929-C27B28B93464}"/>
+						</Reference>
 					</ReferenceList>
 					<ChildrenList>
 						<RandomSequenceContainer Name="community1" ID="{0ABDDF13-931E-4BBA-8567-03605C5526F5}" ShortID="906359090">
 							<PropertyList>
+								<Property Name="CenterPercentage" Type="int32">
+									<ValueList>
+										<Value>88</Value>
+									</ValueList>
+								</Property>
 								<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
+								<Property Name="SpeakerPanning" Type="int16" Value="1"/>
 								<Property Name="Volume" Type="Real64">
 									<ModifierList>
 										<ModifierInfo>
@@ -48,7 +65,7 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<Sound Name="chimes-community1A#" ID="{D8D09201-9183-4A40-B6CE-CC03159C1BAA}" ShortID="150989163">
+								<Sound Name="chimes-community1A#" ID="{B288CEF3-1DE6-44EE-9522-75B8959C5216}" ShortID="557375817">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{890C2A6A-F4B0-4F89-9461-EC99F69DD99E}"/>
@@ -58,10 +75,12 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="chimes-community1A#" ID="{F0ADDAAA-017B-46B6-8C07-1B7629EA71A3}">
+										<AudioFileSource Name="chimes-community1A#" ID="{8B6AC04E-430A-4940-A8AA-049C4F77D47A}">
 											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.007"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.19105078125"/>
 												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="TrimBegin" Type="Real64" Value="0.0147397203737936"/>
+												<Property Name="TrimEnd" Type="Real64" Value="1.10260026041667"/>
 											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>community1\chimes-community1A#.wav</AudioFile>
@@ -71,10 +90,10 @@
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="chimes-community1A#" ID="{F0ADDAAA-017B-46B6-8C07-1B7629EA71A3}" Platform="Linked"/>
+										<ActiveSource Name="chimes-community1A#" ID="{8B6AC04E-430A-4940-A8AA-049C4F77D47A}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="chimes-community1C#" ID="{B64809F1-3675-4340-82BE-33CEC67EA9CB}" ShortID="682076888">
+								<Sound Name="chimes-community1C#" ID="{D5A41376-9CC6-4963-96F2-DBCCC064DEB4}" ShortID="383303137">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{890C2A6A-F4B0-4F89-9461-EC99F69DD99E}"/>
@@ -84,11 +103,12 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="chimes-community1C#" ID="{7C9EC2BB-3A74-4E20-BACF-10D62E481614}">
+										<AudioFileSource Name="chimes-community1C#" ID="{3E688E68-6B5B-49FC-9F12-DDFE0CAB7AF6}">
 											<PropertyList>
-												<Property Name="LoopBegin" Type="Real64" Value="0.0226963121841216"/>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.007"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.157205369241193"/>
 												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="TrimBegin" Type="Real64" Value="0.0226963121841216"/>
+												<Property Name="TrimEnd" Type="Real64" Value="1.36402252710027"/>
 											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>community1\chimes-community1C#.wav</AudioFile>
@@ -98,10 +118,10 @@
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="chimes-community1C#" ID="{7C9EC2BB-3A74-4E20-BACF-10D62E481614}" Platform="Linked"/>
+										<ActiveSource Name="chimes-community1C#" ID="{3E688E68-6B5B-49FC-9F12-DDFE0CAB7AF6}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="chimes-community1C#High" ID="{B19E24D5-D7D1-40FF-A3DE-90FB11D3ADD1}" ShortID="10520278">
+								<Sound Name="chimes-community1C#High" ID="{6D74A443-73F8-48A8-BBF3-454FF4DC824C}" ShortID="203203749">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{890C2A6A-F4B0-4F89-9461-EC99F69DD99E}"/>
@@ -111,10 +131,12 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="chimes-community1C#High" ID="{1C029A40-43C4-44A7-A372-E4F6CBFF2426}">
+										<AudioFileSource Name="chimes-community1C#High" ID="{C2E5D4F2-E80E-4A5E-BDD0-6BF03D33FF92}">
 											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.007"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.209439881859756"/>
 												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="TrimBegin" Type="Real64" Value="0.00851362767260247"/>
+												<Property Name="TrimEnd" Type="Real64" Value="1.02455725990854"/>
 											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>community1\chimes-community1C#High.wav</AudioFile>
@@ -124,10 +146,10 @@
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="chimes-community1C#High" ID="{1C029A40-43C4-44A7-A372-E4F6CBFF2426}" Platform="Linked"/>
+										<ActiveSource Name="chimes-community1C#High" ID="{C2E5D4F2-E80E-4A5E-BDD0-6BF03D33FF92}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="chimes-community1C" ID="{C4451EE9-8232-488F-A530-DBBF3915019C}" ShortID="589739428">
+								<Sound Name="chimes-community1C" ID="{EE7AA837-BD2C-41B3-AA04-E5ECA93F974E}" ShortID="1005733313">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{890C2A6A-F4B0-4F89-9461-EC99F69DD99E}"/>
@@ -137,11 +159,12 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="chimes-community1C" ID="{54592B0C-FD47-415E-84B4-2AFEB81D6813}">
+										<AudioFileSource Name="chimes-community1C" ID="{05F8F1F2-9447-4AB6-89C2-4AA520011AB9}">
 											<PropertyList>
-												<Property Name="LoopBegin" Type="Real64" Value="0.0140502664728682"/>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.007"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.26093343495935"/>
 												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="TrimBegin" Type="Real64" Value="0.0122003293260507"/>
+												<Property Name="TrimEnd" Type="Real64" Value="1.06465764735772"/>
 											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>community1\chimes-community1C.wav</AudioFile>
@@ -151,10 +174,10 @@
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="chimes-community1C" ID="{54592B0C-FD47-415E-84B4-2AFEB81D6813}" Platform="Linked"/>
+										<ActiveSource Name="chimes-community1C" ID="{05F8F1F2-9447-4AB6-89C2-4AA520011AB9}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="chimes-community1D#" ID="{DDCCFDE6-C471-4AF3-8352-DDDB35E7C98F}" ShortID="109306597">
+								<Sound Name="chimes-community1D#" ID="{16911830-6463-48E6-A35D-5B62430CDB87}" ShortID="558534425">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{890C2A6A-F4B0-4F89-9461-EC99F69DD99E}"/>
@@ -164,11 +187,12 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="chimes-community1D#" ID="{2B38C831-FF76-4B3A-9A30-506DC0D65B5D}">
+										<AudioFileSource Name="chimes-community1D#" ID="{856FBD2E-929D-436F-A007-572DA32941B9}">
 											<PropertyList>
-												<Property Name="LoopBegin" Type="Real64" Value="0.00840858774183184"/>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.007"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0894015074525747"/>
 												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="TrimBegin" Type="Real64" Value="0.00840858774183184"/>
+												<Property Name="TrimEnd" Type="Real64" Value="1.40348119918699"/>
 											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>community1\chimes-community1D#.wav</AudioFile>
@@ -178,10 +202,10 @@
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="chimes-community1D#" ID="{2B38C831-FF76-4B3A-9A30-506DC0D65B5D}" Platform="Linked"/>
+										<ActiveSource Name="chimes-community1D#" ID="{856FBD2E-929D-436F-A007-572DA32941B9}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="chimes-community1F#" ID="{EA2F35E1-252B-4FD1-99AC-5B4EB2F80656}" ShortID="390328907">
+								<Sound Name="chimes-community1F#" ID="{AC289D27-2702-40D5-B230-0913B4F8B306}" ShortID="897948917">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{890C2A6A-F4B0-4F89-9461-EC99F69DD99E}"/>
@@ -191,7 +215,13 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="chimes-community1F#" ID="{92E73490-72AC-4925-9AE9-14999A21E9CD}">
+										<AudioFileSource Name="chimes-community1F#" ID="{46031E20-A32D-4225-B8BE-162A3773B358}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.007"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.135409785738483"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="1.32701590023713"/>
+											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>community1\chimes-community1F#.wav</AudioFile>
 											<MediaIDList>
@@ -200,10 +230,10 @@
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="chimes-community1F#" ID="{92E73490-72AC-4925-9AE9-14999A21E9CD}" Platform="Linked"/>
+										<ActiveSource Name="chimes-community1F#" ID="{46031E20-A32D-4225-B8BE-162A3773B358}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="chimes-community1F" ID="{56F625B0-8679-4956-BB42-F13192851543}" ShortID="350227047">
+								<Sound Name="chimes-community1F" ID="{EE710D2E-45DC-4FEE-8C35-225D5CE3368D}" ShortID="79093450">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{890C2A6A-F4B0-4F89-9461-EC99F69DD99E}"/>
@@ -213,11 +243,12 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="chimes-community1F" ID="{05D7EA98-E97F-4B8F-85CD-9AAC256DFAD1}">
+										<AudioFileSource Name="chimes-community1F" ID="{A3B4D9E1-6095-483E-8C14-A81FF6A3E986}">
 											<PropertyList>
-												<Property Name="LoopBegin" Type="Real64" Value="0.0138585108779483"/>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.007"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.182563357469512"/>
 												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="TrimBegin" Type="Real64" Value="0.0138585108779483"/>
+												<Property Name="TrimEnd" Type="Real64" Value="1.41399390243902"/>
 											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>community1\chimes-community1F.wav</AudioFile>
@@ -227,10 +258,10 @@
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="chimes-community1F" ID="{05D7EA98-E97F-4B8F-85CD-9AAC256DFAD1}" Platform="Linked"/>
+										<ActiveSource Name="chimes-community1F" ID="{A3B4D9E1-6095-483E-8C14-A81FF6A3E986}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="chimes-community1G#" ID="{43842169-CEA7-4A25-8344-C7717D6B355D}" ShortID="984974079">
+								<Sound Name="chimes-community1G#" ID="{62BCED77-98ED-4E49-BDD3-879DC3A367C6}" ShortID="511465774">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{890C2A6A-F4B0-4F89-9461-EC99F69DD99E}"/>
@@ -240,11 +271,12 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="chimes-community1G#" ID="{05AFC81F-0FA6-4FF3-BD26-A0B0488E6AD2}">
+										<AudioFileSource Name="chimes-community1G#" ID="{538259D0-9321-4DD2-A58B-5D0D5D461589}">
 											<PropertyList>
-												<Property Name="LoopBegin" Type="Real64" Value="0.0123459849282478"/>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.007"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.171585789295393"/>
 												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="TrimBegin" Type="Real64" Value="0.0123459849282478"/>
+												<Property Name="TrimEnd" Type="Real64" Value="1.17625016937669"/>
 											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>community1\chimes-community1G#.wav</AudioFile>
@@ -254,10 +286,13 @@
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="chimes-community1G#" ID="{05AFC81F-0FA6-4FF3-BD26-A0B0488E6AD2}" Platform="Linked"/>
+										<ActiveSource Name="chimes-community1G#" ID="{538259D0-9321-4DD2-A58B-5D0D5D461589}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
+							<PositioningInfo>
+								<Panner Name="" ID="{1C3DE0C4-8568-4CD8-8500-9B2E978FE258}"/>
+							</PositioningInfo>
 						</RandomSequenceContainer>
 						<RandomSequenceContainer Name="community2" ID="{86994D99-173E-4D4C-A6DB-9427ED38B4D5}" ShortID="1028591016">
 							<PropertyList>

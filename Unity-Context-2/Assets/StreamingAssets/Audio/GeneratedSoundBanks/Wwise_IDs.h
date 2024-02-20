@@ -17,11 +17,6 @@ namespace AK
         static const AkUniqueID CHIME1STOP = 632066680U;
     } // namespace EVENTS
 
-    namespace GAME_PARAMETERS
-    {
-        static const AkUniqueID EASTPRESSED = 3304885472U;
-    } // namespace GAME_PARAMETERS
-
     namespace BANKS
     {
         static const AkUniqueID INIT = 1355168291U;
@@ -39,6 +34,7 @@ namespace AK
     namespace AUX_BUSSES
     {
         static const AkUniqueID EMOTIONSDIMENSION = 3477531017U;
+        static const AkUniqueID TESTVERB = 841660990U;
     } // namespace AUX_BUSSES
 
     namespace AUDIO_DEVICES
