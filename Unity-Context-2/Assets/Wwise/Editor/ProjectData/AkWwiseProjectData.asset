@@ -38,8 +38,59 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 8dc0b307ade8814aa929c27b28b93464
     GuidInternal: 
-    m_lastTime: -8584935147959190649
+    m_lastTime: -8584931842544906611
     List:
+    - name: Ambience
+      guid: 45bbfd6b2b78e94186b0109575ddfb5f
+      id: 85412153
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 8dc0b307ade8814aa929c27b28b93464
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: Ambience
+        ObjectType: 2
+        guid: 45bbfd6b2b78e94186b0109575ddfb5f
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Ambience
+    - name: Chimes
+      guid: 083fc6d0a68aa44f8fbaed045e95e039
+      id: 2590078866
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 8dc0b307ade8814aa929c27b28b93464
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: Chimes
+        ObjectType: 2
+        guid: 083fc6d0a68aa44f8fbaed045e95e039
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Chimes
+    - name: EmotionsDimension
+      guid: 1b14a593955c4a4fa16da914fcd2dc34
+      id: 3477531017
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 8dc0b307ade8814aa929c27b28b93464
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: EmotionsDimension
+        ObjectType: 1
+        guid: 1b14a593955c4a4fa16da914fcd2dc34
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\EmotionsDimension
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
       id: 3803692087
@@ -54,6 +105,40 @@ MonoBehaviour:
         ObjectType: 2
         guid: d8a41415a61d2a41a17e75ca0c2149f3
       Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus
+    - name: Player
+      guid: e76b9d45a7f0c04fa2f919390bc8cd30
+      id: 1069431850
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 8dc0b307ade8814aa929c27b28b93464
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: Player
+        ObjectType: 2
+        guid: e76b9d45a7f0c04fa2f919390bc8cd30
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Player
+    - name: TestVerb
+      guid: a7ad37eddcdc314d95fc1ed7aa1ad070
+      id: 841660990
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 8dc0b307ade8814aa929c27b28b93464
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: TestVerb
+        ObjectType: 1
+        guid: a7ad37eddcdc314d95fc1ed7aa1ad070
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\TestVerb
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     PathAndIcons:
@@ -66,7 +151,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: d7906ce14cf00844a1cf51bb2f3f5324
     GuidInternal: 
-    m_lastTime: -8584935121878131479
+    m_lastTime: -8584931848594872491
     List:
     - name: Main
       guid: edcbdbe24520214883096064fcb95c6c
@@ -94,11 +179,11 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 1829c11d708c3d4b85382b800fb51260
     GuidInternal: 
-    m_lastTime: -8584935128295863753
+    m_lastTime: -8584931842544721645
     List:
-    - name: Test_Event
+    - name: Chime1Start
       guid: 5e001fa2a4320a4fb58b9ca2a6c61696
-      id: 4258653052
+      id: 3097783492
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -106,13 +191,79 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 1829c11d708c3d4b85382b800fb51260
-      - ElementName: Test_Event
+      - ElementName: Chimes
+        ObjectType: 4
+        guid: 5afd6593077ce5469d64005f7e78831e
+      - ElementName: Community1
+        ObjectType: 4
+        guid: 0fe91c6d37d32c46ac3a7cdbb1aa1901
+      - ElementName: Chime1Start
         ObjectType: 3
         guid: 5e001fa2a4320a4fb58b9ca2a6c61696
-      Path: Events\Default Work Unit\Test_Event
+      Path: Events\Default Work Unit\Chimes\Community1\Chime1Start
+      maxAttenuation: 100
+      maxDuration: 1.413994
+      minDuration: 1.0245572
+    - name: Chime1Stop
+      guid: cfdeb867a00f38498d4511996745434b
+      id: 632066680
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 1829c11d708c3d4b85382b800fb51260
+      - ElementName: Chimes
+        ObjectType: 4
+        guid: 5afd6593077ce5469d64005f7e78831e
+      - ElementName: Community1
+        ObjectType: 4
+        guid: 0fe91c6d37d32c46ac3a7cdbb1aa1901
+      - ElementName: Chime1Stop
+        ObjectType: 3
+        guid: cfdeb867a00f38498d4511996745434b
+      Path: Events\Default Work Unit\Chimes\Community1\Chime1Stop
       maxAttenuation: 0
-      maxDuration: 3.7891042
-      minDuration: 3.7891042
+      maxDuration: 0
+      minDuration: 0
+    - name: Chimes
+      guid: 5afd6593077ce5469d64005f7e78831e
+      id: 2590078866
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 1829c11d708c3d4b85382b800fb51260
+      - ElementName: Chimes
+        ObjectType: 4
+        guid: 5afd6593077ce5469d64005f7e78831e
+      Path: Events\Default Work Unit\Chimes
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Community1
+      guid: 0fe91c6d37d32c46ac3a7cdbb1aa1901
+      id: 3910964057
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 1829c11d708c3d4b85382b800fb51260
+      - ElementName: Chimes
+        ObjectType: 4
+        guid: 5afd6593077ce5469d64005f7e78831e
+      - ElementName: Community1
+        ObjectType: 4
+        guid: 0fe91c6d37d32c46ac3a7cdbb1aa1901
+      Path: Events\Default Work Unit\Chimes\Community1
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -125,7 +276,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: 6e8a3e52955e38448efc5e2b8decd175
     GuidInternal: 
-    m_lastTime: -8584935136804879952
+    m_lastTime: -8584931834021291521
     List: []
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
@@ -139,74 +290,8 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: ee9c2c1aa3ee3549bcf9769c5161d1dc
     GuidInternal: 
-    m_lastTime: -8584935136805102857
-    List:
-    - name: New_State_Group
-      guid: f1cf8c6fcc70994faf2afa5361550173
-      id: 2012657067
-      PathAndIcons:
-      - ElementName: States
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: ee9c2c1aa3ee3549bcf9769c5161d1dc
-      - ElementName: New_State_Group
-        ObjectType: 9
-        guid: f1cf8c6fcc70994faf2afa5361550173
-      Path: States\Default Work Unit\New_State_Group
-      values:
-      - name: New_State
-        guid: 659e4ecbb0c8cf4f9260d1df39d6a207
-        id: 2021425847
-        PathAndIcons:
-        - ElementName: States
-          ObjectType: 5
-          guid: 00000000000000000000000000000000
-        - ElementName: Default Work Unit
-          ObjectType: 12
-          guid: ee9c2c1aa3ee3549bcf9769c5161d1dc
-        - ElementName: New_State_Group
-          ObjectType: 9
-          guid: f1cf8c6fcc70994faf2afa5361550173
-        - ElementName: New_State
-          ObjectType: 8
-          guid: 659e4ecbb0c8cf4f9260d1df39d6a207
-      - name: New_State_01
-        guid: e2d32c5b30c4c046ac4fd45a0f74aebb
-        id: 3436006651
-        PathAndIcons:
-        - ElementName: States
-          ObjectType: 5
-          guid: 00000000000000000000000000000000
-        - ElementName: Default Work Unit
-          ObjectType: 12
-          guid: ee9c2c1aa3ee3549bcf9769c5161d1dc
-        - ElementName: New_State_Group
-          ObjectType: 9
-          guid: f1cf8c6fcc70994faf2afa5361550173
-        - ElementName: New_State_01
-          ObjectType: 8
-          guid: e2d32c5b30c4c046ac4fd45a0f74aebb
-      - name: None
-        guid: 08020863e9459a479bf07e54928beb52
-        id: 748895195
-        PathAndIcons:
-        - ElementName: States
-          ObjectType: 5
-          guid: 00000000000000000000000000000000
-        - ElementName: Default Work Unit
-          ObjectType: 12
-          guid: ee9c2c1aa3ee3549bcf9769c5161d1dc
-        - ElementName: New_State_Group
-          ObjectType: 9
-          guid: f1cf8c6fcc70994faf2afa5361550173
-        - ElementName: None
-          ObjectType: 8
-          guid: 08020863e9459a479bf07e54928beb52
-      ValueGuids: []
-      ValueIcons: []
-      valuesInternal: []
+    m_lastTime: -8584932633135366033
+    List: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
     PathAndIcons:
@@ -219,7 +304,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: a0523abc768a534caf9f9ccda37772bd
     GuidInternal: 
-    m_lastTime: -8584935136804937899
+    m_lastTime: -8584932635564796682
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
@@ -236,7 +321,7 @@ MonoBehaviour:
     m_lastTime: -8584935147958006455
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 05000000060000000a0000000b0000000c000000
+  ExpandedWaapiItemIds: 0500000006000000070000000a0000000b0000000c000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

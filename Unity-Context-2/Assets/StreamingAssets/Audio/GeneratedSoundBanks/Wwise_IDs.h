@@ -13,24 +13,9 @@ namespace AK
 {
     namespace EVENTS
     {
-        static const AkUniqueID TEST_EVENT = 4258653052U;
+        static const AkUniqueID CHIME1START = 3097783492U;
+        static const AkUniqueID CHIME1STOP = 632066680U;
     } // namespace EVENTS
-
-    namespace STATES
-    {
-        namespace NEW_STATE_GROUP
-        {
-            static const AkUniqueID GROUP = 2012657067U;
-
-            namespace STATE
-            {
-                static const AkUniqueID NEW_STATE = 2021425847U;
-                static const AkUniqueID NEW_STATE_01 = 3436006651U;
-                static const AkUniqueID NONE = 748895195U;
-            } // namespace STATE
-        } // namespace NEW_STATE_GROUP
-
-    } // namespace STATES
 
     namespace BANKS
     {
@@ -40,8 +25,17 @@ namespace AK
 
     namespace BUSSES
     {
+        static const AkUniqueID AMBIENCE = 85412153U;
+        static const AkUniqueID CHIMES = 2590078866U;
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
+        static const AkUniqueID PLAYER = 1069431850U;
     } // namespace BUSSES
+
+    namespace AUX_BUSSES
+    {
+        static const AkUniqueID EMOTIONSDIMENSION = 3477531017U;
+        static const AkUniqueID TESTVERB = 841660990U;
+    } // namespace AUX_BUSSES
 
     namespace AUDIO_DEVICES
     {
