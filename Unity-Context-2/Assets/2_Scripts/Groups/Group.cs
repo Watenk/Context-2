@@ -12,21 +12,18 @@ public class Group
 
     private List<Agent> agents = new List<Agent>();
     private List<AgentPrefab> agentPrefabs = new List<AgentPrefab>();
-
-    // References
-    private GroupManager groupManager;
+    private Dictionary<AgentType, float> affection = new Dictionary<AgentType, float>();
 
     //-----------------------------------------------
 
-    public Group(AgentType agentType, int groupSize, Vector3 homePos, float spawnRadius, GroupManager groupManager){
+    public Group(AgentType agentType, int groupSize, Vector3 homePos, float spawnRadius){
         AgentType = agentType;
         Size = groupSize;
         Home = homePos;
         SpawnRadius = spawnRadius;
-        this.groupManager = groupManager;
         agentPrefabs = AgentSettings.Instance.Prefabs;
 
-        InstanceActors();
+        InstanceAgents();
     }
 
     public void DestroyAgents(){
@@ -37,7 +34,7 @@ public class Group
 
     //------------------------------------------------
 
-    private void InstanceActors(){
+    private void InstanceAgents(){
         
         AgentPrefab agentPrefab = GetAgentPrefab();
 
@@ -47,6 +44,14 @@ public class Group
             Vector3 randomPosInRange = new Vector3(Home.x + Random.Range(-SpawnRadius, SpawnRadius), 0, Home.z + Random.Range(-SpawnRadius, SpawnRadius));
             GameObject agentInstance = GameObject.Instantiate(randomPrefab, randomPosInRange, Quaternion.identity);
             agentInstance.transform.SetParent(GameManager.Instance.transform);
+            Agent agent = agentInstance.GetComponent<Agent>();
+
+            #if UNITY_EDITOR
+                if (agent == null) { Debug.LogError(agentPrefab.ToString() + " doesn't contain an agent"); }
+            #endif
+
+            agent.InitAgent(this);
+            agents.Add(agent);
         }
     }
 

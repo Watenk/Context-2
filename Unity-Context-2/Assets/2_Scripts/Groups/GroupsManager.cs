@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GroupManager : IFixedUpdateable
+public class GroupsManager 
 {
     private List<Group> groups = new List<Group>();
 
@@ -11,16 +11,12 @@ public class GroupManager : IFixedUpdateable
 
     //------------------------------------------------
 
-    public GroupManager(){
+    public GroupsManager(){
         gameManager = GameManager.Instance;
     }
 
-    public void OnFixedUpdate(){
-
-    }
-
     public void AddGroup(AgentType agentType, int groupSize, Vector3 homePos, float spawnRadius){
-        groups.Add(new Group(agentType, groupSize, homePos, spawnRadius, this));
+        groups.Add(new Group(agentType, groupSize, homePos, spawnRadius));
     }
 
     public void RemoveGroup(Group group){

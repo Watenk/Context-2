@@ -9,7 +9,7 @@ public class GroupSpawner : MonoBehaviour
     public float SpawnRadius; [Tooltip("Range around the GroupSpawner agents will spawn in")]
     
     void Start(){
-        GameManager.Instance.GetService<GroupManager>().AddGroup(AgentType, GroupSize, transform.position, SpawnRadius);        
+        GameManager.Instance.GetService<GroupsManager>().AddGroup(AgentType, GroupSize, transform.position, SpawnRadius);        
         GameObject.Destroy(this.gameObject);
     }
 }

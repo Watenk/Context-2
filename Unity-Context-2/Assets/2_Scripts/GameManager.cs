@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour
         Instance = this;
 
         AddService(new InputManager());
-        AddService(new GroupManager());
+        AddService(new GroupsManager());
     }
 
     public void Update(){

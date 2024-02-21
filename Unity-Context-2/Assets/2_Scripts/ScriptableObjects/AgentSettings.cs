@@ -27,6 +27,8 @@ public class AgentSettings : ScriptableObject
     [Header("Settings")]
     public float MaxSpeed;
     public float MinSpeed;
+    [Tooltip("Distance an agent will wander from their home")]
+    public float WanderFromHomeDistance;
 
     [Header("Advanced Settings")]
     [Tooltip("Max Distance between each 'step' in the agents path")]

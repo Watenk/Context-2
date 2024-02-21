@@ -25,3 +25,5 @@ MonoBehaviour:
   MaxSpeed: 2
   MinSpeed: 3
   StepDistance: 2
+  AgentNewDestinationDistance: 5
+  WanderFromHomeDistance: 10
