@@ -6,6 +6,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
+    public PlayerController Player { get; private set; }
 
     private Dictionary<Type, System.Object> services = new Dictionary<Type, System.Object>();
     private List<IUpdateable> updateables = new List<IUpdateable>();
@@ -18,6 +19,7 @@ public class GameManager : MonoBehaviour
 
         AddService(new InputManager());
         AddService(new GroupsManager());
+        AddService(new TimerManager());
     }
 
     public void Update(){
@@ -38,8 +40,8 @@ public class GameManager : MonoBehaviour
         return (T)service;
     }
 
-    public GameObject Instantiate(GameObject prefab, Vector3 pos, Quaternion rotation){
-        return GameObject.Instantiate(prefab, pos, rotation);
+    public void SetPlayer(PlayerController player){
+        Player = player;
     }
 
     //-------------------------------------------------------------

@@ -1,13 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 using UnityEngine.AI;
 
 public class Agent : MonoBehaviour
 {
     public Group Group { get; private set; }
-    public NavMeshAgent NavMeshAgent { get; private set; }
     public bool DestinationReached { get; private set; }
+    public NavMeshAgent NavMeshAgent { get; private set; }
+
+    private Fsm<Agent> fsm;
 
     // Pathfinding
     private List<Vector3> path = new List<Vector3>();
@@ -15,19 +18,22 @@ public class Agent : MonoBehaviour
     private float stepDistance;
     private float wanderFromHomeDistance;
 
-    // References
-    private GroupsManager groupManager;
-
     //----------------------------------------
 
     public void InitAgent(Group group){
         Group = group;
         NavMeshAgent = GetComponent<NavMeshAgent>();
-        groupManager = GameManager.Instance.GetService<GroupsManager>();
         stepDistance = AgentSettings.Instance.StepDistance;
         wanderFromHomeDistance = AgentSettings.Instance.WanderFromHomeDistance;
         NavMeshAgent.speed = Random.Range(AgentSettings.Instance.MinSpeed, AgentSettings.Instance.MaxSpeed);
         DestinationReached = true;
+
+        fsm = new Fsm<Agent>(this,
+           new AgentIdleState(),
+           new AgentFollowingState(),
+           new AgentWanderingState()
+        );
+        fsm.SwitchState(typeof(AgentWanderingState));
 
         #if UNITY_EDITOR
             if (NavMeshAgent == null) { Debug.LogError(gameObject.name + " doesn't contain a navmeshAgent"); }
@@ -40,32 +46,11 @@ public class Agent : MonoBehaviour
 
     public void FixedUpdate(){
         
-        if (DestinationReached) { GetNewDestination(); }
-        else { FollowPath(); }
+        fsm.OnUpdate();
+        if (!DestinationReached) { UpdatePath(); }
     }
 
-    //------------------------------------------
-
-    private void FollowPath(){
-        if (NavMeshAgent.remainingDistance <= 1.0f){
-            if (pathIndex == path.Count){
-                DestinationReached = true;
-            }
-            else{
-                NavMeshAgent.SetDestination(path[pathIndex]);
-                pathIndex++;
-            }
-        }
-    }
-
-    private void GetNewDestination(){
-        Vector3 newDestination = new Vector3(Group.Home.x + Random.Range(-wanderFromHomeDistance, wanderFromHomeDistance), 0, Group.Home.z + Random.Range(-wanderFromHomeDistance, wanderFromHomeDistance));
-        path = CalcPathTo(newDestination);
-        pathIndex = 0;
-        DestinationReached = false;
-    }
-
-    private List<Vector3> CalcPathTo(Vector3 pos){
+    public void SetDestination(Vector3 pos){
         NavMeshPath navMeshPath = new NavMeshPath();
         NavMeshAgent.CalculatePath(pos, navMeshPath);
 
@@ -76,7 +61,23 @@ public class Agent : MonoBehaviour
         path = GravitateTowardsSimilarAgents(path);
         path = RemovePointsOutsideNavMesh(path);
 
-        return path;
+        pathIndex = 0;
+        this.path = path;
+        DestinationReached = false;
+    }
+
+    //------------------------------------------
+
+    private void UpdatePath(){
+        if (NavMeshAgent.remainingDistance <= 1.0f){
+            if (pathIndex == path.Count){
+                DestinationReached = true;
+            }
+            else{
+                NavMeshAgent.SetDestination(path[pathIndex]);
+                pathIndex++;
+            }
+        }
     }
 
     private List<Vector3> DividePathIntoSteps(List<Vector3> currentPath){

@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
     //------------------------------------------------
 
     public void Start(){
+        GameManager.Instance.SetPlayer(this);
         inputManager = GameManager.Instance.GetService<InputManager>();
         rb = GetComponent<Rigidbody>();
         speed = PlayerSettings.Instance.Speed;
