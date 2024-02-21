@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="150">
+	<RootPaths>
+		<ProjectRoot>../..</ProjectRoot>
+		<SourceFilesRoot>../../.cache/Windows</SourceFilesRoot>
+		<SoundBanksRoot>.</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>.</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{22718E58-C259-4E9C-1C99-4F7ED531B9C4}">
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+			<Plugins>
+				<ShareSets>
+					<Plugin Id="48620415" Name="Have_U_Ever_Been_Outside" LibName="Wwise RoomVerb" LibId="7733251"/>
+				</ShareSets>
+				<AudioDevices>
+					<Plugin Id="2317455096" Name="No_Output" LibName="No Output" LibId="11862023"/>
+					<Plugin Id="3859886410" Name="System" LibName="System" LibId="11403271"/>
+				</AudioDevices>
+			</Plugins>
+			<Busses>
+				<Bus Id="85412153" Name="Ambience"/>
+				<Bus Id="1069431850" Name="Player"/>
+				<Bus Id="2590078866" Name="Chimes"/>
+				<Bus Id="3803692087" Name="Master Audio Bus"/>
+			</Busses>
+			<AuxBusses>
+				<AuxBus Id="841660990" Name="TestVerb">
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="48620415"/>
+						</ShareSets>
+					</PluginRefs>
+				</AuxBus>
+				<AuxBus Id="3477531017" Name="EmotionsDimension"/>
+			</AuxBusses>
+		</SoundBank>
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{1ACAC8C2-67B7-62DE-FD6E-F9CD265F965D}">
+			<ShortName>Main</ShortName>
+			<Path>Main.bnk</Path>
+			<Media>
+				<File Id="200744382" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>community1\chimes-community1C#High.wav</ShortName>
+					<CachePath>SFX/community1/chimes-community1C#High_76BBA159.wem</CachePath>
+				</File>
+				<File Id="234843785" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>community1\chimes-community1C.wav</ShortName>
+					<CachePath>SFX/community1/chimes-community1C_D040B135.wem</CachePath>
+				</File>
+				<File Id="276159906" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>community1\chimes-community1C#.wav</ShortName>
+					<CachePath>SFX/community1/chimes-community1C#_AE6CEDB8.wem</CachePath>
+				</File>
+				<File Id="374736244" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>community1\chimes-community1A#.wav</ShortName>
+					<CachePath>SFX/community1/chimes-community1A#_D0F5832A.wem</CachePath>
+				</File>
+				<File Id="741005136" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>community1\chimes-community1D#.wav</ShortName>
+					<CachePath>SFX/community1/chimes-community1D#_74F4A685.wem</CachePath>
+				</File>
+				<File Id="775169254" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>community1\chimes-community1F.wav</ShortName>
+					<CachePath>SFX/community1/chimes-community1F_7FE83652.wem</CachePath>
+				</File>
+				<File Id="817811054" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>community1\chimes-community1F#.wav</ShortName>
+					<CachePath>SFX/community1/chimes-community1F#_DE84E4E3.wem</CachePath>
+				</File>
+				<File Id="1050643609" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>community1\chimes-community1G#.wav</ShortName>
+					<CachePath>SFX/community1/chimes-community1G#_8BAF1F79.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="3097783492" Name="Chime1Start" MaxAttenuation="100" DurationType="OneShot" DurationMin="1.0245572" DurationMax="1.413994">
+					<MediaRefs>
+						<MediaRef Id="200744382"/>
+						<MediaRef Id="234843785"/>
+						<MediaRef Id="276159906"/>
+						<MediaRef Id="374736244"/>
+						<MediaRef Id="741005136"/>
+						<MediaRef Id="775169254"/>
+						<MediaRef Id="817811054"/>
+						<MediaRef Id="1050643609"/>
+					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="841660990" Name="TestVerb"/>
+					</AuxBusRefs>
+				</Event>
+				<Event Id="632066680" Name="Chime1Stop" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<MediaRefs>
+						<MediaRef Id="200744382"/>
+						<MediaRef Id="234843785"/>
+						<MediaRef Id="276159906"/>
+						<MediaRef Id="374736244"/>
+						<MediaRef Id="741005136"/>
+						<MediaRef Id="775169254"/>
+						<MediaRef Id="817811054"/>
+						<MediaRef Id="1050643609"/>
+					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="841660990" Name="TestVerb"/>
+					</AuxBusRefs>
+				</Event>
+			</Events>
+		</SoundBank>
+	</SoundBanks>
+	<FileHash>{ABB83B86-48C7-1B96-7769-8F9F78EBE654}</FileHash>
+</SoundBanksInfo>

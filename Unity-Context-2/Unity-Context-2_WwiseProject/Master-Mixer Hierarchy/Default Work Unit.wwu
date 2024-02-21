@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{07B3C08D-E8AD-4A81-A929-C27B28B93464}" SchemaVersion="119">
+	<Busses>
+		<WorkUnit Name="Default Work Unit" ID="{07B3C08D-E8AD-4A81-A929-C27B28B93464}" PersistMode="Standalone">
+			<ChildrenList>
+				<Bus Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}">
+					<ReferenceList>
+						<Reference Name="AudioDevice" PluginName="System" CompanyID="0" PluginID="174" PluginType="7">
+							<ObjectRef Name="System" ID="{E67E3161-DF5B-4679-AA14-1F1BA1423F59}" WorkUnitID="{E50427F0-4E2A-45C8-AE4B-96893CD61E6A}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AuxBus Name="EmotionsDimension" ID="{93A5141B-5C95-4F4A-A16D-A914FCD2DC34}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="12"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+						</AuxBus>
+						<Bus Name="Player" ID="{459D6BE7-F0A7-4FC0-A2F9-19390BC8CD30}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="20"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+						</Bus>
+						<Bus Name="Ambience" ID="{6BFDBB45-782B-41E9-86B0-109575DDFB5F}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="4"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+						</Bus>
+						<Bus Name="Chimes" ID="{D0C63F08-8AA6-4FA4-8FBA-ED045E95E039}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="2"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+						</Bus>
+						<AuxBus Name="TestVerb" ID="{ED37ADA7-DCDC-4D31-95FC-1ED7AA1AD070}">
+							<ObjectLists>
+								<ObjectList Name="Effects">
+									<Reference>
+										<Local>
+											<EffectSlot Name="" ID="{735AE77F-77F4-4BBC-ACA8-121424AFEF80}" ShortID="530581845">
+												<ReferenceList>
+													<Reference Name="Effect" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+														<ObjectRef Name="Have_U_Ever_Been_Outside" ID="{FE29AE8D-FD86-4652-A95D-68D32F5760EC}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+													</Reference>
+												</ReferenceList>
+											</EffectSlot>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+						</AuxBus>
+					</ChildrenList>
+				</Bus>
+			</ChildrenList>
+		</WorkUnit>
+	</Busses>
+</WwiseDocument>

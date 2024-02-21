@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{1DC12918-8C70-4B3D-8538-2B800FB51260}" SchemaVersion="119">
+	<Events>
+		<WorkUnit Name="Default Work Unit" ID="{1DC12918-8C70-4B3D-8538-2B800FB51260}" PersistMode="Standalone">
+			<ChildrenList>
+				<Folder Name="Chimes" ID="{9365FD5A-7C07-46E5-9D64-005F7E78831E}" ShortID="411131761">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="1"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Folder Name="Community1" ID="{6D1CE90F-D337-462C-AC3A-7CDBB1AA1901}" ShortID="526521138">
+							<ChildrenList>
+								<Event Name="Chime1Start" ID="{A21F005E-32A4-4F0A-B58B-9CA2A6C61696}">
+									<ChildrenList>
+										<Action Name="" ID="{7E8C34DE-A7F0-4FFC-A9C4-D05FD0A2D39B}" ShortID="114172043">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="community1" ID="{0ABDDF13-931E-4BBA-8567-03605C5526F5}" WorkUnitID="{7170A4AA-0716-459D-A833-37BA2C074759}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Chime1Stop" ID="{67B8DECF-0FA0-4938-8D45-11996745434B}">
+									<ChildrenList>
+										<Action Name="" ID="{F08A22BA-5D78-4108-AE00-4BDA96F91327}" ShortID="652862323">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+												<Property Name="FadeOutCurve" Type="int16" Value="6"/>
+												<Property Name="FadeTime" Type="Real64" Value="0.25"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="community1" ID="{0ABDDF13-931E-4BBA-8567-03605C5526F5}" WorkUnitID="{7170A4AA-0716-459D-A833-37BA2C074759}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>
