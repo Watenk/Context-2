@@ -24,6 +24,6 @@ MonoBehaviour:
     - {fileID: 7888470974323744715, guid: 2330071e75cac334eb8f7c157648ab28, type: 3}
   MaxSpeed: 2
   MinSpeed: 3
-  StepDistance: 2
-  AgentNewDestinationDistance: 5
   WanderFromHomeDistance: 10
+  AgentLookAtPlayerDistance: 5
+  StepDistance: 2

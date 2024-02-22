@@ -9,8 +9,7 @@ public class Agent : MonoBehaviour
     public Group Group { get; private set; }
     public bool DestinationReached { get; private set; }
     public NavMeshAgent NavMeshAgent { get; private set; }
-
-    private Fsm<Agent> fsm;
+    public Fsm<Agent> fsm { get; private set; }
 
     // Pathfinding
     private List<Vector3> path = new List<Vector3>();
@@ -31,7 +30,8 @@ public class Agent : MonoBehaviour
         fsm = new Fsm<Agent>(this,
            new AgentIdleState(),
            new AgentFollowingState(),
-           new AgentWanderingState()
+           new AgentWanderingState(),
+           new AgentLookAtPlayerState()
         );
         fsm.SwitchState(typeof(AgentWanderingState));
 

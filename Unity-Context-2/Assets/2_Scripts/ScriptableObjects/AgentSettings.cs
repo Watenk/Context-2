@@ -29,6 +29,8 @@ public class AgentSettings : ScriptableObject
     public float MinSpeed;
     [Tooltip("Distance an agent will wander from their home")]
     public float WanderFromHomeDistance;
+    [Tooltip("Distance an agent must be from the player to stop and look at the player")]
+    public float AgentLookAtPlayerDistance;
 
     [Header("Advanced Settings")]
     [Tooltip("Max Distance between each 'step' in the agents path")]

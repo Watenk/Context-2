@@ -16,16 +16,20 @@ public class PlayerController : MonoBehaviour
 
     //------------------------------------------------
 
-    public void Start(){
+    public void Awake(){
         GameManager.Instance.SetPlayer(this);
-        inputManager = GameManager.Instance.GetService<InputManager>();
         rb = GetComponent<Rigidbody>();
-        speed = PlayerSettings.Instance.Speed;
-        rotationSpeed = PlayerSettings.Instance.RotationSpeed;
 
         #if UNITY_EDITOR
+            if (GameManager.Instance == null) { Debug.LogError("GameManager.Instance is null"); }
             if (rb == null) { Debug.LogError("Player doesnt contain a rigidbody"); }
         #endif
+    }
+
+    public void Start(){
+        inputManager = GameManager.Instance.GetService<InputManager>();
+        speed = PlayerSettings.Instance.Speed;
+        rotationSpeed = PlayerSettings.Instance.RotationSpeed;
 
         inputManager.OnPlayerMove += OnPlayerMove;
     }
