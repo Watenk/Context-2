@@ -32,4 +32,8 @@ public class Timer
     public void ChangeLenght(float newLenght){
         lenght = newLenght;
     }
+
+    public void ChangeTime(float newTimerTime){
+        timer = newTimerTime;
+    }
 }

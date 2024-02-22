@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using Unity.VisualScripting.FullSerializer;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -14,8 +15,9 @@ public class Agent : MonoBehaviour
     // Pathfinding
     private List<Vector3> path = new List<Vector3>();
     private int pathIndex;
-    private float stepDistance;
     private float wanderFromHomeDistance;
+    private float stepDistance;
+    private float stopDistance;
 
     //----------------------------------------
 
@@ -47,19 +49,22 @@ public class Agent : MonoBehaviour
     public void FixedUpdate(){
         
         fsm.OnUpdate();
-        if (!DestinationReached) { UpdatePath(); }
+        UpdatePath();
     }
 
-    public void SetDestination(Vector3 pos){
+    public void SetDestination(Vector3 pos, float stopDistance){
+        this.stopDistance = stopDistance;
         NavMeshPath navMeshPath = new NavMeshPath();
         NavMeshAgent.CalculatePath(pos, navMeshPath);
 
         List<Vector3> path = new List<Vector3>();
-        foreach (Vector3 current in navMeshPath.corners) { path.Add(current); }
+        for (int i = 0; i < navMeshPath.corners.Length; i++){
+            path.Add(navMeshPath.corners[i]);
+        }
 
         path = DividePathIntoSteps(path);
-        path = GravitateTowardsSimilarAgents(path);
-        path = RemovePointsOutsideNavMesh(path);
+        // path = GravitateTowardsSimilarAgents(path);
+        // path = RemovePointsOutsideNavMesh(path);
 
         pathIndex = 0;
         this.path = path;
@@ -69,14 +74,14 @@ public class Agent : MonoBehaviour
     //------------------------------------------
 
     private void UpdatePath(){
-        if (NavMeshAgent.remainingDistance <= 1.0f){
-            if (pathIndex == path.Count){
-                DestinationReached = true;
-            }
-            else{
+        if (pathIndex != path.Count){
+            if (NavMeshAgent.remainingDistance <= stopDistance){
                 NavMeshAgent.SetDestination(path[pathIndex]);
                 pathIndex++;
             }
+        }
+        else{
+            DestinationReached = true;
         }
     }
 
@@ -102,19 +107,17 @@ public class Agent : MonoBehaviour
             else{
                 newPath.Add(currentPos);
             }
-
             previousPos = currentPos;
         }
-
         return newPath;
     }
 
-    private List<Vector3> GravitateTowardsSimilarAgents(List<Vector3> currentPath){
-        return currentPath;
-    }
+    // private List<Vector3> GravitateTowardsSimilarAgents(List<Vector3> currentPath){
+    //     return currentPath;
+    // }
 
-    private List<Vector3> RemovePointsOutsideNavMesh(List<Vector3> currentPath){
-        // navMesh.SamplePosition to check if point is on navmesh
-        return currentPath;
-    }
+    // private List<Vector3> RemovePointsOutsideNavMesh(List<Vector3> currentPath){
+    //     // navMesh.SamplePosition to check if point is on navmesh
+    //     return currentPath;
+    // }
 }

@@ -5,7 +5,7 @@ using UnityEngine;
 public class AgentWanderingState : BaseState<Agent>
 {
     private float wanderFromHomeDistance = 0;
-    private float agentLookAtPlayerDistance;
+    private float lookAtPlayerDistance;
 
     // References
     private PlayerController player;
@@ -14,12 +14,12 @@ public class AgentWanderingState : BaseState<Agent>
 
     public override void OnAwake(){
         wanderFromHomeDistance = AgentSettings.Instance.WanderFromHomeDistance;
-        agentLookAtPlayerDistance = AgentSettings.Instance.AgentLookAtPlayerDistance;
+        lookAtPlayerDistance = AgentSettings.Instance.LookAtPlayerDistance;
         player = GameManager.Instance.Player;
 
         #if UNITY_EDITOR
             if (wanderFromHomeDistance == 0) { Debug.LogError("wanderFromHomeDistance is 0 in AgentSettings"); }
-            if (agentLookAtPlayerDistance == 0) { Debug.LogError("agentLookAtPlayerDistance is 0 in AgentSettings"); }
+            if (lookAtPlayerDistance == 0) { Debug.LogError("LookAtPlayerDistance is 0 in AgentSettings"); }
             if (player == null) { Debug.LogError("Couldn't get player from GameManager"); }
         #endif
     }
@@ -27,26 +27,26 @@ public class AgentWanderingState : BaseState<Agent>
     public override void OnUpdate(){
         
         CheckState();
-        SetDestination();
+        Wander();
     }
 
     public override void OnExit(){
-        owner.SetDestination(owner.transform.position);
+        owner.SetDestination(owner.transform.position, 0.1f);
         owner.NavMeshAgent.isStopped = true;
     }
 
     //---------------------------------------------
 
     private void CheckState(){
-        if (Vector3.Distance(owner.transform.position, player.transform.position) < agentLookAtPlayerDistance){
+        if (Vector3.Distance(owner.transform.position, player.transform.position) < lookAtPlayerDistance){
             owner.fsm.SwitchState(typeof(AgentLookAtPlayerState));
         }
     }
 
-    private void SetDestination(){
+    private void Wander(){
         if (owner.DestinationReached){
             Vector3 newDestination = new Vector3(owner.Group.Home.x + Random.Range(-wanderFromHomeDistance, wanderFromHomeDistance), 0, owner.Group.Home.z + Random.Range(-wanderFromHomeDistance, wanderFromHomeDistance));
-            owner.SetDestination(newDestination);
+            owner.SetDestination(newDestination, 0.1f);
         }
     }
 }
