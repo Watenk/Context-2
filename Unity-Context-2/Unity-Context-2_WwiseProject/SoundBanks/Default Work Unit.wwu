@@ -5,8 +5,15 @@
 			<ChildrenList>
 				<SoundBank Name="Main" ID="{E2DBCBED-2045-4821-8309-6064FCB95C6C}">
 					<ObjectInclusionList>
+						<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{07B3C08D-E8AD-4A81-A929-C27B28B93464}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Chimes" ID="{9C89A6D4-98A5-419A-B8C4-E456FE1EF824}" WorkUnitID="{7170A4AA-0716-459D-A833-37BA2C074759}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Community2" ID="{29615E9C-93DA-43FB-A150-95A8A4C5FB63}" WorkUnitID="{1DC12918-8C70-4B3D-8538-2B800FB51260}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Default Work Unit" ID="{7170A4AA-0716-459D-A833-37BA2C074759}" WorkUnitID="{7170A4AA-0716-459D-A833-37BA2C074759}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Chimes" ID="{9365FD5A-7C07-46E5-9D64-005F7E78831E}" WorkUnitID="{1DC12918-8C70-4B3D-8538-2B800FB51260}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Chime1Stop" ID="{67B8DECF-0FA0-4938-8D45-11996745434B}" WorkUnitID="{1DC12918-8C70-4B3D-8538-2B800FB51260}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Default Work Unit" ID="{1DC12918-8C70-4B3D-8538-2B800FB51260}" WorkUnitID="{1DC12918-8C70-4B3D-8538-2B800FB51260}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="community1" ID="{0ABDDF13-931E-4BBA-8567-03605C5526F5}" WorkUnitID="{7170A4AA-0716-459D-A833-37BA2C074759}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Community3" ID="{4F9E9005-18BB-4BF9-AA68-8BD8E9517D98}" WorkUnitID="{1DC12918-8C70-4B3D-8538-2B800FB51260}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Chime1Start" ID="{A21F005E-32A4-4F0A-B58B-9CA2A6C61696}" WorkUnitID="{1DC12918-8C70-4B3D-8538-2B800FB51260}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
