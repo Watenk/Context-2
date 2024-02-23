@@ -17,11 +17,9 @@ public class PlayerController : MonoBehaviour
     //------------------------------------------------
 
     public void Awake(){
-        GameManager.Instance.SetPlayer(this);
         rb = GetComponent<Rigidbody>();
 
         #if UNITY_EDITOR
-            if (GameManager.Instance == null) { Debug.LogError("GameManager.Instance is null"); }
             if (rb == null) { Debug.LogError("Player doesnt contain a rigidbody"); }
         #endif
     }
