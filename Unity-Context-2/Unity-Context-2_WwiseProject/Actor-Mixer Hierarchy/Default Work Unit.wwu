@@ -6,7 +6,7 @@
 				<ActorMixer Name="Chimes" ID="{9C89A6D4-98A5-419A-B8C4-E456FE1EF824}" ShortID="992716489">
 					<PropertyList>
 						<Property Name="3DSpatialization" Type="int16" Value="2"/>
-						<Property Name="Color" Type="int16" Value="2"/>
+						<Property Name="Color" Type="int16" Value="15"/>
 						<Property Name="OverrideColor" Type="bool" Value="True"/>
 						<Property Name="UserAuxSendVolume0" Type="Real64">
 							<ValueList>
@@ -46,9 +46,14 @@
 										<Value>88</Value>
 									</ValueList>
 								</Property>
+								<Property Name="Color" Type="int16" Value="19"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
 								<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
 								<Property Name="SpeakerPanning" Type="int16" Value="1"/>
 								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-4</Value>
+									</ValueList>
 									<ModifierList>
 										<ModifierInfo>
 											<Modifier Name="" ID="{EB97F4CA-EB2E-45DD-A401-4367157F2CBD}"/>
@@ -294,51 +299,19 @@
 								<Panner Name="" ID="{1C3DE0C4-8568-4CD8-8500-9B2E978FE258}"/>
 							</PositioningInfo>
 						</RandomSequenceContainer>
-						<RandomSequenceContainer Name="community2" ID="{86994D99-173E-4D4C-A6DB-9427ED38B4D5}" ShortID="1028591016">
-							<PropertyList>
-								<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>-14</Value>
-									</ValueList>
-									<ModifierList>
-										<ModifierInfo>
-											<Modifier Name="" ID="{0E8F3823-8FB8-4519-86EE-14EAE60DD957}"/>
-										</ModifierInfo>
-									</ModifierList>
-								</Property>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{890C2A6A-F4B0-4F89-9461-EC99F69DD99E}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{07B3C08D-E8AD-4A81-A929-C27B28B93464}"/>
-								</Reference>
-							</ReferenceList>
-						</RandomSequenceContainer>
-						<RandomSequenceContainer Name="community3" ID="{BDA79CAF-3F2D-4329-BF9A-87C9B07939B7}" ShortID="506238297">
-							<PropertyList>
-								<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
-								<Property Name="Volume" Type="Real64">
-									<ModifierList>
-										<ModifierInfo>
-											<Modifier Name="" ID="{63A79AAC-C895-4556-AE65-43B9FE6C18C8}"/>
-										</ModifierInfo>
-									</ModifierList>
-								</Property>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{890C2A6A-F4B0-4F89-9461-EC99F69DD99E}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{07B3C08D-E8AD-4A81-A929-C27B28B93464}"/>
-								</Reference>
-							</ReferenceList>
-						</RandomSequenceContainer>
 						<RandomSequenceContainer Name="universal" ID="{DC523BA7-E3E5-460E-88D2-F2048DB8A011}" ShortID="488256050">
 							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{074DC6FF-C484-4E79-922E-2E90F2160C24}">
+												<PropertyList>
+													<Property Name="Max" Type="Real64" Value="40"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ModifierList>
 										<ModifierInfo>
@@ -355,7 +328,442 @@
 									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{07B3C08D-E8AD-4A81-A929-C27B28B93464}"/>
 								</Reference>
 							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="chimes-universal1" ID="{6BEEA79D-FEA3-43B4-AF92-78CA1D7499F3}" ShortID="120568736">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{890C2A6A-F4B0-4F89-9461-EC99F69DD99E}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{07B3C08D-E8AD-4A81-A929-C27B28B93464}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="chimes-universal1" ID="{F8DDB83D-1FE7-4AF5-B630-58F44D73DB6B}">
+											<Language>SFX</Language>
+											<AudioFile>chimes-universal1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="753953363"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="chimes-universal1" ID="{F8DDB83D-1FE7-4AF5-B630-58F44D73DB6B}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
 						</RandomSequenceContainer>
+						<ActorMixer Name="community3" ID="{7FD15C02-0D30-4A60-A095-8294591A68D9}" ShortID="469340395">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="1"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{890C2A6A-F4B0-4F89-9461-EC99F69DD99E}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{07B3C08D-E8AD-4A81-A929-C27B28B93464}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="chimes-community3Start" ID="{DA7E7AA8-D39C-49A9-A807-9F868DB347CA}" ShortID="432403144">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{890C2A6A-F4B0-4F89-9461-EC99F69DD99E}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{07B3C08D-E8AD-4A81-A929-C27B28B93464}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="chimes-community3Start" ID="{86C34201-82A1-433F-87D9-499C9C11CB57}">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="0"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>community3\chimes-community3Start.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="573591343"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="chimes-community3Start" ID="{86C34201-82A1-433F-87D9-499C9C11CB57}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<RandomSequenceContainer Name="community3End" ID="{528B735B-6DDE-473D-BD5F-19183E519AAF}" ShortID="1072248819">
+									<PropertyList>
+										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{890C2A6A-F4B0-4F89-9461-EC99F69DD99E}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{07B3C08D-E8AD-4A81-A929-C27B28B93464}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="chimes-community3End1" ID="{1AA18206-4D33-4B39-A852-08DA46E97761}" ShortID="384217035">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{890C2A6A-F4B0-4F89-9461-EC99F69DD99E}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{07B3C08D-E8AD-4A81-A929-C27B28B93464}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="chimes-community3End1" ID="{049F6B95-6B99-4193-BCC4-A990757CDBE6}">
+													<Language>SFX</Language>
+													<AudioFile>chimes-community3End1.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="274837945"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="chimes-community3End1" ID="{049F6B95-6B99-4193-BCC4-A990757CDBE6}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="chimes-community3End2" ID="{D0FCFEC9-4EEB-44C0-BC69-42224A0008C3}" ShortID="402443847">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{890C2A6A-F4B0-4F89-9461-EC99F69DD99E}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{07B3C08D-E8AD-4A81-A929-C27B28B93464}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="chimes-community3End2" ID="{A7DFE5F0-6CD5-43B3-9EA7-F709AEF74E97}">
+													<Language>SFX</Language>
+													<AudioFile>chimes-community3End2.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="490430711"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="chimes-community3End2" ID="{A7DFE5F0-6CD5-43B3-9EA7-F709AEF74E97}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="community3Start" ID="{09865357-1558-4078-B374-7DAB8558EA12}" ShortID="266458660">
+									<PropertyList>
+										<Property Name="MakeUpGain" Type="Real64">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{7109E584-19AD-4E62-BA94-0D442245722F}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="1"/>
+															<Property Name="Min" Type="Real64" Value="-2"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{890C2A6A-F4B0-4F89-9461-EC99F69DD99E}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{07B3C08D-E8AD-4A81-A929-C27B28B93464}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="chimes-community3Start1" ID="{B3183D84-784C-41ED-BB78-20B44DC7938D}" ShortID="298978508">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{890C2A6A-F4B0-4F89-9461-EC99F69DD99E}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{07B3C08D-E8AD-4A81-A929-C27B28B93464}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="chimes-community3Start1" ID="{F212887F-7D49-495B-9826-3FDB25988B7C}">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.085402397260274"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>chimes-community3Start1.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="775312337"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="chimes-community3Start1" ID="{F212887F-7D49-495B-9826-3FDB25988B7C}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="chimes-community3Start2" ID="{C6D6D975-CFF3-4018-B20D-CC8DD822352D}" ShortID="520739988">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{890C2A6A-F4B0-4F89-9461-EC99F69DD99E}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{07B3C08D-E8AD-4A81-A929-C27B28B93464}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="chimes-community3Start2" ID="{AE0F9736-64C8-4F72-8B1F-415C7BFB6676}">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.0898972602739726"/>
+														<Property Name="LoopBegin" Type="Real64" Value="0"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>chimes-community3Start2.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="632147614"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="chimes-community3Start2" ID="{AE0F9736-64C8-4F72-8B1F-415C7BFB6676}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+							</ChildrenList>
+						</ActorMixer>
+						<ActorMixer Name="community2" ID="{49618B4A-C34C-4332-BABD-6B10711A401E}" ShortID="139770342">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="10"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{890C2A6A-F4B0-4F89-9461-EC99F69DD99E}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{07B3C08D-E8AD-4A81-A929-C27B28B93464}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="chimes-community2Start" ID="{C604C275-3933-473F-A56D-D612EC54A72B}" ShortID="725461078">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="2"/>
+										<Property Name="MakeUpGain" Type="Real64">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{EBA93675-B0F1-48EB-9766-CD3190733997}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="1"/>
+															<Property Name="Min" Type="Real64" Value="-2"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="UserAuxSendVolume0" Type="Real64">
+											<ValueList>
+												<Value>-8</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="NPCChimes" ID="{3FD4D0B4-7719-40F9-A7D7-66A1196736CA}" WorkUnitID="{367E7C67-F63E-4EF5-89C2-DD807CEBB0F9}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{890C2A6A-F4B0-4F89-9461-EC99F69DD99E}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Chimes" ID="{D0C63F08-8AA6-4FA4-8FBA-ED045E95E039}" WorkUnitID="{07B3C08D-E8AD-4A81-A929-C27B28B93464}"/>
+										</Reference>
+										<Reference Name="UserAuxSend0">
+											<ObjectRef Name="TestVerb" ID="{ED37ADA7-DCDC-4D31-95FC-1ED7AA1AD070}" WorkUnitID="{07B3C08D-E8AD-4A81-A929-C27B28B93464}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="chimes-community2Start" ID="{59194C26-A798-469F-97BB-D95860A7812A}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0538313356164384"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>chimes-community2Start.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="892371228"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="chimes-community2Start" ID="{59194C26-A798-469F-97BB-D95860A7812A}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<RandomSequenceContainer Name="community2End" ID="{D071E1A3-B123-4783-BF4D-85DC650619A1}" ShortID="572990672">
+									<PropertyList>
+										<Property Name="Highpass" Type="int16">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{DEEEFCCB-5713-44D9-9DC4-D3D6812898B7}">
+														<PropertyList>
+															<Property Name="Min" Type="Real64" Value="-11"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{890C2A6A-F4B0-4F89-9461-EC99F69DD99E}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{07B3C08D-E8AD-4A81-A929-C27B28B93464}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="chimes-community2End1" ID="{CEC086EF-6F89-4736-BE58-1FC1E9400BB0}" ShortID="346230596">
+											<PropertyList>
+												<Property Name="3DSpatialization" Type="int16" Value="2"/>
+												<Property Name="Highpass" Type="int16">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{5B2B6322-086C-488C-94AB-8A2AF4B13642}"/>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="UserAuxSendVolume0" Type="Real64">
+													<ValueList>
+														<Value>-8</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Attenuation">
+													<ObjectRef Name="NPCChimes" ID="{3FD4D0B4-7719-40F9-A7D7-66A1196736CA}" WorkUnitID="{367E7C67-F63E-4EF5-89C2-DD807CEBB0F9}"/>
+												</Reference>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{890C2A6A-F4B0-4F89-9461-EC99F69DD99E}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Chimes" ID="{D0C63F08-8AA6-4FA4-8FBA-ED045E95E039}" WorkUnitID="{07B3C08D-E8AD-4A81-A929-C27B28B93464}"/>
+												</Reference>
+												<Reference Name="UserAuxSend0">
+													<ObjectRef Name="TestVerb" ID="{ED37ADA7-DCDC-4D31-95FC-1ED7AA1AD070}" WorkUnitID="{07B3C08D-E8AD-4A81-A929-C27B28B93464}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="chimes-community2End1" ID="{41093A21-12AF-4777-AA79-6527B270B967}">
+													<Language>SFX</Language>
+													<AudioFile>chimes-community2End1.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="191050772"/>
+													</MediaIDList>
+												</AudioFileSource>
+												<AudioFileSource Name="chimes-community2End2" ID="{090205CC-A65F-411E-A3B4-7548E5C42F1A}">
+													<Language>SFX</Language>
+													<AudioFile>chimes-community2End2.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="355458017"/>
+													</MediaIDList>
+												</AudioFileSource>
+												<AudioFileSource Name="chimes-community2End3" ID="{83D9315C-B354-4E00-BC8D-69751CEAC561}">
+													<Language>SFX</Language>
+													<AudioFile>chimes-community2End3.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="220254561"/>
+													</MediaIDList>
+												</AudioFileSource>
+												<AudioFileSource Name="chimes-community2Start" ID="{FDC21180-3E49-4BEC-96C9-F1E4C40D0766}">
+													<Language>SFX</Language>
+													<AudioFile>chimes-community2Start.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="493344552"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="chimes-community2End1" ID="{41093A21-12AF-4777-AA79-6527B270B967}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="chimes-community2End3" ID="{24F1BBD5-0AAC-4760-BA34-B948D80C6CE6}" ShortID="788348186">
+											<PropertyList>
+												<Property Name="3DSpatialization" Type="int16" Value="2"/>
+												<Property Name="UserAuxSendVolume0" Type="Real64">
+													<ValueList>
+														<Value>-8</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Attenuation">
+													<ObjectRef Name="NPCChimes" ID="{3FD4D0B4-7719-40F9-A7D7-66A1196736CA}" WorkUnitID="{367E7C67-F63E-4EF5-89C2-DD807CEBB0F9}"/>
+												</Reference>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{890C2A6A-F4B0-4F89-9461-EC99F69DD99E}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Chimes" ID="{D0C63F08-8AA6-4FA4-8FBA-ED045E95E039}" WorkUnitID="{07B3C08D-E8AD-4A81-A929-C27B28B93464}"/>
+												</Reference>
+												<Reference Name="UserAuxSend0">
+													<ObjectRef Name="TestVerb" ID="{ED37ADA7-DCDC-4D31-95FC-1ED7AA1AD070}" WorkUnitID="{07B3C08D-E8AD-4A81-A929-C27B28B93464}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="chimes-community2End3" ID="{E7D98E7B-1E10-4BBF-ADC8-91DD331BF981}">
+													<Language>SFX</Language>
+													<AudioFile>chimes-community2End3.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="220254561"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="chimes-community2End3" ID="{E7D98E7B-1E10-4BBF-ADC8-91DD331BF981}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="chimes-community2End2" ID="{311EBA80-E270-4641-B68B-BDD3D28D6208}" ShortID="919172716">
+											<PropertyList>
+												<Property Name="3DSpatialization" Type="int16" Value="2"/>
+												<Property Name="UserAuxSendVolume0" Type="Real64">
+													<ValueList>
+														<Value>-8</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Attenuation">
+													<ObjectRef Name="NPCChimes" ID="{3FD4D0B4-7719-40F9-A7D7-66A1196736CA}" WorkUnitID="{367E7C67-F63E-4EF5-89C2-DD807CEBB0F9}"/>
+												</Reference>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{890C2A6A-F4B0-4F89-9461-EC99F69DD99E}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Chimes" ID="{D0C63F08-8AA6-4FA4-8FBA-ED045E95E039}" WorkUnitID="{07B3C08D-E8AD-4A81-A929-C27B28B93464}"/>
+												</Reference>
+												<Reference Name="UserAuxSend0">
+													<ObjectRef Name="TestVerb" ID="{ED37ADA7-DCDC-4D31-95FC-1ED7AA1AD070}" WorkUnitID="{07B3C08D-E8AD-4A81-A929-C27B28B93464}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="chimes-community2End2" ID="{E43E6773-6A88-4EE8-B084-9FA2C1D2CD6D}">
+													<Language>SFX</Language>
+													<AudioFile>chimes-community2End2.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="355458017"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="chimes-community2End2" ID="{E43E6773-6A88-4EE8-B084-9FA2C1D2CD6D}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+							</ChildrenList>
+						</ActorMixer>
 					</ChildrenList>
 				</ActorMixer>
 				<ActorMixer Name="Ambience" ID="{AE339A94-6823-4198-8016-3900436E720D}" ShortID="750633516">

@@ -5,13 +5,21 @@
 			<ChildrenList>
 				<Folder Name="Chimes" ID="{9365FD5A-7C07-46E5-9D64-005F7E78831E}" ShortID="411131761">
 					<PropertyList>
-						<Property Name="Color" Type="int16" Value="1"/>
+						<Property Name="Color" Type="int16" Value="15"/>
 						<Property Name="OverrideColor" Type="bool" Value="True"/>
 					</PropertyList>
 					<ChildrenList>
 						<Folder Name="Community1" ID="{6D1CE90F-D337-462C-AC3A-7CDBB1AA1901}" ShortID="526521138">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="19"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
 							<ChildrenList>
 								<Event Name="Chime1Start" ID="{A21F005E-32A4-4F0A-B58B-9CA2A6C61696}">
+									<PropertyList>
+										<Property Name="Color" Type="int16" Value="19"/>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
+									</PropertyList>
 									<ChildrenList>
 										<Action Name="" ID="{7E8C34DE-A7F0-4FFC-A9C4-D05FD0A2D39B}" ShortID="114172043">
 											<ReferenceList>
@@ -23,6 +31,10 @@
 									</ChildrenList>
 								</Event>
 								<Event Name="Chime1Stop" ID="{67B8DECF-0FA0-4938-8D45-11996745434B}">
+									<PropertyList>
+										<Property Name="Color" Type="int16" Value="19"/>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
+									</PropertyList>
 									<ChildrenList>
 										<Action Name="" ID="{F08A22BA-5D78-4108-AE00-4BDA96F91327}" ShortID="652862323">
 											<PropertyList>
@@ -33,6 +45,209 @@
 											<ReferenceList>
 												<Reference Name="Target">
 													<ObjectRef Name="community1" ID="{0ABDDF13-931E-4BBA-8567-03605C5526F5}" WorkUnitID="{7170A4AA-0716-459D-A833-37BA2C074759}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="NPCChime1Long" ID="{ECDE23B3-35EE-44EA-92E1-61360ED7B128}">
+									<ChildrenList>
+										<Action Name="" ID="{7D8FE597-FC6D-4A93-A260-F48809698281}" ShortID="431937961">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="community1" ID="{0ABDDF13-931E-4BBA-8567-03605C5526F5}" WorkUnitID="{7170A4AA-0716-459D-A833-37BA2C074759}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="NPCChime1Short" ID="{10DF5110-7DED-4A14-8524-4BF5F04B2205}">
+									<ChildrenList>
+										<Action Name="" ID="{824D981C-D9E8-4BA2-A411-1053683432C1}" ShortID="374638372">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="community1" ID="{0ABDDF13-931E-4BBA-8567-03605C5526F5}" WorkUnitID="{7170A4AA-0716-459D-A833-37BA2C074759}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{30BF070B-19C7-4DE3-AA5A-D64BD61CF1FC}" ShortID="457342365">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+												<Property Name="Delay" Type="Real64" Value="0.5">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{5099C566-CA69-48D6-80AB-1996557C00F6}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="0.3"/>
+																	<Property Name="Min" Type="Real64" Value="-0.1"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="community1" ID="{0ABDDF13-931E-4BBA-8567-03605C5526F5}" WorkUnitID="{7170A4AA-0716-459D-A833-37BA2C074759}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
+						<Folder Name="Community2" ID="{29615E9C-93DA-43FB-A150-95A8A4C5FB63}" ShortID="212327949">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="10"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+							<ChildrenList>
+								<Event Name="Chime2Start" ID="{4D2DE0F8-4D9E-46FE-8132-8CE354C188E5}">
+									<PropertyList>
+										<Property Name="Color" Type="int16" Value="10"/>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
+									</PropertyList>
+									<ChildrenList>
+										<Action Name="" ID="{160D2238-ABB3-461E-A5E5-5AC299FE5963}" ShortID="453985417">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="chimes-community2Start" ID="{C604C275-3933-473F-A56D-D612EC54A72B}" WorkUnitID="{7170A4AA-0716-459D-A833-37BA2C074759}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{DCD15484-9476-47F8-8AF2-B115FA6F666F}" ShortID="72885841">
+											<PropertyList>
+												<Property Name="Delay" Type="Real64" Value="0.25"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="community2End" ID="{D071E1A3-B123-4783-BF4D-85DC650619A1}" WorkUnitID="{7170A4AA-0716-459D-A833-37BA2C074759}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Chime2Stop" ID="{591EBF8F-64AD-4B43-814F-D439D6F224D2}">
+									<PropertyList>
+										<Property Name="Color" Type="int16" Value="10"/>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
+									</PropertyList>
+									<ChildrenList>
+										<Action Name="" ID="{440EEA12-28A2-4F49-A7A2-47A9CA6A593E}" ShortID="200503743">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="community2End" ID="{D071E1A3-B123-4783-BF4D-85DC650619A1}" WorkUnitID="{7170A4AA-0716-459D-A833-37BA2C074759}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="NPCChime2Long" ID="{2CB6FF1F-7A9A-43C5-9066-D1D94AAD5F18}">
+									<ChildrenList>
+										<Action Name="" ID="{EBC4FD58-17C3-40DE-8DA4-E0B93CAF70F3}" ShortID="1020674921">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="chimes-community2Start" ID="{C604C275-3933-473F-A56D-D612EC54A72B}" WorkUnitID="{7170A4AA-0716-459D-A833-37BA2C074759}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{12DD18D6-32ED-4291-A645-AF2F216F6339}" ShortID="769550114">
+											<PropertyList>
+												<Property Name="Delay" Type="Real64" Value="0.25"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="community2End" ID="{D071E1A3-B123-4783-BF4D-85DC650619A1}" WorkUnitID="{7170A4AA-0716-459D-A833-37BA2C074759}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="NPCChime2Short" ID="{A1A1C594-7813-4B1E-8E5F-077926530B45}">
+									<ChildrenList>
+										<Action Name="" ID="{3E0BF693-F7A6-43B1-8F94-403523A8FAA2}" ShortID="460265567">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="chimes-community2Start" ID="{C604C275-3933-473F-A56D-D612EC54A72B}" WorkUnitID="{7170A4AA-0716-459D-A833-37BA2C074759}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
+						<Folder Name="Community3" ID="{4F9E9005-18BB-4BF9-AA68-8BD8E9517D98}" ShortID="406980052">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="1"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+							<ChildrenList>
+								<Event Name="Chime3Start" ID="{40D8E97E-E7F9-4EF9-94F1-9FFF01837773}">
+									<ChildrenList>
+										<Action Name="" ID="{EDA1F169-A0CA-4EBC-92EF-2C1B342F2999}" ShortID="529394181">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="community3Start" ID="{09865357-1558-4078-B374-7DAB8558EA12}" WorkUnitID="{7170A4AA-0716-459D-A833-37BA2C074759}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{4C588AAA-F30B-45B8-9946-9C83AC6200FB}" ShortID="456567188">
+											<PropertyList>
+												<Property Name="Delay" Type="Real64" Value="0.375"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="community3End" ID="{528B735B-6DDE-473D-BD5F-19183E519AAF}" WorkUnitID="{7170A4AA-0716-459D-A833-37BA2C074759}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Chime3Stop" ID="{18E63860-B58C-4D81-89C9-B5031BDD2CB6}">
+									<ChildrenList>
+										<Action Name="" ID="{63BFAF76-3BE7-4516-9ABD-4CD7953C3885}" ShortID="505171063">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="community3End" ID="{528B735B-6DDE-473D-BD5F-19183E519AAF}" WorkUnitID="{7170A4AA-0716-459D-A833-37BA2C074759}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="NPCChime3Short" ID="{0AE7742D-2AED-497F-8FCF-1BE1DBA78A96}">
+									<ChildrenList>
+										<Action Name="" ID="{76DFCEE7-F334-431A-8A56-F5DF6C86C982}" ShortID="611764339">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="community3Start" ID="{09865357-1558-4078-B374-7DAB8558EA12}" WorkUnitID="{7170A4AA-0716-459D-A833-37BA2C074759}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="NPCChime3Long" ID="{8A8EE201-156C-427B-AE7B-3D90C111276D}">
+									<ChildrenList>
+										<Action Name="" ID="{21D97EDA-8936-4898-A1E9-D7B0BE9C02D5}" ShortID="882045167">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="community3Start" ID="{09865357-1558-4078-B374-7DAB8558EA12}" WorkUnitID="{7170A4AA-0716-459D-A833-37BA2C074759}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{1182D2B3-EBF8-446D-B6A5-3833C53AC036}" ShortID="68918091">
+											<PropertyList>
+												<Property Name="Delay" Type="Real64" Value="0.375"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="community3End" ID="{528B735B-6DDE-473D-BD5F-19183E519AAF}" WorkUnitID="{7170A4AA-0716-459D-A833-37BA2C074759}"/>
 												</Reference>
 											</ReferenceList>
 										</Action>

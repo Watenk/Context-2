@@ -15,6 +15,16 @@ namespace AK
     {
         static const AkUniqueID CHIME1START = 3097783492U;
         static const AkUniqueID CHIME1STOP = 632066680U;
+        static const AkUniqueID CHIME2START = 1569664137U;
+        static const AkUniqueID CHIME2STOP = 1791974179U;
+        static const AkUniqueID CHIME3START = 3745805490U;
+        static const AkUniqueID CHIME3STOP = 2451530218U;
+        static const AkUniqueID NPCCHIME1LONG = 1795884461U;
+        static const AkUniqueID NPCCHIME1SHORT = 4090504235U;
+        static const AkUniqueID NPCCHIME2LONG = 1704435946U;
+        static const AkUniqueID NPCCHIME2SHORT = 2400837350U;
+        static const AkUniqueID NPCCHIME3LONG = 4264886911U;
+        static const AkUniqueID NPCCHIME3SHORT = 2846910609U;
     } // namespace EVENTS
 
     namespace BANKS

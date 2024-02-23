@@ -30,7 +30,7 @@
 						</Bus>
 						<Bus Name="Chimes" ID="{D0C63F08-8AA6-4FA4-8FBA-ED045E95E039}">
 							<PropertyList>
-								<Property Name="Color" Type="int16" Value="2"/>
+								<Property Name="Color" Type="int16" Value="15"/>
 								<Property Name="OverrideColor" Type="bool" Value="True"/>
 							</PropertyList>
 						</Bus>
