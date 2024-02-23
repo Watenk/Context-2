@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlaySoundTest : MonoBehaviour
+public class StopChimeX : MonoBehaviour
 {
-    public AK.Wwise.Event SomeSound;
+    public AK.Wwise.Event SomeSound1;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,9 +14,9 @@ public class PlaySoundTest : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space))
+        if(Input.GetKeyUp(KeyCode.X))
         {
-            SomeSound.Post(gameObject);
+            SomeSound1.Post(gameObject);
         }
     }
 }

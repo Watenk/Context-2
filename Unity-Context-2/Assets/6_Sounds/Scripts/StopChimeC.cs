@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StopChimeE : MonoBehaviour
+public class StopChimeC : MonoBehaviour
 {
     public AK.Wwise.Event SomeSound1;
     // Start is called before the first frame update
@@ -14,7 +14,7 @@ public class StopChimeE : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyUp(KeyCode.E))
+        if(Input.GetKeyUp(KeyCode.C))
         {
             SomeSound1.Post(gameObject);
         }

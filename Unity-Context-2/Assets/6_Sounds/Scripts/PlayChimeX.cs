@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayChimeE : MonoBehaviour
+public class PlayChimeTestX : MonoBehaviour
 {
     public AK.Wwise.Event SomeSound;
     // Start is called before the first frame update
@@ -14,7 +14,7 @@ public class PlayChimeE : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.X))
         {
             SomeSound.Post(gameObject);
         }

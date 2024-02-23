@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StopSoundTest : MonoBehaviour
+public class PlaySoundTestZ : MonoBehaviour
 {
     public AK.Wwise.Event SomeSound;
     // Start is called before the first frame update
@@ -14,7 +14,7 @@ public class StopSoundTest : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyUp(KeyCode.Space))
+        if(Input.GetKeyDown(KeyCode.Z))
         {
             SomeSound.Post(gameObject);
         }

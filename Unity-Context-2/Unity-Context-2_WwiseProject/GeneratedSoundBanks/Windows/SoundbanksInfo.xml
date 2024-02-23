@@ -38,7 +38,7 @@
 				<AuxBus Id="3477531017" Name="EmotionsDimension"/>
 			</AuxBusses>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{4A2C94CF-0800-37D7-8A2E-950C79A5126D}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{E3912A4A-493A-2DAB-FC4C-2852D7335418}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -100,7 +100,7 @@
 				</File>
 				<File Id="775312337" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>chimes-community3Start1.wav</ShortName>
-					<CachePath>SFX/chimes-community3Start1_B3CDE7DF.wem</CachePath>
+					<CachePath>SFX/chimes-community3Start1_AA9D67F0.wem</CachePath>
 				</File>
 				<File Id="817811054" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>community1\chimes-community1F#.wav</ShortName>
@@ -108,7 +108,7 @@
 				</File>
 				<File Id="892371228" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>chimes-community2Start.wav</ShortName>
-					<CachePath>SFX/chimes-community2Start_1BD7A104.wem</CachePath>
+					<CachePath>SFX/chimes-community2Start_28A75622.wem</CachePath>
 				</File>
 				<File Id="1050643609" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>community1\chimes-community1G#.wav</ShortName>
@@ -280,5 +280,5 @@
 			</AuxBusses>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{E27A84C8-ED4E-172C-DE58-39DDED5C63C5}</FileHash>
+	<FileHash>{1AA88379-D386-EA2C-186B-3A6EB6884C97}</FileHash>
 </SoundBanksInfo>
