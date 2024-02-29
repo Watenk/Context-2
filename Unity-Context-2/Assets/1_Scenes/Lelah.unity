@@ -123,6 +123,73 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &3821181
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3821184}
+  - component: {fileID: 3821183}
+  - component: {fileID: 3821182}
+  m_Layer: 0
+  m_Name: ChimeUtest
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &3821182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3821181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b587926da7dc03143b5f9195ec38e03a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SomeSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 2cab63e7bcc067a46a1587a8e72fbc61,
+      type: 2}
+--- !u!114 &3821183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3821181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6282854dedf68f1478c154afe32c922d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SomeSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 6b74670ff36b8f74690fadae7994b6d3,
+      type: 2}
+--- !u!4 &3821184
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3821181}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.0649414, y: 1.4236622, z: 0.19455242}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &53769667
 GameObject:
   m_ObjectHideFlags: 0
@@ -689,7 +756,7 @@ MonoBehaviour:
   SomeSound:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 65c228648336e4f4ab57b4635919dc88,
+    WwiseObjectReference: {fileID: 11400000, guid: fbaef7c40bfa18e47a01aa9b8ca2934f,
       type: 2}
 --- !u!114 &1156708492
 MonoBehaviour:
@@ -706,7 +773,7 @@ MonoBehaviour:
   SomeSound1:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: a857195ac4962334aa88bc68f2e4e93d,
+    WwiseObjectReference: {fileID: 11400000, guid: 6275298527b94e7409883c2b2f416d27,
       type: 2}
 --- !u!1 &1490853604
 GameObject:
@@ -785,4 +852,5 @@ SceneRoots:
   - {fileID: 1490853607}
   - {fileID: 1156708489}
   - {fileID: 238133941}
+  - {fileID: 3821184}
   - {fileID: 53769672}

@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7f2e4986a5f83142837c1808767b4d1, type: 3}
   m_Name: A21F005E-32A4-4F0A-B58B-9CA2A6C61696
   m_EditorClassIdentifier: 
-  objectName: Chime1Start
-  id: 3097783492
+  objectName: Chime1Play
+  id: 3117609094
   guid: A21F005E-32A4-4F0A-B58B-9CA2A6C61696
