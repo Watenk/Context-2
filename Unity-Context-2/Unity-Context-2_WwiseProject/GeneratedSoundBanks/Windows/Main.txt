@@ -1,14 +1,21 @@
 Event	ID	Name			Wwise Object Path	Notes
+	120659352	Chime3Play			\Default Work Unit\Chimes\Community3\Chime3Play	
+	408897957	Chime2Play			\Default Work Unit\Chimes\Community2\Chime2Play	
 	632066680	Chime1Stop			\Default Work Unit\Chimes\Community1\Chime1Stop	
-	1569664137	Chime2Start			\Default Work Unit\Chimes\Community2\Chime2Start	
+	722374694	NPCChime1Confused			\Default Work Unit\Chimes\Community1\NPCChime1Confused	
+	1032095362	ChimeUPlay			\Default Work Unit\Chimes\Universal\ChimeUPlay	
+	1137344520	NPCChime3Confused			\Default Work Unit\Chimes\Community3\NPCChime3Confused	
+	1675108316	ChimeUStop			\Default Work Unit\Chimes\Universal\ChimeUStop	
 	1704435946	NPCChime2Long			\Default Work Unit\Chimes\Community2\NPCChime2Long	
 	1791974179	Chime2Stop			\Default Work Unit\Chimes\Community2\Chime2Stop	
 	1795884461	NPCChime1Long			\Default Work Unit\Chimes\Community1\NPCChime1Long	
 	2400837350	NPCChime2Short			\Default Work Unit\Chimes\Community2\NPCChime2Short	
 	2451530218	Chime3Stop			\Default Work Unit\Chimes\Community3\Chime3Stop	
 	2846910609	NPCChime3Short			\Default Work Unit\Chimes\Community3\NPCChime3Short	
-	3097783492	Chime1Start			\Default Work Unit\Chimes\Community1\Chime1Start	
-	3745805490	Chime3Start			\Default Work Unit\Chimes\Community3\Chime3Start	
+	2993939861	NPCChime2Confused			\Default Work Unit\Chimes\Community2\NPCChime2Confused	
+	3117609094	Chime1Play			\Default Work Unit\Chimes\Community1\Chime1Play	
+	3518065335	NPCChimeUShort			\Default Work Unit\Chimes\Universal\NPCChimeUShort	
+	3686713601	NPCChimeULong			\Default Work Unit\Chimes\Universal\NPCChimeULong	
 	4090504235	NPCChime1Short			\Default Work Unit\Chimes\Community1\NPCChime1Short	
 	4264886911	NPCChime3Long			\Default Work Unit\Chimes\Community3\NPCChime3Long	
 
@@ -20,28 +27,41 @@ Audio Bus	ID	Name			Wwise Object Path	Notes
 
 Auxiliary Bus	ID	Name			Wwise Object Path	Notes
 	841660990	TestVerb			\Default Work Unit\Master Audio Bus\TestVerb	
+	3268711830	TestEcho			\Default Work Unit\Master Audio Bus\TestEcho	
 	3477531017	EmotionsDimension			\Default Work Unit\Master Audio Bus\EmotionsDimension	
 
 Effect plug-ins	ID	Name	Type				Notes
 	48620415	Have_U_Ever_Been_Outside	Wwise RoomVerb			
+	1588715066	Echoes_Linear	Wwise Delay			
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	191050772	chimes-community2End1	C:\Users\LvanE\GameDev\Context-2\Unity-Context-2\Unity-Context-2_WwiseProject\.cache\Windows\SFX\chimes-community2End1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chimes\community2\community2End\chimes-community2End1		168096
-	200744382	chimes-community1C#High	C:\Users\LvanE\GameDev\Context-2\Unity-Context-2\Unity-Context-2_WwiseProject\.cache\Windows\SFX\community1\chimes-community1C#High_09CA549B.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chimes\community1\chimes-community1C#High		196812
-	220254561	chimes-community2End3	C:\Users\LvanE\GameDev\Context-2\Unity-Context-2\Unity-Context-2_WwiseProject\.cache\Windows\SFX\chimes-community2End3_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chimes\community2\community2End\chimes-community2End3		183716
-	234843785	chimes-community1C	C:\Users\LvanE\GameDev\Context-2\Unity-Context-2\Unity-Context-2_WwiseProject\.cache\Windows\SFX\community1\chimes-community1C_4B72FBFF.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chimes\community1\chimes-community1C		204512
-	274837945	chimes-community3End1	C:\Users\LvanE\GameDev\Context-2\Unity-Context-2\Unity-Context-2_WwiseProject\.cache\Windows\SFX\chimes-community3End1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chimes\community3\community3End\chimes-community3End1		152096
-	276159906	chimes-community1C#	C:\Users\LvanE\GameDev\Context-2\Unity-Context-2\Unity-Context-2_WwiseProject\.cache\Windows\SFX\community1\chimes-community1C#_48CC29FF.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chimes\community1\chimes-community1C#		261988
-	355458017	chimes-community2End2	C:\Users\LvanE\GameDev\Context-2\Unity-Context-2\Unity-Context-2_WwiseProject\.cache\Windows\SFX\chimes-community2End2_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chimes\community2\community2End\chimes-community2End2		168096
-	374736244	chimes-community1A#	C:\Users\LvanE\GameDev\Context-2\Unity-Context-2\Unity-Context-2_WwiseProject\.cache\Windows\SFX\community1\chimes-community1A#_7BAD7AF1.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chimes\community1\chimes-community1A#		211796
-	490430711	chimes-community3End2	C:\Users\LvanE\GameDev\Context-2\Unity-Context-2\Unity-Context-2_WwiseProject\.cache\Windows\SFX\chimes-community3End2_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chimes\community3\community3End\chimes-community3End2		343776
-	573591343	chimes-community3Start	C:\Users\LvanE\GameDev\Context-2\Unity-Context-2\Unity-Context-2_WwiseProject\.cache\Windows\SFX\community3\chimes-community3Start_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chimes\community3\chimes-community3Start		97968
-	632147614	chimes-community3Start2	C:\Users\LvanE\GameDev\Context-2\Unity-Context-2\Unity-Context-2_WwiseProject\.cache\Windows\SFX\chimes-community3Start2_DBBAE844.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chimes\community3\community3Start\chimes-community3Start2		72096
-	741005136	chimes-community1D#	C:\Users\LvanE\GameDev\Context-2\Unity-Context-2\Unity-Context-2_WwiseProject\.cache\Windows\SFX\community1\chimes-community1D#_A8446D5E.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chimes\community1\chimes-community1D#		269564
-	753953363	chimes-universal1	C:\Users\LvanE\GameDev\Context-2\Unity-Context-2\Unity-Context-2_WwiseProject\.cache\Windows\SFX\chimes-universal1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chimes\universal\chimes-universal1		204096
-	775169254	chimes-community1F	C:\Users\LvanE\GameDev\Context-2\Unity-Context-2\Unity-Context-2_WwiseProject\.cache\Windows\SFX\community1\chimes-community1F_82D80226.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chimes\community1\chimes-community1F		271584
-	775312337	chimes-community3Start1	C:\Users\LvanE\GameDev\Context-2\Unity-Context-2\Unity-Context-2_WwiseProject\.cache\Windows\SFX\chimes-community3Start1_B3CDE7DF.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chimes\community3\community3Start\chimes-community3Start1		72096
-	817811054	chimes-community1F#	C:\Users\LvanE\GameDev\Context-2\Unity-Context-2\Unity-Context-2_WwiseProject\.cache\Windows\SFX\community1\chimes-community1F#_F13B1AE7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chimes\community1\chimes-community1F#		254884
-	892371228	chimes-community2Start	C:\Users\LvanE\GameDev\Context-2\Unity-Context-2\Unity-Context-2_WwiseProject\.cache\Windows\SFX\chimes-community2Start_1BD7A104.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chimes\community2\chimes-community2Start		96096
-	1050643609	chimes-community1G#	C:\Users\LvanE\GameDev\Context-2\Unity-Context-2\Unity-Context-2_WwiseProject\.cache\Windows\SFX\community1\chimes-community1G#_616D30F2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chimes\community1\chimes-community1G#		225936
+	78035267	chimes-community2-3	C:\Users\LvanE\GameDev\Context-2\Unity-Context-2\Unity-Context-2_WwiseProject\.cache\Windows\SFX\community2\chimes-community2-3_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chimes\community2\chimes-community2\chimes-community2-3		768096
+	85199183	chimes-universal9	C:\Users\LvanE\GameDev\Context-2\Unity-Context-2\Unity-Context-2_WwiseProject\.cache\Windows\SFX\universal\chimes-universal9_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chimes\universal\chimes-universal9		263632
+	146898835	chimes-universal2	C:\Users\LvanE\GameDev\Context-2\Unity-Context-2\Unity-Context-2_WwiseProject\.cache\Windows\SFX\universal\chimes-universal2_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chimes\universal\chimes-universal2		378596
+	200744382	chimes-community1C#High	C:\Users\LvanE\GameDev\Context-2\Unity-Context-2\Unity-Context-2_WwiseProject\.cache\Windows\SFX\community1\chimes-community1C#High_09CA549B.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chimes\community1\chimes-community1\chimes-community1C#High		196812
+	211848107	chimes-community2-2	C:\Users\LvanE\GameDev\Context-2\Unity-Context-2\Unity-Context-2_WwiseProject\.cache\Windows\SFX\community2\chimes-community2-2_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chimes\community2\chimes-community2\chimes-community2-2		768096
+	217292502	chimes-universal10	C:\Users\LvanE\GameDev\Context-2\Unity-Context-2\Unity-Context-2_WwiseProject\.cache\Windows\SFX\universal\chimes-universal10_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chimes\universal\chimes-universal10		374096
+	234843785	chimes-community1C	C:\Users\LvanE\GameDev\Context-2\Unity-Context-2\Unity-Context-2_WwiseProject\.cache\Windows\SFX\community1\chimes-community1C_4B72FBFF.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chimes\community1\chimes-community1\chimes-community1C		204512
+	274837946	chimes-community3End1	C:\Users\LvanE\GameDev\Context-2\Unity-Context-2\Unity-Context-2_WwiseProject\.cache\Windows\SFX\community3\chimes-community3End1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chimes\community3\community3End\chimes-community3End1		152096
+	276159906	chimes-community1C#	C:\Users\LvanE\GameDev\Context-2\Unity-Context-2\Unity-Context-2_WwiseProject\.cache\Windows\SFX\community1\chimes-community1C#_48CC29FF.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chimes\community1\chimes-community1\chimes-community1C#		261988
+	374736244	chimes-community1A#	C:\Users\LvanE\GameDev\Context-2\Unity-Context-2\Unity-Context-2_WwiseProject\.cache\Windows\SFX\community1\chimes-community1A#_7BAD7AF1.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chimes\community1\chimes-community1\chimes-community1A#		211796
+	535706050	chimes-community3End2	C:\Users\LvanE\GameDev\Context-2\Unity-Context-2\Unity-Context-2_WwiseProject\.cache\Windows\SFX\community3\chimes-community3End2_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chimes\community3\community3End\chimes-community3End2		343776
+	631739992	chimes-universal5	C:\Users\LvanE\GameDev\Context-2\Unity-Context-2\Unity-Context-2_WwiseProject\.cache\Windows\SFX\universal\chimes-universal5_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chimes\universal\chimes-universal5		316280
+	632147615	chimes-community3Start2	C:\Users\LvanE\GameDev\Context-2\Unity-Context-2\Unity-Context-2_WwiseProject\.cache\Windows\SFX\community3\chimes-community3Start2_DBBAE844.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chimes\community3\community3Start\chimes-community3Start2		72096
+	641973831	chimes-universal3	C:\Users\LvanE\GameDev\Context-2\Unity-Context-2\Unity-Context-2_WwiseProject\.cache\Windows\SFX\universal\chimes-universal3_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chimes\universal\chimes-universal3		359096
+	667630877	chimes-community2-1	C:\Users\LvanE\GameDev\Context-2\Unity-Context-2\Unity-Context-2_WwiseProject\.cache\Windows\SFX\community2\chimes-community2-1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chimes\community2\chimes-community2\chimes-community2-1		768096
+	716981537	chimes-universal6	C:\Users\LvanE\GameDev\Context-2\Unity-Context-2\Unity-Context-2_WwiseProject\.cache\Windows\SFX\universal\chimes-universal6_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chimes\universal\chimes-universal6		403940
+	741005136	chimes-community1D#	C:\Users\LvanE\GameDev\Context-2\Unity-Context-2\Unity-Context-2_WwiseProject\.cache\Windows\SFX\community1\chimes-community1D#_A8446D5E.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chimes\community1\chimes-community1\chimes-community1D#		269564
+	752477891	chimes-community2Confused	C:\Users\LvanE\GameDev\Context-2\Unity-Context-2\Unity-Context-2_WwiseProject\.cache\Windows\SFX\community2\chimes-community2Confused_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chimes\community2\chimes-community2Confused		930668
+	753953363	chimes-universal1	C:\Users\LvanE\GameDev\Context-2\Unity-Context-2\Unity-Context-2_WwiseProject\.cache\Windows\SFX\chimes-universal1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chimes\universal\chimes-universal1		402096
+	775169254	chimes-community1F	C:\Users\LvanE\GameDev\Context-2\Unity-Context-2\Unity-Context-2_WwiseProject\.cache\Windows\SFX\community1\chimes-community1F_82D80226.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chimes\community1\chimes-community1\chimes-community1F		271584
+	775312338	chimes-community3Start1	C:\Users\LvanE\GameDev\Context-2\Unity-Context-2\Unity-Context-2_WwiseProject\.cache\Windows\SFX\community3\chimes-community3Start1_AA9D67F0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chimes\community3\community3Start\chimes-community3Start1		72096
+	780278558	chimes-community3Confused	C:\Users\LvanE\GameDev\Context-2\Unity-Context-2\Unity-Context-2_WwiseProject\.cache\Windows\SFX\community3\chimes-community3Confused_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chimes\community3\chimes-community3Confused		293776
+	817811054	chimes-community1F#	C:\Users\LvanE\GameDev\Context-2\Unity-Context-2\Unity-Context-2_WwiseProject\.cache\Windows\SFX\community1\chimes-community1F#_F13B1AE7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chimes\community1\chimes-community1\chimes-community1F#		254884
+	851559997	chimes-universal7	C:\Users\LvanE\GameDev\Context-2\Unity-Context-2\Unity-Context-2_WwiseProject\.cache\Windows\SFX\universal\chimes-universal7_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chimes\universal\chimes-universal7		326596
+	914666976	chimes-universal8	C:\Users\LvanE\GameDev\Context-2\Unity-Context-2\Unity-Context-2_WwiseProject\.cache\Windows\SFX\universal\chimes-universal8_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chimes\universal\chimes-universal8		302564
+	955222108	chimes-community2-4	C:\Users\LvanE\GameDev\Context-2\Unity-Context-2\Unity-Context-2_WwiseProject\.cache\Windows\SFX\community2\chimes-community2-4_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chimes\community2\chimes-community2\chimes-community2-4		768096
+	997782913	chimes-universal4	C:\Users\LvanE\GameDev\Context-2\Unity-Context-2\Unity-Context-2_WwiseProject\.cache\Windows\SFX\universal\chimes-universal4_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chimes\universal\chimes-universal4		384076
+	1040139626	chimes-community1Confused	C:\Users\LvanE\GameDev\Context-2\Unity-Context-2\Unity-Context-2_WwiseProject\.cache\Windows\SFX\community1\chimes-community1Confused_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chimes\community1\chimes-community1Confused		371120
+	1050643609	chimes-community1G#	C:\Users\LvanE\GameDev\Context-2\Unity-Context-2\Unity-Context-2_WwiseProject\.cache\Windows\SFX\community1\chimes-community1G#_616D30F2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chimes\community1\chimes-community1\chimes-community1G#		225936
 

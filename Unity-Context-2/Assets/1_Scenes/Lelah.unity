@@ -123,6 +123,73 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &3821181
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3821184}
+  - component: {fileID: 3821183}
+  - component: {fileID: 3821182}
+  m_Layer: 0
+  m_Name: ChimeUtest
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &3821182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3821181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b587926da7dc03143b5f9195ec38e03a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SomeSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 2cab63e7bcc067a46a1587a8e72fbc61,
+      type: 2}
+--- !u!114 &3821183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3821181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6282854dedf68f1478c154afe32c922d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SomeSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 6b74670ff36b8f74690fadae7994b6d3,
+      type: 2}
+--- !u!4 &3821184
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3821181}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.0649414, y: 1.4236622, z: 0.19455242}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &53769667
 GameObject:
   m_ObjectHideFlags: 0
@@ -200,6 +267,73 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.7179775, y: 1.9640126, z: -9.724553}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &238133938
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 238133941}
+  - component: {fileID: 238133940}
+  - component: {fileID: 238133939}
+  m_Layer: 0
+  m_Name: Chime3Test
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &238133939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 238133938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71601dccdbb5c8a4b82a6b7be358f49e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SomeSound1:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 686ced3ee31972945812702c360ce778,
+      type: 2}
+--- !u!114 &238133940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 238133938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e9b818bc528c1147a5619a1d10dbf2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SomeSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: a6a9327f4b708214181988b8678e8518,
+      type: 2}
+--- !u!4 &238133941
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 238133938}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.0649414, y: 1.4236622, z: 0.19455242}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -584,7 +718,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1156708489}
   - component: {fileID: 1156708491}
-  - component: {fileID: 1156708490}
+  - component: {fileID: 1156708492}
   m_Layer: 0
   m_Name: Chime2Test
   m_TagString: Untagged
@@ -607,23 +741,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1156708490
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1156708488}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d4e8a472ff02624db0c2afce8965a21, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SomeSound1:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 686ced3ee31972945812702c360ce778,
-      type: 2}
 --- !u!114 &1156708491
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -639,7 +756,24 @@ MonoBehaviour:
   SomeSound:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: a6a9327f4b708214181988b8678e8518,
+    WwiseObjectReference: {fileID: 11400000, guid: fbaef7c40bfa18e47a01aa9b8ca2934f,
+      type: 2}
+--- !u!114 &1156708492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1156708488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d4e8a472ff02624db0c2afce8965a21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SomeSound1:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 6275298527b94e7409883c2b2f416d27,
       type: 2}
 --- !u!1 &1490853604
 GameObject:
@@ -689,7 +823,7 @@ MonoBehaviour:
   SomeSound:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 65c228648336e4f4ab57b4635919dc88,
+    WwiseObjectReference: {fileID: 11400000, guid: 7fab2a57940660a47b4b42bacc697b0e,
       type: 2}
 --- !u!114 &1490853609
 MonoBehaviour:
@@ -706,7 +840,7 @@ MonoBehaviour:
   SomeSound:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: a857195ac4962334aa88bc68f2e4e93d,
+    WwiseObjectReference: {fileID: 11400000, guid: fc5c7a0e54c655448a5726fa07b0620b,
       type: 2}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
@@ -717,4 +851,6 @@ SceneRoots:
   - {fileID: 918135819}
   - {fileID: 1490853607}
   - {fileID: 1156708489}
+  - {fileID: 238133941}
+  - {fileID: 3821184}
   - {fileID: 53769672}
