@@ -8,19 +8,20 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance { get; private set; }
     public PlayerController Player;
 
-    private Dictionary<Type, System.Object> services = new Dictionary<Type, System.Object>();
-    private List<IUpdateable> updateables = new List<IUpdateable>();
-    private List<IFixedUpdateable> fixedUpdateables = new List<IFixedUpdateable>();
+    private static Dictionary<Type, System.Object> services = new Dictionary<Type, System.Object>();
+    private static List<IUpdateable> updateables = new List<IUpdateable>();
+    private static List<IFixedUpdateable> fixedUpdateables = new List<IFixedUpdateable>();
 
     //------------------------------------------------------------
 
     public void Awake(){
         Instance = this;
 
-        AddService(new InputManager());
-        AddService(new GroupsManager());
         AddService(new TimerManager());
-        AddService(new AudioManager());
+        AddService(new SoundManager());
+        AddService(new CommunityManager());
+        AddService(new InputManager());
+        AddService(new ChimeManager());
 
         #if UNITY_EDITOR
             if (Player == null) { Debug.LogError("Player isn't set in GameManager"); }
@@ -35,7 +36,7 @@ public class GameManager : MonoBehaviour
         foreach (IFixedUpdateable current in fixedUpdateables) { current.OnFixedUpdate(); }
     }
 
-    public T GetService<T>(){
+    public static T GetService<T>(){
         services.TryGetValue(typeof(T), out System.Object service);
 
         #if UNITY_EDITOR
@@ -47,6 +48,10 @@ public class GameManager : MonoBehaviour
 
     public void SetPlayer(PlayerController player){
         Player = player;
+    }
+
+    public static T GetComponent<T>(GameObject gameObject){
+        return gameObject.GetComponent<T>();
     }
 
     //-------------------------------------------------------------

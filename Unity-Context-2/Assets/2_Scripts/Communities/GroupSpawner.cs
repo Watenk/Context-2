@@ -11,7 +11,7 @@ public class GroupSpawner : MonoBehaviour
     //--------------------------------------------------------
     
     void Start(){
-        GameManager.Instance.GetService<GroupsManager>().AddGroup(AgentType, GroupSize, transform.position, SpawnRadius);        
-        GameObject.Destroy(this.gameObject);
+        //GameManager.GetService<GroupsManager>().AddGroup(AgentType, GroupSize, transform.position, SpawnRadius);        
+        //GameObject.Destroy(this.gameObject);
     }
 }

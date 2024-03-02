@@ -31,14 +31,14 @@ public class AgentWanderingState : BaseState<Agent>
     }
 
     public override void OnExit(){
-        owner.SetDestination(owner.transform.position, 0.1f);
+        owner.SetDestination(owner.GameObject.transform.position, 0.1f);
         owner.NavMeshAgent.isStopped = true;
     }
 
     //---------------------------------------------
 
     private void CheckState(){
-        if (Vector3.Distance(owner.transform.position, player.transform.position) < lookAtPlayerDistance){
+        if (Vector3.Distance(owner.GameObject.transform.position, player.transform.position) < lookAtPlayerDistance){
             owner.fsm.SwitchState(typeof(AgentLookAtPlayerState));
         }
     }

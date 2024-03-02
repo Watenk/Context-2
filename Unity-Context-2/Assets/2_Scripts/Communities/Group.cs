@@ -28,7 +28,7 @@ public class Group
 
     public void DestroyAgents(){
         foreach (Agent current in agents){
-            GameObject.Destroy(current.gameObject);
+            GameObject.Destroy(current.GameObject);
         }
     }
 
@@ -50,7 +50,6 @@ public class Group
                 if (agent == null) { Debug.LogError(agentPrefab.ToString() + " doesn't contain an agent"); }
             #endif
 
-            agent.InitAgent(this);
             agents.Add(agent);
         }
     }

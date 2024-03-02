@@ -1,16 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.IO;
-using Unity.VisualScripting.FullSerializer;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class Agent : MonoBehaviour
+public class Agent : IFixedUpdateable
 {
     public Group Group { get; private set; }
     public bool DestinationReached { get; private set; }
     public NavMeshAgent NavMeshAgent { get; private set; }
     public Fsm<Agent> fsm { get; private set; }
+    public GameObject GameObject { get; private set; }
 
     // Pathfinding
     private List<Vector3> path = new List<Vector3>();
@@ -21,9 +20,9 @@ public class Agent : MonoBehaviour
 
     //----------------------------------------
 
-    public void InitAgent(Group group){
-        Group = group;
-        NavMeshAgent = GetComponent<NavMeshAgent>();
+    public Agent(GameObject gameObject){
+        GameObject = gameObject;
+        NavMeshAgent = GameManager.GetComponent<NavMeshAgent>(GameObject);
         stepDistance = AgentSettings.Instance.StepDistance;
         wanderFromHomeDistance = AgentSettings.Instance.WanderFromHomeDistance;
         NavMeshAgent.speed = Random.Range(AgentSettings.Instance.MinSpeed, AgentSettings.Instance.MaxSpeed);
@@ -33,9 +32,10 @@ public class Agent : MonoBehaviour
            new AgentIdleState(),
            new AgentFollowingState(),
            new AgentWanderingState(),
-           new AgentLookAtPlayerState()
+           new AgentLookAtPlayerState(),
+           new AgentDepressedState()
         );
-        fsm.SwitchState(typeof(AgentWanderingState));
+        fsm.SwitchState(typeof(AgentDepressedState));
 
         #if UNITY_EDITOR
             if (NavMeshAgent == null) { Debug.LogError(gameObject.name + " doesn't contain a navmeshAgent"); }
@@ -46,8 +46,7 @@ public class Agent : MonoBehaviour
         #endif
     }
 
-    public void FixedUpdate(){
-        
+    public void OnFixedUpdate(){
         fsm.OnUpdate();
         UpdatePath();
     }
