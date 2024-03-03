@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GroupSpawner : MonoBehaviour
 {
-    public AgentType AgentType;
+    public ChimeInputs AgentType;
     public int GroupSize;
     public float SpawnRadius; [Tooltip("Range around the GroupSpawner agents will spawn in")]
 

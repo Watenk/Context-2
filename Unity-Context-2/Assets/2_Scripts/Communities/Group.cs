@@ -5,18 +5,18 @@ using UnityEngine;
 
 public class Group
 {
-    public AgentType AgentType { get; private set; }
+    public ChimeInputs AgentType { get; private set; }
     public int Size { get; private set; }
     public Vector3 Home { get; private set; }
     public float SpawnRadius { get; private set; }
 
     private List<Agent> agents = new List<Agent>();
     private List<AgentPrefab> agentPrefabs = new List<AgentPrefab>();
-    private Dictionary<AgentType, float> affection = new Dictionary<AgentType, float>();
+    private Dictionary<ChimeInputs, float> affection = new Dictionary<ChimeInputs, float>();
 
     //-----------------------------------------------
 
-    public Group(AgentType agentType, int groupSize, Vector3 homePos, float spawnRadius){
+    public Group(ChimeInputs agentType, int groupSize, Vector3 homePos, float spawnRadius){
         AgentType = agentType;
         Size = groupSize;
         Home = homePos;

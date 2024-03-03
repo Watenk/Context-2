@@ -44,12 +44,15 @@ public class ChimeManager : IFixedUpdateable
     //------------------------------------------------
 
     private void OnChime(Chime chime){
-        currentChimes.Add(chime);
-        chimeResetTimer.ResetTime();
 
-        foreach (TaskChime current in taskChimes){
-            if (AreChimeSequencesEqual(currentChimes, current.chimes)){
-                SetState(current.chimeTask);
+        if (fsm.currentState == fsm.GetState(typeof(ChimeIdleState))){
+            currentChimes.Add(chime);
+            chimeResetTimer.ResetTime();
+
+            foreach (TaskChime current in taskChimes){
+                if (AreChimeSequencesEqual(currentChimes, current.chimes)){
+                    SetState(current.chimeTask);
+                }
             }
         }
     }

@@ -4,19 +4,19 @@ using UnityEngine;
 
 public class CommunityManager
 {
-    private Dictionary<AgentType, Community> communities = new Dictionary<AgentType, Community>();
+    private Dictionary<ChimeInputs, Community> communities = new Dictionary<ChimeInputs, Community>();
 
     //-------------------------------------------
 
     public CommunityManager(){
-        int agentTypeCount = AgentType.GetValues(typeof(AgentType)).Length;
+        int agentTypeCount = ChimeInputs.GetValues(typeof(ChimeInputs)).Length;
 
         for (int i = 0; i < agentTypeCount; i++){
-            Add((AgentType)i, new Community());
+            Add((ChimeInputs)i, new Community());
         }
     }
 
-    public Community Get(AgentType agentType){
+    public Community Get(ChimeInputs agentType){
         communities.TryGetValue(agentType, out Community community);
 
         #if UNITY_EDITOR
@@ -28,7 +28,7 @@ public class CommunityManager
 
     //----------------------------------------------
 
-    private void Add(AgentType agentType, Community newCommunity){
+    private void Add(ChimeInputs agentType, Community newCommunity){
         communities.Add(agentType, newCommunity);
     }
 }
