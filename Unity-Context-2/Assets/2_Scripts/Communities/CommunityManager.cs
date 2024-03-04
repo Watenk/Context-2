@@ -15,14 +15,18 @@ public class CommunityManager : IFixedUpdateable
         Add(CommunityTypes.square);
     }
 
-    public void AddGroup(CommunityTypes community, int size, Vector3 pos, float spawnRadius){
-        Get(community).AddGroup(size, pos, spawnRadius);
-    }
-
     public void OnFixedUpdate(){
         foreach (KeyValuePair<CommunityTypes, Community> kvp in communities){
             kvp.Value.OnFixedUpdate();
         }
+    }
+
+    public void AddGroup(CommunityTypes communityType, int size, Vector3 pos, float spawnRadius){
+        Get(communityType).AddGroup(size, pos, spawnRadius);
+    }
+
+    public void AddProblem(CommunityTypes communityType, Problem problem){
+        Get(communityType).AddProblem(problem);
     }
 
     //----------------------------------------------
