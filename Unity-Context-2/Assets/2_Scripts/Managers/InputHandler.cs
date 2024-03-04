@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class InputManager : IUpdateable
+public class InputHandler : IUpdateable
 {
     public event Action<Vector2> OnPlayerMove;
     public event Action<Chime> OnChime;
@@ -17,13 +17,13 @@ public class InputManager : IUpdateable
 
     //---------------------------------------------------------
 
-    public InputManager(){
+    public InputHandler(){
         timerManager = GameManager.GetService<TimerManager>();
 
-        chimeTimers.Add("square", timerManager.AddTimer(ChimeSettings.Instance.LongChimeTime));
-        chimeTimers.Add("triangle", timerManager.AddTimer(ChimeSettings.Instance.LongChimeTime));
-        chimeTimers.Add("circle", timerManager.AddTimer(ChimeSettings.Instance.LongChimeTime));
-        chimeTimers.Add("global", timerManager.AddTimer(ChimeSettings.Instance.LongChimeTime));
+        chimeTimers.Add("square", timerManager.AddTimer(ChimeSettings.Instance.LongChimeLenght));
+        chimeTimers.Add("triangle", timerManager.AddTimer(ChimeSettings.Instance.LongChimeLenght));
+        chimeTimers.Add("circle", timerManager.AddTimer(ChimeSettings.Instance.LongChimeLenght));
+        chimeTimers.Add("global", timerManager.AddTimer(ChimeSettings.Instance.LongChimeLenght));
 
         chimeBools.Add("square", false);
         chimeBools.Add("triangle", false);

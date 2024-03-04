@@ -6,5 +6,22 @@ public class Community
 {
     private List<Group> groups = new List<Group>();
     private List<Problem> problems = new List<Problem>();
-    // What chimes learned?
+    private List<ChimeSequences> chimeSequences = new List<ChimeSequences>();
+
+    // References
+    private ChimeSequencer chimeSequencer;
+
+    //------------------------------------------------
+
+    public Community(){
+        chimeSequencer = GameManager.GetService<ChimeSequencer>();
+
+        chimeSequencer.OnChimeSequence += OnChimeSequence;
+    }
+
+    //--------------------------------------------------
+
+    private void OnChimeSequence(ChimeSequences chimeSequence){
+        
+    }
 }

@@ -13,11 +13,29 @@ MonoBehaviour:
   m_Name: ChimeSettings
   m_EditorClassIdentifier: 
   ChimeResetTime: 2
-  LongChimeTime: 1
-  taskChimes:
-  - chimeTask: 0
+  LongChimeLenght: 1
+  ChimeSequences:
+  - chimeSequence: 0
     chimes:
     - chimeInput: 0
       isLong: 0
     - chimeInput: 0
+      isLong: 0
+  - chimeSequence: 0
+    chimes:
+    - chimeInput: 2
+      isLong: 0
+    - chimeInput: 2
+      isLong: 0
+  - chimeSequence: 0
+    chimes:
+    - chimeInput: 3
+      isLong: 0
+    - chimeInput: 3
+      isLong: 0
+  - chimeSequence: 0
+    chimes:
+    - chimeInput: 1
+      isLong: 0
+    - chimeInput: 1
       isLong: 0

@@ -24,6 +24,6 @@ public class ChimeSettings : ScriptableObject
     [Tooltip("Tile in seconds it takes for a chime chain to reset")]
     public float ChimeResetTime;
     [Tooltip("How long a button needs to be hold for it to be a long chime")]
-    public float LongChimeTime;
-    public List<TaskChime> taskChimes = new List<TaskChime>();
+    public float LongChimeLenght;
+    public List<ChimeSequence> ChimeSequences = new List<ChimeSequence>();
 }

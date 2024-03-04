@@ -8,14 +8,14 @@ public class AgentLookAtPlayerState : BaseState<Agent>
 
     // References
     private PlayerController player;
-    private InputManager inputManager;
+    private InputHandler inputManager;
 
     //---------------------------------------
 
     public override void OnAwake(){
         agentLookAtPlayerDistance = AgentSettings.Instance.LookAtPlayerDistance;
         player = GameManager.Instance.Player;
-        inputManager = GameManager.GetService<InputManager>();
+        inputManager = GameManager.GetService<InputHandler>();
 
         #if UNITY_EDITOR
             if (agentLookAtPlayerDistance == 0) { Debug.LogError("agentLookAtPlayerDistance is 0 in AgentSettings"); }

@@ -10,14 +10,14 @@ public class AgentFollowingState : BaseState<Agent>
     private float followPlayerSpeed;
 
     // References
-    private InputManager inputManager;
+    private InputHandler inputManager;
     private TimerManager timerManager;
     private PlayerController player;
 
     //-----------------------------------------
 
     public override void OnAwake(){
-        inputManager = GameManager.GetService<InputManager>();
+        inputManager = GameManager.GetService<InputHandler>();
         timerManager = GameManager.GetService<TimerManager>();
         player = GameManager.Instance.Player;
         followPlayerAtDistance = AgentSettings.Instance.FollowPlayerAtDistance;

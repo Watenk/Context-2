@@ -4,8 +4,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [Serializable]
-public class TaskChime
+public class ChimeSequence
 {
-    public ChimeTasks chimeTask;
+    public ChimeSequences chimeSequence;
     public List<Chime> chimes = new List<Chime>();
 }

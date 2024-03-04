@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
     private float rotationSpeed;
 
     // References
-    private InputManager inputManager;
+    private InputHandler inputManager;
 
     //------------------------------------------------
 
@@ -25,7 +25,7 @@ public class PlayerController : MonoBehaviour
     }
 
     public void Start(){
-        inputManager = GameManager.GetService<InputManager>();
+        inputManager = GameManager.GetService<InputHandler>();
         speed = PlayerSettings.Instance.Speed;
         rotationSpeed = PlayerSettings.Instance.RotationSpeed;
 

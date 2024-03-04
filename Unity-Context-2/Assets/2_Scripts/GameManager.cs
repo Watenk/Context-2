@@ -20,8 +20,8 @@ public class GameManager : MonoBehaviour
         AddService(new TimerManager());
         AddService(new SoundManager());
         AddService(new CommunityManager());
-        AddService(new InputManager());
-        AddService(new ChimeManager());
+        AddService(new InputHandler());
+        AddService(new ChimeSequencer());
 
         #if UNITY_EDITOR
             if (Player == null) { Debug.LogError("Player isn't set in GameManager"); }
