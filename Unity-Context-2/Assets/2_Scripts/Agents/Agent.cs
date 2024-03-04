@@ -5,11 +5,11 @@ using UnityEngine.AI;
 
 public class Agent : IFixedUpdateable
 {
+    public GameObject GameObject { get; private set; }
     public Group Group { get; private set; }
     public bool DestinationReached { get; private set; }
     public NavMeshAgent NavMeshAgent { get; private set; }
     public Fsm<Agent> fsm { get; private set; }
-    public GameObject GameObject { get; private set; }
 
     // Pathfinding
     private List<Vector3> path = new List<Vector3>();
@@ -20,8 +20,9 @@ public class Agent : IFixedUpdateable
 
     //----------------------------------------
 
-    public Agent(GameObject gameObject){
+    public Agent(GameObject gameObject, Group group){
         GameObject = gameObject;
+        Group = group;
         NavMeshAgent = GameManager.GetComponent<NavMeshAgent>(GameObject);
         stepDistance = AgentSettings.Instance.StepDistance;
         wanderFromHomeDistance = AgentSettings.Instance.WanderFromHomeDistance;
@@ -35,7 +36,7 @@ public class Agent : IFixedUpdateable
            new AgentLookAtPlayerState(),
            new AgentDepressedState()
         );
-        fsm.SwitchState(typeof(AgentDepressedState));
+        fsm.SwitchState(typeof(AgentWanderingState));
 
         #if UNITY_EDITOR
             if (NavMeshAgent == null) { Debug.LogError(gameObject.name + " doesn't contain a navmeshAgent"); }

@@ -13,5 +13,5 @@ public class ChimeSequence
     [Tooltip("Chimes in the sequence")]
     public List<Chime> chimes = new List<Chime>();
     [Tooltip("What communities are affected by this chime")]
-    public List<Communities> affectedCommunities;
+    public List<CommunityTypes> affectedCommunities;
 }

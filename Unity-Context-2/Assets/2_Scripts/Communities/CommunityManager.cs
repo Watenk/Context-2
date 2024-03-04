@@ -2,22 +2,42 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CommunityManager
+public class CommunityManager : IFixedUpdateable
 {
-    private Dictionary<Communities, Community> communities = new Dictionary<Communities, Community>();
+    private Dictionary<CommunityTypes, Community> communities = new Dictionary<CommunityTypes, Community>();
 
     //-------------------------------------------
 
     public CommunityManager(){
 
-        Add(Communities.circle);
-        Add(Communities.triangle);
-        Add(Communities.square);
+        Add(CommunityTypes.circle);
+        Add(CommunityTypes.triangle);
+        Add(CommunityTypes.square);
+    }
+
+    public void AddGroup(CommunityTypes community, int size, Vector3 pos, float spawnRadius){
+        Get(community).AddGroup(size, pos, spawnRadius);
+    }
+
+    public void OnFixedUpdate(){
+        foreach (KeyValuePair<CommunityTypes, Community> kvp in communities){
+            kvp.Value.OnFixedUpdate();
+        }
     }
 
     //----------------------------------------------
 
-    private void Add(Communities community){
-        communities.Add(community, new Community(community));
+    private void Add(CommunityTypes communityType){
+        communities.Add(communityType, new Community(communityType));
+    }
+
+    private Community Get(CommunityTypes communityType){
+        communities.TryGetValue(communityType, out Community communityInstance);
+
+        #if UNITY_EDITOR
+            if (communityInstance == null) { Debug.LogWarning("communityInstance of " + communityType.ToString() + " is null"); }
+        #endif
+
+        return communityInstance;
     }
 }

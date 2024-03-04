@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Community
+public class Community : IFixedUpdateable
 {
-    private Communities community;
+    public CommunityTypes CommunityType { get; private set; }
     private List<Group> groups = new List<Group>();
     private List<Problem> problems = new List<Problem>();
+    // TODO: Add Problems
     // TODO: Add Affection for other communities
 
     // References
@@ -14,17 +15,27 @@ public class Community
 
     //------------------------------------------------
 
-    public Community(Communities community){
+    public Community(CommunityTypes communityType){
         chimeSequencer = GameManager.GetService<ChimeSequencer>();
-        this.community = community;
+        this.CommunityType = communityType;
 
         chimeSequencer.OnChimeSequence += OnChimeSequence;
+    }
+
+    public void OnFixedUpdate(){
+        foreach (Group currentGroup in groups){
+            currentGroup.OnFixedUpdate();
+        }
+    }
+
+    public void AddGroup(int size, Vector3 pos, float spawnRadius){
+        groups.Add(new Group(this, size, pos, spawnRadius));
     }
 
     //--------------------------------------------------
 
     private void OnChimeSequence(ChimeSequence chimeSequence){
-        if (chimeSequence.affectedCommunities.Contains(community)){
+        if (chimeSequence.affectedCommunities.Contains(CommunityType)){
             foreach (Group currentGroup in groups){
                 currentGroup.ExecuteTask(chimeSequence.chimeTask);
             }

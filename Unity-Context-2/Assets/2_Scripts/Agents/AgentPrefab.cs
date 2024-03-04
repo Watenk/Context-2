@@ -6,6 +6,6 @@ using UnityEngine;
 [Serializable]
 public class AgentPrefab 
 {
-    public ChimeInputs agentType;
+    public CommunityTypes CommunityType;
     public List<GameObject> prefabs = new List<GameObject>();
 }
