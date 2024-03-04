@@ -51,6 +51,17 @@ public class Agent : IFixedUpdateable
         UpdatePath();
     }
 
+    public void ExecuteTask(ChimeTasks chimeTask){
+        
+        switch (chimeTask){
+            case ChimeTasks.follow:
+                if (fsm.currentState == fsm.GetState(typeof(AgentLookAtPlayerState))){
+                    fsm.SwitchState(typeof(AgentFollowingState));
+                }
+                break;
+        }
+    }
+
     public void SetDestination(Vector3 pos, float stopDistance){
         this.stopDistance = stopDistance;
         NavMeshPath navMeshPath = new NavMeshPath();

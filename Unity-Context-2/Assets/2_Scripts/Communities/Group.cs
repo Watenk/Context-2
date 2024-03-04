@@ -12,7 +12,6 @@ public class Group
 
     private List<Agent> agents = new List<Agent>();
     private List<AgentPrefab> agentPrefabs = new List<AgentPrefab>();
-    private Dictionary<ChimeInputs, float> affection = new Dictionary<ChimeInputs, float>();
 
     //-----------------------------------------------
 
@@ -29,6 +28,12 @@ public class Group
     public void DestroyAgents(){
         foreach (Agent current in agents){
             GameObject.Destroy(current.GameObject);
+        }
+    }
+
+    public void ExecuteTask(ChimeTasks chimeTask){
+        foreach (Agent currentAgent in agents){
+            currentAgent.ExecuteTask(chimeTask);
         }
     }
 

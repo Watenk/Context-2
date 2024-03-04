@@ -3,12 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ChimeSequencer
+public class ChimeSequencer : IFixedUpdateable
 {
-    public event Action<ChimeSequences> OnChimeSequence;
+    public event Action<ChimeSequence> OnChimeSequence;
 
     private List<Chime> currentChimes = new List<Chime>();
-    private List<ChimeSequence> ChimeSequences = new List<ChimeSequence>();
+    private List<ChimeSequence> chimeSequences = new List<ChimeSequence>();
     private Timer chimeResetTimer;
     private bool playerIsEntering;
 
@@ -23,7 +23,7 @@ public class ChimeSequencer
         timerManager = GameManager.GetService<TimerManager>();
 
         chimeResetTimer = timerManager.AddTimer(ChimeSettings.Instance.ChimeResetTime);
-        ChimeSequences = ChimeSettings.Instance.ChimeSequences;
+        chimeSequences = ChimeSettings.Instance.ChimeSequences;
 
         inputManager.OnChime += OnChime;
     }
@@ -34,6 +34,20 @@ public class ChimeSequencer
         }
     }
 
+    public ChimeSequence GetChimeSequence(ChimeTasks chimeSequence){
+        foreach (ChimeSequence currentSequence in chimeSequences){
+            if (currentSequence.chimeTask == chimeSequence){
+                return currentSequence;
+            }
+        }
+
+        #if UNITY_EDITOR
+            Debug.LogError("GetChimeSequence didn't find the" + chimeSequence.ToString()  +  " chime in chimeSequences. Check the chimes in chimeSettings");
+        #endif
+
+        return null;
+    }
+
     //------------------------------------------------
 
     private void OnChime(Chime chime){
@@ -42,9 +56,9 @@ public class ChimeSequencer
         playerIsEntering = true;
         chimeResetTimer.ResetTime();
 
-        foreach (ChimeSequence currentSequence in ChimeSequences){
+        foreach (ChimeSequence currentSequence in chimeSequences){
             if (ChimeSequencesAreEqual(currentChimes, currentSequence.chimes)){
-                OnChimeSequence(currentSequence.chimeSequence);
+                OnChimeSequence(currentSequence);
                 ClearSequence();
             }
         }

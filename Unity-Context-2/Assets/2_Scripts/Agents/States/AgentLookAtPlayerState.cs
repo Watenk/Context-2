@@ -8,23 +8,17 @@ public class AgentLookAtPlayerState : BaseState<Agent>
 
     // References
     private PlayerController player;
-    private InputHandler inputManager;
 
     //---------------------------------------
 
     public override void OnAwake(){
         agentLookAtPlayerDistance = AgentSettings.Instance.LookAtPlayerDistance;
         player = GameManager.Instance.Player;
-        inputManager = GameManager.GetService<InputHandler>();
 
         #if UNITY_EDITOR
             if (agentLookAtPlayerDistance == 0) { Debug.LogError("agentLookAtPlayerDistance is 0 in AgentSettings"); }
             if (player == null) { Debug.LogError("Couldn't get player from GameManager"); }
         #endif
-    }
-
-    public override void OnStart(){
-        //inputManager.OnSpace += OnSpace;
     }
 
     public override void OnUpdate(){
@@ -34,7 +28,6 @@ public class AgentLookAtPlayerState : BaseState<Agent>
 
     public override void OnExit(){
         owner.NavMeshAgent.isStopped = false;
-        //inputManager.OnSpace -= OnSpace;
     }
 
     //-------------------------------------
@@ -49,9 +42,5 @@ public class AgentLookAtPlayerState : BaseState<Agent>
         if (Vector3.Distance(owner.GameObject.transform.position, player.transform.position) > agentLookAtPlayerDistance){
             owner.fsm.SwitchState(typeof(AgentWanderingState));
         }
-    }
-
-    private void OnSpace(){
-        owner.fsm.SwitchState(typeof(AgentFollowingState));
     }
 }

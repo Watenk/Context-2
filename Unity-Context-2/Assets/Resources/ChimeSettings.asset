@@ -15,27 +15,39 @@ MonoBehaviour:
   ChimeResetTime: 2
   LongChimeLenght: 1
   ChimeSequences:
-  - chimeSequence: 0
+  - Name: SquareFollow
+    chimeTask: 0
     chimes:
     - chimeInput: 0
       isLong: 0
     - chimeInput: 0
       isLong: 0
-  - chimeSequence: 0
-    chimes:
     - chimeInput: 2
       isLong: 0
     - chimeInput: 2
       isLong: 0
-  - chimeSequence: 0
+    affectedCommunities: 02000000
+  - Name: CircleFollow
+    chimeTask: 0
     chimes:
+    - chimeInput: 0
+      isLong: 0
+    - chimeInput: 0
+      isLong: 0
     - chimeInput: 3
       isLong: 0
     - chimeInput: 3
       isLong: 0
-  - chimeSequence: 0
+    affectedCommunities: 01000000
+  - Name: TriangleFollow
+    chimeTask: 0
     chimes:
-    - chimeInput: 1
+    - chimeInput: 0
+      isLong: 0
+    - chimeInput: 0
       isLong: 0
     - chimeInput: 1
       isLong: 0
+    - chimeInput: 1
+      isLong: 0
+    affectedCommunities: 00000000
