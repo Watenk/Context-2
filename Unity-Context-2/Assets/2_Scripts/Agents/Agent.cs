@@ -60,6 +60,10 @@ public class Agent : IFixedUpdateable
                     fsm.SwitchState(typeof(AgentFollowingState));
                 }
                 break;
+            
+            case ChimeTasks.solveProblem:
+                // TODO: Add solveproblem task
+                break;
         }
     }
 

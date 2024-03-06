@@ -87,7 +87,6 @@ public class ChimeSequencer : IFixedUpdateable
             }         
 
             if (chime1IsLong != chime2IsLong){
-                Debug.Log(chime1IsLong + ", " + chime2IsLong);
                 return false;
             }
         }

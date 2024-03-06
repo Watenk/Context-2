@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7f2e4986a5f83142837c1808767b4d1, type: 3}
   m_Name: A043182B-170E-4411-A635-567B02E7D0F1
   m_EditorClassIdentifier: 
-  objectName: Chime2Stop_01
-  id: 559572247
+  objectName: Chime2Stop
+  id: 1791974179
   guid: A043182B-170E-4411-A635-567B02E7D0F1

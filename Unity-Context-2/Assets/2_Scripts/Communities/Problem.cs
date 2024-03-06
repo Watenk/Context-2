@@ -3,17 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class Problem : IFixedUpdateable
+public class Problem
 {
     private List<CommunityTypes> problemSolvers;
     private Vector3 pos;
     private float detectRange;
-    private Timer detectTimer;
 
     // References
     private PlayerController player;
-    private TimerManager timerManager;
     private CommunityManager communityManager;
+    private ChimeSequencer chimeSequencer;
 
     //-------------------------------------------------
 
@@ -21,27 +20,23 @@ public class Problem : IFixedUpdateable
         this.problemSolvers = problemSolvers;
         this.pos = pos;
 
-        timerManager = GameManager.GetService<TimerManager>();
         communityManager = GameManager.GetService<CommunityManager>();
+        chimeSequencer = GameManager.GetService<ChimeSequencer>();
         player = GameManager.Instance.Player;
-        detectTimer = timerManager.AddTimer(5);
         detectRange = ProblemSettings.Instance.ProblemDetectRange;
+
+        chimeSequencer.OnChimeSequence += OnChimeSequence;
 
         #if UNITY_EDITOR
             if (detectRange == 0) { Debug.LogWarning("ProblemDetectRange in ProblemSettings is 0"); }
         #endif
     }
 
-    public void OnFixedUpdate(){
-        
-        CheckIfProblemSolversAreInRange();
-    }
-
     //--------------------------------------------------
 
-    private void CheckIfProblemSolversAreInRange(){
+    private void OnChimeSequence(ChimeSequence chimeSequence){
         
-        // TODO: Add DetectTimer
+        if (chimeSequence.chimeTask != ChimeTasks.solveProblem ) { return; }
 
         if (Vector3.Distance(pos, player.gameObject.transform.position) < detectRange){
             List<CommunityTypes> followingAgents = communityManager.GetFollowingAgents();

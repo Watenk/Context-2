@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11217f0ac8dbd604c956a986aaf91b33, type: 3}
   m_Name: ChimeSettings
   m_EditorClassIdentifier: 
-  ChimeResetTime: 2
-  LongChimeLenght: 1
+  ChimeResetTime: 1
+  LongChimeLenght: 0.5
   ChimeSequences:
   - Name: SquareFollow
     chimeTask: 0
@@ -48,6 +48,30 @@ MonoBehaviour:
       isLong: 0
     - chimeInput: 1
       isLong: 0
+    - chimeInput: 1
+      isLong: 0
+    affectedCommunities: 00000000
+  - Name: SquareSolveProblem
+    chimeTask: 1
+    chimes:
+    - chimeInput: 0
+      isLong: 1
+    - chimeInput: 2
+      isLong: 0
+    affectedCommunities: 02000000
+  - Name: CircleSolveProblem
+    chimeTask: 1
+    chimes:
+    - chimeInput: 0
+      isLong: 1
+    - chimeInput: 3
+      isLong: 0
+    affectedCommunities: 01000000
+  - Name: TriangleSolveProblem
+    chimeTask: 1
+    chimes:
+    - chimeInput: 0
+      isLong: 1
     - chimeInput: 1
       isLong: 0
     affectedCommunities: 00000000
