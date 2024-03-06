@@ -12,9 +12,9 @@
 						<ObjectRef Name="Chimes" ID="{9365FD5A-7C07-46E5-9D64-005F7E78831E}" WorkUnitID="{1DC12918-8C70-4B3D-8538-2B800FB51260}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Chime1Stop" ID="{67B8DECF-0FA0-4938-8D45-11996745434B}" WorkUnitID="{1DC12918-8C70-4B3D-8538-2B800FB51260}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Default Work Unit" ID="{1DC12918-8C70-4B3D-8538-2B800FB51260}" WorkUnitID="{1DC12918-8C70-4B3D-8538-2B800FB51260}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="community1" ID="{0ABDDF13-931E-4BBA-8567-03605C5526F5}" WorkUnitID="{7170A4AA-0716-459D-A833-37BA2C074759}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="chimes-community1" ID="{0ABDDF13-931E-4BBA-8567-03605C5526F5}" WorkUnitID="{7170A4AA-0716-459D-A833-37BA2C074759}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Community3" ID="{4F9E9005-18BB-4BF9-AA68-8BD8E9517D98}" WorkUnitID="{1DC12918-8C70-4B3D-8538-2B800FB51260}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Chime1Start" ID="{A21F005E-32A4-4F0A-B58B-9CA2A6C61696}" WorkUnitID="{1DC12918-8C70-4B3D-8538-2B800FB51260}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Chime1Play" ID="{A21F005E-32A4-4F0A-B58B-9CA2A6C61696}" WorkUnitID="{1DC12918-8C70-4B3D-8538-2B800FB51260}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>

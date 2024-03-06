@@ -13,18 +13,25 @@ namespace AK
 {
     namespace EVENTS
     {
-        static const AkUniqueID CHIME1START = 3097783492U;
+        static const AkUniqueID CHIME1PLAY = 3117609094U;
         static const AkUniqueID CHIME1STOP = 632066680U;
-        static const AkUniqueID CHIME2START = 1569664137U;
+        static const AkUniqueID CHIME2PLAY = 408897957U;
         static const AkUniqueID CHIME2STOP = 1791974179U;
-        static const AkUniqueID CHIME3START = 3745805490U;
+        static const AkUniqueID CHIME3PLAY = 120659352U;
         static const AkUniqueID CHIME3STOP = 2451530218U;
+        static const AkUniqueID CHIMEUPLAY = 1032095362U;
+        static const AkUniqueID CHIMEUSTOP = 1675108316U;
+        static const AkUniqueID NPCCHIME1CONFUSED = 722374694U;
         static const AkUniqueID NPCCHIME1LONG = 1795884461U;
         static const AkUniqueID NPCCHIME1SHORT = 4090504235U;
+        static const AkUniqueID NPCCHIME2CONFUSED = 2993939861U;
         static const AkUniqueID NPCCHIME2LONG = 1704435946U;
         static const AkUniqueID NPCCHIME2SHORT = 2400837350U;
+        static const AkUniqueID NPCCHIME3CONFUSED = 1137344520U;
         static const AkUniqueID NPCCHIME3LONG = 4264886911U;
         static const AkUniqueID NPCCHIME3SHORT = 2846910609U;
+        static const AkUniqueID NPCCHIMEULONG = 3686713601U;
+        static const AkUniqueID NPCCHIMEUSHORT = 3518065335U;
     } // namespace EVENTS
 
     namespace BANKS
@@ -44,6 +51,7 @@ namespace AK
     namespace AUX_BUSSES
     {
         static const AkUniqueID EMOTIONSDIMENSION = 3477531017U;
+        static const AkUniqueID TESTECHO = 3268711830U;
         static const AkUniqueID TESTVERB = 841660990U;
     } // namespace AUX_BUSSES
 
