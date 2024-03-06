@@ -6,17 +6,20 @@ using UnityEngine;
 public class Group : IFixedUpdateable
 {
     public Community Community { get; private set; }
+    public CommunityTypes CommunityType { get; private set; }
     public int Size { get; private set; }
     public Vector3 Home { get; private set; }
     public float SpawnRadius { get; private set; }
 
     private List<Agent> agents = new List<Agent>();
+    private List<CommunityTypes> followingAgents = new List<CommunityTypes>(); // Agents in following State
     private List<AgentPrefab> agentPrefabs = new List<AgentPrefab>();
 
     //-----------------------------------------------
 
-    public Group(Community community, int groupSize, Vector3 homePos, float spawnRadius){
+    public Group(Community community, CommunityTypes communityType, int groupSize, Vector3 homePos, float spawnRadius){
         Community = community;
+        CommunityType = communityType;
         Size = groupSize;
         Home = homePos;
         SpawnRadius = spawnRadius;
@@ -41,6 +44,18 @@ public class Group : IFixedUpdateable
         foreach (Agent currentAgent in agents){
             currentAgent.ExecuteTask(chimeTask);
         }
+    }
+
+    public void AddFollowingAgent(CommunityTypes agentType){
+        followingAgents.Add(agentType);
+    }
+
+    public void RemoveFollowingAgent(CommunityTypes agentType){
+        followingAgents.Remove(agentType);
+    }
+
+    public List<CommunityTypes> GetFollowingAgents(){
+        return followingAgents;
     }
 
     //------------------------------------------------

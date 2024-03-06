@@ -25,14 +25,30 @@ public class Community : IFixedUpdateable
         foreach (Group currentGroup in groups){
             currentGroup.OnFixedUpdate();
         }
+
+        foreach (Problem currentProblem in problems){
+            currentProblem.OnFixedUpdate();
+        }
     }
 
     public void AddGroup(int size, Vector3 pos, float spawnRadius){
-        groups.Add(new Group(this, size, pos, spawnRadius));
+        groups.Add(new Group(this, CommunityType, size, pos, spawnRadius));
     }
 
     public void AddProblem(Problem problem){
         problems.Add(problem);
+    }
+
+    public List<CommunityTypes> GetFollowingAgents(){
+        
+        if (groups.Count == 0) { return default; }
+        List<CommunityTypes> followingAgents = new List<CommunityTypes>();
+
+        foreach (Group currentGroup in groups){
+            followingAgents.AddRange(currentGroup.GetFollowingAgents());
+        }
+
+        return followingAgents;
     }
 
     //--------------------------------------------------
