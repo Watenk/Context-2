@@ -13,6 +13,7 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID AMBIENCE = 85412153U;
         static const AkUniqueID CHIME1PLAY = 3117609094U;
         static const AkUniqueID CHIME1STOP = 632066680U;
         static const AkUniqueID CHIME2PLAY = 408897957U;
@@ -33,6 +34,28 @@ namespace AK
         static const AkUniqueID NPCCHIMEULONG = 3686713601U;
         static const AkUniqueID NPCCHIMEUSHORT = 3518065335U;
     } // namespace EVENTS
+
+    namespace STATES
+    {
+        namespace AMBIENCEINSIDEOUTSIDE
+        {
+            static const AkUniqueID GROUP = 3607165242U;
+
+            namespace STATE
+            {
+                static const AkUniqueID INSIDE = 3553349781U;
+                static const AkUniqueID NONE = 748895195U;
+                static const AkUniqueID OUTSIDE = 438105790U;
+            } // namespace STATE
+        } // namespace AMBIENCEINSIDEOUTSIDE
+
+    } // namespace STATES
+
+    namespace GAME_PARAMETERS
+    {
+        static const AkUniqueID GREENERYLEVEL = 1750790826U;
+        static const AkUniqueID INSIDEOUTSIDE = 3929688590U;
+    } // namespace GAME_PARAMETERS
 
     namespace BANKS
     {

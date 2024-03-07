@@ -376,6 +376,25 @@
 						</Folder>
 					</ChildrenList>
 				</Folder>
+				<Folder Name="Ambience" ID="{082EB862-4209-4BAF-9883-2C8E88410C14}" ShortID="793891545">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="4"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Event Name="Ambience" ID="{CD88F586-8F63-4D48-8F40-20EB95385AE6}">
+							<ChildrenList>
+								<Action Name="" ID="{D264FF6A-C65B-47F9-8AE5-7C91C72F969F}" ShortID="923590298">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ambience" ID="{C5AA6690-F0E7-4176-9A52-15F1F8A7FC97}" WorkUnitID="{7170A4AA-0716-459D-A833-37BA2C074759}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

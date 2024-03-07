@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7f2e4986a5f83142837c1808767b4d1, type: 3}
   m_Name: 2ABA9CC2-A1B5-40FA-B3D0-DCCF2EE172A7
   m_EditorClassIdentifier: 
-  objectName: Chime2Play_01
-  id: 3136856193
+  objectName: Chime2Play
+  id: 408897957
   guid: 2ABA9CC2-A1B5-40FA-B3D0-DCCF2EE172A7

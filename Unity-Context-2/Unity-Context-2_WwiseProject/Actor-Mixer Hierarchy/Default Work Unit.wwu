@@ -97,46 +97,6 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<Sound Name="chimes-universal1" ID="{7BD725E5-178A-4F16-AFCD-4EA7341AF8EC}" ShortID="984129323">
-									<PropertyList>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>-5</Value>
-											</ValueList>
-										</Property>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{890C2A6A-F4B0-4F89-9461-EC99F69DD99E}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{07B3C08D-E8AD-4A81-A929-C27B28B93464}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="chimes-universal1" ID="{56C26510-323B-465A-AD3C-507415F6E0C8}">
-											<PropertyList>
-												<Property Name="LoopBegin" Type="Real64" Value="0"/>
-												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-											</PropertyList>
-											<Language>SFX</Language>
-											<AudioFile>universal\chimes-universal1.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="444656573"/>
-											</MediaIDList>
-										</AudioFileSource>
-										<AudioFileSource Name="chimes-universal1_01" ID="{E2B18449-2113-4E3E-AE70-11B86FFCD78E}">
-											<Language>SFX</Language>
-											<AudioFile>chimes-universal1.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="753953363"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="chimes-universal1_01" ID="{E2B18449-2113-4E3E-AE70-11B86FFCD78E}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
 								<Sound Name="chimes-universal10" ID="{F612F5DB-F12E-43BC-BFCC-AF1FAF015080}" ShortID="504701487">
 									<PropertyList>
 										<Property Name="Volume" Type="Real64">
@@ -354,6 +314,28 @@
 									</ChildrenList>
 									<ActiveSourceList>
 										<ActiveSource Name="chimes-universal9" ID="{04A13154-13D8-4B43-87FB-7BE8A5634154}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="chimes-universal1" ID="{DC184C83-BFFF-490B-9764-8D47491C70BA}" ShortID="850238467">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{890C2A6A-F4B0-4F89-9461-EC99F69DD99E}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{07B3C08D-E8AD-4A81-A929-C27B28B93464}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="chimes-universal1" ID="{CCF58CBF-B387-4E54-9752-079A81D01C6A}">
+											<Language>SFX</Language>
+											<AudioFile>universal\chimes-universal1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="444656573"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="chimes-universal1" ID="{CCF58CBF-B387-4E54-9752-079A81D01C6A}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
@@ -1044,6 +1026,145 @@
 							<ObjectRef Name="Ambience" ID="{6BFDBB45-782B-41E9-86B0-109575DDFB5F}" WorkUnitID="{07B3C08D-E8AD-4A81-A929-C27B28B93464}"/>
 						</Reference>
 					</ReferenceList>
+					<ChildrenList>
+						<BlendContainer Name="ambience" ID="{C5AA6690-F0E7-4176-9A52-15F1F8A7FC97}" ShortID="728771677">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{890C2A6A-F4B0-4F89-9461-EC99F69DD99E}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{07B3C08D-E8AD-4A81-A929-C27B28B93464}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="ambience-empty" ID="{81E5A886-6B98-4C39-8161-178A3F3A6DB2}" ShortID="301608146">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{890C2A6A-F4B0-4F89-9461-EC99F69DD99E}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{07B3C08D-E8AD-4A81-A929-C27B28B93464}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="ambience-empty" ID="{E0C0F9E9-AC58-4FFA-8F08-BCBBC4546CF2}">
+											<PropertyList>
+												<Property Name="CrossfadeDuration" Type="Real64" Value="2519.85815602836"/>
+												<Property Name="LoopBegin" Type="Real64" Value="1.33404255319149"/>
+												<Property Name="LoopEnd" Type="Real64" Value="82.3400709219858"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>ambience\ambience-empty.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1052460289"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="ambience-empty" ID="{E0C0F9E9-AC58-4FFA-8F08-BCBBC4546CF2}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="ambience-green" ID="{9297B4FE-5A72-429B-AB24-E0B747EB4024}" ShortID="292275151">
+									<PropertyList>
+										<Property Name="Highpass" Type="int16">
+											<ValueList>
+												<Value>56</Value>
+											</ValueList>
+										</Property>
+										<Property Name="MakeUpGain" Type="Real64">
+											<ValueList>
+												<Value>6</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{890C2A6A-F4B0-4F89-9461-EC99F69DD99E}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{07B3C08D-E8AD-4A81-A929-C27B28B93464}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="ambience-green" ID="{C1170EFD-87C0-4E46-896E-99117365134F}">
+											<PropertyList>
+												<Property Name="CrossfadeDuration" Type="Real64" Value="8442.29829787236"/>
+												<Property Name="LoopBegin" Type="Real64" Value="5.26703287529551"/>
+												<Property Name="LoopEnd" Type="Real64" Value="200.64826751773"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>ambience\ambience-green.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="390170484"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="ambience-green" ID="{C1170EFD-87C0-4E46-896E-99117365134F}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<StateInfo>
+								<StateGroupList>
+									<StateGroupInfo>
+										<StateGroupRef Name="ambienceInsideOutside" ID="{7F94DE54-DA53-4F66-AA37-236C7EFC25F0}"/>
+									</StateGroupInfo>
+								</StateGroupList>
+								<CustomStateList>
+									<CustomState>
+										<StateRef Name="Inside" ID="{D68485E7-7F1F-4185-89E1-C3B0F0A71358}"/>
+										<CustomState Name="" ID="{4EFA2B91-DCA6-466A-98C4-9365F82E1A97}" ShortID="723235295">
+											<PropertyList>
+												<Property Name="Lowpass" Type="int16" Value="35"/>
+												<Property Name="Volume" Type="Real64" Value="-8.5"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Outside" ID="{3433294B-052D-45B7-AB97-7AA8B3FB91C4}"/>
+										<CustomState Name="" ID="{B15AA58C-894D-4709-9A25-90BC995D643A}" ShortID="537749107"/>
+									</CustomState>
+								</CustomStateList>
+							</StateInfo>
+							<BlendTrackList>
+								<BlendTrack Name="GreeneryLevel Crossfade" ID="{F3501CA7-EBBF-4205-85D6-2A4C514037EA}" ShortID="510929719">
+									<PropertyList>
+										<Property Name="EnableCrossFading" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="LayerCrossFadeControlInput">
+											<ObjectRef Name="GreeneryLevel" ID="{515A56B2-97C2-4B90-A236-A63CC60BC7A7}" WorkUnitID="{523E8A6E-5E95-4438-8EFC-5E2B8DECD175}"/>
+										</Reference>
+									</ReferenceList>
+									<BlendTrackAssocList>
+										<BlendTrackAssoc>
+											<ItemRef Name="ambience-empty" ID="{81E5A886-6B98-4C39-8161-178A3F3A6DB2}"/>
+											<CrossfadingInfo>
+												<LeftEdgePos>0</LeftEdgePos>
+												<LeftFadingMode>Automatic</LeftFadingMode>
+												<RightEdgePos>89.9614527158099</RightEdgePos>
+												<RightFadingMode>Automatic</RightFadingMode>
+											</CrossfadingInfo>
+										</BlendTrackAssoc>
+										<BlendTrackAssoc>
+											<ItemRef Name="ambience-green" ID="{9297B4FE-5A72-429B-AB24-E0B747EB4024}"/>
+											<CrossfadingInfo>
+												<LeftEdgePos>9.93235475266732</LeftEdgePos>
+												<LeftFadingMode>Automatic</LeftFadingMode>
+												<RightEdgePos>100</RightEdgePos>
+												<RightFadingMode>Automatic</RightFadingMode>
+											</CrossfadingInfo>
+										</BlendTrackAssoc>
+									</BlendTrackAssocList>
+								</BlendTrack>
+							</BlendTrackList>
+						</BlendContainer>
+					</ChildrenList>
 				</ActorMixer>
 				<ActorMixer Name="Player" ID="{F5AFE101-62F1-46A3-8D4E-4B8D39EFC58B}" ShortID="973739604">
 					<PropertyList>

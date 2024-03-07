@@ -1,4 +1,5 @@
 Event	ID	Name			Wwise Object Path	Notes
+	85412153	Ambience			\Default Work Unit\Ambience\Ambience	
 	120659352	Chime3Play			\Default Work Unit\Chimes\Community3\Chime3Play	
 	408897957	Chime2Play			\Default Work Unit\Chimes\Community2\Chime2Play	
 	632066680	Chime1Stop			\Default Work Unit\Chimes\Community1\Chime1Stop	
@@ -18,6 +19,17 @@ Event	ID	Name			Wwise Object Path	Notes
 	3686713601	NPCChimeULong			\Default Work Unit\Chimes\Universal\NPCChimeULong	
 	4090504235	NPCChime1Short			\Default Work Unit\Chimes\Community1\NPCChime1Short	
 	4264886911	NPCChime3Long			\Default Work Unit\Chimes\Community3\NPCChime3Long	
+
+State Group	ID	Name			Wwise Object Path	Notes
+	3607165242	ambienceInsideOutside			\Default Work Unit\ambienceInsideOutside	
+
+State	ID	Name	State Group			Notes
+	438105790	Outside	ambienceInsideOutside			
+	748895195	None	ambienceInsideOutside			
+	3553349781	Inside	ambienceInsideOutside			
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	1750790826	GreeneryLevel			\Default Work Unit\ambience\GreeneryLevel	
 
 Audio Bus	ID	Name			Wwise Object Path	Notes
 	85412153	Ambience			\Default Work Unit\Master Audio Bus\Ambience	
@@ -45,6 +57,8 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	274837946	chimes-community3End1	C:\Users\LvanE\GameDev\Context-2\Unity-Context-2\Unity-Context-2_WwiseProject\.cache\Windows\SFX\community3\chimes-community3End1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chimes\community3\community3End\chimes-community3End1		152096
 	276159906	chimes-community1C#	C:\Users\LvanE\GameDev\Context-2\Unity-Context-2\Unity-Context-2_WwiseProject\.cache\Windows\SFX\community1\chimes-community1C#_48CC29FF.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chimes\community1\chimes-community1\chimes-community1C#		261988
 	374736244	chimes-community1A#	C:\Users\LvanE\GameDev\Context-2\Unity-Context-2\Unity-Context-2_WwiseProject\.cache\Windows\SFX\community1\chimes-community1A#_7BAD7AF1.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chimes\community1\chimes-community1\chimes-community1A#		211796
+	390170484	ambience-green	C:\Users\LvanE\GameDev\Context-2\Unity-Context-2\Unity-Context-2_WwiseProject\.cache\Windows\SFX\ambience\ambience-green_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\ambience\ambience-green		39335024
+	444656573	chimes-universal1	C:\Users\LvanE\GameDev\Context-2\Unity-Context-2\Unity-Context-2_WwiseProject\.cache\Windows\SFX\universal\chimes-universal1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chimes\universal\chimes-universal1		402096
 	535706050	chimes-community3End2	C:\Users\LvanE\GameDev\Context-2\Unity-Context-2\Unity-Context-2_WwiseProject\.cache\Windows\SFX\community3\chimes-community3End2_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chimes\community3\community3End\chimes-community3End2		343776
 	631739992	chimes-universal5	C:\Users\LvanE\GameDev\Context-2\Unity-Context-2\Unity-Context-2_WwiseProject\.cache\Windows\SFX\universal\chimes-universal5_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chimes\universal\chimes-universal5		316280
 	632147615	chimes-community3Start2	C:\Users\LvanE\GameDev\Context-2\Unity-Context-2\Unity-Context-2_WwiseProject\.cache\Windows\SFX\community3\chimes-community3Start2_DBBAE844.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chimes\community3\community3Start\chimes-community3Start2		72096
@@ -53,7 +67,6 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	716981537	chimes-universal6	C:\Users\LvanE\GameDev\Context-2\Unity-Context-2\Unity-Context-2_WwiseProject\.cache\Windows\SFX\universal\chimes-universal6_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chimes\universal\chimes-universal6		403940
 	741005136	chimes-community1D#	C:\Users\LvanE\GameDev\Context-2\Unity-Context-2\Unity-Context-2_WwiseProject\.cache\Windows\SFX\community1\chimes-community1D#_A8446D5E.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chimes\community1\chimes-community1\chimes-community1D#		269564
 	752477891	chimes-community2Confused	C:\Users\LvanE\GameDev\Context-2\Unity-Context-2\Unity-Context-2_WwiseProject\.cache\Windows\SFX\community2\chimes-community2Confused_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chimes\community2\chimes-community2Confused		930668
-	753953363	chimes-universal1	C:\Users\LvanE\GameDev\Context-2\Unity-Context-2\Unity-Context-2_WwiseProject\.cache\Windows\SFX\chimes-universal1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chimes\universal\chimes-universal1		402096
 	775169254	chimes-community1F	C:\Users\LvanE\GameDev\Context-2\Unity-Context-2\Unity-Context-2_WwiseProject\.cache\Windows\SFX\community1\chimes-community1F_82D80226.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chimes\community1\chimes-community1\chimes-community1F		271584
 	775312338	chimes-community3Start1	C:\Users\LvanE\GameDev\Context-2\Unity-Context-2\Unity-Context-2_WwiseProject\.cache\Windows\SFX\community3\chimes-community3Start1_AA9D67F0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chimes\community3\community3Start\chimes-community3Start1		72096
 	780278558	chimes-community3Confused	C:\Users\LvanE\GameDev\Context-2\Unity-Context-2\Unity-Context-2_WwiseProject\.cache\Windows\SFX\community3\chimes-community3Confused_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chimes\community3\chimes-community3Confused		293776
@@ -64,4 +77,5 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	997782913	chimes-universal4	C:\Users\LvanE\GameDev\Context-2\Unity-Context-2\Unity-Context-2_WwiseProject\.cache\Windows\SFX\universal\chimes-universal4_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chimes\universal\chimes-universal4		384076
 	1040139626	chimes-community1Confused	C:\Users\LvanE\GameDev\Context-2\Unity-Context-2\Unity-Context-2_WwiseProject\.cache\Windows\SFX\community1\chimes-community1Confused_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chimes\community1\chimes-community1Confused		371120
 	1050643609	chimes-community1G#	C:\Users\LvanE\GameDev\Context-2\Unity-Context-2\Unity-Context-2_WwiseProject\.cache\Windows\SFX\community1\chimes-community1G#_616D30F2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chimes\community1\chimes-community1\chimes-community1G#		225936
+	1052460289	ambience-empty	C:\Users\LvanE\GameDev\Context-2\Unity-Context-2\Unity-Context-2_WwiseProject\.cache\Windows\SFX\ambience\ambience-empty_52785B11.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\ambience\ambience-empty		16051344
 

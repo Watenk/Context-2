@@ -1,6 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{523E8A6E-5E95-4438-8EFC-5E2B8DECD175}" SchemaVersion="119">
 	<GameParameters>
-		<WorkUnit Name="Default Work Unit" ID="{523E8A6E-5E95-4438-8EFC-5E2B8DECD175}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{523E8A6E-5E95-4438-8EFC-5E2B8DECD175}" PersistMode="Standalone">
+			<ChildrenList>
+				<Folder Name="ambience" ID="{558C7D59-9D6C-47ED-93E6-3E83FDCFAB57}" ShortID="985466894">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="4"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<GameParameter Name="InsideOutside" ID="{6D5CDD69-75AE-40C5-8BC7-82FC42CB0575}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="4"/>
+								<Property Name="FilterTimeDown" Type="Real64" Value="2"/>
+								<Property Name="FilterTimeUp" Type="Real64" Value="2"/>
+								<Property Name="InitialValue" Type="Real64" Value="100"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+								<Property Name="RTPCRamping" Type="int16" Value="2"/>
+							</PropertyList>
+						</GameParameter>
+						<GameParameter Name="GreeneryLevel" ID="{515A56B2-97C2-4B90-A236-A63CC60BC7A7}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="4"/>
+								<Property Name="InitialValue" Type="Real64" Value="0"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+						</GameParameter>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
 	</GameParameters>
 </WwiseDocument>
