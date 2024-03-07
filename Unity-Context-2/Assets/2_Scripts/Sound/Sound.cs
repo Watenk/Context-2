@@ -2,18 +2,29 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Sound 
+public class Sound : IFixedUpdateable
 {
-    private GameObject soundInstance;
-    private AK.Wwise.Event stopEvent;
+    public GameObject SoundGameObject { get; private set; }
 
-    //---------------------------------------
+    private Timer existTimer;
 
-    public Sound(GameObject soundInstance, AK.Wwise.Event stopEvent){
-        this.soundInstance = soundInstance;
-        this.stopEvent = stopEvent;
+    // References
+    private TimerManager timerManager;
+    private SoundManager soundManager;
+
+    //------------------------------------------------
+
+    public Sound(SoundManager soundManager, GameObject soundGameObject, AK.Wwise.Event startEvent, float existLenght){
+        timerManager = GameManager.GetService<TimerManager>();
+        this.soundManager = soundManager;
+
+        startEvent.Post(soundGameObject);
+        existTimer = timerManager.AddTimer(existLenght);
     }
 
-    public void StopSound(){
+    public void OnFixedUpdate(){
+        if (existTimer.IsDone()){
+            soundManager.StopSound(this);
+        }
     }
 }

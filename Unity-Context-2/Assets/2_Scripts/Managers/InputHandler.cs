@@ -11,14 +11,17 @@ public class InputHandler : IUpdateable
 
     private Dictionary<string, Timer> chimeTimers = new Dictionary<string, Timer>();
     private Dictionary<string, bool> chimeBools = new Dictionary<string, bool>();
+    private LoopingSound globalCime;
 
     // References
     private TimerManager timerManager;
+    private SoundManager soundManager;
 
     //---------------------------------------------------------
 
     public InputHandler(){
         timerManager = GameManager.GetService<TimerManager>();
+        soundManager = GameManager.GetService<SoundManager>();
 
         chimeTimers.Add("square", timerManager.AddTimer(ChimeSettings.Instance.LongChimeLenght));
         chimeTimers.Add("triangle", timerManager.AddTimer(ChimeSettings.Instance.LongChimeLenght));
@@ -54,6 +57,7 @@ public class InputHandler : IUpdateable
     private void OnChimeDown(string button){
         chimeBools[button] = true;
         chimeTimers[button].ResetTime();
+        PlaySound(ConvertButtonToChimeInput(button));
     }
 
     private void OnChimeUp(string button){
@@ -64,6 +68,17 @@ public class InputHandler : IUpdateable
             OnChime(new Chime(ConvertButtonToChimeInput(button), false));
         }
         chimeBools[button] = false;
+        globalCime.StopSound();
+    }
+
+    private void PlaySound(ChimeInputs chimeInput){
+
+        switch (chimeInput){
+            
+            case ChimeInputs.global:
+                globalCime = soundManager.AddLoopingSound(AudioSettings.Instance.PlayPlayerGlobalChime, AudioSettings.Instance.PlayPlayerGlobalChime, GameManager.Instance.Player.transform.position);
+                break;
+        }
     }
 
     private ChimeInputs ConvertButtonToChimeInput(string button){

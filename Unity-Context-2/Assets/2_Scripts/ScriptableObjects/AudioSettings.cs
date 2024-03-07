@@ -21,6 +21,10 @@ public class AudioSettings : ScriptableObject
 
     //--------------------------------------------
 
+    public GameObject SoundPrefab;
+    public float SoundDestroyTime;
+
+    [Header("PlayerChimes")]
     public AK.Wwise.Event PlayPlayerCircleChime;
     public AK.Wwise.Event PlayPlayerTriangleChime;
     public AK.Wwise.Event PlayPlayerSquareChime;
@@ -29,8 +33,14 @@ public class AudioSettings : ScriptableObject
     public AK.Wwise.Event StopPlayerTriangleChime;
     public AK.Wwise.Event StopPlayerSquareChime;
     public AK.Wwise.Event StopPlayerGlobalChime;
-    public AK.Wwise.Event NPCCircleChime;
-    public AK.Wwise.Event NPCTriangleChime;
-    public AK.Wwise.Event NPCSquareChime;
-    public AK.Wwise.Event NPCGlobalChime;
+
+    [Header("NPCChimes")]
+    public AK.Wwise.Event ShortNPCCircleChime;
+    public AK.Wwise.Event ShortNPCTriangleChime;
+    public AK.Wwise.Event ShortNPCSquareChime;
+    public AK.Wwise.Event ShortNPCGlobalChime;
+    public AK.Wwise.Event LongNPCCircleChime;
+    public AK.Wwise.Event LongNPCTriangleChime;
+    public AK.Wwise.Event LongNPCSquareChime;
+    public AK.Wwise.Event LongNPCGlobalChime;
 }

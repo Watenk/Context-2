@@ -12,7 +12,70 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 219d694f910c8da4eb5b7a838429d477, type: 3}
   m_Name: AudioSettings
   m_EditorClassIdentifier: 
-  NPCCircleChime:
+  SoundPrefab: {fileID: 7179621112042646335, guid: 12efd11602ec50f4697ca6b8f74692a5,
+    type: 3}
+  SoundDestroyTime: 5
+  PlayPlayerCircleChime:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  PlayPlayerTriangleChime:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  PlayPlayerSquareChime:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  PlayPlayerGlobalChime:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  StopPlayerCircleChime:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  StopPlayerTriangleChime:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  StopPlayerSquareChime:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  StopPlayerGlobalChime:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  ShortNPCCircleChime:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  ShortNPCTriangleChime:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  ShortNPCSquareChime:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  ShortNPCGlobalChime:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  LongNPCCircleChime:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  LongNPCTriangleChime:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  LongNPCSquareChime:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  LongNPCGlobalChime:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 0}
