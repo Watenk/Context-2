@@ -10,9 +10,11 @@ public class PlayerController : MonoBehaviour
     private Rigidbody rb;
     private float speed;
     private float rotationSpeed;
+    private Queue<LoopingSound> activeSounds = new Queue<LoopingSound>();
 
     // References
     private InputHandler inputManager;
+    private SoundManager soundManager;
 
     //------------------------------------------------
 
@@ -26,10 +28,13 @@ public class PlayerController : MonoBehaviour
 
     public void Start(){
         inputManager = GameManager.GetService<InputHandler>();
+        soundManager = GameManager.GetService<SoundManager>();
         speed = PlayerSettings.Instance.Speed;
         rotationSpeed = PlayerSettings.Instance.RotationSpeed;
 
         inputManager.OnPlayerMove += OnPlayerMove;
+        inputManager.OnChimeDown += OnChimeDown;
+        inputManager.OnChimeUp += OnChimeUp;
     }
 
     //-----------------------------------------------
@@ -46,5 +51,18 @@ public class PlayerController : MonoBehaviour
             Quaternion targetRotation = Quaternion.Euler(0, bodyYRotation, 0);
             Body.transform.rotation = Quaternion.Slerp(Body.transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
         }
+    }
+
+    private void OnChimeDown(ChimeInputs chimeInput){
+        PlayerSoundData soundData = soundManager.GetPlayerSound(chimeInput);
+        LoopingSound sound = soundManager.PlayLoopingSound(soundData, gameObject.transform.position);
+        activeSounds.Enqueue(sound);
+    }
+
+    private void OnChimeUp(ChimeInputs chimeInput){
+        if (activeSounds.Count == 0) { return; }
+
+        LoopingSound sound = activeSounds.Dequeue();
+        sound.StopSound();
     }
 }

@@ -18,8 +18,8 @@ public class GameManager : MonoBehaviour
         Instance = this;
 
         AddService(new TimerManager());
-        AddService(new SoundManager());
         AddService(new InputHandler());
+        AddService(new SoundManager());
         AddService(new ChimeSequencer());
         AddService(new CommunityManager());
 

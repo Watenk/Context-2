@@ -9,16 +9,10 @@ public class Community : IFixedUpdateable
     private List<Problem> problems = new List<Problem>();
     // TODO: Add Affection for other communities
 
-    // References
-    private ChimeSequencer chimeSequencer;
-
     //------------------------------------------------
 
     public Community(CommunityTypes communityType){
-        chimeSequencer = GameManager.GetService<ChimeSequencer>();
         this.CommunityType = communityType;
-
-        chimeSequencer.OnChimeSequence += OnChimeSequence;
     }
 
     public void OnFixedUpdate(){
@@ -33,27 +27,5 @@ public class Community : IFixedUpdateable
 
     public void AddProblem(Problem problem){
         problems.Add(problem);
-    }
-
-    public List<CommunityTypes> GetFollowingAgents(){
-        
-        if (groups.Count == 0) { return default; }
-        List<CommunityTypes> followingAgents = new List<CommunityTypes>();
-
-        foreach (Group currentGroup in groups){
-            followingAgents.AddRange(currentGroup.GetFollowingAgents());
-        }
-
-        return followingAgents;
-    }
-
-    //--------------------------------------------------
-
-    private void OnChimeSequence(ChimeSequence chimeSequence){
-        if (chimeSequence.affectedCommunities.Contains(CommunityType)){
-            foreach (Group currentGroup in groups){
-                currentGroup.ExecuteTask(chimeSequence.chimeTask);
-            }
-        }
     }
 }
