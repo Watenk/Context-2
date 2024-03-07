@@ -1,6 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{1A2C9CEE-EEA3-4935-BCF9-769C5161D1DC}" SchemaVersion="119">
 	<States>
-		<WorkUnit Name="Default Work Unit" ID="{1A2C9CEE-EEA3-4935-BCF9-769C5161D1DC}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{1A2C9CEE-EEA3-4935-BCF9-769C5161D1DC}" PersistMode="Standalone">
+			<ChildrenList>
+				<StateGroup Name="ambienceInsideOutside" ID="{7F94DE54-DA53-4F66-AA37-236C7EFC25F0}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="4"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<State Name="None" ID="{98EE36B4-CB8D-4A46-9CD2-22F3F4D43DF2}"/>
+						<State Name="Inside" ID="{D68485E7-7F1F-4185-89E1-C3B0F0A71358}"/>
+						<State Name="Outside" ID="{3433294B-052D-45B7-AB97-7AA8B3FB91C4}"/>
+					</ChildrenList>
+					<TransitionList>
+						<Transition>
+							<StartState Name="Inside" ID="{D68485E7-7F1F-4185-89E1-C3B0F0A71358}"/>
+							<EndState Name="Outside" ID="{3433294B-052D-45B7-AB97-7AA8B3FB91C4}"/>
+							<Time>0.4</Time>
+							<IsShared>true</IsShared>
+						</Transition>
+					</TransitionList>
+				</StateGroup>
+			</ChildrenList>
+		</WorkUnit>
 	</States>
 </WwiseDocument>

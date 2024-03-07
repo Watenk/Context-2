@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{FB84B8F7-A7BF-F8C7-45B1-5E576426D6CF}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{5D6B9902-7BE1-007D-6C31-B6A48CF663BA}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -45,8 +45,21 @@
 				</AuxBus>
 				<AuxBus Id="3477531017" Name="EmotionsDimension"/>
 			</AuxBusses>
+			<GameParameters>
+				<GameParameter Id="1750790826" Name="GreeneryLevel"/>
+				<GameParameter Id="3929688590" Name="InsideOutside"/>
+			</GameParameters>
+			<StateGroups>
+				<StateGroup Id="3607165242" Name="ambienceInsideOutside">
+					<States>
+						<State Id="438105790" Name="Outside"/>
+						<State Id="748895195" Name="None"/>
+						<State Id="3553349781" Name="Inside"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{3FBFF2D7-70C7-2C41-1227-08A0F9DF712F}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{E813E99F-7654-FBEC-4457-FEB51BBE590D}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -90,6 +103,14 @@
 					<ShortName>community1\chimes-community1A#.wav</ShortName>
 					<CachePath>SFX/community1/chimes-community1A#_7BAD7AF1.wem</CachePath>
 				</File>
+				<File Id="390170484" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>ambience\ambience-green.wav</ShortName>
+					<CachePath>SFX/ambience/ambience-green_818F3B66.wem</CachePath>
+				</File>
+				<File Id="444656573" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>universal\chimes-universal1.wav</ShortName>
+					<CachePath>SFX/universal/chimes-universal1_818F3B66.wem</CachePath>
+				</File>
 				<File Id="535706050" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>community3\chimes-community3End2.wav</ShortName>
 					<CachePath>SFX/community3/chimes-community3End2_818F3B66.wem</CachePath>
@@ -121,10 +142,6 @@
 				<File Id="752477891" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>community2\chimes-community2Confused.wav</ShortName>
 					<CachePath>SFX/community2/chimes-community2Confused_818F3B66.wem</CachePath>
-				</File>
-				<File Id="753953363" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>chimes-universal1.wav</ShortName>
-					<CachePath>SFX/chimes-universal1_818F3B66.wem</CachePath>
 				</File>
 				<File Id="775169254" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>community1\chimes-community1F.wav</ShortName>
@@ -166,6 +183,10 @@
 					<ShortName>community1\chimes-community1G#.wav</ShortName>
 					<CachePath>SFX/community1/chimes-community1G#_616D30F2.wem</CachePath>
 				</File>
+				<File Id="1052460289" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>ambience\ambience-empty.wav</ShortName>
+					<CachePath>SFX/ambience/ambience-empty_52785B11.wem</CachePath>
+				</File>
 			</Media>
 			<Plugins>
 				<ShareSets>
@@ -174,6 +195,12 @@
 				</ShareSets>
 			</Plugins>
 			<Events>
+				<Event Id="85412153" Name="Ambience" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="390170484"/>
+						<MediaRef Id="1052460289"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="3117609094" Name="Chime1Play" MaxAttenuation="100" DurationType="OneShot" DurationMin="1.0245572" DurationMax="1.413994">
 					<MediaRefs>
 						<MediaRef Id="200744382"/>
@@ -251,10 +278,10 @@
 						<MediaRef Id="85199183"/>
 						<MediaRef Id="146898835"/>
 						<MediaRef Id="217292502"/>
+						<MediaRef Id="444656573"/>
 						<MediaRef Id="631739992"/>
 						<MediaRef Id="641973831"/>
 						<MediaRef Id="716981537"/>
-						<MediaRef Id="753953363"/>
 						<MediaRef Id="851559997"/>
 						<MediaRef Id="914666976"/>
 						<MediaRef Id="997782913"/>
@@ -269,10 +296,10 @@
 						<MediaRef Id="85199183"/>
 						<MediaRef Id="146898835"/>
 						<MediaRef Id="217292502"/>
+						<MediaRef Id="444656573"/>
 						<MediaRef Id="631739992"/>
 						<MediaRef Id="641973831"/>
 						<MediaRef Id="716981537"/>
-						<MediaRef Id="753953363"/>
 						<MediaRef Id="851559997"/>
 						<MediaRef Id="914666976"/>
 						<MediaRef Id="997782913"/>
@@ -383,10 +410,10 @@
 						<MediaRef Id="85199183"/>
 						<MediaRef Id="146898835"/>
 						<MediaRef Id="217292502"/>
+						<MediaRef Id="444656573"/>
 						<MediaRef Id="631739992"/>
 						<MediaRef Id="641973831"/>
 						<MediaRef Id="716981537"/>
-						<MediaRef Id="753953363"/>
 						<MediaRef Id="851559997"/>
 						<MediaRef Id="914666976"/>
 						<MediaRef Id="997782913"/>
@@ -401,10 +428,10 @@
 						<MediaRef Id="85199183"/>
 						<MediaRef Id="146898835"/>
 						<MediaRef Id="217292502"/>
+						<MediaRef Id="444656573"/>
 						<MediaRef Id="631739992"/>
 						<MediaRef Id="641973831"/>
 						<MediaRef Id="716981537"/>
-						<MediaRef Id="753953363"/>
 						<MediaRef Id="851559997"/>
 						<MediaRef Id="914666976"/>
 						<MediaRef Id="997782913"/>
@@ -438,7 +465,10 @@
 				</AuxBus>
 				<AuxBus Id="3477531017" Name="EmotionsDimension"/>
 			</AuxBusses>
+			<GameParameters>
+				<GameParameter Id="1750790826" Name="GreeneryLevel"/>
+			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{05D0A35C-22BB-F9AB-9A8E-66A0B7C6963B}</FileHash>
+	<FileHash>{E9A44A38-20B2-7099-6040-4C572311B1BA}</FileHash>
 </SoundBanksInfo>

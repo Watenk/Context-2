@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics\Default Work Unit
     guid: 954c813606d6da4dad71495b9f6c3d05
     GuidInternal: 
-    m_lastTime: -8584928973215696943
+    m_lastTime: -8584935147957695664
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 8dc0b307ade8814aa929c27b28b93464
     GuidInternal: 
-    m_lastTime: -8584918481286599591
+    m_lastTime: -8584929031709871458
     List:
     - name: Ambience
       guid: 45bbfd6b2b78e94186b0109575ddfb5f
@@ -168,7 +168,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: d7906ce14cf00844a1cf51bb2f3f5324
     GuidInternal: 
-    m_lastTime: -8584918481285716399
+    m_lastTime: -8584924033448111425
     List:
     - name: Main
       guid: edcbdbe24520214883096064fcb95c6c
@@ -196,8 +196,45 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 1829c11d708c3d4b85382b800fb51260
     GuidInternal: 
-    m_lastTime: -8584918481287489093
+    m_lastTime: -8584922978533480666
     List:
+    - name: Ambience
+      guid: 86f588cd638f484d8f4020eb95385ae6
+      id: 85412153
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 1829c11d708c3d4b85382b800fb51260
+      - ElementName: Ambience
+        ObjectType: 4
+        guid: 62b82e080942af4b98832c8e88410c14
+      - ElementName: Ambience
+        ObjectType: 3
+        guid: 86f588cd638f484d8f4020eb95385ae6
+      Path: Events\Default Work Unit\Ambience\Ambience
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Ambience
+      guid: 62b82e080942af4b98832c8e88410c14
+      id: 85412153
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 1829c11d708c3d4b85382b800fb51260
+      - ElementName: Ambience
+        ObjectType: 4
+        guid: 62b82e080942af4b98832c8e88410c14
+      Path: Events\Default Work Unit\Ambience
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Chime1Play
       guid: 5e001fa2a4320a4fb58b9ca2a6c61696
       id: 3117609094
@@ -744,8 +781,56 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: 6e8a3e52955e38448efc5e2b8decd175
     GuidInternal: 
-    m_lastTime: -8584928973218572453
-    List: []
+    m_lastTime: -8584923001494753691
+    List:
+    - name: ambience
+      guid: 597d8c556c9ded4793e63e83fdcfab57
+      id: 85412153
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 6e8a3e52955e38448efc5e2b8decd175
+      - ElementName: ambience
+        ObjectType: 4
+        guid: 597d8c556c9ded4793e63e83fdcfab57
+      Path: Game Parameters\Default Work Unit\ambience
+    - name: GreeneryLevel
+      guid: b2565a51c297904ba236a63cc60bc7a7
+      id: 1750790826
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 6e8a3e52955e38448efc5e2b8decd175
+      - ElementName: ambience
+        ObjectType: 4
+        guid: 597d8c556c9ded4793e63e83fdcfab57
+      - ElementName: GreeneryLevel
+        ObjectType: 13
+        guid: b2565a51c297904ba236a63cc60bc7a7
+      Path: Game Parameters\Default Work Unit\ambience\GreeneryLevel
+    - name: InsideOutside
+      guid: 69dd5c6dae75c5408bc782fc42cb0575
+      id: 3929688590
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 6e8a3e52955e38448efc5e2b8decd175
+      - ElementName: ambience
+        ObjectType: 4
+        guid: 597d8c556c9ded4793e63e83fdcfab57
+      - ElementName: InsideOutside
+        ObjectType: 13
+        guid: 69dd5c6dae75c5408bc782fc42cb0575
+      Path: Game Parameters\Default Work Unit\ambience\InsideOutside
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     PathAndIcons:
@@ -758,8 +843,74 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: ee9c2c1aa3ee3549bcf9769c5161d1dc
     GuidInternal: 
-    m_lastTime: -8584928973215736972
-    List: []
+    m_lastTime: -8584922985151727311
+    List:
+    - name: ambienceInsideOutside
+      guid: 54de947f53da664faa37236c7efc25f0
+      id: 3607165242
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: ee9c2c1aa3ee3549bcf9769c5161d1dc
+      - ElementName: ambienceInsideOutside
+        ObjectType: 9
+        guid: 54de947f53da664faa37236c7efc25f0
+      Path: States\Default Work Unit\ambienceInsideOutside
+      values:
+      - name: Inside
+        guid: e78584d61f7f854189e1c3b0f0a71358
+        id: 3553349781
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: ee9c2c1aa3ee3549bcf9769c5161d1dc
+        - ElementName: ambienceInsideOutside
+          ObjectType: 9
+          guid: 54de947f53da664faa37236c7efc25f0
+        - ElementName: Inside
+          ObjectType: 8
+          guid: e78584d61f7f854189e1c3b0f0a71358
+      - name: None
+        guid: b436ee988dcb464a9cd222f3f4d43df2
+        id: 748895195
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: ee9c2c1aa3ee3549bcf9769c5161d1dc
+        - ElementName: ambienceInsideOutside
+          ObjectType: 9
+          guid: 54de947f53da664faa37236c7efc25f0
+        - ElementName: None
+          ObjectType: 8
+          guid: b436ee988dcb464a9cd222f3f4d43df2
+      - name: Outside
+        guid: 4b2933342d05b745ab977aa8b3fb91c4
+        id: 438105790
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: ee9c2c1aa3ee3549bcf9769c5161d1dc
+        - ElementName: ambienceInsideOutside
+          ObjectType: 9
+          guid: 54de947f53da664faa37236c7efc25f0
+        - ElementName: Outside
+          ObjectType: 8
+          guid: 4b2933342d05b745ab977aa8b3fb91c4
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
     PathAndIcons:
@@ -772,7 +923,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: a0523abc768a534caf9f9ccda37772bd
     GuidInternal: 
-    m_lastTime: -8584928973215736972
+    m_lastTime: -8584932635564796682
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
@@ -786,10 +937,10 @@ MonoBehaviour:
     ParentPath: Triggers\Default Work Unit
     guid: ffb58b344218ab42b290b09ddbdffacb
     GuidInternal: 
-    m_lastTime: -8584928973215726996
+    m_lastTime: -8584935147958006455
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 010000000500000006000000070000000a0000000b0000000c00000016000000190000001b0000001c0000002000000025000000
+  ExpandedWaapiItemIds: 01000000050000000600000007000000080000000a0000000b0000000c00000016000000190000001b0000001c00000020000000250000002c000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0
