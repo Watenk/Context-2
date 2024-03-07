@@ -19,13 +19,13 @@ MonoBehaviour:
   FollowPlayerAtDistance: 3
   FollowPlayerSpeed: 6
   Prefabs:
-  - agentType: 0
+  - CommunityType: 1
     prefabs:
     - {fileID: 7888470974323744715, guid: 67cf23082feafd9448ab2c48d921109e, type: 3}
-  - agentType: 1
+  - CommunityType: 0
     prefabs:
     - {fileID: 7888470974323744715, guid: 7af951a9365c5294db884b4ca66f5947, type: 3}
-  - agentType: 2
+  - CommunityType: 2
     prefabs:
     - {fileID: 7888470974323744715, guid: 2330071e75cac334eb8f7c157648ab28, type: 3}
   StepDistance: 2

@@ -1,12 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.IO;
-using Unity.VisualScripting.FullSerializer;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class Agent : MonoBehaviour
+public class Agent : IFixedUpdateable
 {
+    public GameObject GameObject { get; private set; }
     public Group Group { get; private set; }
     public bool DestinationReached { get; private set; }
     public NavMeshAgent NavMeshAgent { get; private set; }
@@ -21,9 +20,10 @@ public class Agent : MonoBehaviour
 
     //----------------------------------------
 
-    public void InitAgent(Group group){
+    public Agent(GameObject gameObject, Group group){
+        GameObject = gameObject;
         Group = group;
-        NavMeshAgent = GetComponent<NavMeshAgent>();
+        NavMeshAgent = GameManager.GetComponent<NavMeshAgent>(GameObject);
         stepDistance = AgentSettings.Instance.StepDistance;
         wanderFromHomeDistance = AgentSettings.Instance.WanderFromHomeDistance;
         NavMeshAgent.speed = Random.Range(AgentSettings.Instance.MinSpeed, AgentSettings.Instance.MaxSpeed);
@@ -33,7 +33,8 @@ public class Agent : MonoBehaviour
            new AgentIdleState(),
            new AgentFollowingState(),
            new AgentWanderingState(),
-           new AgentLookAtPlayerState()
+           new AgentLookAtPlayerState(),
+           new AgentDepressedState()
         );
         fsm.SwitchState(typeof(AgentWanderingState));
 
@@ -46,10 +47,24 @@ public class Agent : MonoBehaviour
         #endif
     }
 
-    public void FixedUpdate(){
-        
+    public void OnFixedUpdate(){
         fsm.OnUpdate();
         UpdatePath();
+    }
+
+    public void ExecuteTask(ChimeTasks chimeTask){
+        
+        switch (chimeTask){
+            case ChimeTasks.follow:
+                if (fsm.currentState == fsm.GetState(typeof(AgentLookAtPlayerState))){
+                    fsm.SwitchState(typeof(AgentFollowingState));
+                }
+                break;
+            
+            case ChimeTasks.solveProblem:
+                // TODO: Add solveproblem task
+                break;
+        }
     }
 
     public void SetDestination(Vector3 pos, float stopDistance){

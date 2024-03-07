@@ -33,7 +33,11 @@ public class Timer
         lenght = newLenght;
     }
 
-    public void ChangeTime(float newTimerTime){
+    public void ChangeCurrentTime(float newTimerTime){
         timer = newTimerTime;
+    }
+
+    public void ResetTime(){
+        timer = lenght;
     }
 }
