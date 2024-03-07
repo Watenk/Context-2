@@ -2,9 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum AgentType 
+public class AgentDepressedState : BaseState<Agent>
 {
-    circle,
-    triangle,
-    square
+
 }

@@ -3,21 +3,23 @@ using System.Collections.Generic;
 using System.Xml.Serialization;
 using UnityEngine;
 
-public class Group
+public class Group : IFixedUpdateable
 {
-    public AgentType AgentType { get; private set; }
+    public Community Community { get; private set; }
+    public CommunityTypes CommunityType { get; private set; }
     public int Size { get; private set; }
     public Vector3 Home { get; private set; }
     public float SpawnRadius { get; private set; }
 
     private List<Agent> agents = new List<Agent>();
+    private List<CommunityTypes> followingAgents = new List<CommunityTypes>(); // Agents in following State
     private List<AgentPrefab> agentPrefabs = new List<AgentPrefab>();
-    private Dictionary<AgentType, float> affection = new Dictionary<AgentType, float>();
 
     //-----------------------------------------------
 
-    public Group(AgentType agentType, int groupSize, Vector3 homePos, float spawnRadius){
-        AgentType = agentType;
+    public Group(Community community, CommunityTypes communityType, int groupSize, Vector3 homePos, float spawnRadius){
+        Community = community;
+        CommunityType = communityType;
         Size = groupSize;
         Home = homePos;
         SpawnRadius = spawnRadius;
@@ -26,10 +28,34 @@ public class Group
         InstanceAgents();
     }
 
+    public void OnFixedUpdate(){
+        foreach (Agent currentAgent in agents){
+            currentAgent.OnFixedUpdate();
+        }
+    }
+
     public void DestroyAgents(){
         foreach (Agent current in agents){
-            GameObject.Destroy(current.gameObject);
+            GameObject.Destroy(current.GameObject);
         }
+    }
+
+    public void ExecuteTask(ChimeTasks chimeTask){
+        foreach (Agent currentAgent in agents){
+            currentAgent.ExecuteTask(chimeTask);
+        }
+    }
+
+    public void AddFollowingAgent(CommunityTypes agentType){
+        followingAgents.Add(agentType);
+    }
+
+    public void RemoveFollowingAgent(CommunityTypes agentType){
+        followingAgents.Remove(agentType);
+    }
+
+    public List<CommunityTypes> GetFollowingAgents(){
+        return followingAgents;
     }
 
     //------------------------------------------------
@@ -40,18 +66,14 @@ public class Group
 
         for (int i = 0; i < Size; i++){
 
+            // Instance GameObject
             GameObject randomPrefab = agentPrefab.prefabs[Random.Range(0, agentPrefab.prefabs.Count)];
             Vector3 randomPosInRange = new Vector3(Home.x + Random.Range(-SpawnRadius, SpawnRadius), 0, Home.z + Random.Range(-SpawnRadius, SpawnRadius));
             GameObject agentInstance = GameObject.Instantiate(randomPrefab, randomPosInRange, Quaternion.identity);
             agentInstance.transform.SetParent(GameManager.Instance.transform);
-            Agent agent = agentInstance.GetComponent<Agent>();
 
-            #if UNITY_EDITOR
-                if (agent == null) { Debug.LogError(agentPrefab.ToString() + " doesn't contain an agent"); }
-            #endif
-
-            agent.InitAgent(this);
-            agents.Add(agent);
+            Agent newAgent = new Agent(agentInstance, this);
+            agents.Add(newAgent);
         }
     }
 
@@ -59,14 +81,14 @@ public class Group
 
         AgentPrefab agentPrefab = null;
         foreach (AgentPrefab current in agentPrefabs){
-            if (current.agentType == AgentType){
+            if (current.CommunityType == Community.CommunityType){
                 agentPrefab = current;
             }
         }
 
         #if UNITY_EDITOR
-            if (agentPrefab == null) { Debug.LogError("No AgentPrefab of type " + AgentType.ToString() + " found. Add this type in the AgentSettings"); }
-            if (agentPrefab.prefabs == null) { Debug.LogError("No prefabs of type " + AgentType.ToString() + " found. Add prefabs of this type in the AgentSettings"); }
+            if (agentPrefab == null) { Debug.LogError("No AgentPrefab of type " + Community.ToString() + " found. Add this type in the AgentSettings"); }
+            if (agentPrefab.prefabs == null) { Debug.LogError("No prefabs of type " + Community.ToString() + " found. Add prefabs of this type in the AgentSettings"); }
         #endif
 
         return agentPrefab;

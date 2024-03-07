@@ -8,29 +8,29 @@ using UnityEngine;
 public class Fsm<T>
 {
     public BaseState<T> currentState;
-    
+
     private Dictionary<System.Type, BaseState<T>> states = new Dictionary<System.Type, BaseState<T>>(); 
 
-    public Fsm(T owner, params BaseState<T>[] newStates)
-    {
-        foreach (BaseState<T> state in newStates)
-        {
+    public Fsm(T owner, params BaseState<T>[] newStates){
+        foreach (BaseState<T> state in newStates){
             state.SetOwner(this, owner);
             states.Add(state.GetType(), state);
             state.OnAwake();
         }
     }
 
-    public void SwitchState(System.Type newState)
-    {
+    public void OnUpdate(){
+        currentState?.OnUpdate();
+    }
+
+    public void SwitchState(System.Type newState){
         currentState?.OnExit();
         currentState = states[newState];
         currentState?.OnStart();
     }
 
-    public void OnUpdate()
-    {
-        currentState?.OnUpdate();
+    public BaseState<T> GetState(System.Type type){
+        return states[type];
     }
 }
 
