@@ -14,12 +14,13 @@ public class Sound : IFixedUpdateable
 
     //------------------------------------------------
 
-    public Sound(SoundManager soundManager, GameObject soundGameObject, AK.Wwise.Event startEvent, float existLenght){
+    public Sound(SoundManager soundManager, GameObject soundGameObject, AK.Wwise.Event startEvent){
         timerManager = GameManager.GetService<TimerManager>();
         this.soundManager = soundManager;
+        SoundGameObject = soundGameObject;
 
         startEvent.Post(soundGameObject);
-        existTimer = timerManager.AddTimer(existLenght);
+        existTimer = timerManager.AddTimer(SoundSettings.Instance.SoundDestroyTime);
     }
 
     public void OnFixedUpdate(){
