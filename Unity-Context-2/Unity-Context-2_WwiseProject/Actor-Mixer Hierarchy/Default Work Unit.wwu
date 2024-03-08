@@ -591,7 +591,7 @@
 												<AudioFileSource Name="chimes-community1A#" ID="{8B6AC04E-430A-4940-A8AA-049C4F77D47A}">
 													<PropertyList>
 														<Property Name="FadeInDuration" Type="Real64" Value="0.007"/>
-														<Property Name="FadeOutDuration" Type="Real64" Value="0.19105078125"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.147010682683692"/>
 														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
 														<Property Name="TrimEnd" Type="Real64" Value="1.10260026041667"/>
 													</PropertyList>
@@ -889,6 +889,9 @@
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="chimes-community2-1" ID="{CA337BFB-304E-45A5-A99A-311E795B28D9}">
+													<PropertyList>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>community2\chimes-community2-1.wav</AudioFile>
 													<MediaIDList>
@@ -911,6 +914,10 @@
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="chimes-community2-2" ID="{282881C9-76F2-4666-826F-EBC0B40AA6E5}">
+													<PropertyList>
+														<Property Name="LoopBegin" Type="Real64" Value="0"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>community2\chimes-community2-2.wav</AudioFile>
 													<MediaIDList>
