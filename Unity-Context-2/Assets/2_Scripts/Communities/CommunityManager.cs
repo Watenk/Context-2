@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CommunityManager : IFixedUpdateable
 {
+    private List<CommunityTypes> activeAgents = new List<CommunityTypes>();
     private Dictionary<CommunityTypes, Community> communities = new Dictionary<CommunityTypes, Community>();
 
     //-------------------------------------------
@@ -21,10 +22,6 @@ public class CommunityManager : IFixedUpdateable
         }
     }
 
-    public void AddGroup(CommunityTypes communityType, int size, Vector3 pos, float spawnRadius){
-        Get(communityType).AddGroup(size, pos, spawnRadius);
-    }
-
     public Community GetCommunity(CommunityTypes communityType){
         communities.TryGetValue(communityType, out Community community);
 
@@ -35,35 +32,29 @@ public class CommunityManager : IFixedUpdateable
         return community;
     }
 
-    public List<CommunityTypes> GetFollowingAgents(){
+    public List<CommunityTypes> GetActiveAgents(){
+        return activeAgents;
+    }
 
-        if (communities.Count == 0) { return default; }
-        List<CommunityTypes> followingAgents = new List<CommunityTypes>();
+    public void AddActiveAgent(CommunityTypes communityType){
+        activeAgents.Add(communityType);
+    }
 
-        foreach (KeyValuePair<CommunityTypes, Community> kvp in communities){
-            followingAgents.AddRange(kvp.Value.GetFollowingAgents());
-        }
+    public void RemoveActiveAgent(CommunityTypes communityType){
+        activeAgents.Remove(communityType);
+    }
 
-        return followingAgents;
+    public void AddGroup(CommunityTypes communityType, int size, Vector3 pos, float spawnRadius){
+        GetCommunity(communityType).AddGroup(size, pos, spawnRadius);
     }
 
     public void AddProblem(CommunityTypes communityType, Problem problem){
-        Get(communityType).AddProblem(problem);
+        GetCommunity(communityType).AddProblem(problem);
     }
 
     //----------------------------------------------
 
     private void Add(CommunityTypes communityType){
         communities.Add(communityType, new Community(communityType));
-    }
-
-    private Community Get(CommunityTypes communityType){
-        communities.TryGetValue(communityType, out Community communityInstance);
-
-        #if UNITY_EDITOR
-            if (communityInstance == null) { Debug.LogWarning("communityInstance of " + communityType.ToString() + " is null"); }
-        #endif
-
-        return communityInstance;
     }
 }

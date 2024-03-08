@@ -1,0 +1,83 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 219d694f910c8da4eb5b7a838429d477, type: 3}
+  m_Name: SoundSettings
+  m_EditorClassIdentifier: 
+  SoundPrefab: {fileID: 7179621112042646335, guid: 12efd11602ec50f4697ca6b8f74692a5,
+    type: 3}
+  SoundDestroyTime: 5
+  PlayerChimes:
+  - Name: GlobalChime
+    ChimeInput: 0
+    StartWwiseEvent:
+      idInternal: 0
+      valueGuidInternal: 
+      WwiseObjectReference: {fileID: 0}
+    StopWwiseEvent:
+      idInternal: 0
+      valueGuidInternal: 
+      WwiseObjectReference: {fileID: 0}
+  - Name: TriangleChime
+    ChimeInput: 1
+    StartWwiseEvent:
+      idInternal: 0
+      valueGuidInternal: 
+      WwiseObjectReference: {fileID: 0}
+    StopWwiseEvent:
+      idInternal: 0
+      valueGuidInternal: 
+      WwiseObjectReference: {fileID: 0}
+  - Name: SquareChime
+    ChimeInput: 2
+    StartWwiseEvent:
+      idInternal: 0
+      valueGuidInternal: 
+      WwiseObjectReference: {fileID: 0}
+    StopWwiseEvent:
+      idInternal: 0
+      valueGuidInternal: 
+      WwiseObjectReference: {fileID: 0}
+  - Name: CircleChime
+    ChimeInput: 3
+    StartWwiseEvent:
+      idInternal: 0
+      valueGuidInternal: 
+      WwiseObjectReference: {fileID: 0}
+    StopWwiseEvent:
+      idInternal: 0
+      valueGuidInternal: 
+      WwiseObjectReference: {fileID: 0}
+  NPCChimes:
+  - Name: GlobalChime
+    ChimeInput: 0
+    WwiseEvent:
+      idInternal: 0
+      valueGuidInternal: 
+      WwiseObjectReference: {fileID: 0}
+  - Name: TriangleChime
+    ChimeInput: 1
+    WwiseEvent:
+      idInternal: 0
+      valueGuidInternal: 
+      WwiseObjectReference: {fileID: 0}
+  - Name: SquareChime
+    ChimeInput: 2
+    WwiseEvent:
+      idInternal: 0
+      valueGuidInternal: 
+      WwiseObjectReference: {fileID: 0}
+  - Name: CircleChime
+    ChimeInput: 3
+    WwiseEvent:
+      idInternal: 0
+      valueGuidInternal: 
+      WwiseObjectReference: {fileID: 0}

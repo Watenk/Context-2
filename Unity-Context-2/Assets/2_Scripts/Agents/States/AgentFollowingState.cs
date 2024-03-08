@@ -12,11 +12,13 @@ public class AgentFollowingState : BaseState<Agent>
     // References
     private TimerManager timerManager;
     private PlayerController player;
+    private CommunityManager communityManager;
 
     //-----------------------------------------
 
     public override void OnAwake(){
         timerManager = GameManager.GetService<TimerManager>();
+        communityManager = GameManager.GetService<CommunityManager>();
         player = GameManager.Instance.Player;
         followPlayerAtDistance = AgentSettings.Instance.FollowPlayerAtDistance;
         followPlayerSpeed = AgentSettings.Instance.FollowPlayerSpeed;
@@ -32,7 +34,7 @@ public class AgentFollowingState : BaseState<Agent>
         normalAgentSpeed = owner.NavMeshAgent.speed;
         owner.NavMeshAgent.speed = followPlayerSpeed;
         spaceTimer = timerManager.AddTimer(0.5f);
-        owner.Group.AddFollowingAgent(owner.Group.CommunityType);
+        communityManager.AddActiveAgent(owner.Group.CommunityType);
     }
 
     public override void OnUpdate(){
@@ -42,7 +44,7 @@ public class AgentFollowingState : BaseState<Agent>
     public override void OnExit(){
         owner.NavMeshAgent.speed = normalAgentSpeed;
         timerManager.RemoveTimer(spaceTimer);
-        owner.Group.RemoveFollowingAgent(owner.Group.CommunityType);
+        communityManager.RemoveActiveAgent(owner.Group.CommunityType);
     }
 
     //----------------------------------------

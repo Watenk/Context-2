@@ -18,16 +18,24 @@ public class Agent : IFixedUpdateable
     private float stepDistance;
     private float stopDistance;
 
+    // References
+    private ChimeSequencer chimeSequencer;
+    private SoundManager soundManager;
+
     //----------------------------------------
 
     public Agent(GameObject gameObject, Group group){
         GameObject = gameObject;
         Group = group;
         NavMeshAgent = GameManager.GetComponent<NavMeshAgent>(GameObject);
+        chimeSequencer = GameManager.GetService<ChimeSequencer>();
+        soundManager = GameManager.GetService<SoundManager>();
         stepDistance = AgentSettings.Instance.StepDistance;
         wanderFromHomeDistance = AgentSettings.Instance.WanderFromHomeDistance;
         NavMeshAgent.speed = Random.Range(AgentSettings.Instance.MinSpeed, AgentSettings.Instance.MaxSpeed);
         DestinationReached = true;
+
+        chimeSequencer.OnChimeSequence += OnChimeSequence;
 
         fsm = new Fsm<Agent>(this,
            new AgentIdleState(),
@@ -52,21 +60,6 @@ public class Agent : IFixedUpdateable
         UpdatePath();
     }
 
-    public void ExecuteTask(ChimeTasks chimeTask){
-        
-        switch (chimeTask){
-            case ChimeTasks.follow:
-                if (fsm.currentState == fsm.GetState(typeof(AgentLookAtPlayerState))){
-                    fsm.SwitchState(typeof(AgentFollowingState));
-                }
-                break;
-            
-            case ChimeTasks.solveProblem:
-                // TODO: Add solveproblem task
-                break;
-        }
-    }
-
     public void SetDestination(Vector3 pos, float stopDistance){
         this.stopDistance = stopDistance;
         NavMeshPath navMeshPath = new NavMeshPath();
@@ -87,6 +80,32 @@ public class Agent : IFixedUpdateable
     }
 
     //------------------------------------------
+
+    private void OnChimeSequence(ChimeSequence chimeSequence){
+        
+        if (!chimeSequence.affectedCommunities.Contains(Group.CommunityType)) { return; } // If community is affected
+
+        ExecuteTask(chimeSequence.chimeTask);
+    }
+
+    private void ExecuteTask(ChimeTasks chimeTask){
+
+        switch (chimeTask){
+            case ChimeTasks.follow:
+                if (fsm.currentState == fsm.GetState(typeof(AgentLookAtPlayerState))){
+                    fsm.SwitchState(typeof(AgentFollowingState));
+
+                    // Sound
+                    NPCSoundData soundData = soundManager.GetNPCSound(chimeTask);
+                    soundManager.PlaySound(soundData, GameObject.transform.position);
+                }
+                break;
+            
+            case ChimeTasks.solveProblem:
+                // TODO: Add solveproblem task
+                break;
+        }
+    }
 
     private void UpdatePath(){
         if (pathIndex != path.Count){

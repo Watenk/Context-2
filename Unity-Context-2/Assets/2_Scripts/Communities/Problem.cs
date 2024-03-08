@@ -39,7 +39,7 @@ public class Problem
         if (chimeSequence.chimeTask != ChimeTasks.solveProblem ) { return; }
 
         if (Vector3.Distance(pos, player.gameObject.transform.position) < detectRange){
-            List<CommunityTypes> followingAgents = communityManager.GetFollowingAgents();
+            List<CommunityTypes> followingAgents = communityManager.GetActiveAgents();
 
             if (problemSolvers.All(agent => followingAgents.Contains(agent))){
                 Debug.Log("Jeee");

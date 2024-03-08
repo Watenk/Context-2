@@ -8,20 +8,19 @@ public class InputHandler : IUpdateable
 {
     public event Action<Vector2> OnPlayerMove;
     public event Action<Chime> OnChime;
+    public event Action<ChimeInputs> OnChimeUp;
+    public event Action<ChimeInputs> OnChimeDown;
 
     private Dictionary<string, Timer> chimeTimers = new Dictionary<string, Timer>();
     private Dictionary<string, bool> chimeBools = new Dictionary<string, bool>();
-    private LoopingSound globalCime;
 
     // References
     private TimerManager timerManager;
-    private SoundManager soundManager;
 
     //---------------------------------------------------------
 
     public InputHandler(){
         timerManager = GameManager.GetService<TimerManager>();
-        soundManager = GameManager.GetService<SoundManager>();
 
         chimeTimers.Add("square", timerManager.AddTimer(ChimeSettings.Instance.LongChimeLenght));
         chimeTimers.Add("triangle", timerManager.AddTimer(ChimeSettings.Instance.LongChimeLenght));
@@ -47,38 +46,30 @@ public class InputHandler : IUpdateable
     private void CheckChime(string button){
         chimeBools.TryGetValue(button, out bool state);
         if (Input.GetAxis(button) > 0 && !state && OnChime != null){
-            OnChimeDown(button);
+            IfChimeDown(button);
         }
         else if (Input.GetAxis(button) == 0 && state && OnChime != null){
-            OnChimeUp(button);
+            IfChimeUp(button);
         }
     }
 
-    private void OnChimeDown(string button){
+    private void IfChimeDown(string button){
+        ChimeInputs chimeInput = ConvertButtonToChimeInput(button);
         chimeBools[button] = true;
         chimeTimers[button].ResetTime();
-        PlaySound(ConvertButtonToChimeInput(button));
+        OnChimeDown(chimeInput);
     }
 
-    private void OnChimeUp(string button){
+    private void IfChimeUp(string button){
+        ChimeInputs chimeInput = ConvertButtonToChimeInput(button);
         if (chimeTimers[button].IsDone()){
-            OnChime(new Chime(ConvertButtonToChimeInput(button), true));
+            OnChime(new Chime(chimeInput, true));
         }
         else{
-            OnChime(new Chime(ConvertButtonToChimeInput(button), false));
+            OnChime(new Chime(chimeInput, false));
         }
         chimeBools[button] = false;
-        globalCime.StopSound();
-    }
-
-    private void PlaySound(ChimeInputs chimeInput){
-
-        switch (chimeInput){
-            
-            case ChimeInputs.global:
-                globalCime = soundManager.AddLoopingSound(AudioSettings.Instance.PlayPlayerGlobalChime, AudioSettings.Instance.PlayPlayerGlobalChime, GameManager.Instance.Player.transform.position);
-                break;
-        }
+        OnChimeUp(chimeInput);
     }
 
     private ChimeInputs ConvertButtonToChimeInput(string button){

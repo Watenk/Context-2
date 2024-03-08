@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Xml.Serialization;
 using UnityEngine;
 
 public class Group : IFixedUpdateable
@@ -12,7 +11,6 @@ public class Group : IFixedUpdateable
     public float SpawnRadius { get; private set; }
 
     private List<Agent> agents = new List<Agent>();
-    private List<CommunityTypes> followingAgents = new List<CommunityTypes>(); // Agents in following State
     private List<AgentPrefab> agentPrefabs = new List<AgentPrefab>();
 
     //-----------------------------------------------
@@ -38,24 +36,6 @@ public class Group : IFixedUpdateable
         foreach (Agent current in agents){
             GameObject.Destroy(current.GameObject);
         }
-    }
-
-    public void ExecuteTask(ChimeTasks chimeTask){
-        foreach (Agent currentAgent in agents){
-            currentAgent.ExecuteTask(chimeTask);
-        }
-    }
-
-    public void AddFollowingAgent(CommunityTypes agentType){
-        followingAgents.Add(agentType);
-    }
-
-    public void RemoveFollowingAgent(CommunityTypes agentType){
-        followingAgents.Remove(agentType);
-    }
-
-    public List<CommunityTypes> GetFollowingAgents(){
-        return followingAgents;
     }
 
     //------------------------------------------------
