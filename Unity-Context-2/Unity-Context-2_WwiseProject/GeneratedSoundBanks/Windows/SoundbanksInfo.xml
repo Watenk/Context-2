@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{5D6B9902-7BE1-007D-6C31-B6A48CF663BA}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{F9731315-8566-8D0A-94D1-0CE410BB753C}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -25,7 +25,7 @@
 			<Busses>
 				<Bus Id="85412153" Name="Ambience"/>
 				<Bus Id="1069431850" Name="Player"/>
-				<Bus Id="2590078866" Name="Chimes"/>
+				<Bus Id="2590078866" Name="Chimes" MaxAttenuation="30"/>
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
 			</Busses>
 			<AuxBusses>
@@ -59,7 +59,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{E813E99F-7654-FBEC-4457-FEB51BBE590D}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{FF31356D-6861-5624-5B8C-DDB05BF15E72}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -93,7 +93,7 @@
 				</File>
 				<File Id="274837946" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>community3\chimes-community3End1.wav</ShortName>
-					<CachePath>SFX/community3/chimes-community3End1_818F3B66.wem</CachePath>
+					<CachePath>SFX/community3/chimes-community3End1_0C4E205D.wem</CachePath>
 				</File>
 				<File Id="276159906" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>community1\chimes-community1C#.wav</ShortName>
@@ -101,7 +101,7 @@
 				</File>
 				<File Id="374736244" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>community1\chimes-community1A#.wav</ShortName>
-					<CachePath>SFX/community1/chimes-community1A#_7BAD7AF1.wem</CachePath>
+					<CachePath>SFX/community1/chimes-community1A#_B6A2727B.wem</CachePath>
 				</File>
 				<File Id="390170484" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>ambience\ambience-green.wav</ShortName>
@@ -113,7 +113,7 @@
 				</File>
 				<File Id="535706050" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>community3\chimes-community3End2.wav</ShortName>
-					<CachePath>SFX/community3/chimes-community3End2_818F3B66.wem</CachePath>
+					<CachePath>SFX/community3/chimes-community3End2_BB2FB185.wem</CachePath>
 				</File>
 				<File Id="631739992" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>universal\chimes-universal5.wav</ShortName>
@@ -121,7 +121,7 @@
 				</File>
 				<File Id="632147615" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>community3\chimes-community3Start2.wav</ShortName>
-					<CachePath>SFX/community3/chimes-community3Start2_DBBAE844.wem</CachePath>
+					<CachePath>SFX/community3/chimes-community3Start2_C4606813.wem</CachePath>
 				</File>
 				<File Id="641973831" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>universal\chimes-universal3.wav</ShortName>
@@ -141,7 +141,7 @@
 				</File>
 				<File Id="752477891" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>community2\chimes-community2Confused.wav</ShortName>
-					<CachePath>SFX/community2/chimes-community2Confused_818F3B66.wem</CachePath>
+					<CachePath>SFX/community2/chimes-community2Confused_A465BEC2.wem</CachePath>
 				</File>
 				<File Id="775169254" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>community1\chimes-community1F.wav</ShortName>
@@ -149,11 +149,11 @@
 				</File>
 				<File Id="775312338" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>community3\chimes-community3Start1.wav</ShortName>
-					<CachePath>SFX/community3/chimes-community3Start1_AA9D67F0.wem</CachePath>
+					<CachePath>SFX/community3/chimes-community3Start1_4D185C47.wem</CachePath>
 				</File>
 				<File Id="780278558" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>community3\chimes-community3Confused.wav</ShortName>
-					<CachePath>SFX/community3/chimes-community3Confused_818F3B66.wem</CachePath>
+					<CachePath>SFX/community3/chimes-community3Confused_C5246CD6.wem</CachePath>
 				</File>
 				<File Id="817811054" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>community1\chimes-community1F#.wav</ShortName>
@@ -177,7 +177,7 @@
 				</File>
 				<File Id="1040139626" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>community1\chimes-community1Confused.wav</ShortName>
-					<CachePath>SFX/community1/chimes-community1Confused_818F3B66.wem</CachePath>
+					<CachePath>SFX/community1/chimes-community1Confused_EA7520A7.wem</CachePath>
 				</File>
 				<File Id="1050643609" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>community1\chimes-community1G#.wav</ShortName>
@@ -201,7 +201,7 @@
 						<MediaRef Id="1052460289"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3117609094" Name="Chime1Play" MaxAttenuation="100" DurationType="OneShot" DurationMin="1.0245572" DurationMax="1.413994">
+				<Event Id="3117609094" Name="Chime1Play" MaxAttenuation="30" DurationType="OneShot" DurationMin="1.0245572" DurationMax="1.413994">
 					<MediaRefs>
 						<MediaRef Id="200744382"/>
 						<MediaRef Id="234843785"/>
@@ -231,7 +231,7 @@
 						<AuxBusRef Id="841660990" Name="TestVerb"/>
 					</AuxBusRefs>
 				</Event>
-				<Event Id="408897957" Name="Chime2Play" MaxAttenuation="100" DurationType="OneShot" DurationMin="4" DurationMax="4">
+				<Event Id="408897957" Name="Chime2Play" MaxAttenuation="30" DurationType="OneShot" DurationMin="4" DurationMax="4">
 					<MediaRefs>
 						<MediaRef Id="78035267"/>
 						<MediaRef Id="211848107"/>
@@ -253,7 +253,7 @@
 						<AuxBusRef Id="841660990" Name="TestVerb"/>
 					</AuxBusRefs>
 				</Event>
-				<Event Id="120659352" Name="Chime3Play" MaxAttenuation="100" DurationType="OneShot" DurationMin="1.1666667" DurationMax="2.165">
+				<Event Id="120659352" Name="Chime3Play" MaxAttenuation="30" DurationType="OneShot" DurationMin="1.1666667" DurationMax="2.165">
 					<MediaRefs>
 						<MediaRef Id="274837946"/>
 						<MediaRef Id="535706050"/>
@@ -273,7 +273,7 @@
 						<AuxBusRef Id="841660990" Name="TestVerb"/>
 					</AuxBusRefs>
 				</Event>
-				<Event Id="1032095362" Name="ChimeUPlay" MaxAttenuation="100" DurationType="OneShot" DurationMin="1.3725834" DurationMax="2.1033542">
+				<Event Id="1032095362" Name="ChimeUPlay" MaxAttenuation="30" DurationType="OneShot" DurationMin="1.3725834" DurationMax="2.1033542">
 					<MediaRefs>
 						<MediaRef Id="85199183"/>
 						<MediaRef Id="146898835"/>
@@ -309,7 +309,7 @@
 						<AuxBusRef Id="3268711830" Name="TestEcho"/>
 					</AuxBusRefs>
 				</Event>
-				<Event Id="722374694" Name="NPCChime1Confused" MaxAttenuation="100" DurationType="OneShot" DurationMin="1.9324167" DurationMax="1.9324167">
+				<Event Id="722374694" Name="NPCChime1Confused" MaxAttenuation="30" DurationType="OneShot" DurationMin="1.9324167" DurationMax="1.9324167">
 					<MediaRefs>
 						<MediaRef Id="1040139626"/>
 					</MediaRefs>
@@ -317,7 +317,7 @@
 						<AuxBusRef Id="841660990" Name="TestVerb"/>
 					</AuxBusRefs>
 				</Event>
-				<Event Id="1795884461" Name="NPCChime1Long" MaxAttenuation="100" DurationType="OneShot" DurationMin="1.0245572" DurationMax="1.413994">
+				<Event Id="1795884461" Name="NPCChime1Long" MaxAttenuation="30" DurationType="OneShot" DurationMin="1.0245572" DurationMax="1.413994">
 					<MediaRefs>
 						<MediaRef Id="200744382"/>
 						<MediaRef Id="234843785"/>
@@ -332,7 +332,7 @@
 						<AuxBusRef Id="841660990" Name="TestVerb"/>
 					</AuxBusRefs>
 				</Event>
-				<Event Id="4090504235" Name="NPCChime1Short" MaxAttenuation="100" DurationType="OneShot" DurationMin="1.0245572" DurationMax="1.413994">
+				<Event Id="4090504235" Name="NPCChime1Short" MaxAttenuation="30" DurationType="OneShot" DurationMin="1.0245572" DurationMax="1.413994">
 					<MediaRefs>
 						<MediaRef Id="200744382"/>
 						<MediaRef Id="234843785"/>
@@ -347,7 +347,7 @@
 						<AuxBusRef Id="841660990" Name="TestVerb"/>
 					</AuxBusRefs>
 				</Event>
-				<Event Id="2993939861" Name="NPCChime2Confused" MaxAttenuation="100" DurationType="OneShot" DurationMin="4.8467293" DurationMax="4.8467293">
+				<Event Id="2993939861" Name="NPCChime2Confused" MaxAttenuation="30" DurationType="OneShot" DurationMin="4.8467293" DurationMax="4.8467293">
 					<MediaRefs>
 						<MediaRef Id="752477891"/>
 					</MediaRefs>
@@ -355,7 +355,7 @@
 						<AuxBusRef Id="841660990" Name="TestVerb"/>
 					</AuxBusRefs>
 				</Event>
-				<Event Id="1704435946" Name="NPCChime2Long" MaxAttenuation="100" DurationType="OneShot" DurationMin="4" DurationMax="4">
+				<Event Id="1704435946" Name="NPCChime2Long" MaxAttenuation="30" DurationType="OneShot" DurationMin="4" DurationMax="4">
 					<MediaRefs>
 						<MediaRef Id="78035267"/>
 						<MediaRef Id="211848107"/>
@@ -366,7 +366,7 @@
 						<AuxBusRef Id="841660990" Name="TestVerb"/>
 					</AuxBusRefs>
 				</Event>
-				<Event Id="2400837350" Name="NPCChime2Short" MaxAttenuation="100" DurationType="OneShot" DurationMin="4" DurationMax="4">
+				<Event Id="2400837350" Name="NPCChime2Short" MaxAttenuation="30" DurationType="OneShot" DurationMin="4" DurationMax="4">
 					<MediaRefs>
 						<MediaRef Id="78035267"/>
 						<MediaRef Id="211848107"/>
@@ -377,7 +377,7 @@
 						<AuxBusRef Id="841660990" Name="TestVerb"/>
 					</AuxBusRefs>
 				</Event>
-				<Event Id="1137344520" Name="NPCChime3Confused" MaxAttenuation="100" DurationType="OneShot" DurationMin="1.5295833" DurationMax="1.5295833">
+				<Event Id="1137344520" Name="NPCChime3Confused" MaxAttenuation="30" DurationType="OneShot" DurationMin="1.5295833" DurationMax="1.5295833">
 					<MediaRefs>
 						<MediaRef Id="780278558"/>
 					</MediaRefs>
@@ -385,7 +385,7 @@
 						<AuxBusRef Id="841660990" Name="TestVerb"/>
 					</AuxBusRefs>
 				</Event>
-				<Event Id="4264886911" Name="NPCChime3Long" MaxAttenuation="100" DurationType="OneShot" DurationMin="1.1666667" DurationMax="2.165">
+				<Event Id="4264886911" Name="NPCChime3Long" MaxAttenuation="30" DurationType="OneShot" DurationMin="1.1666667" DurationMax="2.165">
 					<MediaRefs>
 						<MediaRef Id="274837946"/>
 						<MediaRef Id="535706050"/>
@@ -396,7 +396,7 @@
 						<AuxBusRef Id="841660990" Name="TestVerb"/>
 					</AuxBusRefs>
 				</Event>
-				<Event Id="2846910609" Name="NPCChime3Short" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.375" DurationMax="0.375">
+				<Event Id="2846910609" Name="NPCChime3Short" MaxAttenuation="30" DurationType="OneShot" DurationMin="0.375" DurationMax="0.375">
 					<MediaRefs>
 						<MediaRef Id="632147615"/>
 						<MediaRef Id="775312338"/>
@@ -405,7 +405,7 @@
 						<AuxBusRef Id="841660990" Name="TestVerb"/>
 					</AuxBusRefs>
 				</Event>
-				<Event Id="3686713601" Name="NPCChimeULong" MaxAttenuation="100" DurationType="OneShot" DurationMin="1.3725834" DurationMax="2.1033542">
+				<Event Id="3686713601" Name="NPCChimeULong" MaxAttenuation="30" DurationType="OneShot" DurationMin="1.3725834" DurationMax="2.1033542">
 					<MediaRefs>
 						<MediaRef Id="85199183"/>
 						<MediaRef Id="146898835"/>
@@ -423,7 +423,7 @@
 						<AuxBusRef Id="3268711830" Name="TestEcho"/>
 					</AuxBusRefs>
 				</Event>
-				<Event Id="3518065335" Name="NPCChimeUShort" MaxAttenuation="100" DurationType="OneShot" DurationMin="1.3725834" DurationMax="2.1033542">
+				<Event Id="3518065335" Name="NPCChimeUShort" MaxAttenuation="30" DurationType="OneShot" DurationMin="1.3725834" DurationMax="2.1033542">
 					<MediaRefs>
 						<MediaRef Id="85199183"/>
 						<MediaRef Id="146898835"/>
@@ -445,7 +445,7 @@
 			<Busses>
 				<Bus Id="85412153" Name="Ambience"/>
 				<Bus Id="1069431850" Name="Player"/>
-				<Bus Id="2590078866" Name="Chimes"/>
+				<Bus Id="2590078866" Name="Chimes" MaxAttenuation="30"/>
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
 			</Busses>
 			<AuxBusses>
@@ -470,5 +470,5 @@
 			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{E9A44A38-20B2-7099-6040-4C572311B1BA}</FileHash>
+	<FileHash>{D145766D-98A5-27F0-BC4D-FD925020C035}</FileHash>
 </SoundBanksInfo>

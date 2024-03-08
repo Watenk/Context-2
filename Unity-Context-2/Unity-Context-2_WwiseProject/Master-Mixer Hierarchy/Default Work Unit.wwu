@@ -31,43 +31,55 @@
 						<Bus Name="Chimes" ID="{D0C63F08-8AA6-4FA4-8FBA-ED045E95E039}">
 							<PropertyList>
 								<Property Name="Color" Type="int16" Value="15"/>
+								<Property Name="ListenerRelativeRouting" Type="bool" Value="True"/>
 								<Property Name="OverrideColor" Type="bool" Value="True"/>
 							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="NPCChimes" ID="{3FD4D0B4-7719-40F9-A7D7-66A1196736CA}" WorkUnitID="{367E7C67-F63E-4EF5-89C2-DD807CEBB0F9}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AuxBus Name="TestEcho" ID="{7E763664-D897-4CA7-A1E9-BD5C3FEC870C}">
+									<ObjectLists>
+										<ObjectList Name="Effects">
+											<Reference>
+												<Local>
+													<EffectSlot Name="" ID="{D56E8BEF-FFEA-49C7-915F-6C503A474F94}" ShortID="110513877">
+														<ReferenceList>
+															<Reference Name="Effect" PluginName="Wwise Delay" CompanyID="0" PluginID="106" PluginType="3">
+																<ObjectRef Name="Echoes_Linear" ID="{D20F3717-EBA2-4E3A-84F8-C8BD431563FB}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+															</Reference>
+														</ReferenceList>
+													</EffectSlot>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</AuxBus>
+								<AuxBus Name="TestVerb" ID="{ED37ADA7-DCDC-4D31-95FC-1ED7AA1AD070}">
+									<ObjectLists>
+										<ObjectList Name="Effects">
+											<Reference>
+												<Local>
+													<EffectSlot Name="" ID="{735AE77F-77F4-4BBC-ACA8-121424AFEF80}" ShortID="530581845">
+														<ReferenceList>
+															<Reference Name="Effect" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+																<ObjectRef Name="Have_U_Ever_Been_Outside" ID="{FE29AE8D-FD86-4652-A95D-68D32F5760EC}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+															</Reference>
+														</ReferenceList>
+													</EffectSlot>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</AuxBus>
+							</ChildrenList>
+							<PositioningInfo>
+								<Panner Name="" ID="{16EA67E9-0DEC-47A1-AA4A-377E399A062C}"/>
+								<Position Name="" ID="{A019EF8D-80F9-4224-8BF2-5F49390D04E6}"/>
+							</PositioningInfo>
 						</Bus>
-						<AuxBus Name="TestVerb" ID="{ED37ADA7-DCDC-4D31-95FC-1ED7AA1AD070}">
-							<ObjectLists>
-								<ObjectList Name="Effects">
-									<Reference>
-										<Local>
-											<EffectSlot Name="" ID="{735AE77F-77F4-4BBC-ACA8-121424AFEF80}" ShortID="530581845">
-												<ReferenceList>
-													<Reference Name="Effect" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
-														<ObjectRef Name="Have_U_Ever_Been_Outside" ID="{FE29AE8D-FD86-4652-A95D-68D32F5760EC}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
-													</Reference>
-												</ReferenceList>
-											</EffectSlot>
-										</Local>
-									</Reference>
-								</ObjectList>
-							</ObjectLists>
-						</AuxBus>
-						<AuxBus Name="TestEcho" ID="{7E763664-D897-4CA7-A1E9-BD5C3FEC870C}">
-							<ObjectLists>
-								<ObjectList Name="Effects">
-									<Reference>
-										<Local>
-											<EffectSlot Name="" ID="{D56E8BEF-FFEA-49C7-915F-6C503A474F94}" ShortID="110513877">
-												<ReferenceList>
-													<Reference Name="Effect" PluginName="Wwise Delay" CompanyID="0" PluginID="106" PluginType="3">
-														<ObjectRef Name="Echoes_Linear" ID="{D20F3717-EBA2-4E3A-84F8-C8BD431563FB}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
-													</Reference>
-												</ReferenceList>
-											</EffectSlot>
-										</Local>
-									</Reference>
-								</ObjectList>
-							</ObjectLists>
-						</AuxBus>
 					</ChildrenList>
 				</Bus>
 			</ChildrenList>
