@@ -13,8 +13,8 @@ Audio Bus	ID	Name			Wwise Object Path	Notes
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
 
 Auxiliary Bus	ID	Name			Wwise Object Path	Notes
-	841660990	TestVerb			\Default Work Unit\Master Audio Bus\TestVerb	
-	3268711830	TestEcho			\Default Work Unit\Master Audio Bus\TestEcho	
+	841660990	TestVerb			\Default Work Unit\Master Audio Bus\Chimes\TestVerb	
+	3268711830	TestEcho			\Default Work Unit\Master Audio Bus\Chimes\TestEcho	
 	3477531017	EmotionsDimension			\Default Work Unit\Master Audio Bus\EmotionsDimension	
 
 Effect plug-ins	ID	Name	Type				Notes

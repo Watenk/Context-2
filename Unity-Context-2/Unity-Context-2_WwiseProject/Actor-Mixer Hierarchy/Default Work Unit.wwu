@@ -68,7 +68,7 @@
 								</Property>
 								<Property Name="UserAuxSendVolume1" Type="Real64">
 									<ValueList>
-										<Value>-16</Value>
+										<Value>-17</Value>
 									</ValueList>
 								</Property>
 								<Property Name="Volume" Type="Real64">
@@ -383,6 +383,10 @@
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="chimes-community3End1" ID="{049F6B95-6B99-4193-BCC4-A990757CDBE6}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.00645731375747689"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>community3\chimes-community3End1.wav</AudioFile>
 													<MediaIDList>
@@ -405,6 +409,11 @@
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="chimes-community3End2" ID="{A7DFE5F0-6CD5-43B3-9EA7-F709AEF74E97}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0233605220228385"/>
+														<Property Name="LoopBegin" Type="Real64" Value="0"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>community3\chimes-community3End2.wav</AudioFile>
 													<MediaIDList>
@@ -455,6 +464,7 @@
 											<ChildrenList>
 												<AudioFileSource Name="chimes-community3Start1" ID="{F212887F-7D49-495B-9826-3FDB25988B7C}">
 													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.00550570962479608"/>
 														<Property Name="FadeOutDuration" Type="Real64" Value="0.085402397260274"/>
 														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
 													</PropertyList>
@@ -481,8 +491,8 @@
 											<ChildrenList>
 												<AudioFileSource Name="chimes-community3Start2" ID="{AE0F9736-64C8-4F72-8B1F-415C7BFB6676}">
 													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.00550570962479609"/>
 														<Property Name="FadeOutDuration" Type="Real64" Value="0.0898972602739726"/>
-														<Property Name="LoopBegin" Type="Real64" Value="0"/>
 														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
 													</PropertyList>
 													<Language>SFX</Language>
@@ -509,6 +519,11 @@
 									</ReferenceList>
 									<ChildrenList>
 										<AudioFileSource Name="chimes-community3Confused" ID="{DCDF376A-FEAB-4B79-A98A-5DF0B47CB7C2}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0199619358346928"/>
+												<Property Name="LoopBegin" Type="Real64" Value="0"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>community3\chimes-community3Confused.wav</AudioFile>
 											<MediaIDList>
@@ -815,6 +830,11 @@
 									</ReferenceList>
 									<ChildrenList>
 										<AudioFileSource Name="chimes-community1Confused" ID="{F36ED296-BBEE-4C43-8ED4-44ADC2DA4671}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0189143556280588"/>
+												<Property Name="LoopBegin" Type="Real64" Value="0"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>community1\chimes-community1Confused.wav</AudioFile>
 											<MediaIDList>
@@ -1005,6 +1025,11 @@
 									</ReferenceList>
 									<ChildrenList>
 										<AudioFileSource Name="chimes-community2Confused" ID="{8B117189-05D3-4558-8B2E-34A9C7BF6A3D}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0316262914627515"/>
+												<Property Name="LoopBegin" Type="Real64" Value="0"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>community2\chimes-community2Confused.wav</AudioFile>
 											<MediaIDList>
@@ -1019,6 +1044,9 @@
 							</ChildrenList>
 						</ActorMixer>
 					</ChildrenList>
+					<PositioningInfo>
+						<Panner Name="" ID="{5A8916AC-72E9-46CD-A295-1FD55099B314}"/>
+					</PositioningInfo>
 				</ActorMixer>
 				<ActorMixer Name="Ambience" ID="{AE339A94-6823-4198-8016-3900436E720D}" ShortID="750633516">
 					<PropertyList>
