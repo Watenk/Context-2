@@ -11,7 +11,7 @@ public class ProblemSpawner : MonoBehaviour
     //-----------------------------------------------
 
     public void Start(){
-        GameManager.GetService<CommunityManager>().AddProblem(communityType, new Problem(problemSolvers, transform.position));
+        GameManager.GetService<CommunityManager>().AddProblem(communityType, new Problem(problemSolvers, this.gameObject, transform.position));
         Destroy(this);
     }
 }

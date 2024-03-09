@@ -978,6 +978,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7184151628150270609, guid: ddcb8050654381646a05e39b6f2b8942,
+        type: 3}
+      propertyPath: m_RenderPostProcessing
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1049,7 +1054,7 @@ PrefabInstance:
     - target: {fileID: 4320862391741613153, guid: e4e34d3dfdb61ac448e0cf972456d648,
         type: 3}
       propertyPath: problemSolvers.Array.size
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4320862391741613153, guid: e4e34d3dfdb61ac448e0cf972456d648,
         type: 3}
@@ -1059,7 +1064,12 @@ PrefabInstance:
     - target: {fileID: 4320862391741613153, guid: e4e34d3dfdb61ac448e0cf972456d648,
         type: 3}
       propertyPath: problemSolvers.Array.data[1]
-      value: 2
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4320862391741613153, guid: e4e34d3dfdb61ac448e0cf972456d648,
+        type: 3}
+      propertyPath: problemSolvers.Array.data[2]
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4320862391741613153, guid: e4e34d3dfdb61ac448e0cf972456d648,
         type: 3}
