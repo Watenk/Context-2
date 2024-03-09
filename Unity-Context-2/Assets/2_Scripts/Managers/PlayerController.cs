@@ -41,9 +41,13 @@ public class PlayerController : MonoBehaviour
 
     private void OnPlayerMove(Vector2 playerMovement){
 
-        Vector3 movementDirection = new Vector3(playerMovement.x, 0, playerMovement.y).normalized;
-        Vector3 worldMovementDirection = transform.TransformDirection(movementDirection);
-        rb.AddForce(worldMovementDirection * speed * Time.deltaTime, ForceMode.VelocityChange);
+        Vector3 playerDirection = new Vector3(playerMovement.x, 0, playerMovement.y).normalized;
+        Vector3 camForward = Camera.main.transform.forward;
+        camForward.y = 0f;
+        camForward.Normalize();
+        Vector3 dir = Quaternion.LookRotation(camForward) * playerDirection;
+
+        rb.AddForce(dir * speed * Time.deltaTime, ForceMode.VelocityChange);
 
         // Rotate body
         if (playerMovement.x != 0 || playerMovement.y != 0){
