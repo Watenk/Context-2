@@ -102,7 +102,12 @@ public class Agent : IFixedUpdateable
                 break;
             
             case ChimeTasks.solveProblem:
-                // TODO: Add solveproblem task
+                if (fsm.currentState == fsm.GetState(typeof(AgentFollowingState))){
+
+                    // Sound
+                    NPCSoundData soundData = soundManager.GetNPCSound(ChimeTasks.follow);
+                    soundManager.PlaySound(soundData, GameObject.transform.position);
+                }
                 break;
         }
     }

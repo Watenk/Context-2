@@ -43,4 +43,10 @@ public class Community : IFixedUpdateable
     public void RemoveProblem(Problem problem){
         problemsGC.Add(problem);
     }
+
+    public void ProblemSolved(){
+        foreach (Group currentGroup in groups){
+            currentGroup.ProblemSolved();
+        }
+    }
 }

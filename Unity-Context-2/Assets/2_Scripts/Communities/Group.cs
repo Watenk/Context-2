@@ -32,6 +32,14 @@ public class Group : IFixedUpdateable
         }
     }
 
+    public void ProblemSolved(){
+        foreach (Agent current in agents){
+            if (current.fsm.currentState == current.fsm.GetState(typeof(AgentFollowingState))){
+                current.fsm.SwitchState(typeof(AgentWanderingState));
+            }
+        }
+    }
+
     public void DestroyAgents(){
         foreach (Agent current in agents){
             GameObject.Destroy(current.GameObject);

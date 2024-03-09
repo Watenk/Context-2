@@ -65,6 +65,10 @@ public class CommunityManager : IFixedUpdateable
 
     public void RemoveProblem(CommunityTypes communityType, Problem problem){
         GetCommunity(communityType).RemoveProblem(problem);
+
+        foreach (KeyValuePair<CommunityTypes, Community> kvp in communities){
+            kvp.Value.ProblemSolved();
+        }
     }
 
     //----------------------------------------------
