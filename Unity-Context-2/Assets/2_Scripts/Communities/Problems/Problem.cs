@@ -1,13 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel.Design;
 using System.Linq;
 using UnityEngine;
 
 public class Problem : IFixedUpdateable
 {
     private Dictionary<CommunityTypes, List<ProblemSolver>> problemSolvers = new Dictionary<CommunityTypes, List<ProblemSolver>>();
+    private Dictionary<CommunityTypes, bool> solvedCommunities = new Dictionary<CommunityTypes, bool>();
     private List<MushroomPrefab> mushroomPrefabs;
     private List<CommunityTypes> communityAmount;
+    private CommunityTypes communityType;
     private Vector3 pos;
     private float detectRange;
     private float mushroomSpawnRadius;
@@ -20,7 +23,8 @@ public class Problem : IFixedUpdateable
 
     //-------------------------------------------------
 
-    public Problem(List<CommunityTypes> communityTypes, GameObject gameObject, Vector3 pos){
+    public Problem(List<CommunityTypes> solverCommunityTypes, CommunityTypes communityType, GameObject gameObject, Vector3 pos){
+        this.communityType = communityType;
         this.gameObject = gameObject;
         this.pos = pos;
 
@@ -33,13 +37,18 @@ public class Problem : IFixedUpdateable
 
         chimeSequencer.OnChimeSequence += OnChimeSequence;
 
-        // Init problemSolvers dict
+        // Init Dicts
         communityAmount = communityManager.GetCommunityAmount();
         foreach (CommunityTypes currentCommunity in communityAmount){
             problemSolvers.Add(currentCommunity, new List<ProblemSolver>());
         }
+        foreach (CommunityTypes currentCommunity in solverCommunityTypes){
+            if (!solvedCommunities.ContainsKey(currentCommunity)){
+                solvedCommunities.Add(currentCommunity, false);
+            }
+        }
 
-        SpawnMushrooms(communityTypes);
+        SpawnMushrooms(solverCommunityTypes);
 
         #if UNITY_EDITOR
             if (detectRange == 0) { Debug.LogWarning("ProblemDetectRange in ProblemSettings is 0"); }
@@ -51,6 +60,7 @@ public class Problem : IFixedUpdateable
 
         if (Vector3.Distance(pos, player.gameObject.transform.position) > detectRange) { return; }
 
+        // Set mushroom animations
         foreach (CommunityTypes currentCommunity in communityAmount){
             List<ProblemSolver> solvers = problemSolvers[currentCommunity];
             int followingAmount = GetFollowingAmount(currentCommunity);
@@ -67,6 +77,19 @@ public class Problem : IFixedUpdateable
         }
     }
 
+    public void Remove(){
+        chimeSequencer.OnChimeSequence -= OnChimeSequence;
+        
+        foreach (KeyValuePair<CommunityTypes, List<ProblemSolver>> kvp in problemSolvers){
+            List<ProblemSolver> currentProblemSolvers = kvp.Value;
+
+            foreach (ProblemSolver problemSolver in currentProblemSolvers){
+                GameObject.Destroy(problemSolver.Mushroom);
+            }
+        }
+        GameObject.Destroy(gameObject);
+    }
+
     //--------------------------------------------------
 
     private void OnChimeSequence(ChimeSequence chimeSequence){
@@ -74,10 +97,32 @@ public class Problem : IFixedUpdateable
         if (chimeSequence.chimeTask != ChimeTasks.solveProblem ) { return; }
         if (Vector3.Distance(pos, player.gameObject.transform.position) > detectRange) { return; }
 
-        // Dictionary<CommunityTypes, int> followingAgents = communityManager.GetActiveAgents();
-        // if (problemSolvers.All(problemSolver => followingAgents.Contains(problemSolver.CommunityType))){
-        //     Debug.Log("Problem Solved");
-        // }
+        // Check if enough followingAgents are present
+        foreach (CommunityTypes currentCommunity in communityAmount){
+            List<ProblemSolver> solvers = problemSolvers[currentCommunity];
+            int followingAmount = GetFollowingAmount(currentCommunity);
+
+            foreach (ProblemSolver currentSolver in solvers){
+                if (followingAmount > 0){
+                    followingAmount -= 1;
+                }
+                else{
+                    return;
+                }
+            }
+        }
+
+        // Set solved communities
+        foreach (CommunityTypes currentType in chimeSequence.affectedCommunities){
+            solvedCommunities[currentType] = true;
+        }
+
+        // Check if all communities are solved
+        foreach (KeyValuePair<CommunityTypes, bool> kvp in solvedCommunities){
+            if (!kvp.Value) { return; }
+        }
+
+        communityManager.RemoveProblem(communityType, this);
     }
 
     private void SpawnMushrooms(List<CommunityTypes> communityTypes){

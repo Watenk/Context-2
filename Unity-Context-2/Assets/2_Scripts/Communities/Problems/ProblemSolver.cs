@@ -7,6 +7,7 @@ public class ProblemSolver
     public CommunityTypes CommunityType { get; private set; }
     public GameObject Mushroom { get; private set; } 
     public Animator Animator { get; private set; } 
+    public bool IsSolved;
  
     //---------------------------------------------
 

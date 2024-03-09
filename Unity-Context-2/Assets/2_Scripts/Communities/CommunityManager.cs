@@ -63,6 +63,10 @@ public class CommunityManager : IFixedUpdateable
         GetCommunity(communityType).AddProblem(problem);
     }
 
+    public void RemoveProblem(CommunityTypes communityType, Problem problem){
+        GetCommunity(communityType).RemoveProblem(problem);
+    }
+
     //----------------------------------------------
 
     private void Add(CommunityTypes communityType){
