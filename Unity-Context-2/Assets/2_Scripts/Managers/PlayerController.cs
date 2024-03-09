@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Rendering;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -51,9 +52,8 @@ public class PlayerController : MonoBehaviour
 
         // Rotate body
         if (playerMovement.x != 0 || playerMovement.y != 0){
-            float bodyYRotation = Mathf.Atan2(playerMovement.x, playerMovement.y) * Mathf.Rad2Deg;
-            Quaternion targetRotation = Quaternion.Euler(0, bodyYRotation, 0);
-            Body.transform.rotation = Quaternion.Slerp(Body.transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+            float bodyYRotation = Mathf.Atan2(dir.x, dir.z) * Mathf.Rad2Deg;
+            Body.transform.rotation = Quaternion.Slerp(Body.transform.rotation, Quaternion.Euler(0, bodyYRotation, 0), rotationSpeed * Time.deltaTime);
         }
     }
 
