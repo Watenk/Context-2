@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7f2e4986a5f83142837c1808767b4d1, type: 3}
+  m_Name: 2ABA9CC2-A1B5-40FA-B3D0-DCCF2EE172A7
+  m_EditorClassIdentifier: 
+  objectName: Chime2Play
+  id: 408897957
+  guid: 2ABA9CC2-A1B5-40FA-B3D0-DCCF2EE172A7

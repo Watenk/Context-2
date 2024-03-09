@@ -1,0 +1,953 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ce2bd242a6c57a4f874f2517b891b83, type: 3}
+  m_Name: AkWwiseProjectData
+  m_EditorClassIdentifier: 
+  AcousticTextureWwu:
+  - PhysicalPath: Virtual Acoustics\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Virtual Acoustics
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: 954c813606d6da4dad71495b9f6c3d05
+    ParentPath: Virtual Acoustics\Default Work Unit
+    guid: 954c813606d6da4dad71495b9f6c3d05
+    GuidInternal: 
+    m_lastTime: -8584928973215696943
+    List: []
+  AuxBusWwu:
+  - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Master-Mixer Hierarchy
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: 8dc0b307ade8814aa929c27b28b93464
+    ParentPath: Master-Mixer Hierarchy\Default Work Unit
+    guid: 8dc0b307ade8814aa929c27b28b93464
+    GuidInternal: 
+    m_lastTime: -8584917048765399434
+    List:
+    - name: Ambience
+      guid: 45bbfd6b2b78e94186b0109575ddfb5f
+      id: 85412153
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 8dc0b307ade8814aa929c27b28b93464
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: Ambience
+        ObjectType: 2
+        guid: 45bbfd6b2b78e94186b0109575ddfb5f
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Ambience
+    - name: Chimes
+      guid: 083fc6d0a68aa44f8fbaed045e95e039
+      id: 2590078866
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 8dc0b307ade8814aa929c27b28b93464
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: Chimes
+        ObjectType: 2
+        guid: 083fc6d0a68aa44f8fbaed045e95e039
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Chimes
+    - name: EmotionsDimension
+      guid: 1b14a593955c4a4fa16da914fcd2dc34
+      id: 3477531017
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 8dc0b307ade8814aa929c27b28b93464
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: EmotionsDimension
+        ObjectType: 1
+        guid: 1b14a593955c4a4fa16da914fcd2dc34
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\EmotionsDimension
+    - name: Master Audio Bus
+      guid: d8a41415a61d2a41a17e75ca0c2149f3
+      id: 3803692087
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 8dc0b307ade8814aa929c27b28b93464
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus
+    - name: Player
+      guid: e76b9d45a7f0c04fa2f919390bc8cd30
+      id: 1069431850
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 8dc0b307ade8814aa929c27b28b93464
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: Player
+        ObjectType: 2
+        guid: e76b9d45a7f0c04fa2f919390bc8cd30
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Player
+    - name: TestEcho
+      guid: 6436767e97d8a74ca1e9bd5c3fec870c
+      id: 3268711830
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 8dc0b307ade8814aa929c27b28b93464
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: Chimes
+        ObjectType: 2
+        guid: 083fc6d0a68aa44f8fbaed045e95e039
+      - ElementName: TestEcho
+        ObjectType: 1
+        guid: 6436767e97d8a74ca1e9bd5c3fec870c
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Chimes\TestEcho
+    - name: TestVerb
+      guid: a7ad37eddcdc314d95fc1ed7aa1ad070
+      id: 841660990
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 8dc0b307ade8814aa929c27b28b93464
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: Chimes
+        ObjectType: 2
+        guid: 083fc6d0a68aa44f8fbaed045e95e039
+      - ElementName: TestVerb
+        ObjectType: 1
+        guid: a7ad37eddcdc314d95fc1ed7aa1ad070
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Chimes\TestVerb
+  BankWwu:
+  - PhysicalPath: SoundBanks\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: SoundBanks
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: d7906ce14cf00844a1cf51bb2f3f5324
+    ParentPath: SoundBanks\Default Work Unit
+    guid: d7906ce14cf00844a1cf51bb2f3f5324
+    GuidInternal: 
+    m_lastTime: -8584918481285716399
+    List:
+    - name: Main
+      guid: edcbdbe24520214883096064fcb95c6c
+      id: 3161908922
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: d7906ce14cf00844a1cf51bb2f3f5324
+      - ElementName: Main
+        ObjectType: 7
+        guid: edcbdbe24520214883096064fcb95c6c
+      Path: SoundBanks\Default Work Unit\Main
+  EventWwu:
+  - PhysicalPath: Events\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Events
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: 1829c11d708c3d4b85382b800fb51260
+    ParentPath: Events\Default Work Unit
+    guid: 1829c11d708c3d4b85382b800fb51260
+    GuidInternal: 
+    m_lastTime: -8584917818838664164
+    List:
+    - name: Ambience
+      guid: 86f588cd638f484d8f4020eb95385ae6
+      id: 85412153
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 1829c11d708c3d4b85382b800fb51260
+      - ElementName: Ambience
+        ObjectType: 4
+        guid: 62b82e080942af4b98832c8e88410c14
+      - ElementName: Ambience
+        ObjectType: 3
+        guid: 86f588cd638f484d8f4020eb95385ae6
+      Path: Events\Default Work Unit\Ambience\Ambience
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Ambience
+      guid: 62b82e080942af4b98832c8e88410c14
+      id: 85412153
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 1829c11d708c3d4b85382b800fb51260
+      - ElementName: Ambience
+        ObjectType: 4
+        guid: 62b82e080942af4b98832c8e88410c14
+      Path: Events\Default Work Unit\Ambience
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Chime1Play
+      guid: 5e001fa2a4320a4fb58b9ca2a6c61696
+      id: 3117609094
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 1829c11d708c3d4b85382b800fb51260
+      - ElementName: Chimes
+        ObjectType: 4
+        guid: 5afd6593077ce5469d64005f7e78831e
+      - ElementName: Community1
+        ObjectType: 4
+        guid: 0fe91c6d37d32c46ac3a7cdbb1aa1901
+      - ElementName: Chime1Play
+        ObjectType: 3
+        guid: 5e001fa2a4320a4fb58b9ca2a6c61696
+      Path: Events\Default Work Unit\Chimes\Community1\Chime1Play
+      maxAttenuation: 30
+      maxDuration: 1.413994
+      minDuration: 1.0245572
+    - name: Chime1Stop
+      guid: cfdeb867a00f38498d4511996745434b
+      id: 632066680
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 1829c11d708c3d4b85382b800fb51260
+      - ElementName: Chimes
+        ObjectType: 4
+        guid: 5afd6593077ce5469d64005f7e78831e
+      - ElementName: Community1
+        ObjectType: 4
+        guid: 0fe91c6d37d32c46ac3a7cdbb1aa1901
+      - ElementName: Chime1Stop
+        ObjectType: 3
+        guid: cfdeb867a00f38498d4511996745434b
+      Path: Events\Default Work Unit\Chimes\Community1\Chime1Stop
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Chime2Play
+      guid: c29cba2ab5a1fa40b3d0dccf2ee172a7
+      id: 408897957
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 1829c11d708c3d4b85382b800fb51260
+      - ElementName: Chimes
+        ObjectType: 4
+        guid: 5afd6593077ce5469d64005f7e78831e
+      - ElementName: Community2
+        ObjectType: 4
+        guid: 9c5e6129da93fb43a15095a8a4c5fb63
+      - ElementName: Chime2Play
+        ObjectType: 3
+        guid: c29cba2ab5a1fa40b3d0dccf2ee172a7
+      Path: Events\Default Work Unit\Chimes\Community2\Chime2Play
+      maxAttenuation: 30
+      maxDuration: 4
+      minDuration: 4
+    - name: Chime2Stop
+      guid: 2b1843a00e171144a635567b02e7d0f1
+      id: 1791974179
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 1829c11d708c3d4b85382b800fb51260
+      - ElementName: Chimes
+        ObjectType: 4
+        guid: 5afd6593077ce5469d64005f7e78831e
+      - ElementName: Community2
+        ObjectType: 4
+        guid: 9c5e6129da93fb43a15095a8a4c5fb63
+      - ElementName: Chime2Stop
+        ObjectType: 3
+        guid: 2b1843a00e171144a635567b02e7d0f1
+      Path: Events\Default Work Unit\Chimes\Community2\Chime2Stop
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Chime3Play
+      guid: 7ee9d840f9e7f94e94f19fff01837773
+      id: 120659352
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 1829c11d708c3d4b85382b800fb51260
+      - ElementName: Chimes
+        ObjectType: 4
+        guid: 5afd6593077ce5469d64005f7e78831e
+      - ElementName: Community3
+        ObjectType: 4
+        guid: 05909e4fbb18f94baa688bd8e9517d98
+      - ElementName: Chime3Play
+        ObjectType: 3
+        guid: 7ee9d840f9e7f94e94f19fff01837773
+      Path: Events\Default Work Unit\Chimes\Community3\Chime3Play
+      maxAttenuation: 30
+      maxDuration: 2.165
+      minDuration: 1.1666667
+    - name: Chime3Stop
+      guid: 6038e6188cb5814d89c9b5031bdd2cb6
+      id: 2451530218
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 1829c11d708c3d4b85382b800fb51260
+      - ElementName: Chimes
+        ObjectType: 4
+        guid: 5afd6593077ce5469d64005f7e78831e
+      - ElementName: Community3
+        ObjectType: 4
+        guid: 05909e4fbb18f94baa688bd8e9517d98
+      - ElementName: Chime3Stop
+        ObjectType: 3
+        guid: 6038e6188cb5814d89c9b5031bdd2cb6
+      Path: Events\Default Work Unit\Chimes\Community3\Chime3Stop
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Chimes
+      guid: 5afd6593077ce5469d64005f7e78831e
+      id: 2590078866
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 1829c11d708c3d4b85382b800fb51260
+      - ElementName: Chimes
+        ObjectType: 4
+        guid: 5afd6593077ce5469d64005f7e78831e
+      Path: Events\Default Work Unit\Chimes
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: ChimeUPlay
+      guid: 0905f8e7d526a34d9fbba44f9c8c8969
+      id: 1032095362
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 1829c11d708c3d4b85382b800fb51260
+      - ElementName: Chimes
+        ObjectType: 4
+        guid: 5afd6593077ce5469d64005f7e78831e
+      - ElementName: Universal
+        ObjectType: 4
+        guid: d8b50c03c013fd4db5159e6a1aed9e11
+      - ElementName: ChimeUPlay
+        ObjectType: 3
+        guid: 0905f8e7d526a34d9fbba44f9c8c8969
+      Path: Events\Default Work Unit\Chimes\Universal\ChimeUPlay
+      maxAttenuation: 30
+      maxDuration: 2.1033542
+      minDuration: 1.3725834
+    - name: ChimeUStop
+      guid: 65e785b8f40bfd42a95e8b65874029ce
+      id: 1675108316
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 1829c11d708c3d4b85382b800fb51260
+      - ElementName: Chimes
+        ObjectType: 4
+        guid: 5afd6593077ce5469d64005f7e78831e
+      - ElementName: Universal
+        ObjectType: 4
+        guid: d8b50c03c013fd4db5159e6a1aed9e11
+      - ElementName: ChimeUStop
+        ObjectType: 3
+        guid: 65e785b8f40bfd42a95e8b65874029ce
+      Path: Events\Default Work Unit\Chimes\Universal\ChimeUStop
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Community1
+      guid: 0fe91c6d37d32c46ac3a7cdbb1aa1901
+      id: 3910964057
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 1829c11d708c3d4b85382b800fb51260
+      - ElementName: Chimes
+        ObjectType: 4
+        guid: 5afd6593077ce5469d64005f7e78831e
+      - ElementName: Community1
+        ObjectType: 4
+        guid: 0fe91c6d37d32c46ac3a7cdbb1aa1901
+      Path: Events\Default Work Unit\Chimes\Community1
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Community2
+      guid: 9c5e6129da93fb43a15095a8a4c5fb63
+      id: 3910964058
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 1829c11d708c3d4b85382b800fb51260
+      - ElementName: Chimes
+        ObjectType: 4
+        guid: 5afd6593077ce5469d64005f7e78831e
+      - ElementName: Community2
+        ObjectType: 4
+        guid: 9c5e6129da93fb43a15095a8a4c5fb63
+      Path: Events\Default Work Unit\Chimes\Community2
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Community3
+      guid: 05909e4fbb18f94baa688bd8e9517d98
+      id: 3910964059
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 1829c11d708c3d4b85382b800fb51260
+      - ElementName: Chimes
+        ObjectType: 4
+        guid: 5afd6593077ce5469d64005f7e78831e
+      - ElementName: Community3
+        ObjectType: 4
+        guid: 05909e4fbb18f94baa688bd8e9517d98
+      Path: Events\Default Work Unit\Chimes\Community3
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: NPCChime1Confused
+      guid: 1b366f8f7963d54487cf76305cc6e3a6
+      id: 722374694
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 1829c11d708c3d4b85382b800fb51260
+      - ElementName: Chimes
+        ObjectType: 4
+        guid: 5afd6593077ce5469d64005f7e78831e
+      - ElementName: Community1
+        ObjectType: 4
+        guid: 0fe91c6d37d32c46ac3a7cdbb1aa1901
+      - ElementName: NPCChime1Confused
+        ObjectType: 3
+        guid: 1b366f8f7963d54487cf76305cc6e3a6
+      Path: Events\Default Work Unit\Chimes\Community1\NPCChime1Confused
+      maxAttenuation: 30
+      maxDuration: 1.9324167
+      minDuration: 1.9324167
+    - name: NPCChime1Long
+      guid: b323deecee35ea4492e161360ed7b128
+      id: 1795884461
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 1829c11d708c3d4b85382b800fb51260
+      - ElementName: Chimes
+        ObjectType: 4
+        guid: 5afd6593077ce5469d64005f7e78831e
+      - ElementName: Community1
+        ObjectType: 4
+        guid: 0fe91c6d37d32c46ac3a7cdbb1aa1901
+      - ElementName: NPCChime1Long
+        ObjectType: 3
+        guid: b323deecee35ea4492e161360ed7b128
+      Path: Events\Default Work Unit\Chimes\Community1\NPCChime1Long
+      maxAttenuation: 30
+      maxDuration: 1.413994
+      minDuration: 1.0245572
+    - name: NPCChime1Short
+      guid: 1051df10ed7d144a85244bf5f04b2205
+      id: 4090504235
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 1829c11d708c3d4b85382b800fb51260
+      - ElementName: Chimes
+        ObjectType: 4
+        guid: 5afd6593077ce5469d64005f7e78831e
+      - ElementName: Community1
+        ObjectType: 4
+        guid: 0fe91c6d37d32c46ac3a7cdbb1aa1901
+      - ElementName: NPCChime1Short
+        ObjectType: 3
+        guid: 1051df10ed7d144a85244bf5f04b2205
+      Path: Events\Default Work Unit\Chimes\Community1\NPCChime1Short
+      maxAttenuation: 30
+      maxDuration: 1.413994
+      minDuration: 1.0245572
+    - name: NPCChime2Confused
+      guid: a4c538227ad08944a07914fbecf2523b
+      id: 2993939861
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 1829c11d708c3d4b85382b800fb51260
+      - ElementName: Chimes
+        ObjectType: 4
+        guid: 5afd6593077ce5469d64005f7e78831e
+      - ElementName: Community2
+        ObjectType: 4
+        guid: 9c5e6129da93fb43a15095a8a4c5fb63
+      - ElementName: NPCChime2Confused
+        ObjectType: 3
+        guid: a4c538227ad08944a07914fbecf2523b
+      Path: Events\Default Work Unit\Chimes\Community2\NPCChime2Confused
+      maxAttenuation: 30
+      maxDuration: 4.8467293
+      minDuration: 4.8467293
+    - name: NPCChime2Long
+      guid: 8ac6a61984d7694d815cf48896769236
+      id: 1704435946
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 1829c11d708c3d4b85382b800fb51260
+      - ElementName: Chimes
+        ObjectType: 4
+        guid: 5afd6593077ce5469d64005f7e78831e
+      - ElementName: Community2
+        ObjectType: 4
+        guid: 9c5e6129da93fb43a15095a8a4c5fb63
+      - ElementName: NPCChime2Long
+        ObjectType: 3
+        guid: 8ac6a61984d7694d815cf48896769236
+      Path: Events\Default Work Unit\Chimes\Community2\NPCChime2Long
+      maxAttenuation: 30
+      maxDuration: 4
+      minDuration: 4
+    - name: NPCChime2Short
+      guid: b09342059c215640be3d461a8ae48940
+      id: 2400837350
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 1829c11d708c3d4b85382b800fb51260
+      - ElementName: Chimes
+        ObjectType: 4
+        guid: 5afd6593077ce5469d64005f7e78831e
+      - ElementName: Community2
+        ObjectType: 4
+        guid: 9c5e6129da93fb43a15095a8a4c5fb63
+      - ElementName: NPCChime2Short
+        ObjectType: 3
+        guid: b09342059c215640be3d461a8ae48940
+      Path: Events\Default Work Unit\Chimes\Community2\NPCChime2Short
+      maxAttenuation: 30
+      maxDuration: 4
+      minDuration: 4
+    - name: NPCChime3Confused
+      guid: 9ce7e56636ea4b438596eade0988959d
+      id: 1137344520
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 1829c11d708c3d4b85382b800fb51260
+      - ElementName: Chimes
+        ObjectType: 4
+        guid: 5afd6593077ce5469d64005f7e78831e
+      - ElementName: Community3
+        ObjectType: 4
+        guid: 05909e4fbb18f94baa688bd8e9517d98
+      - ElementName: NPCChime3Confused
+        ObjectType: 3
+        guid: 9ce7e56636ea4b438596eade0988959d
+      Path: Events\Default Work Unit\Chimes\Community3\NPCChime3Confused
+      maxAttenuation: 30
+      maxDuration: 1.5295833
+      minDuration: 1.5295833
+    - name: NPCChime3Long
+      guid: 01e28e8a6c157b42ae7b3d90c111276d
+      id: 4264886911
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 1829c11d708c3d4b85382b800fb51260
+      - ElementName: Chimes
+        ObjectType: 4
+        guid: 5afd6593077ce5469d64005f7e78831e
+      - ElementName: Community3
+        ObjectType: 4
+        guid: 05909e4fbb18f94baa688bd8e9517d98
+      - ElementName: NPCChime3Long
+        ObjectType: 3
+        guid: 01e28e8a6c157b42ae7b3d90c111276d
+      Path: Events\Default Work Unit\Chimes\Community3\NPCChime3Long
+      maxAttenuation: 30
+      maxDuration: 2.165
+      minDuration: 1.1666667
+    - name: NPCChime3Short
+      guid: 2d74e70aed2a7f498fcf1be1dba78a96
+      id: 2846910609
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 1829c11d708c3d4b85382b800fb51260
+      - ElementName: Chimes
+        ObjectType: 4
+        guid: 5afd6593077ce5469d64005f7e78831e
+      - ElementName: Community3
+        ObjectType: 4
+        guid: 05909e4fbb18f94baa688bd8e9517d98
+      - ElementName: NPCChime3Short
+        ObjectType: 3
+        guid: 2d74e70aed2a7f498fcf1be1dba78a96
+      Path: Events\Default Work Unit\Chimes\Community3\NPCChime3Short
+      maxAttenuation: 30
+      maxDuration: 0.375
+      minDuration: 0.375
+    - name: NPCChimeULong
+      guid: 36d8ac801b7d8548ad4c2293461d260f
+      id: 3686713601
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 1829c11d708c3d4b85382b800fb51260
+      - ElementName: Chimes
+        ObjectType: 4
+        guid: 5afd6593077ce5469d64005f7e78831e
+      - ElementName: Universal
+        ObjectType: 4
+        guid: d8b50c03c013fd4db5159e6a1aed9e11
+      - ElementName: NPCChimeULong
+        ObjectType: 3
+        guid: 36d8ac801b7d8548ad4c2293461d260f
+      Path: Events\Default Work Unit\Chimes\Universal\NPCChimeULong
+      maxAttenuation: 30
+      maxDuration: 2.1033542
+      minDuration: 1.3725834
+    - name: NPCChimeUShort
+      guid: bd13d06c72c0c247876d0114894cab13
+      id: 3518065335
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 1829c11d708c3d4b85382b800fb51260
+      - ElementName: Chimes
+        ObjectType: 4
+        guid: 5afd6593077ce5469d64005f7e78831e
+      - ElementName: Universal
+        ObjectType: 4
+        guid: d8b50c03c013fd4db5159e6a1aed9e11
+      - ElementName: NPCChimeUShort
+        ObjectType: 3
+        guid: bd13d06c72c0c247876d0114894cab13
+      Path: Events\Default Work Unit\Chimes\Universal\NPCChimeUShort
+      maxAttenuation: 30
+      maxDuration: 2.1033542
+      minDuration: 1.3725834
+    - name: Universal
+      guid: d8b50c03c013fd4db5159e6a1aed9e11
+      id: 3883048296
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 1829c11d708c3d4b85382b800fb51260
+      - ElementName: Chimes
+        ObjectType: 4
+        guid: 5afd6593077ce5469d64005f7e78831e
+      - ElementName: Universal
+        ObjectType: 4
+        guid: d8b50c03c013fd4db5159e6a1aed9e11
+      Path: Events\Default Work Unit\Chimes\Universal
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+  RtpcWwu:
+  - PhysicalPath: Game Parameters\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Game Parameters
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: 6e8a3e52955e38448efc5e2b8decd175
+    ParentPath: Game Parameters\Default Work Unit
+    guid: 6e8a3e52955e38448efc5e2b8decd175
+    GuidInternal: 
+    m_lastTime: -8584917819604904803
+    List:
+    - name: ambience
+      guid: 597d8c556c9ded4793e63e83fdcfab57
+      id: 85412153
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 6e8a3e52955e38448efc5e2b8decd175
+      - ElementName: ambience
+        ObjectType: 4
+        guid: 597d8c556c9ded4793e63e83fdcfab57
+      Path: Game Parameters\Default Work Unit\ambience
+    - name: GreeneryLevel
+      guid: b2565a51c297904ba236a63cc60bc7a7
+      id: 1750790826
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 6e8a3e52955e38448efc5e2b8decd175
+      - ElementName: ambience
+        ObjectType: 4
+        guid: 597d8c556c9ded4793e63e83fdcfab57
+      - ElementName: GreeneryLevel
+        ObjectType: 13
+        guid: b2565a51c297904ba236a63cc60bc7a7
+      Path: Game Parameters\Default Work Unit\ambience\GreeneryLevel
+    - name: InsideOutside
+      guid: 69dd5c6dae75c5408bc782fc42cb0575
+      id: 3929688590
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 6e8a3e52955e38448efc5e2b8decd175
+      - ElementName: ambience
+        ObjectType: 4
+        guid: 597d8c556c9ded4793e63e83fdcfab57
+      - ElementName: InsideOutside
+        ObjectType: 13
+        guid: 69dd5c6dae75c5408bc782fc42cb0575
+      Path: Game Parameters\Default Work Unit\ambience\InsideOutside
+  StateWwu:
+  - PhysicalPath: States\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: States
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: ee9c2c1aa3ee3549bcf9769c5161d1dc
+    ParentPath: States\Default Work Unit
+    guid: ee9c2c1aa3ee3549bcf9769c5161d1dc
+    GuidInternal: 
+    m_lastTime: -8584917819595066075
+    List:
+    - name: ambienceInsideOutside
+      guid: 54de947f53da664faa37236c7efc25f0
+      id: 3607165242
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: ee9c2c1aa3ee3549bcf9769c5161d1dc
+      - ElementName: ambienceInsideOutside
+        ObjectType: 9
+        guid: 54de947f53da664faa37236c7efc25f0
+      Path: States\Default Work Unit\ambienceInsideOutside
+      values:
+      - name: Inside
+        guid: e78584d61f7f854189e1c3b0f0a71358
+        id: 3553349781
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: ee9c2c1aa3ee3549bcf9769c5161d1dc
+        - ElementName: ambienceInsideOutside
+          ObjectType: 9
+          guid: 54de947f53da664faa37236c7efc25f0
+        - ElementName: Inside
+          ObjectType: 8
+          guid: e78584d61f7f854189e1c3b0f0a71358
+      - name: None
+        guid: b436ee988dcb464a9cd222f3f4d43df2
+        id: 748895195
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: ee9c2c1aa3ee3549bcf9769c5161d1dc
+        - ElementName: ambienceInsideOutside
+          ObjectType: 9
+          guid: 54de947f53da664faa37236c7efc25f0
+        - ElementName: None
+          ObjectType: 8
+          guid: b436ee988dcb464a9cd222f3f4d43df2
+      - name: Outside
+        guid: 4b2933342d05b745ab977aa8b3fb91c4
+        id: 438105790
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: ee9c2c1aa3ee3549bcf9769c5161d1dc
+        - ElementName: ambienceInsideOutside
+          ObjectType: 9
+          guid: 54de947f53da664faa37236c7efc25f0
+        - ElementName: Outside
+          ObjectType: 8
+          guid: 4b2933342d05b745ab977aa8b3fb91c4
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+  SwitchWwu:
+  - PhysicalPath: Switches\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Switches
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: a0523abc768a534caf9f9ccda37772bd
+    ParentPath: Switches\Default Work Unit
+    guid: a0523abc768a534caf9f9ccda37772bd
+    GuidInternal: 
+    m_lastTime: -8584928973215736972
+    List: []
+  TriggerWwu:
+  - PhysicalPath: Triggers\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Triggers
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: ffb58b344218ab42b290b09ddbdffacb
+    ParentPath: Triggers\Default Work Unit
+    guid: ffb58b344218ab42b290b09ddbdffacb
+    GuidInternal: 
+    m_lastTime: -8584928973215726996
+    List: []
+  ExpandedFileSystemItemIds: 
+  ExpandedWaapiItemIds: 010000000500000006000000080000000a0000000b0000000c00000016000000190000001a0000001b0000001c0000002000000025000000260000002c000000
+  AutoSyncSelection: 0
+  autoPopulateEnabled: 1
+  currentDataSource: 0
+  CurrentPluginConfig: 

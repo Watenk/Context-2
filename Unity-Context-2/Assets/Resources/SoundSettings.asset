@@ -1,0 +1,95 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 219d694f910c8da4eb5b7a838429d477, type: 3}
+  m_Name: SoundSettings
+  m_EditorClassIdentifier: 
+  SoundPrefab: {fileID: 7179621112042646335, guid: 12efd11602ec50f4697ca6b8f74692a5,
+    type: 3}
+  SoundDestroyTime: 5
+  PlayerChimes:
+  - Name: GlobalChime
+    ChimeInput: 0
+    StartWwiseEvent:
+      idInternal: 0
+      valueGuidInternal: 
+      WwiseObjectReference: {fileID: 11400000, guid: 6b74670ff36b8f74690fadae7994b6d3,
+        type: 2}
+    StopWwiseEvent:
+      idInternal: 0
+      valueGuidInternal: 
+      WwiseObjectReference: {fileID: 11400000, guid: 2cab63e7bcc067a46a1587a8e72fbc61,
+        type: 2}
+  - Name: TriangleChime
+    ChimeInput: 1
+    StartWwiseEvent:
+      idInternal: 0
+      valueGuidInternal: 
+      WwiseObjectReference: {fileID: 11400000, guid: fbaef7c40bfa18e47a01aa9b8ca2934f,
+        type: 2}
+    StopWwiseEvent:
+      idInternal: 0
+      valueGuidInternal: 
+      WwiseObjectReference: {fileID: 11400000, guid: 6275298527b94e7409883c2b2f416d27,
+        type: 2}
+  - Name: SquareChime
+    ChimeInput: 2
+    StartWwiseEvent:
+      idInternal: 0
+      valueGuidInternal: 
+      WwiseObjectReference: {fileID: 11400000, guid: a6a9327f4b708214181988b8678e8518,
+        type: 2}
+    StopWwiseEvent:
+      idInternal: 0
+      valueGuidInternal: 
+      WwiseObjectReference: {fileID: 11400000, guid: 686ced3ee31972945812702c360ce778,
+        type: 2}
+  - Name: CircleChime
+    ChimeInput: 3
+    StartWwiseEvent:
+      idInternal: 0
+      valueGuidInternal: 
+      WwiseObjectReference: {fileID: 11400000, guid: 7fab2a57940660a47b4b42bacc697b0e,
+        type: 2}
+    StopWwiseEvent:
+      idInternal: 0
+      valueGuidInternal: 
+      WwiseObjectReference: {fileID: 11400000, guid: fc5c7a0e54c655448a5726fa07b0620b,
+        type: 2}
+  NPCChimes:
+  - Name: GlobalChime
+    ChimeTask: 0
+    WwiseEvent:
+      idInternal: 0
+      valueGuidInternal: 
+      WwiseObjectReference: {fileID: 11400000, guid: 68a8ce552629b7a40a72b59bafe076c9,
+        type: 2}
+  - Name: TriangleChime
+    ChimeTask: 0
+    WwiseEvent:
+      idInternal: 0
+      valueGuidInternal: 
+      WwiseObjectReference: {fileID: 11400000, guid: a417be0a0435fbd439411a50a10ac459,
+        type: 2}
+  - Name: SquareChime
+    ChimeTask: 0
+    WwiseEvent:
+      idInternal: 0
+      valueGuidInternal: 
+      WwiseObjectReference: {fileID: 11400000, guid: fba262a6e386bc24489cf63d16ce7c90,
+        type: 2}
+  - Name: CircleChime
+    ChimeTask: 0
+    WwiseEvent:
+      idInternal: 0
+      valueGuidInternal: 
+      WwiseObjectReference: {fileID: 11400000, guid: ae40f8e08bac233489a5c96d04eb1e34,
+        type: 2}

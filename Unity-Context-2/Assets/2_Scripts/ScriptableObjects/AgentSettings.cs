@@ -21,8 +21,22 @@ public class AgentSettings : ScriptableObject
 
     //------------------------------------------------------------------
 
+    [Header("Settings")]
     public float MaxSpeed;
     public float MinSpeed;
+    [Tooltip("Distance an agent will wander from their home")]
+    public float WanderFromHomeDistance;
+    [Tooltip("Distance an agent must be from the player to stop and look at the player")]
+    public float LookAtPlayerDistance;
+    [Tooltip("The Distance an agent follows the player at")]
+    public float FollowPlayerAtDistance;
+    [Tooltip("The Speed an agent follows the player at")]
+    public float FollowPlayerSpeed;
+
+    [Header("Prefabs")]
+    public List<AgentPrefab> Prefabs = new List<AgentPrefab>();
+
+    [Header("Advanced Settings")]
     [Tooltip("Max Distance between each 'step' in the agents path")]
-    public float StepDistance;
+    public float StepDistance; 
 }
