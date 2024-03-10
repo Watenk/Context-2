@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef180a30a1d7bb04fba70185dc0ab351, type: 3}
+  m_Name: MuralSettings
+  m_EditorClassIdentifier: 
+  DetectRange: 8
+  ChimePlayDelay: 1
+  MushroomDistance: 1
+  MushroomPrefabs:
+  - chimeInputs: 0
+    gameObject: {fileID: 3184000485588933114, guid: d006672e6f0610b4784a847479bb6e2c,
+      type: 3}
+  - chimeInputs: 1
+    gameObject: {fileID: 2320427230618635907, guid: c00c0515d06d61e4fb9fb11c6b23318c,
+      type: 3}
+  - chimeInputs: 2
+    gameObject: {fileID: 9189569027086241631, guid: cf2cb3fa555349247946d91a05f1fedf,
+      type: 3}
+  - chimeInputs: 3
+    gameObject: {fileID: 5079394165848749211, guid: 03abc6b7f89ecc34fbe68951e17d1216,
+      type: 3}

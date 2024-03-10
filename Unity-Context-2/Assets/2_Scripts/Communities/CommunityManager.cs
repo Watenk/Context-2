@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CommunityManager : IFixedUpdateable
 {
-    private List<CommunityTypes> activeAgents = new List<CommunityTypes>();
+    private Dictionary<CommunityTypes, int> activeAgents = new Dictionary<CommunityTypes, int>();
     private Dictionary<CommunityTypes, Community> communities = new Dictionary<CommunityTypes, Community>();
 
     //-------------------------------------------
@@ -32,29 +32,49 @@ public class CommunityManager : IFixedUpdateable
         return community;
     }
 
-    public List<CommunityTypes> GetActiveAgents(){
+    public List<CommunityTypes> GetCommunityAmount(){
+
+        List<CommunityTypes> keys = new List<CommunityTypes>();
+
+        foreach (KeyValuePair<CommunityTypes, Community> kvp in communities){
+            keys.Add(kvp.Key);
+        }
+
+        return keys;
+    }
+
+    public Dictionary<CommunityTypes, int> GetActiveAgents(){
         return activeAgents;
     }
 
     public void AddActiveAgent(CommunityTypes communityType){
-        activeAgents.Add(communityType);
+        activeAgents[communityType] += 1;
     }
 
     public void RemoveActiveAgent(CommunityTypes communityType){
-        activeAgents.Remove(communityType);
+        activeAgents[communityType] -= 1;
     }
 
-    public void AddGroup(CommunityTypes communityType, int size, Vector3 pos, float spawnRadius){
-        GetCommunity(communityType).AddGroup(size, pos, spawnRadius);
+    public void AddGroup(CommunityTypes communityType, int size, Vector3 pos, float spawnRadius, bool isActive){
+        GetCommunity(communityType).AddGroup(size, pos, spawnRadius, isActive);
     }
 
     public void AddProblem(CommunityTypes communityType, Problem problem){
         GetCommunity(communityType).AddProblem(problem);
     }
 
+    public void RemoveProblem(CommunityTypes communityType, Problem problem){
+        GetCommunity(communityType).RemoveProblem(problem);
+
+        foreach (KeyValuePair<CommunityTypes, Community> kvp in communities){
+            kvp.Value.ProblemSolved();
+        }
+    }
+
     //----------------------------------------------
 
     private void Add(CommunityTypes communityType){
         communities.Add(communityType, new Community(communityType));
+        activeAgents.Add(communityType, 0);
     }
 }

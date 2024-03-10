@@ -4839,7 +4839,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5213893279062155292}
-  - component: {fileID: 7413773836821977582}
+  - component: {fileID: -5236594647317684268}
   m_Layer: 0
   m_Name: Mush Square
   m_TagString: Untagged
@@ -4864,7 +4864,7 @@ Transform:
   - {fileID: 6568380041970296981}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &7413773836821977582
+--- !u!95 &-5236594647317684268
 Animator:
   serializedVersion: 5
   m_ObjectHideFlags: 0

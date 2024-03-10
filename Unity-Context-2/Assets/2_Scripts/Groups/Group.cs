@@ -15,7 +15,7 @@ public class Group : IFixedUpdateable
 
     //-----------------------------------------------
 
-    public Group(Community community, CommunityTypes communityType, int groupSize, Vector3 homePos, float spawnRadius){
+    public Group(Community community, CommunityTypes communityType, int groupSize, Vector3 homePos, float spawnRadius, bool isActive){
         Community = community;
         CommunityType = communityType;
         Size = groupSize;
@@ -23,12 +23,20 @@ public class Group : IFixedUpdateable
         SpawnRadius = spawnRadius;
         agentPrefabs = AgentSettings.Instance.Prefabs;
 
-        InstanceAgents();
+        InstanceAgents(isActive);
     }
 
     public void OnFixedUpdate(){
         foreach (Agent currentAgent in agents){
             currentAgent.OnFixedUpdate();
+        }
+    }
+
+    public void ProblemSolved(){
+        foreach (Agent current in agents){
+            if (current.fsm.currentState == current.fsm.GetState(typeof(AgentFollowingState))){
+                current.fsm.SwitchState(typeof(AgentWanderingState));
+            }
         }
     }
 
@@ -38,9 +46,23 @@ public class Group : IFixedUpdateable
         }
     }
 
+    public int FreeAgents(int freeAmount){
+
+        if (freeAmount == 0) { return 0; }
+
+        foreach (Agent current in agents){
+            if (current.fsm.currentState == current.fsm.GetState(typeof(AgentDepressedState)) && freeAmount > 0){
+                current.fsm.SwitchState(typeof(AgentWanderingState));
+                freeAmount --;
+            }
+        }
+
+        return freeAmount;
+    }
+
     //------------------------------------------------
 
-    private void InstanceAgents(){
+    private void InstanceAgents(bool isActive){
         
         AgentPrefab agentPrefab = GetAgentPrefab();
 
@@ -53,6 +75,7 @@ public class Group : IFixedUpdateable
             agentInstance.transform.SetParent(GameManager.Instance.transform);
 
             Agent newAgent = new Agent(agentInstance, this);
+            if (isActive) { newAgent.fsm.SwitchState(typeof(AgentWanderingState)); }
             agents.Add(newAgent);
         }
     }

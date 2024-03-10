@@ -7,6 +7,7 @@ public class Community : IFixedUpdateable
     public CommunityTypes CommunityType { get; private set; }
     private List<Group> groups = new List<Group>();
     private List<Problem> problems = new List<Problem>();
+    private List<Problem> problemsGC = new List<Problem>();
     // TODO: Add Affection for other communities
 
     //------------------------------------------------
@@ -19,13 +20,39 @@ public class Community : IFixedUpdateable
         foreach (Group currentGroup in groups){
             currentGroup.OnFixedUpdate();
         }
+
+        foreach (Problem currentProblem in problems){
+            currentProblem.OnFixedUpdate();
+        }
+
+        foreach (Problem currentProblem in problemsGC){
+            currentProblem.Remove();
+            problems.Remove(currentProblem);
+        }
+        problemsGC.Clear();
     }
 
-    public void AddGroup(int size, Vector3 pos, float spawnRadius){
-        groups.Add(new Group(this, CommunityType, size, pos, spawnRadius));
+    public void AddGroup(int size, Vector3 pos, float spawnRadius, bool isActive){
+        groups.Add(new Group(this, CommunityType, size, pos, spawnRadius, isActive));
     }
 
     public void AddProblem(Problem problem){
         problems.Add(problem);
+    }
+
+    public void RemoveProblem(Problem problem){
+        int freeAmount = problem.FreeNpcAmount;
+
+        foreach (Group current in groups){
+            freeAmount = current.FreeAgents(freeAmount);
+        }
+
+        problemsGC.Add(problem);
+    }
+
+    public void ProblemSolved(){
+        foreach (Group currentGroup in groups){
+            currentGroup.ProblemSolved();
+        }
     }
 }

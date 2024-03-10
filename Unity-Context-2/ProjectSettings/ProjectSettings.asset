@@ -819,6 +819,7 @@ PlayerSettings:
     WebGL: UNITY_POST_PROCESSING_STACK_V2
     XboxOne: UNITY_POST_PROCESSING_STACK_V2
     tvOS: UNITY_POST_PROCESSING_STACK_V2
+    Standalone: WWISE_ADDRESSABLES_POST_2023
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend: {}

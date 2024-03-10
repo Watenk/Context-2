@@ -5,5 +5,6 @@ using UnityEngine;
 public enum ChimeTasks
 {
     follow,
-    solveProblem
+    solveProblem,
+    leave
 }
