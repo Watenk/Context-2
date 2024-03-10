@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics\Default Work Unit
     guid: 954c813606d6da4dad71495b9f6c3d05
     GuidInternal: 
-    m_lastTime: -8584928973215696943
+    m_lastTime: -8584916949830313564
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
@@ -174,7 +174,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: d7906ce14cf00844a1cf51bb2f3f5324
     GuidInternal: 
-    m_lastTime: -8584918481285716399
+    m_lastTime: -8584916949830343568
     List:
     - name: Main
       guid: edcbdbe24520214883096064fcb95c6c
@@ -202,7 +202,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 1829c11d708c3d4b85382b800fb51260
     GuidInternal: 
-    m_lastTime: -8584917818838664164
+    m_lastTime: -8584916949838110502
     List:
     - name: Ambience
       guid: 86f588cd638f484d8f4020eb95385ae6
@@ -787,7 +787,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: 6e8a3e52955e38448efc5e2b8decd175
     GuidInternal: 
-    m_lastTime: -8584917819604904803
+    m_lastTime: -8584916949838100467
     List:
     - name: ambience
       guid: 597d8c556c9ded4793e63e83fdcfab57
@@ -849,7 +849,7 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: ee9c2c1aa3ee3549bcf9769c5161d1dc
     GuidInternal: 
-    m_lastTime: -8584917819595066075
+    m_lastTime: -8584916949830343568
     List:
     - name: ambienceInsideOutside
       guid: 54de947f53da664faa37236c7efc25f0
@@ -929,7 +929,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: a0523abc768a534caf9f9ccda37772bd
     GuidInternal: 
-    m_lastTime: -8584928973215736972
+    m_lastTime: -8584916949830333564
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
@@ -943,7 +943,7 @@ MonoBehaviour:
     ParentPath: Triggers\Default Work Unit
     guid: ffb58b344218ab42b290b09ddbdffacb
     GuidInternal: 
-    m_lastTime: -8584928973215726996
+    m_lastTime: -8584916949830333564
     List: []
   ExpandedFileSystemItemIds: 
   ExpandedWaapiItemIds: 010000000500000006000000080000000a0000000b0000000c00000016000000190000001a0000001b0000001c0000002000000025000000260000002c000000

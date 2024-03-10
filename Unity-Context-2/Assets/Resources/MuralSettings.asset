@@ -13,3 +13,18 @@ MonoBehaviour:
   m_Name: MuralSettings
   m_EditorClassIdentifier: 
   DetectRange: 5
+  ChimePlayDelay: 1
+  MushroomDistance: 1
+  MushroomPrefabs:
+  - chimeInputs: 0
+    gameObject: {fileID: 3184000485588933114, guid: d006672e6f0610b4784a847479bb6e2c,
+      type: 3}
+  - chimeInputs: 1
+    gameObject: {fileID: 2320427230618635907, guid: c00c0515d06d61e4fb9fb11c6b23318c,
+      type: 3}
+  - chimeInputs: 2
+    gameObject: {fileID: 9189569027086241631, guid: cf2cb3fa555349247946d91a05f1fedf,
+      type: 3}
+  - chimeInputs: 3
+    gameObject: {fileID: 5079394165848749211, guid: 03abc6b7f89ecc34fbe68951e17d1216,
+      type: 3}

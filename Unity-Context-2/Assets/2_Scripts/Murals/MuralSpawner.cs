@@ -9,6 +9,7 @@ public class MuralSpawner : MonoBehaviour
     //-------------------------------------
 
     public void Start(){
-        
+        GameManager.GetService<MuralManager>().Add(new Mural(chimeSequence, this.gameObject));
+        Destroy(this);
     }
 }

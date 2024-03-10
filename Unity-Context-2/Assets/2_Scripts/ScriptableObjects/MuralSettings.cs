@@ -23,4 +23,9 @@ public class MuralSettings : ScriptableObject
 
     [Tooltip("Range the player must be in for the mural to activate")]
     public float DetectRange;
+    [Tooltip("Time in seconds between each played note / chime")]
+    public float ChimePlayDelay;
+    [Tooltip("Distance between the mushrooms")]
+    public float MushroomDistance;
+    public List<MuralMushroomPrefab> MushroomPrefabs;
 }

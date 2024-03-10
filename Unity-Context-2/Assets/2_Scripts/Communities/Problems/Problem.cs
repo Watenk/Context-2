@@ -8,7 +8,7 @@ public class Problem : IFixedUpdateable
 {
     private Dictionary<CommunityTypes, List<ProblemSolver>> problemSolvers = new Dictionary<CommunityTypes, List<ProblemSolver>>();
     private Dictionary<CommunityTypes, bool> solvedCommunities = new Dictionary<CommunityTypes, bool>();
-    private List<MushroomPrefab> mushroomPrefabs;
+    private List<ProblemMushroomPrefab> mushroomPrefabs;
     private List<CommunityTypes> communityAmount;
     private CommunityTypes communityType;
     private Vector3 pos;

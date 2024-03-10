@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [Serializable]
-public class MushroomPrefab 
+public class ProblemMushroomPrefab 
 {
     public CommunityTypes communityType;
     public GameObject gameObject;
