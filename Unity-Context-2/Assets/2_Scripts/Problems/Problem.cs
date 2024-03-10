@@ -6,6 +6,8 @@ using UnityEngine;
 
 public class Problem : IFixedUpdateable
 {
+    public int FreeNpcAmount { get; private set; }
+
     private Dictionary<CommunityTypes, List<ProblemSolver>> problemSolvers = new Dictionary<CommunityTypes, List<ProblemSolver>>();
     private Dictionary<CommunityTypes, bool> solvedCommunities = new Dictionary<CommunityTypes, bool>();
     private List<ProblemMushroomPrefab> mushroomPrefabs;
@@ -23,8 +25,9 @@ public class Problem : IFixedUpdateable
 
     //-------------------------------------------------
 
-    public Problem(List<CommunityTypes> solverCommunityTypes, CommunityTypes communityType, GameObject gameObject, Vector3 pos){
+    public Problem(List<CommunityTypes> solverCommunityTypes, CommunityTypes communityType, int freeNpcAmount, GameObject gameObject, Vector3 pos){
         this.communityType = communityType;
+        this.FreeNpcAmount = freeNpcAmount;
         this.gameObject = gameObject;
         this.pos = pos;
 

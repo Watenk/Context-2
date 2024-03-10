@@ -44,7 +44,7 @@ public class Agent : IFixedUpdateable
            new AgentLookAtPlayerState(),
            new AgentDepressedState()
         );
-        fsm.SwitchState(typeof(AgentWanderingState));
+        fsm.SwitchState(typeof(AgentDepressedState));
 
         #if UNITY_EDITOR
             if (NavMeshAgent == null) { Debug.LogError(gameObject.name + " doesn't contain a navmeshAgent"); }

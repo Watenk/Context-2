@@ -55,8 +55,8 @@ public class CommunityManager : IFixedUpdateable
         activeAgents[communityType] -= 1;
     }
 
-    public void AddGroup(CommunityTypes communityType, int size, Vector3 pos, float spawnRadius){
-        GetCommunity(communityType).AddGroup(size, pos, spawnRadius);
+    public void AddGroup(CommunityTypes communityType, int size, Vector3 pos, float spawnRadius, bool isActive){
+        GetCommunity(communityType).AddGroup(size, pos, spawnRadius, isActive);
     }
 
     public void AddProblem(CommunityTypes communityType, Problem problem){

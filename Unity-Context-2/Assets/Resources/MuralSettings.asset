@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef180a30a1d7bb04fba70185dc0ab351, type: 3}
   m_Name: MuralSettings
   m_EditorClassIdentifier: 
-  DetectRange: 5
+  DetectRange: 8
   ChimePlayDelay: 1
   MushroomDistance: 1
   MushroomPrefabs:
