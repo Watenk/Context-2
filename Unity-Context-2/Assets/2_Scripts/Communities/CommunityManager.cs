@@ -14,6 +14,7 @@ public class CommunityManager : IFixedUpdateable
         Add(CommunityTypes.circle);
         Add(CommunityTypes.triangle);
         Add(CommunityTypes.square);
+        Add(CommunityTypes.global);
     }
 
     public void OnFixedUpdate(){
@@ -55,8 +56,8 @@ public class CommunityManager : IFixedUpdateable
         activeAgents[communityType] -= 1;
     }
 
-    public void AddGroup(CommunityTypes communityType, int size, Vector3 pos, float spawnRadius, bool isActive){
-        GetCommunity(communityType).AddGroup(size, pos, spawnRadius, isActive);
+    public Group AddGroup(CommunityTypes communityType, int size, Vector3 pos, float spawnRadius, bool isActive){
+        return GetCommunity(communityType).AddGroup(size, pos, spawnRadius, isActive);
     }
 
     public void AddProblem(CommunityTypes communityType, Problem problem){

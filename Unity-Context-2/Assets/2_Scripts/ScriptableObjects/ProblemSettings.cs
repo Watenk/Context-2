@@ -26,5 +26,6 @@ public class ProblemSettings : ScriptableObject
     public float ProblemDetectRange;
     [Tooltip("The range in which the mushroooms will spawn around a problem")]
     public float MushroomSpawnRadius;
+    public float MushroomSize;
     public List<ProblemMushroomPrefab> MushroomPrefabs;
 }

@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting.Dependencies.NCalc;
 using UnityEngine;
 
 public class Mural : IFixedUpdateable
@@ -20,6 +19,8 @@ public class Mural : IFixedUpdateable
     private bool playing;
     private int playingIndex;
     private Timer chimeTimer;
+    private float shortChimeTime;
+    private float longChimeTime;
 
     // References
     private PlayerController player;
@@ -36,12 +37,14 @@ public class Mural : IFixedUpdateable
         detectRange = MuralSettings.Instance.DetectRange;
         mushroomPrefabs = MuralSettings.Instance.MushroomPrefabs;
         mushroomDistance = MuralSettings.Instance.MushroomDistance;
+        shortChimeTime = MuralSettings.Instance.ShortChimePlayDelay;
+        longChimeTime = MuralSettings.Instance.LongChimePlayDelay;
         inputHandler = GameManager.GetService<InputHandler>();
         soundManager = GameManager.GetService<SoundManager>();
         timerManager = GameManager.GetService<TimerManager>();
 
         inputHandler.OnChime += OnChime;
-        chimeTimer = timerManager.AddTimer(MuralSettings.Instance.ChimePlayDelay);
+        chimeTimer = timerManager.AddTimer(shortChimeTime);
 
         SpawnMushrooms();
 
@@ -73,8 +76,14 @@ public class Mural : IFixedUpdateable
             }
 
             PlayChime(chimeSequence.chimes[playingIndex]);
-            playingIndex++;
+            if (chimeSequence.chimes[playingIndex].isLong){
+                chimeTimer.ChangeLenght(longChimeTime);
+            }
+            else{
+                chimeTimer.ChangeLenght(shortChimeTime);
+            }
             chimeTimer.ResetTime();
+            playingIndex++;
         }
     }
 
@@ -108,9 +117,8 @@ public class Mural : IFixedUpdateable
         for (int i = 0; i < chimeSequence.chimes.Count; i++){
             ChimeInputs chimeInput = chimeSequence.chimes[i].chimeInput;
             Vector3 mushroomPos = startPosition + dir * mushroomDistance * i;
-            GameObject newMushroom = GameObject.Instantiate(mushroomPrefabs.Find(chimePrefab => chimePrefab.chimeInputs == chimeInput).gameObject, mushroomPos, Quaternion.identity);
-            newMushroom.transform.SetParent(gameObject.transform);
-            
+            GameObject newMushroom = GameObject.Instantiate(mushroomPrefabs.Find(chimePrefab => chimePrefab.chimeInputs == chimeInput).gameObject, mushroomPos, Quaternion.identity, gameObject.transform);
+            if (chimeSequence.chimes[i].isLong) { newMushroom.transform.localScale = new Vector3(1.5f, 1.5f, 1.5f); }
             Animator mushroomAnimator = newMushroom.GetComponent<Animator>();
 
             #if UNITY_EDITOR
