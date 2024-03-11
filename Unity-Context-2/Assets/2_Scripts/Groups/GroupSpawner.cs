@@ -11,10 +11,21 @@ public class GroupSpawner : MonoBehaviour
     [Tooltip("Is the group availible to command or is the group inactive")]
     public bool IsActive;
 
+    private Group group;
+
     //--------------------------------------------------------
     
-    void Start(){
-        GameManager.GetService<CommunityManager>().AddGroup(CommunityType, GroupSize, transform.position, SpawnRadius, IsActive);        
+    public void Start(){
+        group = GameManager.GetService<CommunityManager>().AddGroup(CommunityType, GroupSize, transform.position, SpawnRadius, IsActive);        
+    }
+
+    public Group GetGroup(){
+
+        #if UNITY_EDITOR
+            if (group == null) { Debug.LogError("Tried to get group before its initialized"); }
+        #endif
+
         GameObject.Destroy(this.gameObject);
+        return group;
     }
 }

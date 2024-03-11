@@ -6,8 +6,6 @@ using UnityEngine;
 
 public class Problem : IFixedUpdateable
 {
-    public int FreeNpcAmount { get; private set; }
-
     private Dictionary<CommunityTypes, List<ProblemSolver>> problemSolvers = new Dictionary<CommunityTypes, List<ProblemSolver>>();
     private Dictionary<CommunityTypes, bool> solvedCommunities = new Dictionary<CommunityTypes, bool>();
     private List<ProblemMushroomPrefab> mushroomPrefabs;
@@ -19,6 +17,7 @@ public class Problem : IFixedUpdateable
     private GameObject gameObject;
     private bool playerInRange;
     private Vector3 mushroomScale;
+    private List<Group> freedGroups;
 
     // References
     private PlayerController player;
@@ -27,9 +26,9 @@ public class Problem : IFixedUpdateable
 
     //-------------------------------------------------
 
-    public Problem(List<CommunityTypes> solverCommunityTypes, CommunityTypes communityType, int freeNpcAmount, GameObject gameObject, Vector3 pos){
+    public Problem(List<CommunityTypes> solverCommunityTypes, CommunityTypes communityType, List<Group> freedGroups, GameObject gameObject, Vector3 pos){
         this.communityType = communityType;
-        this.FreeNpcAmount = freeNpcAmount;
+        this.freedGroups = freedGroups;
         this.gameObject = gameObject;
         this.pos = pos;
 
@@ -144,6 +143,10 @@ public class Problem : IFixedUpdateable
         // Check if all communities are solved
         foreach (KeyValuePair<CommunityTypes, bool> kvp in solvedCommunities){
             if (!kvp.Value) { return; }
+        }
+
+        foreach (Group current in freedGroups){
+            current.FreeAgents();
         }
 
         communityManager.RemoveProblem(communityType, this);

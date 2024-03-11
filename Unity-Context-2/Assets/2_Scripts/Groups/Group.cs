@@ -46,18 +46,13 @@ public class Group : IFixedUpdateable
         }
     }
 
-    public int FreeAgents(int freeAmount){
-
-        if (freeAmount == 0) { return 0; }
+    public void FreeAgents(){
 
         foreach (Agent current in agents){
-            if (current.fsm.currentState == current.fsm.GetState(typeof(AgentDepressedState)) && freeAmount > 0){
+            if (current.fsm.currentState == current.fsm.GetState(typeof(AgentDepressedState))){
                 current.fsm.SwitchState(typeof(AgentWanderingState));
-                freeAmount --;
             }
         }
-
-        return freeAmount;
     }
 
     //------------------------------------------------

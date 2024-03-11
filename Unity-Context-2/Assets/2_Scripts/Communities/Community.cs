@@ -32,8 +32,10 @@ public class Community : IFixedUpdateable
         problemsGC.Clear();
     }
 
-    public void AddGroup(int size, Vector3 pos, float spawnRadius, bool isActive){
-        groups.Add(new Group(this, CommunityType, size, pos, spawnRadius, isActive));
+    public Group AddGroup(int size, Vector3 pos, float spawnRadius, bool isActive){
+        Group newGroup = new Group(this, CommunityType, size, pos, spawnRadius, isActive);
+        groups.Add(newGroup);
+        return newGroup;
     }
 
     public void AddProblem(Problem problem){
@@ -41,12 +43,6 @@ public class Community : IFixedUpdateable
     }
 
     public void RemoveProblem(Problem problem){
-        int freeAmount = problem.FreeNpcAmount;
-
-        foreach (Group current in groups){
-            freeAmount = current.FreeAgents(freeAmount);
-        }
-
         problemsGC.Add(problem);
     }
 
