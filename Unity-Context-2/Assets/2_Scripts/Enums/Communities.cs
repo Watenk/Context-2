@@ -6,5 +6,6 @@ public enum CommunityTypes
 {
     triangle,
     circle,
-    square
+    square,
+    global
 }

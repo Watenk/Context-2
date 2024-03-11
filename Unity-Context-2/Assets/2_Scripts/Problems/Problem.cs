@@ -17,6 +17,8 @@ public class Problem : IFixedUpdateable
     private float detectRange;
     private float mushroomSpawnRadius;
     private GameObject gameObject;
+    private bool playerInRange;
+    private Vector3 mushroomScale;
 
     // References
     private PlayerController player;
@@ -37,6 +39,7 @@ public class Problem : IFixedUpdateable
         detectRange = ProblemSettings.Instance.ProblemDetectRange;
         mushroomSpawnRadius = ProblemSettings.Instance.MushroomSpawnRadius;
         mushroomPrefabs = ProblemSettings.Instance.MushroomPrefabs;
+        mushroomScale = new Vector3(ProblemSettings.Instance.MushroomSize, ProblemSettings.Instance.MushroomSize, ProblemSettings.Instance.MushroomSize);
 
         chimeSequencer.OnChimeSequence += OnChimeSequence;
 
@@ -61,23 +64,41 @@ public class Problem : IFixedUpdateable
 
     public void OnFixedUpdate(){
 
-        if (Vector3.Distance(pos, player.gameObject.transform.position) > detectRange) { return; }
+        if (Vector3.Distance(pos, player.gameObject.transform.position) < detectRange){ 
+            playerInRange = true;
 
-        // Set mushroom animations
-        foreach (CommunityTypes currentCommunity in communityAmount){
-            List<ProblemSolver> solvers = problemSolvers[currentCommunity];
-            int followingAmount = GetFollowingAmount(currentCommunity);
+            // Enable mushroom animations
+            foreach (CommunityTypes currentCommunity in communityAmount){
+                List<ProblemSolver> solvers = problemSolvers[currentCommunity];
+                int followingAmount = GetFollowingAmount(currentCommunity);
 
-            foreach (ProblemSolver currentSolver in solvers){
-                if (followingAmount > 0){
-                    currentSolver.Animator.SetBool("Active", true);
-                    followingAmount -= 1;
-                }
-                else{
-                    currentSolver.Animator.SetBool("Active", false);
+                foreach (ProblemSolver currentSolver in solvers){
+                    if (followingAmount > 0){
+                        currentSolver.Animator.SetBool("Active", true);
+                        followingAmount -= 1;
+                    }
+                    else{
+                        currentSolver.Animator.SetBool("Active", false);
+                    }
                 }
             }
         }
+        else{
+
+            if (playerInRange){
+                // Disable mushroom animations
+                foreach (CommunityTypes currentCommunity in communityAmount){
+                    List<ProblemSolver> solvers = problemSolvers[currentCommunity];
+
+                    foreach (ProblemSolver currentSolver in solvers){
+                        currentSolver.Animator.SetBool("Active", false);
+                    }
+                }
+            }
+
+            playerInRange = false;
+        }
+
     }
 
     public void Remove(){
@@ -134,8 +155,8 @@ public class Problem : IFixedUpdateable
             CommunityTypes communityType = communityTypes[i];
             float mushroomAngle = i * Mathf.PI * 2 / communityTypes.Count;
             Vector3 mushroomPos = new Vector3(Mathf.Cos(mushroomAngle), 0, Mathf.Sin(mushroomAngle)) * mushroomSpawnRadius + gameObject.transform.position;
-            GameObject newMushroom = GameObject.Instantiate(mushroomPrefabs.Find(problemPrefab => problemPrefab.communityType == communityType).gameObject, mushroomPos, Quaternion.identity);
-            newMushroom.transform.SetParent(gameObject.transform);
+            GameObject newMushroom = GameObject.Instantiate(mushroomPrefabs.Find(problemPrefab => problemPrefab.communityType == communityType).gameObject, mushroomPos, Quaternion.identity, gameObject.transform);
+            newMushroom.transform.localScale = mushroomScale;
             problemSolvers[communityType].Add(new ProblemSolver(communityType, newMushroom));
         }
     }

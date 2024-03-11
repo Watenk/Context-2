@@ -14,6 +14,7 @@ public class CommunityManager : IFixedUpdateable
         Add(CommunityTypes.circle);
         Add(CommunityTypes.triangle);
         Add(CommunityTypes.square);
+        Add(CommunityTypes.global);
     }
 
     public void OnFixedUpdate(){
