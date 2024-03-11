@@ -75,3 +75,57 @@ MonoBehaviour:
     - chimeInput: 1
       isLong: 0
     affectedCommunities: 00000000
+  - Name: CrossSolveProblem
+    chimeTask: 1
+    chimes:
+    - chimeInput: 0
+      isLong: 1
+    - chimeInput: 0
+      isLong: 0
+    affectedCommunities: 00000000
+  - Name: CrossFollow
+    chimeTask: 0
+    chimes:
+    - chimeInput: 0
+      isLong: 0
+    - chimeInput: 0
+      isLong: 0
+    affectedCommunities: 00000000
+  - Name: CrossLeave
+    chimeTask: 2
+    chimes:
+    - chimeInput: 0
+      isLong: 1
+    - chimeInput: 0
+      isLong: 1
+    affectedCommunities: 00000000
+  - Name: SquareLeave
+    chimeTask: 2
+    chimes:
+    - chimeInput: 0
+      isLong: 1
+    - chimeInput: 0
+      isLong: 1
+    - chimeInput: 2
+      isLong: 1
+    affectedCommunities: 02000000
+  - Name: TriangleLeave
+    chimeTask: 2
+    chimes:
+    - chimeInput: 0
+      isLong: 1
+    - chimeInput: 0
+      isLong: 1
+    - chimeInput: 1
+      isLong: 0
+    affectedCommunities: 00000000
+  - Name: CircleLeave
+    chimeTask: 2
+    chimes:
+    - chimeInput: 0
+      isLong: 1
+    - chimeInput: 0
+      isLong: 1
+    - chimeInput: 3
+      isLong: 1
+    affectedCommunities: 01000000
