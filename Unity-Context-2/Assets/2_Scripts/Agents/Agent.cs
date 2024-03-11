@@ -44,7 +44,7 @@ public class Agent : IFixedUpdateable
            new AgentLookAtPlayerState(),
            new AgentDepressedState()
         );
-        fsm.SwitchState(typeof(AgentWanderingState));
+        fsm.SwitchState(typeof(AgentDepressedState));
 
         #if UNITY_EDITOR
             if (NavMeshAgent == null) { Debug.LogError(gameObject.name + " doesn't contain a navmeshAgent"); }
@@ -102,7 +102,12 @@ public class Agent : IFixedUpdateable
                 break;
             
             case ChimeTasks.solveProblem:
-                // TODO: Add solveproblem task
+                if (fsm.currentState == fsm.GetState(typeof(AgentFollowingState))){
+
+                    // Sound
+                    NPCSoundData soundData = soundManager.GetNPCSound(ChimeTasks.follow);
+                    soundManager.PlaySound(soundData, GameObject.transform.position);
+                }
                 break;
         }
     }

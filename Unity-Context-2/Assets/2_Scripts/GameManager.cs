@@ -22,6 +22,7 @@ public class GameManager : MonoBehaviour
         AddService(new SoundManager());
         AddService(new ChimeSequencer());
         AddService(new CommunityManager());
+        AddService(new MuralManager());
 
         #if UNITY_EDITOR
             if (Player == null) { Debug.LogError("Player isn't set in GameManager"); }

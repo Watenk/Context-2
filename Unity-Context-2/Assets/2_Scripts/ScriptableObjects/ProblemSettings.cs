@@ -24,4 +24,7 @@ public class ProblemSettings : ScriptableObject
 
     [Tooltip("The range in which agents and the player are detected around a problem")]
     public float ProblemDetectRange;
+    [Tooltip("The range in which the mushroooms will spawn around a problem")]
+    public float MushroomSpawnRadius;
+    public List<ProblemMushroomPrefab> MushroomPrefabs;
 }

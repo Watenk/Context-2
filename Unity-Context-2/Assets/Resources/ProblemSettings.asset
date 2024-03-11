@@ -13,3 +13,14 @@ MonoBehaviour:
   m_Name: ProblemSettings
   m_EditorClassIdentifier: 
   ProblemDetectRange: 5
+  MushroomSpawnRadius: 0.5
+  MushroomPrefabs:
+  - communityType: 0
+    gameObject: {fileID: 2320427230618635907, guid: c00c0515d06d61e4fb9fb11c6b23318c,
+      type: 3}
+  - communityType: 1
+    gameObject: {fileID: 5079394165848749211, guid: 03abc6b7f89ecc34fbe68951e17d1216,
+      type: 3}
+  - communityType: 2
+    gameObject: {fileID: 9189569027086241631, guid: cf2cb3fa555349247946d91a05f1fedf,
+      type: 3}
