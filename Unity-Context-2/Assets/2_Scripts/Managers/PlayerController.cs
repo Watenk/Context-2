@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.Rendering;
 using UnityEngine;
+using UnityEngine.VFX;
 
 public class PlayerController : MonoBehaviour
 {
@@ -16,6 +17,8 @@ public class PlayerController : MonoBehaviour
     // References
     private InputHandler inputManager;
     private SoundManager soundManager;
+    [SerializeField]
+    private VisualEffect visualEffect;
 
     //------------------------------------------------
 
@@ -61,6 +64,8 @@ public class PlayerController : MonoBehaviour
         PlayerSoundData soundData = soundManager.GetPlayerSound(chimeInput);
         LoopingSound sound = soundManager.PlayLoopingSound(soundData, gameObject.transform.position);
         activeSounds.Enqueue(sound);
+        visualEffect.Play();
+        visualEffect.SetBool("ActiveBool", true);
     }
 
     private void OnChimeUp(ChimeInputs chimeInput){
@@ -68,5 +73,6 @@ public class PlayerController : MonoBehaviour
 
         LoopingSound sound = activeSounds.Dequeue();
         sound.StopSound();
+        visualEffect.SetBool("ActiveBool", false);
     }
 }
