@@ -28,4 +28,7 @@ MonoBehaviour:
   - CommunityType: 2
     prefabs:
     - {fileID: 7888470974323744715, guid: 2330071e75cac334eb8f7c157648ab28, type: 3}
+  - CommunityType: 3
+    prefabs:
+    - {fileID: 7888470974323744715, guid: 00e98d8b055a4434185f4a029a74ea5a, type: 3}
   StepDistance: 2

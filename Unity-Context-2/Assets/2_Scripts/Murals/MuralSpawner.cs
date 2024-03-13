@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class MuralSpawner : MonoBehaviour
 {
-    public ChimeSequence chimeSequence;
+    public ChimeSequences chimeSequence;
 
     //-------------------------------------
 
     public void Start(){
-        GameManager.GetService<MuralManager>().Add(new Mural(chimeSequence, this.gameObject));
+        List<ChimeSequence> chimeSequences = ChimeSettings.Instance.ChimeSequences;
+        GameManager.GetService<MuralManager>().Add(new Mural(chimeSequences.Find(chime => chime.chimeSequence == chimeSequence), this.gameObject));
         Destroy(this);
     }
 }

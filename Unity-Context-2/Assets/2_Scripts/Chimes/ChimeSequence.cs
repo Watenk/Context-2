@@ -8,6 +8,7 @@ public class ChimeSequence
 {
     [Tooltip("This name has no function, Its just to organize the scriptable object")]
     public string Name;
+    public ChimeSequences chimeSequence;
     [Tooltip("The task that is executed after the chime is entered")]
     public ChimeTasks chimeTask;
     [Tooltip("Chimes in the sequence")]

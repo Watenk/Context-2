@@ -16,6 +16,7 @@ MonoBehaviour:
   LongChimeLenght: 0.5
   ChimeSequences:
   - Name: SquareFollow
+    chimeSequence: 3
     chimeTask: 0
     chimes:
     - chimeInput: 0
@@ -28,6 +29,7 @@ MonoBehaviour:
       isLong: 0
     affectedCommunities: 02000000
   - Name: CircleFollow
+    chimeSequence: 6
     chimeTask: 0
     chimes:
     - chimeInput: 0
@@ -40,6 +42,7 @@ MonoBehaviour:
       isLong: 0
     affectedCommunities: 01000000
   - Name: TriangleFollow
+    chimeSequence: 0
     chimeTask: 0
     chimes:
     - chimeInput: 0
@@ -52,6 +55,7 @@ MonoBehaviour:
       isLong: 0
     affectedCommunities: 00000000
   - Name: SquareSolveProblem
+    chimeSequence: 4
     chimeTask: 1
     chimes:
     - chimeInput: 0
@@ -60,6 +64,7 @@ MonoBehaviour:
       isLong: 0
     affectedCommunities: 02000000
   - Name: CircleSolveProblem
+    chimeSequence: 7
     chimeTask: 1
     chimes:
     - chimeInput: 0
@@ -68,6 +73,7 @@ MonoBehaviour:
       isLong: 0
     affectedCommunities: 01000000
   - Name: TriangleSolveProblem
+    chimeSequence: 1
     chimeTask: 1
     chimes:
     - chimeInput: 0
