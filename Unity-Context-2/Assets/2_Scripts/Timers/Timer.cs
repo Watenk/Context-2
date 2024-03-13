@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Timer 
 {
-    private float lenght;
-    private float timer;
+    protected float timer;
+    protected float lenght;
 
     //--------------------------------------------
     
@@ -21,9 +21,8 @@ public class Timer
         }
     }
 
-    public bool IsDone(){
+    public virtual bool IsDone(){
         if (timer <= 0){
-            timer = lenght;
             return true;
         }
         return false;
@@ -37,7 +36,7 @@ public class Timer
         timer = newTimerTime;
     }
 
-    public void ResetTime(){
+    public void Interrupt(){
         timer = lenght;
     }
 }

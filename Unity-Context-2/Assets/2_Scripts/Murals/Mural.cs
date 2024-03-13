@@ -1,30 +1,35 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.VFX;
 
 public class Mural : IFixedUpdateable
 {
-    private ChimeSequence chimeSequence;
+    public event Action OnSequenceDone;
+
     private GameObject gameObject;
-    private float detectRange;
 
     // Mushrooms
-    private List<Animator> mushrooms = new List<Animator>();
+    private List<Animator> mushroomAnimators = new List<Animator>();
+    private List<BubbleController> mushroomBubbles = new List<BubbleController>();
     private List<MuralMushroomPrefab> mushroomPrefabs;
     private float mushroomDistance;
 
     // Chimes
-    private LoopingSound currentChime;
-    private bool playerInRange;
-    private bool playing;
+    private ChimeSequence chimeSequence;
+    private LoopingSound currentChimeSound;
+    private float detectRange;
     private int playingIndex;
+
+    // Times
     private Timer chimeTimer;
+    private Timer repeatTimer;
     private float shortChimeTime;
     private float longChimeTime;
 
     // References
     private PlayerController player;
-    private InputHandler inputHandler;
     private SoundManager soundManager;
     private TimerManager timerManager;
 
@@ -39,12 +44,12 @@ public class Mural : IFixedUpdateable
         mushroomDistance = MuralSettings.Instance.MushroomDistance;
         shortChimeTime = MuralSettings.Instance.ShortChimePlayDelay;
         longChimeTime = MuralSettings.Instance.LongChimePlayDelay;
-        inputHandler = GameManager.GetService<InputHandler>();
         soundManager = GameManager.GetService<SoundManager>();
         timerManager = GameManager.GetService<TimerManager>();
 
-        inputHandler.OnChime += OnChime;
-        chimeTimer = timerManager.AddTimer(shortChimeTime);
+        chimeTimer = timerManager.AddLoopingTimer(shortChimeTime);
+        repeatTimer = timerManager.AddTimer(MuralSettings.Instance.RepeatDelay);
+        repeatTimer.ChangeCurrentTime(0);
 
         SpawnMushrooms();
 
@@ -55,57 +60,54 @@ public class Mural : IFixedUpdateable
 
     public void OnFixedUpdate(){
 
-        if (Vector3.Distance(gameObject.transform.position, player.gameObject.transform.position) > detectRange){
-            playerInRange = false;
+        if (Vector3.Distance(gameObject.transform.position, player.gameObject.transform.position) > detectRange) { return; }
+        if (!repeatTimer.IsDone()) { return; }
+        if (!chimeTimer.IsDone()) { return; }
+
+        // If sequence is done
+        if (playingIndex == chimeSequence.chimes.Count + 1){
+            playingIndex = 0;
+            currentChimeSound = null;
+            repeatTimer.Interrupt();
+            if (OnSequenceDone != null) { OnSequenceDone(); }
+            return;
         }
-        else{
-            playerInRange = true;
-        } 
 
-        if (!playing) { return; }
+        // Chimes
+        PlayChime();
+        StopChime();
 
-        if (chimeTimer.IsDone()){
-
-            if (playingIndex == chimeSequence.chimes.Count){
-                playing = false;
-                mushrooms[playingIndex - 1].SetBool("Active", false);
-                playingIndex = 0;
-                currentChime.StopSound(); 
-                currentChime = null;
-                return;
-            }
-
-            PlayChime(chimeSequence.chimes[playingIndex]);
+        // Set timer lenght
+        if (playingIndex < chimeSequence.chimes.Count){
             if (chimeSequence.chimes[playingIndex].isLong){
                 chimeTimer.ChangeLenght(longChimeTime);
             }
             else{
                 chimeTimer.ChangeLenght(shortChimeTime);
             }
-            chimeTimer.ResetTime();
-            playingIndex++;
         }
+
+        chimeTimer.Interrupt();
+        playingIndex++;
     }
 
     //----------------------------------------
 
-    private void OnChime(Chime chime){
+    private void PlayChime(){
+        if (playingIndex >= chimeSequence.chimes.Count) { return; }
 
-        if (!playerInRange && !playing) { return; }
-
-        chimeTimer.ResetTime();
-        playing = true;
-        playingIndex = 0;
+        mushroomAnimators[playingIndex].SetBool("Active", true);
+        mushroomBubbles[playingIndex].StartBubble(chimeSequence.chimes[playingIndex].chimeInput);
+        PlayerSoundData playerSoundData = soundManager.GetPlayerSound(chimeSequence.chimes[playingIndex].chimeInput);
+        currentChimeSound = soundManager.PlayLoopingSound(playerSoundData, gameObject.transform.position);
     }
 
-    private void PlayChime(Chime chime){
+    private void StopChime(){
+        if (playingIndex == 0) { return; }
 
-        if (currentChime != null) { currentChime.StopSound(); currentChime = null; }
-        if (playingIndex != 0) { mushrooms[playingIndex - 1].SetBool("Active", false); }
-
-        mushrooms[playingIndex].SetBool("Active", true);
-        PlayerSoundData playerSoundData = soundManager.GetPlayerSound(chime.chimeInput);
-        currentChime = soundManager.PlayLoopingSound(playerSoundData, gameObject.transform.position);
+        if (currentChimeSound != null) { currentChimeSound.StopSound(); currentChimeSound = null; }
+        mushroomAnimators[playingIndex - 1].SetBool("Active", false);
+        mushroomBubbles[playingIndex - 1].StopBubble();
     }
 
     private void SpawnMushrooms(){
@@ -120,12 +122,15 @@ public class Mural : IFixedUpdateable
             GameObject newMushroom = GameObject.Instantiate(mushroomPrefabs.Find(chimePrefab => chimePrefab.chimeInputs == chimeInput).gameObject, mushroomPos, Quaternion.identity, gameObject.transform);
             if (chimeSequence.chimes[i].isLong) { newMushroom.transform.localScale = new Vector3(1.5f, 1.5f, 1.5f); }
             Animator mushroomAnimator = newMushroom.GetComponent<Animator>();
+            BubbleController mushroomBubble = newMushroom.GetComponentInChildren<BubbleController>();
 
             #if UNITY_EDITOR
-                if (mushroomAnimator == null) { Debug.LogError("Mushroom doesnt contain a animator"); }
+                if (mushroomAnimator == null) { Debug.LogError("Mushroom doesn't contain a animator"); }
+                if (mushroomBubble == null) { Debug.LogError("Mushroom doesn't contain a VisualEffect"); }
             #endif
 
-            mushrooms.Add(mushroomAnimator);
+            mushroomAnimators.Add(mushroomAnimator);
+            mushroomBubbles.Add(mushroomBubble);
         }
     }
 }
