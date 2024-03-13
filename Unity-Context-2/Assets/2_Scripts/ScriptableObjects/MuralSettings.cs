@@ -27,6 +27,8 @@ public class MuralSettings : ScriptableObject
     public float ShortChimePlayDelay;
     [Tooltip("Time in seconds between each played long note / chime")]
     public float LongChimePlayDelay;
+    [Tooltip("The delay between each repeat of sequences")]
+    public float RepeatDelay;
     [Tooltip("Distance between the mushrooms")]
     public float MushroomDistance;
     public List<MuralMushroomPrefab> MushroomPrefabs;

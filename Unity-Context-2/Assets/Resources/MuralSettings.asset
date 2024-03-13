@@ -15,6 +15,7 @@ MonoBehaviour:
   DetectRange: 8
   ShortChimePlayDelay: 0.3
   LongChimePlayDelay: 1.5
+  RepeatDelay: 3
   MushroomDistance: 1
   MushroomPrefabs:
   - chimeInputs: 0

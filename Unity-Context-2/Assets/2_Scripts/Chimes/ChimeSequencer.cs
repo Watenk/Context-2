@@ -22,7 +22,7 @@ public class ChimeSequencer : IFixedUpdateable
         inputManager = GameManager.GetService<InputHandler>();
         timerManager = GameManager.GetService<TimerManager>();
 
-        chimeResetTimer = timerManager.AddTimer(ChimeSettings.Instance.ChimeResetTime);
+        chimeResetTimer = timerManager.AddLoopingTimer(ChimeSettings.Instance.ChimeResetTime);
         chimeSequences = ChimeSettings.Instance.ChimeSequences;
 
         inputManager.OnChime += OnChime;
@@ -54,7 +54,7 @@ public class ChimeSequencer : IFixedUpdateable
 
         currentChimes.Add(chime);
         playerIsEntering = true;
-        chimeResetTimer.ResetTime();
+        chimeResetTimer.Interrupt();
 
         foreach (ChimeSequence currentSequence in chimeSequences){
             if (ChimeSequencesAreEqual(currentChimes, currentSequence.chimes)){
