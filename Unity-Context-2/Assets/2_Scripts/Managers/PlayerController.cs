@@ -16,6 +16,8 @@ public class PlayerController : MonoBehaviour
     // References
     private InputHandler inputManager;
     private SoundManager soundManager;
+    [SerializeField]
+    private BubbleController bubbleController;
 
     //------------------------------------------------
 
@@ -61,6 +63,7 @@ public class PlayerController : MonoBehaviour
         PlayerSoundData soundData = soundManager.GetPlayerSound(chimeInput);
         LoopingSound sound = soundManager.PlayLoopingSound(soundData, gameObject.transform.position);
         activeSounds.Enqueue(sound);
+        bubbleController.StartBubble(chimeInput);
     }
 
     private void OnChimeUp(ChimeInputs chimeInput){
@@ -68,5 +71,6 @@ public class PlayerController : MonoBehaviour
 
         LoopingSound sound = activeSounds.Dequeue();
         sound.StopSound();
+        bubbleController.StopBubble();
     }
 }
