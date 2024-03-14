@@ -58,7 +58,7 @@ public class ChimeSequencer : IFixedUpdateable
 
         foreach (ChimeSequence currentSequence in chimeSequences){
             if (ChimeSequencesAreEqual(currentChimes, currentSequence.chimes)){
-                OnChimeSequence(currentSequence);
+                OnChimeSequence?.Invoke(currentSequence);
                 ClearSequence();
             }
         }

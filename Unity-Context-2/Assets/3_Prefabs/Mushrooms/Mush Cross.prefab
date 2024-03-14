@@ -5060,7 +5060,7 @@ PrefabInstance:
     - target: {fileID: 7851352020869339445, guid: eeae0068341e408468cdee529486f895,
         type: 3}
       propertyPath: growSpeed
-      value: 0.01
+      value: 0.02
       objectReference: {fileID: 0}
     - target: {fileID: 8202175629205144050, guid: eeae0068341e408468cdee529486f895,
         type: 3}
