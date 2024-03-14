@@ -5055,12 +5055,12 @@ PrefabInstance:
     - target: {fileID: 7851352020869339445, guid: eeae0068341e408468cdee529486f895,
         type: 3}
       propertyPath: radius
-      value: 1.5
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 7851352020869339445, guid: eeae0068341e408468cdee529486f895,
         type: 3}
       propertyPath: growSpeed
-      value: 0.05
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 8202175629205144050, guid: eeae0068341e408468cdee529486f895,
         type: 3}
