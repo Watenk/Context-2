@@ -54,7 +54,7 @@ public class ChimeSequencer : IFixedUpdateable
 
         currentChimes.Add(chime);
         playerIsEntering = true;
-        chimeResetTimer.Interrupt();
+        chimeResetTimer.Reset();
 
         foreach (ChimeSequence currentSequence in chimeSequences){
             if (ChimeSequencesAreEqual(currentChimes, currentSequence.chimes)){

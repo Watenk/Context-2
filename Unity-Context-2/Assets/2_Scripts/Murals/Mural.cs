@@ -13,12 +13,12 @@ public class Mural : IFixedUpdateable
     // Mushrooms
     private List<Animator> mushroomAnimators = new List<Animator>();
     private List<BubbleController> mushroomBubbles = new List<BubbleController>();
+    private List<LoopingSound> mushroomSounds = new List<LoopingSound>();
     private List<MuralMushroomPrefab> mushroomPrefabs;
     private float mushroomDistance;
 
     // Chimes
-    private ChimeSequence chimeSequence;
-    private LoopingSound currentChimeSound;
+    public ChimeSequence chimeSequence;
     private float detectRange;
     private int playingIndex;
 
@@ -60,15 +60,16 @@ public class Mural : IFixedUpdateable
 
     public void OnFixedUpdate(){
 
-        if (Vector3.Distance(gameObject.transform.position, player.gameObject.transform.position) > detectRange) { return; }
+        if (playingIndex == 0){
+            if (Vector3.Distance(gameObject.transform.position, player.gameObject.transform.position) > detectRange) { return; }
+        }
         if (!repeatTimer.IsDone()) { return; }
         if (!chimeTimer.IsDone()) { return; }
 
         // If sequence is done
         if (playingIndex == chimeSequence.chimes.Count + 1){
             playingIndex = 0;
-            currentChimeSound = null;
-            repeatTimer.Interrupt();
+            repeatTimer.Reset();
             if (OnSequenceDone != null) { OnSequenceDone(); }
             return;
         }
@@ -87,7 +88,7 @@ public class Mural : IFixedUpdateable
             }
         }
 
-        chimeTimer.Interrupt();
+        chimeTimer.Reset();
         playingIndex++;
     }
 
@@ -99,13 +100,13 @@ public class Mural : IFixedUpdateable
         mushroomAnimators[playingIndex].SetBool("Active", true);
         mushroomBubbles[playingIndex].StartBubble(chimeSequence.chimes[playingIndex].chimeInput);
         PlayerSoundData playerSoundData = soundManager.GetPlayerSound(chimeSequence.chimes[playingIndex].chimeInput);
-        currentChimeSound = soundManager.PlayLoopingSound(playerSoundData, gameObject.transform.position);
+        mushroomSounds[playingIndex] = soundManager.PlayLoopingSound(playerSoundData, gameObject.transform.position);
     }
 
     private void StopChime(){
         if (playingIndex == 0) { return; }
 
-        if (currentChimeSound != null) { currentChimeSound.StopSound(); currentChimeSound = null; }
+        mushroomSounds[playingIndex - 1].StopSound();
         mushroomAnimators[playingIndex - 1].SetBool("Active", false);
         mushroomBubbles[playingIndex - 1].StopBubble();
     }
@@ -131,6 +132,7 @@ public class Mural : IFixedUpdateable
 
             mushroomAnimators.Add(mushroomAnimator);
             mushroomBubbles.Add(mushroomBubble);
+            mushroomSounds.Add(default);
         }
     }
 }
