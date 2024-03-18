@@ -97,13 +97,13 @@ Material:
     - _BumpScale: 1
     - _ClearCoatMask: 0
     - _ClearCoatSmoothness: 0
-    - _Clip_threshold: 1
+    - _Clip_threshold: 0.62
     - _Cull: 2
     - _Cutoff: 0.5
     - _DetailAlbedoMapScale: 1
     - _DetailNormalMapScale: 1
     - _Dither_Offset: 0.5
-    - _Dither_Range: 0.06
+    - _Dither_Range: 0.07
     - _DstBlend: 0
     - _DstBlendAlpha: 0
     - _EnvironmentReflections: 1
