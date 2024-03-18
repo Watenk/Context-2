@@ -2772,7 +2772,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 160255125}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.2705981, y: -0.65328145, z: 0.270598, w: 0.65328157}
+  m_LocalRotation: {x: 0.27059805, y: -0.65328145, z: 0.27059805, w: 0.65328157}
   m_LocalPosition: {x: 49.8, y: 13.1, z: -41.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2791,7 +2791,7 @@ GameObject:
   - component: {fileID: 167067594}
   - component: {fileID: 167067593}
   m_Layer: 0
-  m_Name: Virtual Camera (5)
+  m_Name: Mural Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2892,7 +2892,7 @@ MonoBehaviour:
   m_UpdateMethod: 2
   m_BlendUpdateMethod: 1
   m_DefaultBlend:
-    m_Style: 4
+    m_Style: 1
     m_Time: 2
     m_CustomCurve:
       serializedVersion: 2
@@ -2900,7 +2900,7 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-  m_CustomBlends: {fileID: 0}
+  m_CustomBlends: {fileID: 11400000, guid: e5d51c7ca4d5f6247901cef61ddac5f2, type: 2}
   m_CameraCutEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -2984,7 +2984,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 60.000004
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -3010,8 +3010,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 175735927}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.2705981, y: -0.65328145, z: 0.270598, w: 0.65328157}
-  m_LocalPosition: {x: 49.8, y: 13.1, z: -41.7}
+  m_LocalRotation: {x: 0.13435678, y: 0.458548, z: -0.070359506, w: 0.8756321}
+  m_LocalPosition: {x: 11.714722, y: 11.073963, z: -59.77578}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3064,7 +3064,7 @@ GameObject:
   - component: {fileID: 184507388}
   - component: {fileID: 184507387}
   m_Layer: 0
-  m_Name: Virtual Camera (5)
+  m_Name: Mural Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5296,7 +5296,7 @@ GameObject:
   - component: {fileID: 328255725}
   - component: {fileID: 328255726}
   m_Layer: 0
-  m_Name: Virtual Camera (1)
+  m_Name: Mural Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5828,7 +5828,7 @@ GameObject:
   - component: {fileID: 357915551}
   - component: {fileID: 357915552}
   m_Layer: 0
-  m_Name: Virtual Camera (4)
+  m_Name: Mural Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7607,7 +7607,7 @@ GameObject:
   - component: {fileID: 495476228}
   - component: {fileID: 495476227}
   m_Layer: 0
-  m_Name: Virtual Camera (5)
+  m_Name: Mural Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7906,7 +7906,7 @@ GameObject:
   - component: {fileID: 511576874}
   - component: {fileID: 511576873}
   m_Layer: 0
-  m_Name: Virtual Camera (5)
+  m_Name: Mural Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9869,6 +9869,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 241957823546166970, guid: 474fc37857e3fd74db7d148d1f3d0d43,
     type: 3}
   m_PrefabInstance: {fileID: 594086467}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &599477882 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4588954289961780836, guid: 8c38ebd83b50c87459c167d502b50a2c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1096254532}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &599647320
 PrefabInstance:
@@ -14527,7 +14533,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &963358990
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14575,7 +14581,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963358989}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.08254005, y: -0.09627879, z: 0.008011801, w: 0.9918938}
+  m_LocalRotation: {x: 0.13435678, y: 0.458548, z: -0.070359506, w: 0.8756321}
   m_LocalPosition: {x: 1.9975967, y: 14.274335, z: -57.09472}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -15027,8 +15033,10 @@ Transform:
   - {fileID: 2137617705}
   - {fileID: 517853718}
   - {fileID: 849288488}
+  - {fileID: 1580440559}
   - {fileID: 1541115638}
   - {fileID: 1355379999}
+  - {fileID: 599477882}
   - {fileID: 647647451}
   - {fileID: 337871906}
   - {fileID: 1868461579}
@@ -16250,6 +16258,89 @@ LightingSettings:
   m_PVRTiledBaking: 0
   m_NumRaysToShootPerTexel: -1
   m_RespectSceneVisibilityWhenBakingGI: 0
+--- !u!1001 &1096254532
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1023716261}
+    m_Modifications:
+    - target: {fileID: 3811431982007393502, guid: 8c38ebd83b50c87459c167d502b50a2c,
+        type: 3}
+      propertyPath: m_Name
+      value: Triangle Building2 (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4588954289961780836, guid: 8c38ebd83b50c87459c167d502b50a2c,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 247.3924
+      objectReference: {fileID: 0}
+    - target: {fileID: 4588954289961780836, guid: 8c38ebd83b50c87459c167d502b50a2c,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 247.3924
+      objectReference: {fileID: 0}
+    - target: {fileID: 4588954289961780836, guid: 8c38ebd83b50c87459c167d502b50a2c,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 247.39238
+      objectReference: {fileID: 0}
+    - target: {fileID: 4588954289961780836, guid: 8c38ebd83b50c87459c167d502b50a2c,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -36.76
+      objectReference: {fileID: 0}
+    - target: {fileID: 4588954289961780836, guid: 8c38ebd83b50c87459c167d502b50a2c,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4588954289961780836, guid: 8c38ebd83b50c87459c167d502b50a2c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -33.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4588954289961780836, guid: 8c38ebd83b50c87459c167d502b50a2c,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.5022821
+      objectReference: {fileID: 0}
+    - target: {fileID: 4588954289961780836, guid: 8c38ebd83b50c87459c167d502b50a2c,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.5022817
+      objectReference: {fileID: 0}
+    - target: {fileID: 4588954289961780836, guid: 8c38ebd83b50c87459c167d502b50a2c,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.49770668
+      objectReference: {fileID: 0}
+    - target: {fileID: 4588954289961780836, guid: 8c38ebd83b50c87459c167d502b50a2c,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.49770862
+      objectReference: {fileID: 0}
+    - target: {fileID: 4588954289961780836, guid: 8c38ebd83b50c87459c167d502b50a2c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 4588954289961780836, guid: 8c38ebd83b50c87459c167d502b50a2c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4588954289961780836, guid: 8c38ebd83b50c87459c167d502b50a2c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 89.476
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8c38ebd83b50c87459c167d502b50a2c, type: 3}
 --- !u!1 &1102807702
 GameObject:
   m_ObjectHideFlags: 3
@@ -17452,7 +17543,7 @@ GameObject:
   - component: {fileID: 1179079657}
   - component: {fileID: 1179079658}
   m_Layer: 0
-  m_Name: Virtual Camera (4)
+  m_Name: Mural Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19292,7 +19383,7 @@ GameObject:
   - component: {fileID: 1362378677}
   - component: {fileID: 1362378678}
   m_Layer: 0
-  m_Name: Virtual Camera (5)
+  m_Name: Mural Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21690,6 +21781,79 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1440581112}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1449772326
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1638072454}
+    m_Modifications:
+    - target: {fileID: 3989561612353504927, guid: fb6c4f0198aa2a94cae5efe8ca67bf8d,
+        type: 3}
+      propertyPath: m_Name
+      value: Triangle Building1 (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6689541954374482523, guid: fb6c4f0198aa2a94cae5efe8ca67bf8d,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 400.40384
+      objectReference: {fileID: 0}
+    - target: {fileID: 6689541954374482523, guid: fb6c4f0198aa2a94cae5efe8ca67bf8d,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 14.91
+      objectReference: {fileID: 0}
+    - target: {fileID: 6689541954374482523, guid: fb6c4f0198aa2a94cae5efe8ca67bf8d,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6689541954374482523, guid: fb6c4f0198aa2a94cae5efe8ca67bf8d,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -14.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 6689541954374482523, guid: fb6c4f0198aa2a94cae5efe8ca67bf8d,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.61850685
+      objectReference: {fileID: 0}
+    - target: {fileID: 6689541954374482523, guid: fb6c4f0198aa2a94cae5efe8ca67bf8d,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.61850685
+      objectReference: {fileID: 0}
+    - target: {fileID: 6689541954374482523, guid: fb6c4f0198aa2a94cae5efe8ca67bf8d,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.3427088
+      objectReference: {fileID: 0}
+    - target: {fileID: 6689541954374482523, guid: fb6c4f0198aa2a94cae5efe8ca67bf8d,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.3427088
+      objectReference: {fileID: 0}
+    - target: {fileID: 6689541954374482523, guid: fb6c4f0198aa2a94cae5efe8ca67bf8d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 6689541954374482523, guid: fb6c4f0198aa2a94cae5efe8ca67bf8d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6689541954374482523, guid: fb6c4f0198aa2a94cae5efe8ca67bf8d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 57.981
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fb6c4f0198aa2a94cae5efe8ca67bf8d, type: 3}
 --- !u!1001 &1454229410
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21964,6 +22128,89 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1461378690}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1474136200
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1023716261}
+    m_Modifications:
+    - target: {fileID: 3811431982007393502, guid: 8c38ebd83b50c87459c167d502b50a2c,
+        type: 3}
+      propertyPath: m_Name
+      value: Triangle Building2 (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4588954289961780836, guid: 8c38ebd83b50c87459c167d502b50a2c,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 424.20627
+      objectReference: {fileID: 0}
+    - target: {fileID: 4588954289961780836, guid: 8c38ebd83b50c87459c167d502b50a2c,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 424.2063
+      objectReference: {fileID: 0}
+    - target: {fileID: 4588954289961780836, guid: 8c38ebd83b50c87459c167d502b50a2c,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 424.20633
+      objectReference: {fileID: 0}
+    - target: {fileID: 4588954289961780836, guid: 8c38ebd83b50c87459c167d502b50a2c,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -35.46
+      objectReference: {fileID: 0}
+    - target: {fileID: 4588954289961780836, guid: 8c38ebd83b50c87459c167d502b50a2c,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4588954289961780836, guid: 8c38ebd83b50c87459c167d502b50a2c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -63.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 4588954289961780836, guid: 8c38ebd83b50c87459c167d502b50a2c,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.26390228
+      objectReference: {fileID: 0}
+    - target: {fileID: 4588954289961780836, guid: 8c38ebd83b50c87459c167d502b50a2c,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.26390067
+      objectReference: {fileID: 0}
+    - target: {fileID: 4588954289961780836, guid: 8c38ebd83b50c87459c167d502b50a2c,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.6560148
+      objectReference: {fileID: 0}
+    - target: {fileID: 4588954289961780836, guid: 8c38ebd83b50c87459c167d502b50a2c,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.65601575
+      objectReference: {fileID: 0}
+    - target: {fileID: 4588954289961780836, guid: 8c38ebd83b50c87459c167d502b50a2c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 4588954289961780836, guid: 8c38ebd83b50c87459c167d502b50a2c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4588954289961780836, guid: 8c38ebd83b50c87459c167d502b50a2c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -136.172
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8c38ebd83b50c87459c167d502b50a2c, type: 3}
 --- !u!1001 &1482206811
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22507,7 +22754,7 @@ GameObject:
   - component: {fileID: 1542979033}
   - component: {fileID: 1542979032}
   m_Layer: 0
-  m_Name: Virtual Camera (5)
+  m_Name: Mural Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -23014,6 +23261,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4588954289961780836, guid: 8c38ebd83b50c87459c167d502b50a2c,
     type: 3}
   m_PrefabInstance: {fileID: 1580314798}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1580440559 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4588954289961780836, guid: 8c38ebd83b50c87459c167d502b50a2c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1474136200}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1593587909
 PrefabInstance:
@@ -24028,6 +24281,7 @@ Transform:
   - {fileID: 1507670645}
   - {fileID: 1129211469}
   - {fileID: 298184652}
+  - {fileID: 1704055145}
   m_Father: {fileID: 1672434212}
   m_LocalEulerAnglesHint: {x: 0, y: 34.631, z: 0}
 --- !u!1 &1639415527
@@ -25338,6 +25592,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1701869057}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1704055145 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6689541954374482523, guid: fb6c4f0198aa2a94cae5efe8ca67bf8d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1449772326}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1704155894
 GameObject:
   m_ObjectHideFlags: 0
@@ -26414,7 +26674,7 @@ GameObject:
   - component: {fileID: 1792322088}
   - component: {fileID: 1792322089}
   m_Layer: 0
-  m_Name: Virtual Camera (5)
+  m_Name: Mural Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26486,7 +26746,7 @@ GameObject:
   - component: {fileID: 1795659586}
   - component: {fileID: 1795659585}
   m_Layer: 0
-  m_Name: Virtual Camera (5)
+  m_Name: Mural Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26992,7 +27252,7 @@ GameObject:
   - component: {fileID: 1869102758}
   - component: {fileID: 1869102759}
   m_Layer: 0
-  m_Name: Virtual Camera (5)
+  m_Name: Mural Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27670,7 +27930,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: d3b52c0ba3904594f80887b95a3d3b2d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -28366,7 +28626,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -34.74091, y: 0.30351442, z: 92.95695}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1.4611, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2108100699}
