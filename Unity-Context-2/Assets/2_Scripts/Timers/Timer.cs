@@ -36,7 +36,7 @@ public class Timer
         timer = newTimerTime;
     }
 
-    public void Interrupt(){
+    public void Reset(){
         timer = lenght;
     }
 }

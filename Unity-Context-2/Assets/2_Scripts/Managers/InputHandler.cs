@@ -56,7 +56,7 @@ public class InputHandler : IUpdateable
     private void IfChimeDown(string button){
         ChimeInputs chimeInput = ConvertButtonToChimeInput(button);
         chimeBools[button] = true;
-        chimeTimers[button].Interrupt();
+        chimeTimers[button].Reset();
         OnChimeDown(chimeInput);
     }
 
