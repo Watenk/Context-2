@@ -15,6 +15,16 @@ public class TimerManager : IUpdateable
         }
     }
 
+    public Timer AddLoopingTimer(float lenght){
+        Timer newTimer = new Timer(lenght);
+        timers.Add(newTimer);
+        return newTimer;
+    }
+
+    public void RemoveLoopingTimer(Timer timer){
+        timers.Remove(timer);
+    }
+
     public Timer AddTimer(float lenght){
         Timer newTimer = new Timer(lenght);
         timers.Add(newTimer);

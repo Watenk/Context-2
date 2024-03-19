@@ -16,4 +16,7 @@ public enum ChimeSequences
     GlobalFollow,
     GlobalSolve,
     GlobalLeave,
+    CrossFollow,
+    CrossSolve,
+    CrossLeave,
 }

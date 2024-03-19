@@ -9,5 +9,6 @@ public class NPCSoundData
     [Tooltip("This name has no function other than organizing the scriptableObject")]
     public string Name;
     public ChimeTasks ChimeTask;
-    public AK.Wwise.Event WwiseEvent;
+    public AK.Wwise.Event ShortChimeWwiseEvent;
+    public AK.Wwise.Event LongChimeWwiseEvent;
 }

@@ -22,10 +22,10 @@ public class InputHandler : IUpdateable
     public InputHandler(){
         timerManager = GameManager.GetService<TimerManager>();
 
-        chimeTimers.Add("square", timerManager.AddTimer(ChimeSettings.Instance.LongChimeLenght));
-        chimeTimers.Add("triangle", timerManager.AddTimer(ChimeSettings.Instance.LongChimeLenght));
-        chimeTimers.Add("circle", timerManager.AddTimer(ChimeSettings.Instance.LongChimeLenght));
-        chimeTimers.Add("global", timerManager.AddTimer(ChimeSettings.Instance.LongChimeLenght));
+        chimeTimers.Add("square", timerManager.AddLoopingTimer(ChimeSettings.Instance.LongChimeLenght));
+        chimeTimers.Add("triangle", timerManager.AddLoopingTimer(ChimeSettings.Instance.LongChimeLenght));
+        chimeTimers.Add("circle", timerManager.AddLoopingTimer(ChimeSettings.Instance.LongChimeLenght));
+        chimeTimers.Add("global", timerManager.AddLoopingTimer(ChimeSettings.Instance.LongChimeLenght));
 
         chimeBools.Add("square", false);
         chimeBools.Add("triangle", false);
@@ -56,7 +56,7 @@ public class InputHandler : IUpdateable
     private void IfChimeDown(string button){
         ChimeInputs chimeInput = ConvertButtonToChimeInput(button);
         chimeBools[button] = true;
-        chimeTimers[button].ResetTime();
+        chimeTimers[button].Reset();
         OnChimeDown(chimeInput);
     }
 
