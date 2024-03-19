@@ -395,6 +395,22 @@
 						</Event>
 					</ChildrenList>
 				</Folder>
+				<Folder Name="MusicFanfair" ID="{D58DDA22-D92A-473D-8018-7981CB74D2DF}" ShortID="100753942">
+					<ChildrenList>
+						<Event Name="MusicFanfair_Play" ID="{54D95B01-6E01-45DB-95C7-F7737F282221}">
+							<ChildrenList>
+								<Action Name="" ID="{960AC3E3-BD7C-44D7-B438-278B226A25A1}" ShortID="1001850713">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="MusicFanfair1" ID="{94E5FBE4-1294-4D5D-80AC-19FC924197B6}" WorkUnitID="{47424826-0680-4E19-AAE6-5C2C528E72F7}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="MusicFanfair_Stop" ID="{BA3964E9-A3E6-4E97-B660-E60043557F8A}"/>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

@@ -22,6 +22,32 @@
 						</Transition>
 					</TransitionList>
 				</StateGroup>
+				<Folder Name="Music" ID="{5578BF76-8378-48A1-9AE0-CA4B23969A00}" ShortID="115553654">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="12"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<StateGroup Name="Fanfair" ID="{33A33BF2-6231-47AC-ABD2-5BB7F88C743A}">
+							<ChildrenList>
+								<State Name="None" ID="{D4002866-EFC9-4E88-ACE5-7CC31249CCCF}"/>
+								<State Name="Stop" ID="{95CA4EA8-170F-473E-AA19-F6F6A2DBD591}"/>
+								<State Name="Play" ID="{4A7D3F05-98FA-440B-8CEC-408E7F3F1885}"/>
+							</ChildrenList>
+						</StateGroup>
+						<StateGroup Name="IncludedCommunties" ID="{583642E3-43CF-4A66-8F59-A2FF477C8005}">
+							<PropertyList>
+								<Property Name="DefaultTransitionTime" Type="Real64" Value="3"/>
+							</PropertyList>
+							<ChildrenList>
+								<State Name="None" ID="{1310D39B-6854-42E0-9A6B-E9D9AF85F93C}"/>
+								<State Name="Circle" ID="{5F5C025B-009D-494A-8839-AD230FD7536C}"/>
+								<State Name="Triangle" ID="{D2D90B2D-285F-4B4A-B4EA-974A548E1465}"/>
+								<State Name="Square" ID="{2E088B71-A772-4723-A6D6-233CA11BE3BE}"/>
+							</ChildrenList>
+						</StateGroup>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</States>

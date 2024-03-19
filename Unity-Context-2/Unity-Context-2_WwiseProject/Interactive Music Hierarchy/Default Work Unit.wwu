@@ -1,6 +1,596 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{47424826-0680-4E19-AAE6-5C2C528E72F7}" SchemaVersion="119">
 	<InteractiveMusic>
-		<WorkUnit Name="Default Work Unit" ID="{47424826-0680-4E19-AAE6-5C2C528E72F7}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{47424826-0680-4E19-AAE6-5C2C528E72F7}" PersistMode="Standalone">
+			<ChildrenList>
+				<Folder Name="Fanfair" ID="{EB41BCEE-A767-4418-B1DC-E80FFD05D1E9}" ShortID="649754292">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="12"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<MusicSegment Name="MusicFanfair1" ID="{94E5FBE4-1294-4D5D-80AC-19FC924197B6}" ShortID="291965857">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="12"/>
+								<Property Name="EndPosition" Type="Real64" Value="63157.9144736842"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+								<Property Name="Tempo" Type="Real64" Value="114"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{890C2A6A-F4B0-4F89-9461-EC99F69DD99E}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Chimes" ID="{D0C63F08-8AA6-4FA4-8FBA-ED045E95E039}" WorkUnitID="{07B3C08D-E8AD-4A81-A929-C27B28B93464}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicTrack Name="1Circle" ID="{86C7376A-DD48-40D7-8606-6C2910026959}" ShortID="952446896">
+									<PropertyList>
+										<Property Name="Color" Type="int16" Value="19"/>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
+										<Property Name="Volume" Type="Real64">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{6312D0E3-E7B3-41B5-A87F-102E5C50A381}"/>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{07B3C08D-E8AD-4A81-A929-C27B28B93464}"/>
+										</Reference>
+										<Reference Name="TransitionRoot">
+											<Custom>
+												<MusicTransition Name="Root" ID="{6D37B1E4-E480-4215-A034-E685FEC33CA9}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</Custom>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="FF_intro1_circle1" ID="{96DF8C1D-390D-4EC9-9918-A2DC256D85A8}">
+											<Language>SFX</Language>
+											<AudioFile>FF_intro1_circle1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="765695433"/>
+											</MediaIDList>
+										</AudioFileSource>
+										<AudioFileSource Name="FF_part1_circle1" ID="{A7653EDF-BDA9-4439-85B8-B232E90E1CCF}">
+											<Language>SFX</Language>
+											<AudioFile>FF_part1_circle1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="444608073"/>
+											</MediaIDList>
+										</AudioFileSource>
+										<AudioFileSource Name="FF_part2_circle1" ID="{F79F12EE-D015-4C0B-8D8D-43B84B513A36}">
+											<Language>SFX</Language>
+											<AudioFile>FF_part2_circle1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="295045199"/>
+											</MediaIDList>
+										</AudioFileSource>
+										<AudioFileSource Name="FF_part3_circle1" ID="{45E304A5-1CA1-4EA3-9BC0-13C7EB7C794B}">
+											<Language>SFX</Language>
+											<AudioFile>FF_part3_circle1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="769456374"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<StateInfo>
+										<StateGroupList>
+											<StateGroupInfo>
+												<StateGroupRef Name="IncludedCommunties" ID="{583642E3-43CF-4A66-8F59-A2FF477C8005}"/>
+											</StateGroupInfo>
+										</StateGroupList>
+										<CustomStateList>
+											<CustomState>
+												<StateRef Name="Square" ID="{2E088B71-A772-4723-A6D6-233CA11BE3BE}"/>
+												<CustomState Name="" ID="{8DFF248A-8715-4317-9B67-8294C55C4DD4}" ShortID="83892143">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64" Value="-108"/>
+													</PropertyList>
+												</CustomState>
+											</CustomState>
+											<CustomState>
+												<StateRef Name="Circle" ID="{5F5C025B-009D-494A-8839-AD230FD7536C}"/>
+												<CustomState Name="" ID="{6A78FBFE-1AEE-48DA-A8C6-0B8D47A1A58A}" ShortID="620010882"/>
+											</CustomState>
+											<CustomState>
+												<StateRef Name="Triangle" ID="{D2D90B2D-285F-4B4A-B4EA-974A548E1465}"/>
+												<CustomState Name="" ID="{42B761D0-1FC2-4041-B0D5-392BB9E38D93}" ShortID="131378441">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64" Value="-108"/>
+													</PropertyList>
+												</CustomState>
+											</CustomState>
+										</CustomStateList>
+									</StateInfo>
+									<ObjectLists>
+										<ObjectList Name="RTPC">
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{7926A8A0-FE08-4F67-9890-4DC676401D95}" ShortID="721388466">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="Volume"/>
+														</PropertyList>
+														<ReferenceList/>
+													</RTPC>
+												</Local>
+											</Reference>
+										</ObjectList>
+										<ObjectList Name="Sequences">
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{D569B6F4-6F6B-47F3-8E37-8A7A6409E0BB}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClip Name="FF_intro1_circle1" ID="{0FBE27CD-F9AD-4207-BABA-DEDDB6F18653}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="2105.27083333333"/>
+																				<Property Name="FadeInMode" Type="int16" Value="0"/>
+																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																				<Property Name="PlayAt" Type="Real64" Value="3.46944695195361E-15"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="FF_intro1_circle1" ID="{96DF8C1D-390D-4EC9-9918-A2DC256D85A8}"/>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+																<Reference>
+																	<Local>
+																		<MusicClip Name="FF_part1_circle1" ID="{1936E575-EE60-43C5-A05F-96D445D08F75}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="16842.125"/>
+																				<Property Name="FadeInMode" Type="int16" Value="0"/>
+																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																				<Property Name="PlayAt" Type="Real64" Value="2105.26315789474"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="FF_part1_circle1" ID="{A7653EDF-BDA9-4439-85B8-B232E90E1CCF}"/>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+																<Reference>
+																	<Local>
+																		<MusicClip Name="FF_part2_circle1" ID="{0A878BD9-BFA2-4527-AE0E-E6E259D07F81}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="16842.125"/>
+																				<Property Name="FadeInMode" Type="int16" Value="0"/>
+																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																				<Property Name="PlayAt" Type="Real64" Value="18947.3684210526"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="FF_part2_circle1" ID="{F79F12EE-D015-4C0B-8D8D-43B84B513A36}"/>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+																<Reference>
+																	<Local>
+																		<MusicClip Name="FF_part3_circle1" ID="{01F9218D-49BA-4A74-BA8E-CFBC3BD8E52B}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="8421.0625"/>
+																				<Property Name="FadeInMode" Type="int16" Value="0"/>
+																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																				<Property Name="PlayAt" Type="Real64" Value="35789.4736842105"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="FF_part3_circle1" ID="{45E304A5-1CA1-4EA3-9BC0-13C7EB7C794B}"/>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+								<MusicTrack Name="2Triangle" ID="{19BAD1D8-4C51-41AE-914D-47578469F0EA}" ShortID="628802374">
+									<PropertyList>
+										<Property Name="Color" Type="int16" Value="10"/>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{07B3C08D-E8AD-4A81-A929-C27B28B93464}"/>
+										</Reference>
+										<Reference Name="TransitionRoot">
+											<Custom>
+												<MusicTransition Name="Root" ID="{9DD4CA85-6084-4DD8-A234-DF0D390953D3}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</Custom>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="FF_intro1_square1" ID="{BC73E25F-FE0C-4B75-8C5E-6D98A7A87D95}">
+											<Language>SFX</Language>
+											<AudioFile>FF_intro1_square1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="973327438"/>
+											</MediaIDList>
+										</AudioFileSource>
+										<AudioFileSource Name="FF_part2_triangle1" ID="{34A69F34-8187-4ECB-8C09-C8240089D351}">
+											<Language>SFX</Language>
+											<AudioFile>FF_part2_triangle1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="507717878"/>
+											</MediaIDList>
+										</AudioFileSource>
+										<AudioFileSource Name="FF_part1_triangle1" ID="{7EE1120D-E27F-44E3-A076-620AB77BBB9E}">
+											<Language>SFX</Language>
+											<AudioFile>FF_part1_triangle1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="829828492"/>
+											</MediaIDList>
+										</AudioFileSource>
+										<AudioFileSource Name="FF_part3_triangle1" ID="{0D207ED3-2DB2-4973-8F34-31721026701A}">
+											<Language>SFX</Language>
+											<AudioFile>FF_part3_triangle1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="622743481"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<StateInfo>
+										<StateGroupList>
+											<StateGroupInfo>
+												<StateGroupRef Name="IncludedCommunties" ID="{583642E3-43CF-4A66-8F59-A2FF477C8005}"/>
+											</StateGroupInfo>
+										</StateGroupList>
+										<CustomStateList>
+											<CustomState>
+												<StateRef Name="Square" ID="{2E088B71-A772-4723-A6D6-233CA11BE3BE}"/>
+												<CustomState Name="" ID="{34CBD5E2-0D5C-450A-B539-32822DB2004E}" ShortID="205251369">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64" Value="-108"/>
+													</PropertyList>
+												</CustomState>
+											</CustomState>
+											<CustomState>
+												<StateRef Name="Circle" ID="{5F5C025B-009D-494A-8839-AD230FD7536C}"/>
+												<CustomState Name="" ID="{F95CB11A-2815-411F-823E-3AB14C4B3562}" ShortID="550621670">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64" Value="-108"/>
+													</PropertyList>
+												</CustomState>
+											</CustomState>
+											<CustomState>
+												<StateRef Name="Triangle" ID="{D2D90B2D-285F-4B4A-B4EA-974A548E1465}"/>
+												<CustomState Name="" ID="{6B708447-6794-4FF3-A1C6-B7F0DDA10417}" ShortID="204732627"/>
+											</CustomState>
+										</CustomStateList>
+									</StateInfo>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{8E4D743A-D237-4C32-9698-83BC64252BE1}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClip Name="FF_intro1_square1" ID="{D7DC301A-DCDF-4823-BB29-172001D32247}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="2105.27083333333"/>
+																				<Property Name="FadeInMode" Type="int16" Value="0"/>
+																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="FF_intro1_square1" ID="{BC73E25F-FE0C-4B75-8C5E-6D98A7A87D95}"/>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+																<Reference>
+																	<Local>
+																		<MusicClip Name="FF_part2_triangle1" ID="{E313167E-2DDC-4225-A4CE-FC78EA4F1C3E}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="16842.125"/>
+																				<Property Name="FadeInMode" Type="int16" Value="0"/>
+																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																				<Property Name="PlayAt" Type="Real64" Value="18947.3684210526"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="FF_part2_triangle1" ID="{34A69F34-8187-4ECB-8C09-C8240089D351}"/>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+																<Reference>
+																	<Local>
+																		<MusicClip Name="FF_part1_triangle1" ID="{3073C37D-EC03-46AF-A4EB-102CA34747F8}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="16842.125"/>
+																				<Property Name="FadeInMode" Type="int16" Value="0"/>
+																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																				<Property Name="PlayAt" Type="Real64" Value="2105.26315789474"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="FF_part1_triangle1" ID="{7EE1120D-E27F-44E3-A076-620AB77BBB9E}"/>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+																<Reference>
+																	<Local>
+																		<MusicClip Name="FF_part3_triangle1" ID="{9B81B3BC-0F6F-4AEB-9AAB-FEC5D82935F5}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="8421.0625"/>
+																				<Property Name="FadeInMode" Type="int16" Value="0"/>
+																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																				<Property Name="PlayAt" Type="Real64" Value="35789.4736842105"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="FF_part3_triangle1" ID="{0D207ED3-2DB2-4973-8F34-31721026701A}"/>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+								<MusicTrack Name="3Square" ID="{FC743BA0-E091-416E-BD73-F6F709F855AB}" ShortID="661380974">
+									<PropertyList>
+										<Property Name="Color" Type="int16" Value="1"/>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{07B3C08D-E8AD-4A81-A929-C27B28B93464}"/>
+										</Reference>
+										<Reference Name="TransitionRoot">
+											<Custom>
+												<MusicTransition Name="Root" ID="{E23E0ABD-5445-4E67-91F1-7858D4F4F3BC}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</Custom>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="FF_intro1_triangle1" ID="{3137969F-D476-4732-BC14-2D944B779D68}">
+											<Language>SFX</Language>
+											<AudioFile>FF_intro1_triangle1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1064703987"/>
+											</MediaIDList>
+										</AudioFileSource>
+										<AudioFileSource Name="FF_part2_square1" ID="{B174F127-07C8-4C19-AA8A-59AA3D6A0F52}">
+											<Language>SFX</Language>
+											<AudioFile>FF_part2_square1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="73589724"/>
+											</MediaIDList>
+										</AudioFileSource>
+										<AudioFileSource Name="FF_part1_square1" ID="{32D9CA17-8CFF-48BE-BC92-7F45C00B9DFD}">
+											<Language>SFX</Language>
+											<AudioFile>FF_part1_square1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="934151318"/>
+											</MediaIDList>
+										</AudioFileSource>
+										<AudioFileSource Name="FF_part3_square1" ID="{E6C8B291-0AD0-4F9A-9CDF-A447EF2DD849}">
+											<Language>SFX</Language>
+											<AudioFile>FF_part3_square1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="400425461"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<StateInfo>
+										<StateGroupList>
+											<StateGroupInfo>
+												<StateGroupRef Name="IncludedCommunties" ID="{583642E3-43CF-4A66-8F59-A2FF477C8005}"/>
+											</StateGroupInfo>
+										</StateGroupList>
+										<CustomStateList>
+											<CustomState>
+												<StateRef Name="Square" ID="{2E088B71-A772-4723-A6D6-233CA11BE3BE}"/>
+												<CustomState Name="" ID="{017817BF-F91F-4E81-B46C-705ED655040B}" ShortID="724330199"/>
+											</CustomState>
+											<CustomState>
+												<StateRef Name="Circle" ID="{5F5C025B-009D-494A-8839-AD230FD7536C}"/>
+												<CustomState Name="" ID="{7B61BCA4-31D6-4718-9EFD-25420BD28908}" ShortID="885065519">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64" Value="-108"/>
+													</PropertyList>
+												</CustomState>
+											</CustomState>
+											<CustomState>
+												<StateRef Name="Triangle" ID="{D2D90B2D-285F-4B4A-B4EA-974A548E1465}"/>
+												<CustomState Name="" ID="{BED4B013-2A4F-49FB-828A-EA8ED8EB877D}" ShortID="616135959">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64" Value="-108"/>
+													</PropertyList>
+												</CustomState>
+											</CustomState>
+										</CustomStateList>
+									</StateInfo>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{2479E052-6B15-4FB2-8C49-71802C21D1B1}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClip Name="FF_intro1_triangle1" ID="{BF694F4D-DC68-4242-A315-E57999480461}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="2105.27083333333"/>
+																				<Property Name="FadeInMode" Type="int16" Value="0"/>
+																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="FF_intro1_triangle1" ID="{3137969F-D476-4732-BC14-2D944B779D68}"/>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+																<Reference>
+																	<Local>
+																		<MusicClip Name="FF_part2_square1" ID="{69F429B7-3109-4379-B0ED-344053AF5C52}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="16842.125"/>
+																				<Property Name="FadeInDuration" Type="Real64" Value="29.9616128984435"/>
+																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																				<Property Name="PlayAt" Type="Real64" Value="18947.3684210526"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="FF_part2_square1" ID="{B174F127-07C8-4C19-AA8A-59AA3D6A0F52}"/>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+																<Reference>
+																	<Local>
+																		<MusicClip Name="FF_part1_square1" ID="{A61CF901-DBD8-4C6E-9FF4-00D7E53C65C8}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="16842.125"/>
+																				<Property Name="FadeInDuration" Type="Real64" Value="25.5340272791075"/>
+																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																				<Property Name="PlayAt" Type="Real64" Value="2105.26315789474"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="FF_part1_square1" ID="{32D9CA17-8CFF-48BE-BC92-7F45C00B9DFD}"/>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+																<Reference>
+																	<Local>
+																		<MusicClip Name="FF_part3_square1" ID="{831004A2-5C9F-4D2C-AF1A-BA0DBAA9ACB0}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="8421.0625"/>
+																				<Property Name="FadeInMode" Type="int16" Value="0"/>
+																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																				<Property Name="PlayAt" Type="Real64" Value="35789.4736842105"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="FF_part3_square1" ID="{E6C8B291-0AD0-4F9A-9CDF-A447EF2DD849}"/>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="Cues">
+									<Reference>
+										<Local>
+											<MusicCue Name="Entry Cue" ID="{C8A591EC-B19A-4C8A-8CBB-2D3BC4DA009A}"/>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<MusicCue Name="Exit Cue" ID="{3D63D0CE-5811-4F75-A1BA-5533263DBC24}">
+												<PropertyList>
+													<Property Name="CueType" Type="int16" Value="1"/>
+													<Property Name="TimeMs" Type="Real64" Value="10655.7559969014"/>
+												</PropertyList>
+											</MusicCue>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<MusicCue Name="" ID="{77406F65-1E7E-44FA-A554-69BDF9EF06E0}">
+												<PropertyList>
+													<Property Name="CueType" Type="int16" Value="2"/>
+													<Property Name="TimeMs" Type="Real64" Value="2105.26315789474"/>
+												</PropertyList>
+											</MusicCue>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<MusicCue Name="" ID="{7473E2E2-1799-4F4C-A743-D27A8CEB4227}">
+												<PropertyList>
+													<Property Name="CueType" Type="int16" Value="2"/>
+													<Property Name="TimeMs" Type="Real64" Value="18947.3684210526"/>
+												</PropertyList>
+											</MusicCue>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<MusicCue Name="" ID="{ABBB09BF-9713-4186-A6B2-C01ADB51E89E}">
+												<PropertyList>
+													<Property Name="CueType" Type="int16" Value="2"/>
+													<Property Name="TimeMs" Type="Real64" Value="35789.4736842105"/>
+												</PropertyList>
+											</MusicCue>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+						</MusicSegment>
+						<MusicSwitchContainer Name="SwitchcontainerTEST" ID="{94C7B92D-C657-45E9-A832-8B2BC49428DB}" ShortID="435759892">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{890C2A6A-F4B0-4F89-9461-EC99F69DD99E}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{07B3C08D-E8AD-4A81-A929-C27B28B93464}"/>
+								</Reference>
+								<Reference Name="TransitionRoot">
+									<Custom>
+										<MusicTransition Name="Root" ID="{666809A6-4ED8-4964-A1FE-273506706A08}">
+											<PropertyList>
+												<Property Name="IsFolder" Type="bool" Value="True"/>
+											</PropertyList>
+											<ChildrenList>
+												<MusicTransition Name="Transition" ID="{8469E61B-16F4-4B7D-8435-84447A208A7E}">
+													<TransitionInfo/>
+												</MusicTransition>
+											</ChildrenList>
+											<TransitionInfo/>
+										</MusicTransition>
+									</Custom>
+								</Reference>
+							</ReferenceList>
+							<StateInfo>
+								<StateGroupList>
+									<StateGroupInfo>
+										<StateGroupRef Name="IncludedCommunties" ID="{583642E3-43CF-4A66-8F59-A2FF477C8005}"/>
+									</StateGroupInfo>
+									<StateGroupInfo>
+										<StateGroupRef Name="Fanfair" ID="{33A33BF2-6231-47AC-ABD2-5BB7F88C743A}"/>
+									</StateGroupInfo>
+								</StateGroupList>
+								<CustomStateList>
+									<CustomState>
+										<StateRef Name="Play" ID="{4A7D3F05-98FA-440B-8CEC-408E7F3F1885}"/>
+										<CustomState Name="" ID="{B0129EF9-F4F1-4939-848B-C21FE0131D56}" ShortID="394571614"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Square" ID="{2E088B71-A772-4723-A6D6-233CA11BE3BE}"/>
+										<CustomState Name="" ID="{CA06F8C0-D8E6-4398-AADF-CF6B8F73FB06}" ShortID="384580637"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Stop" ID="{95CA4EA8-170F-473E-AA19-F6F6A2DBD591}"/>
+										<CustomState Name="" ID="{9617D7D3-E1C1-4ADB-8558-24A32133CC1C}" ShortID="125219257"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Circle" ID="{5F5C025B-009D-494A-8839-AD230FD7536C}"/>
+										<CustomState Name="" ID="{FA805059-6CAE-4D20-8860-1495FBE2A902}" ShortID="583438160"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Triangle" ID="{D2D90B2D-285F-4B4A-B4EA-974A548E1465}"/>
+										<CustomState Name="" ID="{8907976A-B875-4ACB-87B0-6FBA97191118}" ShortID="240177682"/>
+									</CustomState>
+								</CustomStateList>
+							</StateInfo>
+						</MusicSwitchContainer>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
 	</InteractiveMusic>
 </WwiseDocument>

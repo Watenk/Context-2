@@ -9,16 +9,6 @@
 						<Property Name="OverrideColor" Type="bool" Value="True"/>
 					</PropertyList>
 					<ChildrenList>
-						<GameParameter Name="InsideOutside" ID="{6D5CDD69-75AE-40C5-8BC7-82FC42CB0575}">
-							<PropertyList>
-								<Property Name="Color" Type="int16" Value="4"/>
-								<Property Name="FilterTimeDown" Type="Real64" Value="2"/>
-								<Property Name="FilterTimeUp" Type="Real64" Value="2"/>
-								<Property Name="InitialValue" Type="Real64" Value="100"/>
-								<Property Name="OverrideColor" Type="bool" Value="True"/>
-								<Property Name="RTPCRamping" Type="int16" Value="2"/>
-							</PropertyList>
-						</GameParameter>
 						<GameParameter Name="GreeneryLevel" ID="{515A56B2-97C2-4B90-A236-A63CC60BC7A7}">
 							<PropertyList>
 								<Property Name="Color" Type="int16" Value="4"/>
