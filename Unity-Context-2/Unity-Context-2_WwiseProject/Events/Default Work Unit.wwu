@@ -399,10 +399,10 @@
 					<ChildrenList>
 						<Event Name="MusicFanfair_Play" ID="{54D95B01-6E01-45DB-95C7-F7737F282221}">
 							<ChildrenList>
-								<Action Name="" ID="{960AC3E3-BD7C-44D7-B438-278B226A25A1}" ShortID="1001850713">
+								<Action Name="" ID="{B42041CD-5D38-4271-BD2F-5FC5BA8A0CC4}" ShortID="743772821">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="MusicFanfair1" ID="{94E5FBE4-1294-4D5D-80AC-19FC924197B6}" WorkUnitID="{47424826-0680-4E19-AAE6-5C2C528E72F7}"/>
+											<ObjectRef Name="MusicFanfair" ID="{D27AAF3C-C0DF-44F7-86B4-85F373084ACC}" WorkUnitID="{47424826-0680-4E19-AAE6-5C2C528E72F7}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>

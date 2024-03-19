@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 8dc0b307ade8814aa929c27b28b93464
     GuidInternal: 
-    m_lastTime: -8584914529503687265
+    m_lastTime: -8584907630231732696
     List:
     - name: Ambience
       guid: 45bbfd6b2b78e94186b0109575ddfb5f
@@ -74,6 +74,29 @@ MonoBehaviour:
         ObjectType: 2
         guid: 083fc6d0a68aa44f8fbaed045e95e039
       Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Chimes
+    - name: Circle
+      guid: 27f2e4dbe32a2a42bbde18fcdc3d7b0b
+      id: 240409309
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 8dc0b307ade8814aa929c27b28b93464
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: Music
+        ObjectType: 2
+        guid: 653eb62d8aced8499f81c383f6b6df3d
+      - ElementName: Fanfair
+        ObjectType: 2
+        guid: d19e7cd0dfe3f945b3a03b51e401946e
+      - ElementName: Circle
+        ObjectType: 2
+        guid: 27f2e4dbe32a2a42bbde18fcdc3d7b0b
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Music\Fanfair\Circle
     - name: EmotionsDimension
       guid: 1b14a593955c4a4fa16da914fcd2dc34
       id: 3477531017
@@ -91,6 +114,26 @@ MonoBehaviour:
         ObjectType: 1
         guid: 1b14a593955c4a4fa16da914fcd2dc34
       Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\EmotionsDimension
+    - name: Fanfair
+      guid: d19e7cd0dfe3f945b3a03b51e401946e
+      id: 2447030866
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 8dc0b307ade8814aa929c27b28b93464
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: Music
+        ObjectType: 2
+        guid: 653eb62d8aced8499f81c383f6b6df3d
+      - ElementName: Fanfair
+        ObjectType: 2
+        guid: d19e7cd0dfe3f945b3a03b51e401946e
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Music\Fanfair
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
       id: 3803692087
@@ -105,6 +148,23 @@ MonoBehaviour:
         ObjectType: 2
         guid: d8a41415a61d2a41a17e75ca0c2149f3
       Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus
+    - name: Music
+      guid: 653eb62d8aced8499f81c383f6b6df3d
+      id: 3991942870
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 8dc0b307ade8814aa929c27b28b93464
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: Music
+        ObjectType: 2
+        guid: 653eb62d8aced8499f81c383f6b6df3d
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Music
     - name: Player
       guid: e76b9d45a7f0c04fa2f919390bc8cd30
       id: 1069431850
@@ -122,6 +182,29 @@ MonoBehaviour:
         ObjectType: 2
         guid: e76b9d45a7f0c04fa2f919390bc8cd30
       Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Player
+    - name: Square
+      guid: b0b2d8738b375f4aaac46b09da184df2
+      id: 1818333208
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 8dc0b307ade8814aa929c27b28b93464
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: Music
+        ObjectType: 2
+        guid: 653eb62d8aced8499f81c383f6b6df3d
+      - ElementName: Fanfair
+        ObjectType: 2
+        guid: d19e7cd0dfe3f945b3a03b51e401946e
+      - ElementName: Square
+        ObjectType: 2
+        guid: b0b2d8738b375f4aaac46b09da184df2
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Music\Fanfair\Square
     - name: TestEcho
       guid: 6436767e97d8a74ca1e9bd5c3fec870c
       id: 3268711830
@@ -162,6 +245,29 @@ MonoBehaviour:
         ObjectType: 1
         guid: a7ad37eddcdc314d95fc1ed7aa1ad070
       Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Chimes\TestVerb
+    - name: Triangle
+      guid: bc2a3d35a8e8d147b002a65f5c15542c
+      id: 2326865361
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 8dc0b307ade8814aa929c27b28b93464
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: Music
+        ObjectType: 2
+        guid: 653eb62d8aced8499f81c383f6b6df3d
+      - ElementName: Fanfair
+        ObjectType: 2
+        guid: d19e7cd0dfe3f945b3a03b51e401946e
+      - ElementName: Triangle
+        ObjectType: 2
+        guid: bc2a3d35a8e8d147b002a65f5c15542c
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Music\Fanfair\Triangle
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     PathAndIcons:
@@ -202,7 +308,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 1829c11d708c3d4b85382b800fb51260
     GuidInternal: 
-    m_lastTime: -8584914529514142524
+    m_lastTime: -8584907657331285160
     List:
     - name: Ambience
       guid: 86f588cd638f484d8f4020eb95385ae6
@@ -502,6 +608,63 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: MusicFanfair
+      guid: 22da8dd52ad93d4780187981cb74d2df
+      id: 1291415411
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 1829c11d708c3d4b85382b800fb51260
+      - ElementName: MusicFanfair
+        ObjectType: 4
+        guid: 22da8dd52ad93d4780187981cb74d2df
+      Path: Events\Default Work Unit\MusicFanfair
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: MusicFanfair_Play
+      guid: 015bd954016edb4595c7f7737f282221
+      id: 601826692
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 1829c11d708c3d4b85382b800fb51260
+      - ElementName: MusicFanfair
+        ObjectType: 4
+        guid: 22da8dd52ad93d4780187981cb74d2df
+      - ElementName: MusicFanfair_Play
+        ObjectType: 3
+        guid: 015bd954016edb4595c7f7737f282221
+      Path: Events\Default Work Unit\MusicFanfair\MusicFanfair_Play
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: MusicFanfair_Stop
+      guid: e96439bae6a3974eb660e60043557f8a
+      id: 3374377342
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 1829c11d708c3d4b85382b800fb51260
+      - ElementName: MusicFanfair
+        ObjectType: 4
+        guid: 22da8dd52ad93d4780187981cb74d2df
+      - ElementName: MusicFanfair_Stop
+        ObjectType: 3
+        guid: e96439bae6a3974eb660e60043557f8a
+      Path: Events\Default Work Unit\MusicFanfair\MusicFanfair_Stop
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: NPCChime1Confused
       guid: 1b366f8f7963d54487cf76305cc6e3a6
       id: 722374694
@@ -787,7 +950,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: 6e8a3e52955e38448efc5e2b8decd175
     GuidInternal: 
-    m_lastTime: -8584914529514122500
+    m_lastTime: -8584908295427930007
     List:
     - name: ambience
       guid: 597d8c556c9ded4793e63e83fdcfab57
@@ -820,23 +983,6 @@ MonoBehaviour:
         ObjectType: 13
         guid: b2565a51c297904ba236a63cc60bc7a7
       Path: Game Parameters\Default Work Unit\ambience\GreeneryLevel
-    - name: InsideOutside
-      guid: 69dd5c6dae75c5408bc782fc42cb0575
-      id: 3929688590
-      PathAndIcons:
-      - ElementName: Game Parameters
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: 6e8a3e52955e38448efc5e2b8decd175
-      - ElementName: ambience
-        ObjectType: 4
-        guid: 597d8c556c9ded4793e63e83fdcfab57
-      - ElementName: InsideOutside
-        ObjectType: 13
-        guid: 69dd5c6dae75c5408bc782fc42cb0575
-      Path: Game Parameters\Default Work Unit\ambience\InsideOutside
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     PathAndIcons:
@@ -849,7 +995,7 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: ee9c2c1aa3ee3549bcf9769c5161d1dc
     GuidInternal: 
-    m_lastTime: -8584914529492511553
+    m_lastTime: -8584907670558327926
     List:
     - name: ambienceInsideOutside
       guid: 54de947f53da664faa37236c7efc25f0
@@ -917,6 +1063,405 @@ MonoBehaviour:
       ValueGuids: []
       ValueIcons: []
       valuesInternal: []
+    - name: Fanfair
+      guid: 29874f12315c364185eb579c11dd2a94
+      id: 2447030866
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: ee9c2c1aa3ee3549bcf9769c5161d1dc
+      - ElementName: Music
+        ObjectType: 4
+        guid: 76bf78557883a1489ae0ca4b23969a00
+      - ElementName: Fanfair
+        ObjectType: 4
+        guid: 29874f12315c364185eb579c11dd2a94
+      Path: States\Default Work Unit\Music\Fanfair
+      values: []
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+    - name: Fanfair
+      guid: f23ba3333162ac47abd25bb7f88c743a
+      id: 2447030866
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: ee9c2c1aa3ee3549bcf9769c5161d1dc
+      - ElementName: Music
+        ObjectType: 4
+        guid: 76bf78557883a1489ae0ca4b23969a00
+      - ElementName: Fanfair
+        ObjectType: 4
+        guid: 29874f12315c364185eb579c11dd2a94
+      - ElementName: Fanfair
+        ObjectType: 9
+        guid: f23ba3333162ac47abd25bb7f88c743a
+      Path: States\Default Work Unit\Music\Fanfair\Fanfair
+      values:
+      - name: None
+        guid: 662800d4c9ef884eace57cc31249cccf
+        id: 748895195
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: ee9c2c1aa3ee3549bcf9769c5161d1dc
+        - ElementName: Music
+          ObjectType: 4
+          guid: 76bf78557883a1489ae0ca4b23969a00
+        - ElementName: Fanfair
+          ObjectType: 4
+          guid: 29874f12315c364185eb579c11dd2a94
+        - ElementName: Fanfair
+          ObjectType: 9
+          guid: f23ba3333162ac47abd25bb7f88c743a
+        - ElementName: None
+          ObjectType: 8
+          guid: 662800d4c9ef884eace57cc31249cccf
+      - name: Play
+        guid: 053f7d4afa980b448cec408e7f3f1885
+        id: 1256202815
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: ee9c2c1aa3ee3549bcf9769c5161d1dc
+        - ElementName: Music
+          ObjectType: 4
+          guid: 76bf78557883a1489ae0ca4b23969a00
+        - ElementName: Fanfair
+          ObjectType: 4
+          guid: 29874f12315c364185eb579c11dd2a94
+        - ElementName: Fanfair
+          ObjectType: 9
+          guid: f23ba3333162ac47abd25bb7f88c743a
+        - ElementName: Play
+          ObjectType: 8
+          guid: 053f7d4afa980b448cec408e7f3f1885
+      - name: Stop
+        guid: a84eca950f173e47aa19f6f6a2dbd591
+        id: 788884573
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: ee9c2c1aa3ee3549bcf9769c5161d1dc
+        - ElementName: Music
+          ObjectType: 4
+          guid: 76bf78557883a1489ae0ca4b23969a00
+        - ElementName: Fanfair
+          ObjectType: 4
+          guid: 29874f12315c364185eb579c11dd2a94
+        - ElementName: Fanfair
+          ObjectType: 9
+          guid: f23ba3333162ac47abd25bb7f88c743a
+        - ElementName: Stop
+          ObjectType: 8
+          guid: a84eca950f173e47aa19f6f6a2dbd591
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+    - name: IncludeCircle
+      guid: 2be3c43d1a04bb4fb8e387ad5582ff62
+      id: 1316677579
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: ee9c2c1aa3ee3549bcf9769c5161d1dc
+      - ElementName: Music
+        ObjectType: 4
+        guid: 76bf78557883a1489ae0ca4b23969a00
+      - ElementName: Fanfair
+        ObjectType: 4
+        guid: 29874f12315c364185eb579c11dd2a94
+      - ElementName: IncludeCircle
+        ObjectType: 9
+        guid: 2be3c43d1a04bb4fb8e387ad5582ff62
+      Path: States\Default Work Unit\Music\Fanfair\IncludeCircle
+      values:
+      - name: None
+        guid: d6613f14cad86941b36d327e200310b4
+        id: 748895195
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: ee9c2c1aa3ee3549bcf9769c5161d1dc
+        - ElementName: Music
+          ObjectType: 4
+          guid: 76bf78557883a1489ae0ca4b23969a00
+        - ElementName: Fanfair
+          ObjectType: 4
+          guid: 29874f12315c364185eb579c11dd2a94
+        - ElementName: IncludeCircle
+          ObjectType: 9
+          guid: 2be3c43d1a04bb4fb8e387ad5582ff62
+        - ElementName: None
+          ObjectType: 8
+          guid: d6613f14cad86941b36d327e200310b4
+      - name: Off
+        guid: 870c83080bc5c147a37419cd9501f4e7
+        id: 930712164
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: ee9c2c1aa3ee3549bcf9769c5161d1dc
+        - ElementName: Music
+          ObjectType: 4
+          guid: 76bf78557883a1489ae0ca4b23969a00
+        - ElementName: Fanfair
+          ObjectType: 4
+          guid: 29874f12315c364185eb579c11dd2a94
+        - ElementName: IncludeCircle
+          ObjectType: 9
+          guid: 2be3c43d1a04bb4fb8e387ad5582ff62
+        - ElementName: Off
+          ObjectType: 8
+          guid: 870c83080bc5c147a37419cd9501f4e7
+      - name: On
+        guid: 8582f9c381c0c0488c07fb23a3560b16
+        id: 1651971902
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: ee9c2c1aa3ee3549bcf9769c5161d1dc
+        - ElementName: Music
+          ObjectType: 4
+          guid: 76bf78557883a1489ae0ca4b23969a00
+        - ElementName: Fanfair
+          ObjectType: 4
+          guid: 29874f12315c364185eb579c11dd2a94
+        - ElementName: IncludeCircle
+          ObjectType: 9
+          guid: 2be3c43d1a04bb4fb8e387ad5582ff62
+        - ElementName: On
+          ObjectType: 8
+          guid: 8582f9c381c0c0488c07fb23a3560b16
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+    - name: IncludeSquare
+      guid: 69bfa415a823d44d8d0cb5db696fdae2
+      id: 167474714
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: ee9c2c1aa3ee3549bcf9769c5161d1dc
+      - ElementName: Music
+        ObjectType: 4
+        guid: 76bf78557883a1489ae0ca4b23969a00
+      - ElementName: Fanfair
+        ObjectType: 4
+        guid: 29874f12315c364185eb579c11dd2a94
+      - ElementName: IncludeSquare
+        ObjectType: 9
+        guid: 69bfa415a823d44d8d0cb5db696fdae2
+      Path: States\Default Work Unit\Music\Fanfair\IncludeSquare
+      values:
+      - name: None
+        guid: 02a83d97223e6d4083670b642d4b91c3
+        id: 748895195
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: ee9c2c1aa3ee3549bcf9769c5161d1dc
+        - ElementName: Music
+          ObjectType: 4
+          guid: 76bf78557883a1489ae0ca4b23969a00
+        - ElementName: Fanfair
+          ObjectType: 4
+          guid: 29874f12315c364185eb579c11dd2a94
+        - ElementName: IncludeSquare
+          ObjectType: 9
+          guid: 69bfa415a823d44d8d0cb5db696fdae2
+        - ElementName: None
+          ObjectType: 8
+          guid: 02a83d97223e6d4083670b642d4b91c3
+      - name: Off
+        guid: 244d11a94d623545aa72a9ede1ff0d2a
+        id: 930712164
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: ee9c2c1aa3ee3549bcf9769c5161d1dc
+        - ElementName: Music
+          ObjectType: 4
+          guid: 76bf78557883a1489ae0ca4b23969a00
+        - ElementName: Fanfair
+          ObjectType: 4
+          guid: 29874f12315c364185eb579c11dd2a94
+        - ElementName: IncludeSquare
+          ObjectType: 9
+          guid: 69bfa415a823d44d8d0cb5db696fdae2
+        - ElementName: Off
+          ObjectType: 8
+          guid: 244d11a94d623545aa72a9ede1ff0d2a
+      - name: On
+        guid: 1606592b37fc7142bcfc5d2c1bf8f2e1
+        id: 1651971902
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: ee9c2c1aa3ee3549bcf9769c5161d1dc
+        - ElementName: Music
+          ObjectType: 4
+          guid: 76bf78557883a1489ae0ca4b23969a00
+        - ElementName: Fanfair
+          ObjectType: 4
+          guid: 29874f12315c364185eb579c11dd2a94
+        - ElementName: IncludeSquare
+          ObjectType: 9
+          guid: 69bfa415a823d44d8d0cb5db696fdae2
+        - ElementName: On
+          ObjectType: 8
+          guid: 1606592b37fc7142bcfc5d2c1bf8f2e1
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+    - name: IncludeTriangle
+      guid: f9e8d06b9ce7804db93947271107ffef
+      id: 765250607
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: ee9c2c1aa3ee3549bcf9769c5161d1dc
+      - ElementName: Music
+        ObjectType: 4
+        guid: 76bf78557883a1489ae0ca4b23969a00
+      - ElementName: Fanfair
+        ObjectType: 4
+        guid: 29874f12315c364185eb579c11dd2a94
+      - ElementName: IncludeTriangle
+        ObjectType: 9
+        guid: f9e8d06b9ce7804db93947271107ffef
+      Path: States\Default Work Unit\Music\Fanfair\IncludeTriangle
+      values:
+      - name: None
+        guid: 8b9d1b3b44ae744f8a3fdbef3882e81d
+        id: 748895195
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: ee9c2c1aa3ee3549bcf9769c5161d1dc
+        - ElementName: Music
+          ObjectType: 4
+          guid: 76bf78557883a1489ae0ca4b23969a00
+        - ElementName: Fanfair
+          ObjectType: 4
+          guid: 29874f12315c364185eb579c11dd2a94
+        - ElementName: IncludeTriangle
+          ObjectType: 9
+          guid: f9e8d06b9ce7804db93947271107ffef
+        - ElementName: None
+          ObjectType: 8
+          guid: 8b9d1b3b44ae744f8a3fdbef3882e81d
+      - name: Off
+        guid: 5bc941dcdf6fb44f9d51a45809f944e3
+        id: 930712164
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: ee9c2c1aa3ee3549bcf9769c5161d1dc
+        - ElementName: Music
+          ObjectType: 4
+          guid: 76bf78557883a1489ae0ca4b23969a00
+        - ElementName: Fanfair
+          ObjectType: 4
+          guid: 29874f12315c364185eb579c11dd2a94
+        - ElementName: IncludeTriangle
+          ObjectType: 9
+          guid: f9e8d06b9ce7804db93947271107ffef
+        - ElementName: Off
+          ObjectType: 8
+          guid: 5bc941dcdf6fb44f9d51a45809f944e3
+      - name: On
+        guid: cd5edb595597f943afe3ea4ccea36de9
+        id: 1651971902
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: ee9c2c1aa3ee3549bcf9769c5161d1dc
+        - ElementName: Music
+          ObjectType: 4
+          guid: 76bf78557883a1489ae0ca4b23969a00
+        - ElementName: Fanfair
+          ObjectType: 4
+          guid: 29874f12315c364185eb579c11dd2a94
+        - ElementName: IncludeTriangle
+          ObjectType: 9
+          guid: f9e8d06b9ce7804db93947271107ffef
+        - ElementName: On
+          ObjectType: 8
+          guid: cd5edb595597f943afe3ea4ccea36de9
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+    - name: Music
+      guid: 76bf78557883a1489ae0ca4b23969a00
+      id: 3991942870
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: ee9c2c1aa3ee3549bcf9769c5161d1dc
+      - ElementName: Music
+        ObjectType: 4
+        guid: 76bf78557883a1489ae0ca4b23969a00
+      Path: States\Default Work Unit\Music
+      values: []
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
     PathAndIcons:
@@ -929,7 +1474,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: a0523abc768a534caf9f9ccda37772bd
     GuidInternal: 
-    m_lastTime: -8584916949830333564
+    m_lastTime: -8584907670558477120
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
@@ -943,10 +1488,10 @@ MonoBehaviour:
     ParentPath: Triggers\Default Work Unit
     guid: ffb58b344218ab42b290b09ddbdffacb
     GuidInternal: 
-    m_lastTime: -8584916949830333564
+    m_lastTime: -8584913668122320833
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 010000000500000006000000080000000a0000000b0000000c00000016000000190000001a0000001b0000001c0000002000000025000000260000002c000000
+  ExpandedWaapiItemIds: 010000000500000006000000080000000a0000000b0000000c00000016000000190000001a0000001b0000001c00000020000000220000002500000026000000280000002c000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0
