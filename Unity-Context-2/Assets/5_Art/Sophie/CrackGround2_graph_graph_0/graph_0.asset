@@ -12,16 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eed5864476f84ce4b85454db09ca4eaa, type: 3}
   m_Name: graph_0
   m_EditorClassIdentifier: 
-  AssetPath: Assets/CrackGround2_graph.sbsar
+  AssetPath: Assets/5_Art/Sophie/CrackGround2_graph.sbsar
   RawData: {fileID: -244192453324840774, guid: 0de8e5f354c4c8a47baeeaa8bb032308, type: 3}
   Name: graph_0
   IsRoot: 1
   FlagedForDelete: 0
-  GUID: a798a520-a416-4e19-93a0-8debb056f54d
+  GUID: 890b8ed3-e061-4b21-84e5-6e95735e5687
   Index: 0
   Input:
-  - rid: 8999283904249069574
-  - rid: 8999283904249069575
+  - rid: 172155329739489280
+  - rid: 172155329739489281
   Output:
   - Index: 0
     VirtualOutputIndex: 6
@@ -139,7 +139,7 @@ MonoBehaviour:
   references:
     version: 2
     RefIds:
-    - rid: 8999283904249069574
+    - rid: 172155329739489280
       type: {class: SubstanceInputInt2, ns: Adobe.Substance.Input, asm: Adobe.Substance}
       data:
         Index: 0
@@ -158,7 +158,7 @@ MonoBehaviour:
           SliderClamp: 0
           EnumValueCount: 0
           EnumValues: []
-    - rid: 8999283904249069575
+    - rid: 172155329739489281
       type: {class: SubstanceInputInt, ns: Adobe.Substance.Input, asm: Adobe.Substance}
       data:
         Index: 1

@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cb3d2d9ce7023f4bb52fba377654e41, type: 3}
+  m_Name: AgentSettings
+  m_EditorClassIdentifier: 
+  MaxSpeed: 1
+  MinSpeed: 0.3
+  WanderFromHomeDistance: 3
+  LookAtPlayerDistance: 8
+  FollowPlayerAtDistance: 2
+  FollowPlayerSpeed: 4
+  Prefabs:
+  - CommunityType: 1
+    prefabs:
+    - {fileID: 7888470974323744715, guid: 67cf23082feafd9448ab2c48d921109e, type: 3}
+  - CommunityType: 0
+    prefabs:
+    - {fileID: 7888470974323744715, guid: 7af951a9365c5294db884b4ca66f5947, type: 3}
+  - CommunityType: 2
+    prefabs:
+    - {fileID: 7888470974323744715, guid: 2330071e75cac334eb8f7c157648ab28, type: 3}
+  - CommunityType: 3
+    prefabs:
+    - {fileID: 7888470974323744715, guid: 00e98d8b055a4434185f4a029a74ea5a, type: 3}
+  StepDistance: 2

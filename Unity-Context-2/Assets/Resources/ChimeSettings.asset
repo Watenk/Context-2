@@ -1,0 +1,145 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11217f0ac8dbd604c956a986aaf91b33, type: 3}
+  m_Name: ChimeSettings
+  m_EditorClassIdentifier: 
+  ChimeResetTime: 1
+  LongChimeLenght: 0.5
+  ChimeSequences:
+  - Name: SquareFollow
+    chimeSequence: 3
+    chimeTask: 0
+    chimes:
+    - chimeInput: 0
+      isLong: 0
+    - chimeInput: 0
+      isLong: 0
+    - chimeInput: 2
+      isLong: 0
+    - chimeInput: 2
+      isLong: 0
+    affectedCommunities: 02000000
+  - Name: CircleFollow
+    chimeSequence: 6
+    chimeTask: 0
+    chimes:
+    - chimeInput: 0
+      isLong: 0
+    - chimeInput: 0
+      isLong: 0
+    - chimeInput: 3
+      isLong: 0
+    - chimeInput: 3
+      isLong: 0
+    affectedCommunities: 01000000
+  - Name: TriangleFollow
+    chimeSequence: 0
+    chimeTask: 0
+    chimes:
+    - chimeInput: 0
+      isLong: 0
+    - chimeInput: 0
+      isLong: 0
+    - chimeInput: 1
+      isLong: 0
+    - chimeInput: 1
+      isLong: 0
+    affectedCommunities: 00000000
+  - Name: SquareSolveProblem
+    chimeSequence: 4
+    chimeTask: 1
+    chimes:
+    - chimeInput: 0
+      isLong: 1
+    - chimeInput: 2
+      isLong: 0
+    affectedCommunities: 02000000
+  - Name: CircleSolveProblem
+    chimeSequence: 7
+    chimeTask: 1
+    chimes:
+    - chimeInput: 0
+      isLong: 1
+    - chimeInput: 3
+      isLong: 0
+    affectedCommunities: 01000000
+  - Name: TriangleSolveProblem
+    chimeSequence: 1
+    chimeTask: 1
+    chimes:
+    - chimeInput: 0
+      isLong: 1
+    - chimeInput: 1
+      isLong: 0
+    affectedCommunities: 00000000
+  - Name: CrossSolveProblem
+    chimeSequence: 13
+    chimeTask: 1
+    chimes:
+    - chimeInput: 0
+      isLong: 1
+    - chimeInput: 0
+      isLong: 0
+    affectedCommunities: 00000000
+  - Name: CrossFollow
+    chimeSequence: 12
+    chimeTask: 0
+    chimes:
+    - chimeInput: 0
+      isLong: 0
+    - chimeInput: 0
+      isLong: 0
+    - chimeInput: 0
+      isLong: 0
+    affectedCommunities: 00000000
+  - Name: CrossLeave
+    chimeSequence: 14
+    chimeTask: 2
+    chimes:
+    - chimeInput: 0
+      isLong: 1
+    - chimeInput: 0
+      isLong: 1
+    affectedCommunities: 00000000
+  - Name: SquareLeave
+    chimeSequence: 5
+    chimeTask: 2
+    chimes:
+    - chimeInput: 0
+      isLong: 1
+    - chimeInput: 0
+      isLong: 1
+    - chimeInput: 2
+      isLong: 1
+    affectedCommunities: 02000000
+  - Name: TriangleLeave
+    chimeSequence: 2
+    chimeTask: 2
+    chimes:
+    - chimeInput: 0
+      isLong: 1
+    - chimeInput: 0
+      isLong: 1
+    - chimeInput: 1
+      isLong: 0
+    affectedCommunities: 00000000
+  - Name: CircleLeave
+    chimeSequence: 8
+    chimeTask: 2
+    chimes:
+    - chimeInput: 0
+      isLong: 1
+    - chimeInput: 0
+      isLong: 1
+    - chimeInput: 3
+      isLong: 1
+    affectedCommunities: 01000000
