@@ -21,7 +21,7 @@ public class EmotionalWorldSwitcher : MonoBehaviour
     private Rigidbody player;
 
     [SerializeField]
-    private GameObject light;
+    private GameObject lightObject;
 
     private new Camera camera;
 
@@ -86,13 +86,13 @@ public class EmotionalWorldSwitcher : MonoBehaviour
         {
             camera.cullingMask = EmotionalLayer;
             RenderColor(Color.black, camera);
-            light.SetActive(false);
+            lightObject.SetActive(false);
         }
         else
         {
             camera.cullingMask = normalLayers;
             RenderSkybox(camera);
-            light.SetActive(true);
+            lightObject.SetActive(true);
         }
 
 
