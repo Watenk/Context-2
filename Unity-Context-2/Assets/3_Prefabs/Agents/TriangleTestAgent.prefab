@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1002686391222964510}
   - component: {fileID: 9186549000595292167}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TriangleTestAgent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -128,10 +128,45 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7945454458560872618, guid: e5a0e888edba67d44b8269741d7a2e0c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -2235851328662466505, guid: e5a0e888edba67d44b8269741d7a2e0c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e5a0e888edba67d44b8269741d7a2e0c,
         type: 3}
       propertyPath: m_Name
       value: trianglefull1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e5a0e888edba67d44b8269741d7a2e0c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551255863337285566, guid: e5a0e888edba67d44b8269741d7a2e0c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6149066100188643681, guid: e5a0e888edba67d44b8269741d7a2e0c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7305841716577401284, guid: e5a0e888edba67d44b8269741d7a2e0c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7865405361851401942, guid: e5a0e888edba67d44b8269741d7a2e0c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

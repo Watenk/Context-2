@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3346944152081396633}
   - component: {fileID: 1550321294415144890}
   - component: {fileID: 7115795278787066080}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4840,7 +4840,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8057941058460670656}
   - component: {fileID: -6952422926050714941}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mush Triangle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5107,6 +5107,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: mush_triangle
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 85dd0f50db7e2f4499b669a8aa7a9960,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

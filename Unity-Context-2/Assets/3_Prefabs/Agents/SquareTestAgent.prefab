@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1002686391222964510}
   - component: {fileID: 9186549000595292167}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SquareTestAgent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -153,16 +153,36 @@ PrefabInstance:
       propertyPath: m_Name
       value: square_charakter
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 96faf91673a3b9944b69f87f101c0f10,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 1170970068873931921, guid: 96faf91673a3b9944b69f87f101c0f10,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 947cbd66418485845a50892abbb20448, type: 2}
+    - target: {fileID: 2040542448765327740, guid: 96faf91673a3b9944b69f87f101c0f10,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2929640277652407947, guid: 96faf91673a3b9944b69f87f101c0f10,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 947cbd66418485845a50892abbb20448, type: 2}
+    - target: {fileID: 3587788796799408565, guid: 96faf91673a3b9944b69f87f101c0f10,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3662535968494006335, guid: 96faf91673a3b9944b69f87f101c0f10,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5660052785253254443, guid: 96faf91673a3b9944b69f87f101c0f10,
         type: 3}
       propertyPath: m_Materials.Array.data[0]

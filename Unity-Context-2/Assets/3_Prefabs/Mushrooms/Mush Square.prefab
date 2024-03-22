@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8324242737424404424}
   - component: {fileID: 4212306373775919483}
   - component: {fileID: 1795044984229051389}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4840,7 +4840,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5213893279062155292}
   - component: {fileID: -5236594647317684268}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mush Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5107,6 +5107,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: mush_square
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1cbd3ad5304633f42a1b6e6f3a85f5a9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
