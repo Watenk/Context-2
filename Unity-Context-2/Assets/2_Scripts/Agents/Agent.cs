@@ -85,19 +85,19 @@ public class Agent : IFixedUpdateable
         
         if (!chimeSequence.affectedCommunities.Contains(Group.CommunityType)) { return; } // If community is affected
 
-        ExecuteTask(chimeSequence.chimeTask);
+        ExecuteTask(chimeSequence);
     }
 
-    private void ExecuteTask(ChimeTasks chimeTask){
+    private void ExecuteTask(ChimeSequence chimeSequence){
 
-        switch (chimeTask){
+        switch (chimeSequence.chimeTask){
             case ChimeTasks.follow:
                 if (fsm.currentState == fsm.GetState(typeof(AgentLookAtPlayerState))){
                     fsm.SwitchState(typeof(AgentFollowingState));
 
                     // Sound
-                    NPCSoundData soundData = soundManager.GetNPCSound(chimeTask);
-                    soundManager.PlaySound(soundData, GameObject.transform.position);
+                    NPCSoundData soundData = soundManager.GetNPCSound(Group.CommunityType, ChimeTasks.follow);
+                    soundManager.PlayNPCSound(soundData, false, GameObject.transform.position);
                 }
                 break;
             
@@ -105,8 +105,8 @@ public class Agent : IFixedUpdateable
                 if (fsm.currentState == fsm.GetState(typeof(AgentFollowingState))){
 
                     // Sound
-                    NPCSoundData soundData = soundManager.GetNPCSound(ChimeTasks.follow);
-                    soundManager.PlaySound(soundData, GameObject.transform.position);
+                    NPCSoundData soundData = soundManager.GetNPCSound(Group.CommunityType, ChimeTasks.follow);
+                    soundManager.PlayNPCSound(soundData, false, GameObject.transform.position);
                 }
                 break;
         }

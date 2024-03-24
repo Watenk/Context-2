@@ -85,7 +85,7 @@ public class Group : IFixedUpdateable
         }
 
         #if UNITY_EDITOR
-            if (agentPrefab == null) { Debug.LogError("No AgentPrefab of type " + Community.ToString() + " found. Add this type in the AgentSettings"); }
+            if (agentPrefab == null) { Debug.LogError("No AgentPrefab of type " + Community.CommunityType.ToString() + " found. Add this type in the AgentSettings"); }
             if (agentPrefab.prefabs == null) { Debug.LogError("No prefabs of type " + Community.ToString() + " found. Add prefabs of this type in the AgentSettings"); }
         #endif
 

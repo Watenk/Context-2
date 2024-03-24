@@ -42,8 +42,6 @@ public class MuralManager : IFixedUpdateable
 
     private void OnChimeSequence(ChimeSequence chimeSequence){
 
-        Debug.Log(chimeSequence.chimeSequence);
-
         foreach (Mural current in inactiveMurals){
             if (current.ChimeSequence == chimeSequence){
                 inactiveMuralsGC.Add(current);
