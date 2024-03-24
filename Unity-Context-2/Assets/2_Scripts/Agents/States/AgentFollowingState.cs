@@ -33,7 +33,7 @@ public class AgentFollowingState : BaseState<Agent>
     public override void OnStart(){
         normalAgentSpeed = owner.NavMeshAgent.speed;
         owner.NavMeshAgent.speed = followPlayerSpeed;
-        spaceTimer = timerManager.AddTimer(0.5f);
+        spaceTimer = timerManager.AddLoopingTimer(0.5f);
         communityManager.AddActiveAgent(owner.Group.CommunityType);
     }
 
@@ -43,7 +43,7 @@ public class AgentFollowingState : BaseState<Agent>
 
     public override void OnExit(){
         owner.NavMeshAgent.speed = normalAgentSpeed;
-        timerManager.RemoveTimer(spaceTimer);
+        timerManager.RemoveLoopingTimer(spaceTimer);
         communityManager.RemoveActiveAgent(owner.Group.CommunityType);
     }
 

@@ -21,6 +21,7 @@ public class SoundManager : IFixedUpdateable
         #if UNITY_EDITOR
             if (soundPrefab == null) { Debug.LogWarning("SoundPrefab is null in AudioSettings"); }
         #endif
+
     }
 
     public void OnFixedUpdate(){
@@ -48,7 +49,7 @@ public class SoundManager : IFixedUpdateable
         GameObject soundGameObject = GameObject.Instantiate(soundPrefab, pos, Quaternion.identity);
         soundGameObject.transform.SetParent(GameManager.Instance.transform);
 
-        Sound newSound = new Sound(this, soundGameObject, soundData.WwiseEvent);
+        Sound newSound = new Sound(this, soundGameObject, soundData.ShortChimeWwiseEvent);
         sounds.Add(newSound);
         return newSound;
     }

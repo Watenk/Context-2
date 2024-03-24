@@ -20,7 +20,7 @@ public class Sound : IFixedUpdateable
         SoundGameObject = soundGameObject;
 
         startEvent.Post(soundGameObject);
-        existTimer = timerManager.AddTimer(SoundSettings.Instance.SoundDestroyTime);
+        existTimer = timerManager.AddLoopingTimer(SoundSettings.Instance.SoundDestroyTime);
     }
 
     public void OnFixedUpdate(){

@@ -67,29 +67,49 @@ MonoBehaviour:
   NPCChimes:
   - Name: GlobalChime
     ChimeTask: 0
-    WwiseEvent:
+    ShortChimeWwiseEvent:
       idInternal: 0
       valueGuidInternal: 
       WwiseObjectReference: {fileID: 11400000, guid: 68a8ce552629b7a40a72b59bafe076c9,
         type: 2}
+    LongChimeWwiseEvent:
+      idInternal: 0
+      valueGuidInternal: 
+      WwiseObjectReference: {fileID: 11400000, guid: 7d2fa4a5fcd54da4990d829da6bef4f0,
+        type: 2}
   - Name: TriangleChime
     ChimeTask: 0
-    WwiseEvent:
+    ShortChimeWwiseEvent:
       idInternal: 0
       valueGuidInternal: 
       WwiseObjectReference: {fileID: 11400000, guid: a417be0a0435fbd439411a50a10ac459,
         type: 2}
+    LongChimeWwiseEvent:
+      idInternal: 0
+      valueGuidInternal: 
+      WwiseObjectReference: {fileID: 11400000, guid: c780f95db9bdde84a86b4153b21ae9c8,
+        type: 2}
   - Name: SquareChime
     ChimeTask: 0
-    WwiseEvent:
+    ShortChimeWwiseEvent:
       idInternal: 0
       valueGuidInternal: 
       WwiseObjectReference: {fileID: 11400000, guid: fba262a6e386bc24489cf63d16ce7c90,
         type: 2}
+    LongChimeWwiseEvent:
+      idInternal: 0
+      valueGuidInternal: 
+      WwiseObjectReference: {fileID: 11400000, guid: 0c44a56464942a241ae692602b517f95,
+        type: 2}
   - Name: CircleChime
     ChimeTask: 0
-    WwiseEvent:
+    ShortChimeWwiseEvent:
       idInternal: 0
       valueGuidInternal: 
       WwiseObjectReference: {fileID: 11400000, guid: ae40f8e08bac233489a5c96d04eb1e34,
+        type: 2}
+    LongChimeWwiseEvent:
+      idInternal: 0
+      valueGuidInternal: 
+      WwiseObjectReference: {fileID: 11400000, guid: 3dc01b0433815a6448386c03d8f950a9,
         type: 2}

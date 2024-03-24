@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{F9731315-8566-8D0A-94D1-0CE410BB753C}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{322B1FDA-8D10-5E22-2869-03CF34DD5ED9}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -24,9 +24,14 @@
 			</Plugins>
 			<Busses>
 				<Bus Id="85412153" Name="Ambience"/>
+				<Bus Id="240409309" Name="Circle" MaxAttenuation="30"/>
 				<Bus Id="1069431850" Name="Player"/>
+				<Bus Id="1818333208" Name="Square" MaxAttenuation="30"/>
+				<Bus Id="2326865361" Name="Triangle" MaxAttenuation="30"/>
+				<Bus Id="2447030866" Name="Fanfair"/>
 				<Bus Id="2590078866" Name="Chimes" MaxAttenuation="30"/>
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
+				<Bus Id="3991942870" Name="Music"/>
 			</Busses>
 			<AuxBusses>
 				<AuxBus Id="841660990" Name="TestVerb">
@@ -47,9 +52,36 @@
 			</AuxBusses>
 			<GameParameters>
 				<GameParameter Id="1750790826" Name="GreeneryLevel"/>
-				<GameParameter Id="3929688590" Name="InsideOutside"/>
 			</GameParameters>
 			<StateGroups>
+				<StateGroup Id="167474714" Name="IncludeSquare">
+					<States>
+						<State Id="748895195" Name="None"/>
+						<State Id="930712164" Name="Off"/>
+						<State Id="1651971902" Name="On"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="765250607" Name="IncludeTriangle">
+					<States>
+						<State Id="748895195" Name="None"/>
+						<State Id="930712164" Name="Off"/>
+						<State Id="1651971902" Name="On"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="1316677579" Name="IncludeCircle">
+					<States>
+						<State Id="748895195" Name="None"/>
+						<State Id="930712164" Name="Off"/>
+						<State Id="1651971902" Name="On"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="2447030866" Name="Fanfair">
+					<States>
+						<State Id="748895195" Name="None"/>
+						<State Id="788884573" Name="Stop"/>
+						<State Id="1256202815" Name="Play"/>
+					</States>
+				</StateGroup>
 				<StateGroup Id="3607165242" Name="ambienceInsideOutside">
 					<States>
 						<State Id="438105790" Name="Outside"/>
@@ -59,10 +91,14 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{FF31356D-6861-5624-5B8C-DDB05BF15E72}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{25913456-0D90-8E17-30EA-12155D469BD6}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
+				<File Id="73589724" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>FF_part2_square1.wav</ShortName>
+					<CachePath>SFX/FF_part2_square1_FBC78EF0.wem</CachePath>
+				</File>
 				<File Id="78035267" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>community2\chimes-community2-3.wav</ShortName>
 					<CachePath>SFX/community2/chimes-community2-3_818F3B66.wem</CachePath>
@@ -93,11 +129,15 @@
 				</File>
 				<File Id="274837946" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>community3\chimes-community3End1.wav</ShortName>
-					<CachePath>SFX/community3/chimes-community3End1_0C4E205D.wem</CachePath>
+					<CachePath>SFX/community3/chimes-community3End1_EC8A1D26.wem</CachePath>
 				</File>
 				<File Id="276159906" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>community1\chimes-community1C#.wav</ShortName>
 					<CachePath>SFX/community1/chimes-community1C#_48CC29FF.wem</CachePath>
+				</File>
+				<File Id="295045199" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>FF_part2_circle1.wav</ShortName>
+					<CachePath>SFX/FF_part2_circle1_FBC78EF0.wem</CachePath>
 				</File>
 				<File Id="374736244" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>community1\chimes-community1A#.wav</ShortName>
@@ -107,13 +147,29 @@
 					<ShortName>ambience\ambience-green.wav</ShortName>
 					<CachePath>SFX/ambience/ambience-green_818F3B66.wem</CachePath>
 				</File>
+				<File Id="400425461" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>FF_part3_square1.wav</ShortName>
+					<CachePath>SFX/FF_part3_square1_FBC78EF0.wem</CachePath>
+				</File>
+				<File Id="444608073" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>FF_part1_circle1.wav</ShortName>
+					<CachePath>SFX/FF_part1_circle1_FBC78EF0.wem</CachePath>
+				</File>
 				<File Id="444656573" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>universal\chimes-universal1.wav</ShortName>
 					<CachePath>SFX/universal/chimes-universal1_818F3B66.wem</CachePath>
 				</File>
+				<File Id="507717878" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>FF_part2_triangle1.wav</ShortName>
+					<CachePath>SFX/FF_part2_triangle1_FBC78EF0.wem</CachePath>
+				</File>
 				<File Id="535706050" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>community3\chimes-community3End2.wav</ShortName>
-					<CachePath>SFX/community3/chimes-community3End2_BB2FB185.wem</CachePath>
+					<CachePath>SFX/community3/chimes-community3End2_793AF748.wem</CachePath>
+				</File>
+				<File Id="622743481" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>FF_part3_triangle1.wav</ShortName>
+					<CachePath>SFX/FF_part3_triangle1_FBC78EF0.wem</CachePath>
 				</File>
 				<File Id="631739992" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>universal\chimes-universal5.wav</ShortName>
@@ -121,7 +177,7 @@
 				</File>
 				<File Id="632147615" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>community3\chimes-community3Start2.wav</ShortName>
-					<CachePath>SFX/community3/chimes-community3Start2_C4606813.wem</CachePath>
+					<CachePath>SFX/community3/chimes-community3Start2_20F57A42.wem</CachePath>
 				</File>
 				<File Id="641973831" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>universal\chimes-universal3.wav</ShortName>
@@ -141,7 +197,15 @@
 				</File>
 				<File Id="752477891" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>community2\chimes-community2Confused.wav</ShortName>
-					<CachePath>SFX/community2/chimes-community2Confused_A465BEC2.wem</CachePath>
+					<CachePath>SFX/community2/chimes-community2Confused_224D8417.wem</CachePath>
+				</File>
+				<File Id="765695433" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>FF_intro1_circle1.wav</ShortName>
+					<CachePath>SFX/FF_intro1_circle1_FBC78EF0.wem</CachePath>
+				</File>
+				<File Id="769456374" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>FF_part3_circle1.wav</ShortName>
+					<CachePath>SFX/FF_part3_circle1_FBC78EF0.wem</CachePath>
 				</File>
 				<File Id="775169254" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>community1\chimes-community1F.wav</ShortName>
@@ -149,15 +213,19 @@
 				</File>
 				<File Id="775312338" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>community3\chimes-community3Start1.wav</ShortName>
-					<CachePath>SFX/community3/chimes-community3Start1_4D185C47.wem</CachePath>
+					<CachePath>SFX/community3/chimes-community3Start1_7B5979CE.wem</CachePath>
 				</File>
 				<File Id="780278558" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>community3\chimes-community3Confused.wav</ShortName>
-					<CachePath>SFX/community3/chimes-community3Confused_C5246CD6.wem</CachePath>
+					<CachePath>SFX/community3/chimes-community3Confused_9F1A7E5A.wem</CachePath>
 				</File>
 				<File Id="817811054" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>community1\chimes-community1F#.wav</ShortName>
 					<CachePath>SFX/community1/chimes-community1F#_F13B1AE7.wem</CachePath>
+				</File>
+				<File Id="829828492" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>FF_part1_triangle1.wav</ShortName>
+					<CachePath>SFX/FF_part1_triangle1_FBC78EF0.wem</CachePath>
 				</File>
 				<File Id="851559997" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>universal\chimes-universal7.wav</ShortName>
@@ -167,9 +235,17 @@
 					<ShortName>universal\chimes-universal8.wav</ShortName>
 					<CachePath>SFX/universal/chimes-universal8_818F3B66.wem</CachePath>
 				</File>
+				<File Id="934151318" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>FF_part1_square1.wav</ShortName>
+					<CachePath>SFX/FF_part1_square1_FBC78EF0.wem</CachePath>
+				</File>
 				<File Id="955222108" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>community2\chimes-community2-4.wav</ShortName>
 					<CachePath>SFX/community2/chimes-community2-4_818F3B66.wem</CachePath>
+				</File>
+				<File Id="973327438" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>FF_intro1_square1.wav</ShortName>
+					<CachePath>SFX/FF_intro1_square1_FBC78EF0.wem</CachePath>
 				</File>
 				<File Id="997782913" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>universal\chimes-universal4.wav</ShortName>
@@ -177,7 +253,7 @@
 				</File>
 				<File Id="1040139626" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>community1\chimes-community1Confused.wav</ShortName>
-					<CachePath>SFX/community1/chimes-community1Confused_EA7520A7.wem</CachePath>
+					<CachePath>SFX/community1/chimes-community1Confused_DAF55585.wem</CachePath>
 				</File>
 				<File Id="1050643609" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>community1\chimes-community1G#.wav</ShortName>
@@ -186,6 +262,10 @@
 				<File Id="1052460289" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>ambience\ambience-empty.wav</ShortName>
 					<CachePath>SFX/ambience/ambience-empty_52785B11.wem</CachePath>
+				</File>
+				<File Id="1064703987" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>FF_intro1_triangle1.wav</ShortName>
+					<CachePath>SFX/FF_intro1_triangle1_FBC78EF0.wem</CachePath>
 				</File>
 			</Media>
 			<Plugins>
@@ -309,6 +389,23 @@
 						<AuxBusRef Id="3268711830" Name="TestEcho"/>
 					</AuxBusRefs>
 				</Event>
+				<Event Id="601826692" Name="MusicFanfair_Play" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="73589724"/>
+						<MediaRef Id="295045199"/>
+						<MediaRef Id="400425461"/>
+						<MediaRef Id="444608073"/>
+						<MediaRef Id="507717878"/>
+						<MediaRef Id="622743481"/>
+						<MediaRef Id="765695433"/>
+						<MediaRef Id="769456374"/>
+						<MediaRef Id="829828492"/>
+						<MediaRef Id="934151318"/>
+						<MediaRef Id="973327438"/>
+						<MediaRef Id="1064703987"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3374377342" Name="MusicFanfair_Stop" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="722374694" Name="NPCChime1Confused" MaxAttenuation="30" DurationType="OneShot" DurationMin="1.9324167" DurationMax="1.9324167">
 					<MediaRefs>
 						<MediaRef Id="1040139626"/>
@@ -444,9 +541,14 @@
 			</Events>
 			<Busses>
 				<Bus Id="85412153" Name="Ambience"/>
+				<Bus Id="240409309" Name="Circle" MaxAttenuation="30"/>
 				<Bus Id="1069431850" Name="Player"/>
+				<Bus Id="1818333208" Name="Square" MaxAttenuation="30"/>
+				<Bus Id="2326865361" Name="Triangle" MaxAttenuation="30"/>
+				<Bus Id="2447030866" Name="Fanfair"/>
 				<Bus Id="2590078866" Name="Chimes" MaxAttenuation="30"/>
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
+				<Bus Id="3991942870" Name="Music"/>
 			</Busses>
 			<AuxBusses>
 				<AuxBus Id="841660990" Name="TestVerb">
@@ -468,7 +570,30 @@
 			<GameParameters>
 				<GameParameter Id="1750790826" Name="GreeneryLevel"/>
 			</GameParameters>
+			<StateGroups>
+				<StateGroup Id="167474714" Name="IncludeSquare">
+					<States>
+						<State Id="748895195" Name="None"/>
+						<State Id="930712164" Name="Off"/>
+						<State Id="1651971902" Name="On"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="765250607" Name="IncludeTriangle">
+					<States>
+						<State Id="748895195" Name="None"/>
+						<State Id="930712164" Name="Off"/>
+						<State Id="1651971902" Name="On"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="1316677579" Name="IncludeCircle">
+					<States>
+						<State Id="748895195" Name="None"/>
+						<State Id="930712164" Name="Off"/>
+						<State Id="1651971902" Name="On"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{D145766D-98A5-27F0-BC4D-FD925020C035}</FileHash>
+	<FileHash>{8BD85630-46B3-B3AB-A684-BE5B62DA1970}</FileHash>
 </SoundBanksInfo>
