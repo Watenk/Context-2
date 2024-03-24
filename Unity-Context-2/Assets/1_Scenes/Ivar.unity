@@ -255,6 +255,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2829858296756536946, guid: 474fc37857e3fd74db7d148d1f3d0d43,
         type: 3}
+      propertyPath: LibraryMural
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2829858296756536946, guid: 474fc37857e3fd74db7d148d1f3d0d43,
+        type: 3}
       propertyPath: chimeSequence
       value: 0
       objectReference: {fileID: 0}

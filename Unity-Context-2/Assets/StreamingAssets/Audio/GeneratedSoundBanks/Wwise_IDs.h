@@ -22,6 +22,8 @@ namespace AK
         static const AkUniqueID CHIME3STOP = 2451530218U;
         static const AkUniqueID CHIMEUPLAY = 1032095362U;
         static const AkUniqueID CHIMEUSTOP = 1675108316U;
+        static const AkUniqueID MUSICFANFAIR_PLAY = 601826692U;
+        static const AkUniqueID MUSICFANFAIR_STOP = 3374377342U;
         static const AkUniqueID NPCCHIME1CONFUSED = 722374694U;
         static const AkUniqueID NPCCHIME1LONG = 1795884461U;
         static const AkUniqueID NPCCHIME1SHORT = 4090504235U;
@@ -49,12 +51,59 @@ namespace AK
             } // namespace STATE
         } // namespace AMBIENCEINSIDEOUTSIDE
 
+        namespace FANFAIR
+        {
+            static const AkUniqueID GROUP = 2447030866U;
+
+            namespace STATE
+            {
+                static const AkUniqueID NONE = 748895195U;
+                static const AkUniqueID PLAY = 1256202815U;
+                static const AkUniqueID STOP = 788884573U;
+            } // namespace STATE
+        } // namespace FANFAIR
+
+        namespace INCLUDECIRCLE
+        {
+            static const AkUniqueID GROUP = 1316677579U;
+
+            namespace STATE
+            {
+                static const AkUniqueID NONE = 748895195U;
+                static const AkUniqueID OFF = 930712164U;
+                static const AkUniqueID ON = 1651971902U;
+            } // namespace STATE
+        } // namespace INCLUDECIRCLE
+
+        namespace INCLUDESQUARE
+        {
+            static const AkUniqueID GROUP = 167474714U;
+
+            namespace STATE
+            {
+                static const AkUniqueID NONE = 748895195U;
+                static const AkUniqueID OFF = 930712164U;
+                static const AkUniqueID ON = 1651971902U;
+            } // namespace STATE
+        } // namespace INCLUDESQUARE
+
+        namespace INCLUDETRIANGLE
+        {
+            static const AkUniqueID GROUP = 765250607U;
+
+            namespace STATE
+            {
+                static const AkUniqueID NONE = 748895195U;
+                static const AkUniqueID OFF = 930712164U;
+                static const AkUniqueID ON = 1651971902U;
+            } // namespace STATE
+        } // namespace INCLUDETRIANGLE
+
     } // namespace STATES
 
     namespace GAME_PARAMETERS
     {
         static const AkUniqueID GREENERYLEVEL = 1750790826U;
-        static const AkUniqueID INSIDEOUTSIDE = 3929688590U;
     } // namespace GAME_PARAMETERS
 
     namespace BANKS
@@ -67,8 +116,13 @@ namespace AK
     {
         static const AkUniqueID AMBIENCE = 85412153U;
         static const AkUniqueID CHIMES = 2590078866U;
+        static const AkUniqueID CIRCLE = 240409309U;
+        static const AkUniqueID FANFAIR = 2447030866U;
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
+        static const AkUniqueID MUSIC = 3991942870U;
         static const AkUniqueID PLAYER = 1069431850U;
+        static const AkUniqueID SQUARE = 1818333208U;
+        static const AkUniqueID TRIANGLE = 2326865361U;
     } // namespace BUSSES
 
     namespace AUX_BUSSES
