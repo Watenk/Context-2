@@ -23,4 +23,9 @@ public class ProblemSpawner : MonoBehaviour
         GameManager.GetService<CommunityManager>().AddProblem(CommunityType, new Problem(ProblemSolvers, CommunityType, groups, this.gameObject, transform.position));
         Destroy(this);
     }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawSphere(transform.position, 1);
+    }
 }

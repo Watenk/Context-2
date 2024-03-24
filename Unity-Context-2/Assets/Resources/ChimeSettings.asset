@@ -111,7 +111,7 @@ MonoBehaviour:
       isLong: 1
     affectedCommunities: 03000000
   - Name: SquareLeave
-    chimeSequence: 0
+    chimeSequence: 5
     chimeTask: 2
     chimes:
     - chimeInput: 0
@@ -122,7 +122,7 @@ MonoBehaviour:
       isLong: 1
     affectedCommunities: 02000000
   - Name: TriangleLeave
-    chimeSequence: 0
+    chimeSequence: 2
     chimeTask: 2
     chimes:
     - chimeInput: 0
@@ -133,7 +133,7 @@ MonoBehaviour:
       isLong: 0
     affectedCommunities: 00000000
   - Name: CircleLeave
-    chimeSequence: 0
+    chimeSequence: 8
     chimeTask: 2
     chimes:
     - chimeInput: 0
