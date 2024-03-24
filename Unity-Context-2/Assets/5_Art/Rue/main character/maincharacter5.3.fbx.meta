@@ -1,9 +1,44 @@
 fileFormatVersion: 2
-guid: 9d51d2cad39b05748b2f9e7c53d89fa0
+guid: d0854071dcfc98f4985f1a6edd907071
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Back
+    second: {fileID: 2100000, guid: fbd8c2f0a000d1646bd1bd1d5ae4ac10, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Balls
+    second: {fileID: 2100000, guid: aebb85a375943ce489fd86e4b18e943e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Clothes
+    second: {fileID: 2100000, guid: 84d4a81291550204f83105a10e5397f6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Hat
+    second: {fileID: 2100000, guid: ca5a32cb26e31714493c8f145a4ccb75, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Limbs
+    second: {fileID: 2100000, guid: 01de4b14ed90a684cbea0b80828d2aa4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ring
+    second: {fileID: 2100000, guid: 91b1a7d807a482846a6fcce414697f6f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Scarf
+    second: {fileID: 2100000, guid: 3e81913ad69d19240876c0a048ce4200, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
