@@ -1,9 +1,11 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Community : IFixedUpdateable
 {
+    public Action<CommunityTypes> OnFollow;
     public CommunityTypes CommunityType { get; private set; }
     private List<Group> groups = new List<Group>();
     private List<Problem> problems = new List<Problem>();
@@ -35,6 +37,7 @@ public class Community : IFixedUpdateable
     public Group AddGroup(int size, Vector3 pos, float spawnRadius, bool isActive){
         Group newGroup = new Group(this, CommunityType, size, pos, spawnRadius, isActive);
         groups.Add(newGroup);
+        newGroup.OnFollow += Follow;
         return newGroup;
     }
 
@@ -50,5 +53,9 @@ public class Community : IFixedUpdateable
         foreach (Group currentGroup in groups){
             currentGroup.ProblemSolved();
         }
+    }
+
+    private void Follow(CommunityTypes communityType){
+        OnFollow(communityType);
     }
 }

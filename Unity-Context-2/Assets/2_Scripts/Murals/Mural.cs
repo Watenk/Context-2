@@ -14,7 +14,7 @@ public class Mural : IFixedUpdateable
     // Mushrooms
     private List<Animator> mushroomAnimators = new List<Animator>();
     private List<BubbleController> mushroomBubbles = new List<BubbleController>();
-    private List<LoopingSound> mushroomSounds = new List<LoopingSound>();
+    private List<Sound> mushroomSounds = new List<Sound>();
     private List<MuralMushroomPrefab> mushroomPrefabs;
     private float mushroomDistance;
 
@@ -77,7 +77,7 @@ public class Mural : IFixedUpdateable
         }
 
         // Chimes
-        PlayChime();
+        PlayChime(ChimeSequence);
         StopChime();
 
         // Set timer lenght
@@ -121,20 +121,40 @@ public class Mural : IFixedUpdateable
 
     //----------------------------------------
 
-    private void PlayChime(){
+    private void PlayChime(ChimeSequence chimeSequence){
         if (playingIndex >= ChimeSequence.chimes.Count) { return; }
 
         mushroomAnimators[playingIndex].SetBool("Active", true);
         mushroomBubbles[playingIndex].StartBubble(ChimeSequence.chimes[playingIndex].chimeInput);
-        PlayerSoundData playerSoundData = soundManager.GetPlayerSound(ChimeSequence.chimes[playingIndex].chimeInput);
-        mushroomSounds[playingIndex] = soundManager.PlayLoopingSound(playerSoundData, gameObject.transform.position);
+        NPCSoundData npcSoundData = soundManager.GetNPCSound(ChimeInputToCommunityType(chimeSequence.chimes[playingIndex].chimeInput));
+        mushroomSounds[playingIndex] = soundManager.PlayNPCSound(npcSoundData, chimeSequence.chimes[playingIndex].isLong, gameObject.transform.position);
     }
 
     private void StopChime(){
         if (playingIndex == 0) { return; }
 
-        mushroomSounds[playingIndex - 1].StopSound();
         mushroomAnimators[playingIndex - 1].SetBool("Active", false);
         mushroomBubbles[playingIndex - 1].StopBubble();
+    }
+
+    private CommunityTypes ChimeInputToCommunityType(ChimeInputs chimeInput){
+        
+        switch (chimeInput){
+
+            case ChimeInputs.global:
+                return CommunityTypes.global;
+
+            case ChimeInputs.circle:
+                return CommunityTypes.circle;
+
+            case ChimeInputs.triangle:
+                return CommunityTypes.triangle;
+
+            case ChimeInputs.square:
+                return CommunityTypes.square;
+
+            default:
+                return CommunityTypes.global;
+        }
     }
 }

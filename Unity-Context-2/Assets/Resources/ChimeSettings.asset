@@ -89,7 +89,7 @@ MonoBehaviour:
       isLong: 1
     - chimeInput: 0
       isLong: 0
-    affectedCommunities: 00000000
+    affectedCommunities: 03000000
   - Name: CrossFollow
     chimeSequence: 12
     chimeTask: 0
@@ -100,7 +100,7 @@ MonoBehaviour:
       isLong: 0
     - chimeInput: 0
       isLong: 0
-    affectedCommunities: 00000000
+    affectedCommunities: 03000000
   - Name: CrossLeave
     chimeSequence: 14
     chimeTask: 2
@@ -109,7 +109,7 @@ MonoBehaviour:
       isLong: 1
     - chimeInput: 0
       isLong: 1
-    affectedCommunities: 00000000
+    affectedCommunities: 03000000
   - Name: SquareLeave
     chimeSequence: 5
     chimeTask: 2

@@ -22,6 +22,46 @@
 						</Transition>
 					</TransitionList>
 				</StateGroup>
+				<Folder Name="Music" ID="{5578BF76-8378-48A1-9AE0-CA4B23969A00}" ShortID="115553654">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="12"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Folder Name="Fanfair" ID="{124F8729-5C31-4136-85EB-579C11DD2A94}" ShortID="139799523">
+							<ChildrenList>
+								<StateGroup Name="Fanfair" ID="{33A33BF2-6231-47AC-ABD2-5BB7F88C743A}">
+									<ChildrenList>
+										<State Name="None" ID="{D4002866-EFC9-4E88-ACE5-7CC31249CCCF}"/>
+										<State Name="Stop" ID="{95CA4EA8-170F-473E-AA19-F6F6A2DBD591}"/>
+										<State Name="Play" ID="{4A7D3F05-98FA-440B-8CEC-408E7F3F1885}"/>
+									</ChildrenList>
+								</StateGroup>
+								<StateGroup Name="IncludeCircle" ID="{3DC4E32B-041A-4FBB-B8E3-87AD5582FF62}">
+									<ChildrenList>
+										<State Name="None" ID="{143F61D6-D8CA-4169-B36D-327E200310B4}"/>
+										<State Name="On" ID="{C3F98285-C081-48C0-8C07-FB23A3560B16}"/>
+										<State Name="Off" ID="{08830C87-C50B-47C1-A374-19CD9501F4E7}"/>
+									</ChildrenList>
+								</StateGroup>
+								<StateGroup Name="IncludeSquare" ID="{15A4BF69-23A8-4DD4-8D0C-B5DB696FDAE2}">
+									<ChildrenList>
+										<State Name="None" ID="{973DA802-3E22-406D-8367-0B642D4B91C3}"/>
+										<State Name="On" ID="{2B590616-FC37-4271-BCFC-5D2C1BF8F2E1}"/>
+										<State Name="Off" ID="{A9114D24-624D-4535-AA72-A9EDE1FF0D2A}"/>
+									</ChildrenList>
+								</StateGroup>
+								<StateGroup Name="IncludeTriangle" ID="{6BD0E8F9-E79C-4D80-B939-47271107FFEF}">
+									<ChildrenList>
+										<State Name="None" ID="{3B1B9D8B-AE44-4F74-8A3F-DBEF3882E81D}"/>
+										<State Name="On" ID="{59DB5ECD-9755-43F9-AFE3-EA4CCEA36DE9}"/>
+										<State Name="Off" ID="{DC41C95B-6FDF-4FB4-9D51-A45809F944E3}"/>
+									</ChildrenList>
+								</StateGroup>
+							</ChildrenList>
+						</Folder>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</States>

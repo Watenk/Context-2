@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,11 +6,14 @@ using UnityEngine.AI;
 
 public class Agent : IFixedUpdateable
 {
+    public Action<CommunityTypes> OnFollow;
+
     public GameObject GameObject { get; private set; }
     public Group Group { get; private set; }
     public bool DestinationReached { get; private set; }
     public NavMeshAgent NavMeshAgent { get; private set; }
     public Fsm<Agent> fsm { get; private set; }
+    public Animator Animator { get; private set; }
 
     // Pathfinding
     private List<Vector3> path = new List<Vector3>();
@@ -24,15 +28,16 @@ public class Agent : IFixedUpdateable
 
     //----------------------------------------
 
-    public Agent(GameObject gameObject, Group group){
+    public Agent(GameObject gameObject, Group group, Animator animator){
         GameObject = gameObject;
         Group = group;
+        Animator = animator;
         NavMeshAgent = GameManager.GetComponent<NavMeshAgent>(GameObject);
         chimeSequencer = GameManager.GetService<ChimeSequencer>();
         soundManager = GameManager.GetService<SoundManager>();
         stepDistance = AgentSettings.Instance.StepDistance;
         wanderFromHomeDistance = AgentSettings.Instance.WanderFromHomeDistance;
-        NavMeshAgent.speed = Random.Range(AgentSettings.Instance.MinSpeed, AgentSettings.Instance.MaxSpeed);
+        NavMeshAgent.speed = UnityEngine.Random.Range(AgentSettings.Instance.MinSpeed, AgentSettings.Instance.MaxSpeed);
         DestinationReached = true;
 
         chimeSequencer.OnChimeSequence += OnChimeSequence;
@@ -45,6 +50,8 @@ public class Agent : IFixedUpdateable
            new AgentDepressedState()
         );
         fsm.SwitchState(typeof(AgentDepressedState));
+
+        ((AgentFollowingState)fsm.GetState(typeof(AgentFollowingState))).OnFollow += Follow;
 
         #if UNITY_EDITOR
             if (NavMeshAgent == null) { Debug.LogError(gameObject.name + " doesn't contain a navmeshAgent"); }
@@ -81,23 +88,27 @@ public class Agent : IFixedUpdateable
 
     //------------------------------------------
 
+    private void Follow(CommunityTypes communityType){
+        OnFollow(communityType);
+    }
+
     private void OnChimeSequence(ChimeSequence chimeSequence){
         
         if (!chimeSequence.affectedCommunities.Contains(Group.CommunityType)) { return; } // If community is affected
 
-        ExecuteTask(chimeSequence.chimeTask);
+        ExecuteTask(chimeSequence);
     }
 
-    private void ExecuteTask(ChimeTasks chimeTask){
+    private void ExecuteTask(ChimeSequence chimeSequence){
 
-        switch (chimeTask){
+        switch (chimeSequence.chimeTask){
             case ChimeTasks.follow:
                 if (fsm.currentState == fsm.GetState(typeof(AgentLookAtPlayerState))){
                     fsm.SwitchState(typeof(AgentFollowingState));
 
                     // Sound
-                    NPCSoundData soundData = soundManager.GetNPCSound(chimeTask);
-                    soundManager.PlaySound(soundData, GameObject.transform.position);
+                    NPCSoundData soundData = soundManager.GetNPCSound(Group.CommunityType, ChimeTasks.follow);
+                    soundManager.PlayNPCSound(soundData, false, GameObject.transform.position);
                 }
                 break;
             
@@ -105,8 +116,8 @@ public class Agent : IFixedUpdateable
                 if (fsm.currentState == fsm.GetState(typeof(AgentFollowingState))){
 
                     // Sound
-                    NPCSoundData soundData = soundManager.GetNPCSound(ChimeTasks.follow);
-                    soundManager.PlaySound(soundData, GameObject.transform.position);
+                    NPCSoundData soundData = soundManager.GetNPCSound(Group.CommunityType, ChimeTasks.follow);
+                    soundManager.PlayNPCSound(soundData, false, GameObject.transform.position);
                 }
                 break;
         }
