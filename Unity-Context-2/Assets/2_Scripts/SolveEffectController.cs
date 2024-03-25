@@ -8,6 +8,7 @@ public class SolveEffectController : MonoBehaviour
     private float cutOffHeight;
 
     private MeshRenderer[] meshRenderers;
+    private SkinnedMeshRenderer[] skinnedMeshRenderers;
 
 
 
@@ -15,7 +16,12 @@ public class SolveEffectController : MonoBehaviour
     void Start()
     {
         meshRenderers = GetComponentsInChildren<MeshRenderer>();
-        foreach(MeshRenderer mesh in meshRenderers)
+        skinnedMeshRenderers = GetComponentsInChildren<SkinnedMeshRenderer>();
+        foreach (MeshRenderer mesh in meshRenderers)
+        {
+            mesh.material.SetFloat("_CutOffHeight", cutOffHeight);
+        }
+        foreach (SkinnedMeshRenderer mesh in skinnedMeshRenderers)
         {
             mesh.material.SetFloat("_CutOffHeight", cutOffHeight);
         }
@@ -38,6 +44,10 @@ public class SolveEffectController : MonoBehaviour
         {
             cutOffHeight += Time.deltaTime;
             foreach (MeshRenderer mesh in meshRenderers)
+            {
+                mesh.material.SetFloat("_CutOffHeight", cutOffHeight);
+            }
+            foreach (SkinnedMeshRenderer mesh in skinnedMeshRenderers)
             {
                 mesh.material.SetFloat("_CutOffHeight", cutOffHeight);
             }

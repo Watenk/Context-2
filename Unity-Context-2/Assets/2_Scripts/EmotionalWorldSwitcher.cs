@@ -53,7 +53,7 @@ public class EmotionalWorldSwitcher : MonoBehaviour
             }
         }
 
-        Color color = new Color(0, 0, 0, Mathf.InverseLerp(1, timeNeeded, timeNotMoved));
+        Color color = new Color(0, 0, 0, Mathf.InverseLerp(3, timeNeeded, timeNotMoved));
         // Ak send color alpha value
         overlayImage.color = color;
 
