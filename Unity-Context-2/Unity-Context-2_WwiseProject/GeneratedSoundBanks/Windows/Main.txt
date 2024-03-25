@@ -26,6 +26,7 @@ State Group	ID	Name			Wwise Object Path	Notes
 	167474714	IncludeSquare			\Default Work Unit\Music\Fanfair\IncludeSquare	
 	765250607	IncludeTriangle			\Default Work Unit\Music\Fanfair\IncludeTriangle	
 	1316677579	IncludeCircle			\Default Work Unit\Music\Fanfair\IncludeCircle	
+	2447030866	Fanfair			\Default Work Unit\Music\Fanfair\Fanfair	
 	3607165242	ambienceInsideOutside			\Default Work Unit\ambienceInsideOutside	
 
 State	ID	Name	State Group			Notes
@@ -38,6 +39,9 @@ State	ID	Name	State Group			Notes
 	748895195	None	IncludeCircle			
 	930712164	Off	IncludeCircle			
 	1651971902	On	IncludeCircle			
+	748895195	None	Fanfair			
+	788884573	Stop	Fanfair			
+	1256202815	Play	Fanfair			
 	438105790	Outside	ambienceInsideOutside			
 	748895195	None	ambienceInsideOutside			
 	3553349781	Inside	ambienceInsideOutside			
@@ -62,6 +66,7 @@ Auxiliary Bus	ID	Name			Wwise Object Path	Notes
 	841660990	TestVerb			\Default Work Unit\Master Audio Bus\Chimes\TestVerb	
 	3268711830	TestEcho			\Default Work Unit\Master Audio Bus\Chimes\TestEcho	
 	3477531017	EmotionsDimension			\Default Work Unit\Master Audio Bus\EmotionsDimension	
+	3657263530	Verb			\Default Work Unit\Master Audio Bus\Verb	
 
 Effect plug-ins	ID	Name	Type				Notes
 	48620415	Have_U_Ever_Been_Outside	Wwise RoomVerb			

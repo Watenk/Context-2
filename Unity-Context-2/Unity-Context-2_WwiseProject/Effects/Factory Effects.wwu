@@ -131,7 +131,6 @@
 						<Effect Name="Echoes_Linear" ID="{D20F3717-EBA2-4E3A-84F8-C8BD431563FB}" PluginName="Wwise Delay" CompanyID="0" PluginID="106" PluginType="3">
 							<PropertyList>
 								<Property Name="DelayTime" Type="Real32" Value="0.32"/>
-								<Property Name="Feedback" Type="Real32" Value="21.5"/>
 								<Property Name="WetDryMix" Type="Real32" Value="100"/>
 							</PropertyList>
 						</Effect>
@@ -828,7 +827,7 @@
 												<CustomState Name="" ID="{EB39A9DC-BD2C-46D9-B6EF-9ADAEDCF7D76}" ShortID="108537884">
 													<PropertyList>
 														<Property Name="DryLevel" Type="Real32" Value="85"/>
-														<Property Name="ReverbLevel" Type="Real32" Value="-9"/>
+														<Property Name="ReverbLevel" Type="Real32" Value="7"/>
 													</PropertyList>
 												</CustomState>
 											</CustomState>
@@ -1563,6 +1562,37 @@
 										<Property Name="RoomSize" Type="Real32" Value="73"/>
 										<Property Name="StereoWidth" Type="Real32" Value="28"/>
 									</PropertyList>
+									<StateInfo>
+										<StatePropertyList>
+											<Property Name="DryLevel"/>
+											<Property Name="ReverbLevel"/>
+										</StatePropertyList>
+										<StateGroupList>
+											<StateGroupInfo>
+												<StateGroupRef Name="ambienceInsideOutside" ID="{7F94DE54-DA53-4F66-AA37-236C7EFC25F0}"/>
+											</StateGroupInfo>
+										</StateGroupList>
+										<CustomStateList>
+											<CustomState>
+												<StateRef Name="Inside" ID="{D68485E7-7F1F-4185-89E1-C3B0F0A71358}"/>
+												<CustomState Name="" ID="{BE14C95B-1726-4F60-94F6-A967C5AE7819}" ShortID="580678199">
+													<PropertyList>
+														<Property Name="DryLevel" Type="Real32" Value="96"/>
+														<Property Name="ReverbLevel" Type="Real32" Value="-96"/>
+													</PropertyList>
+												</CustomState>
+											</CustomState>
+											<CustomState>
+												<StateRef Name="Outside" ID="{3433294B-052D-45B7-AB97-7AA8B3FB91C4}"/>
+												<CustomState Name="" ID="{B6C9D10B-0CB2-4B18-AA17-CC1DD59B1F0C}" ShortID="435778042">
+													<PropertyList>
+														<Property Name="DryLevel" Type="Real32" Value="85"/>
+														<Property Name="ReverbLevel" Type="Real32" Value="8"/>
+													</PropertyList>
+												</CustomState>
+											</CustomState>
+										</CustomStateList>
+									</StateInfo>
 								</Effect>
 							</ChildrenList>
 						</Folder>

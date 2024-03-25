@@ -132,6 +132,7 @@ namespace AK
         static const AkUniqueID EMOTIONSDIMENSION = 3477531017U;
         static const AkUniqueID TESTECHO = 3268711830U;
         static const AkUniqueID TESTVERB = 841660990U;
+        static const AkUniqueID VERB = 3657263530U;
     } // namespace AUX_BUSSES
 
     namespace AUDIO_DEVICES

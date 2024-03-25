@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 8dc0b307ade8814aa929c27b28b93464
     GuidInternal: 
-    m_lastTime: -8584902392255305143
+    m_lastTime: -8584902201213377560
     List:
     - name: Ambience
       guid: 45bbfd6b2b78e94186b0109575ddfb5f
@@ -308,6 +308,23 @@ MonoBehaviour:
         ObjectType: 2
         guid: bc2a3d35a8e8d147b002a65f5c15542c
       Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Music\Fanfair\Triangle
+    - name: Verb
+      guid: ed2a5b1477ef7c4eb2f0bef0483a4429
+      id: 3657263530
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 8dc0b307ade8814aa929c27b28b93464
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: Verb
+        ObjectType: 1
+        guid: ed2a5b1477ef7c4eb2f0bef0483a4429
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Verb
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     PathAndIcons:
@@ -320,7 +337,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: d7906ce14cf00844a1cf51bb2f3f5324
     GuidInternal: 
-    m_lastTime: -8584914529492531548
+    m_lastTime: -8584902216944186029
     List:
     - name: Main
       guid: edcbdbe24520214883096064fcb95c6c
@@ -348,7 +365,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 1829c11d708c3d4b85382b800fb51260
     GuidInternal: 
-    m_lastTime: -8584902415658688923
+    m_lastTime: -8584902334818994370
     List:
     - name: Ambience
       guid: 86f588cd638f484d8f4020eb95385ae6
@@ -1531,7 +1548,7 @@ MonoBehaviour:
     m_lastTime: -8584913668122320833
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 01000000050000000600000007000000080000000a0000000b0000000c0000000d00000016000000190000001a0000001b0000001c00000020000000220000002500000026000000280000002c000000
+  ExpandedWaapiItemIds: 01000000050000000600000007000000080000000a0000000b0000000c0000000d0000000e0000000f00000016000000190000001a0000001b0000001c00000020000000220000002500000026000000280000002c000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

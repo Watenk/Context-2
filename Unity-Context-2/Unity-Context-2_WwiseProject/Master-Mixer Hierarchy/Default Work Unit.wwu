@@ -20,14 +20,24 @@
 							<PropertyList>
 								<Property Name="Color" Type="int16" Value="20"/>
 								<Property Name="OverrideColor" Type="bool" Value="True"/>
+								<Property Name="UserAuxSendVolume0" Type="Real64">
+									<ValueList>
+										<Value>-4</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
+							<ReferenceList>
+								<Reference Name="UserAuxSend0">
+									<ObjectRef Name="Verb" ID="{145B2AED-EF77-4E7C-B2F0-BEF0483A4429}" WorkUnitID="{07B3C08D-E8AD-4A81-A929-C27B28B93464}"/>
+								</Reference>
+							</ReferenceList>
 							<ChildrenList>
 								<Bus Name="ChimesPlayer" ID="{4CC0B8DA-DBDF-48BC-B5EF-FFA80D869560}">
 									<PropertyList>
 										<Property Name="3DSpatialization" Type="int16" Value="1"/>
 										<Property Name="BusVolume" Type="Real64">
 											<ValueList>
-												<Value>7</Value>
+												<Value>-3</Value>
 											</ValueList>
 										</Property>
 										<Property Name="ListenerRelativeRouting" Type="bool" Value="True"/>
@@ -35,7 +45,7 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Attenuation">
-											<ObjectRef Name="PlayerChimes" ID="{13C8F7A6-1D1A-447A-BDD1-B87A870E6915}" WorkUnitID="{367E7C67-F63E-4EF5-89C2-DD807CEBB0F9}"/>
+											<ObjectRef Name="PlayerChimes2" ID="{ADCCA8AF-F345-4C3C-9847-2E3671FF176E}" WorkUnitID="{367E7C67-F63E-4EF5-89C2-DD807CEBB0F9}"/>
 										</Reference>
 									</ReferenceList>
 									<PositioningInfo>
@@ -73,12 +83,20 @@
 							<PropertyList>
 								<Property Name="3DSpatialization" Type="int16" Value="2"/>
 								<Property Name="Color" Type="int16" Value="15"/>
-								<Property Name="EnableAttenuation" Type="bool" Value="False"/>
+								<Property Name="ListenerRelativeRouting" Type="bool" Value="True"/>
 								<Property Name="OverrideColor" Type="bool" Value="True"/>
+								<Property Name="UserAuxSendVolume0" Type="Real64">
+									<ValueList>
+										<Value>-8</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Attenuation">
 									<ObjectRef Name="NPCChimes" ID="{3FD4D0B4-7719-40F9-A7D7-66A1196736CA}" WorkUnitID="{367E7C67-F63E-4EF5-89C2-DD807CEBB0F9}"/>
+								</Reference>
+								<Reference Name="UserAuxSend0">
+									<ObjectRef Name="Verb" ID="{145B2AED-EF77-4E7C-B2F0-BEF0483A4429}" WorkUnitID="{07B3C08D-E8AD-4A81-A929-C27B28B93464}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -124,7 +142,6 @@
 												<Value>-10</Value>
 											</ValueList>
 										</Property>
-										<Property Name="ListenerRelativeRouting" Type="bool" Value="True"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Attenuation">
@@ -140,24 +157,6 @@
 								<Panner Name="" ID="{16EA67E9-0DEC-47A1-AA4A-377E399A062C}"/>
 								<Position Name="" ID="{A019EF8D-80F9-4224-8BF2-5F49390D04E6}"/>
 							</PositioningInfo>
-							<ObjectLists>
-								<ObjectList Name="Effects">
-									<Reference>
-										<Local>
-											<EffectSlot Name="" ID="{658C45E5-D45B-4B19-A2D9-D21D0A993388}" ShortID="104719336">
-												<PropertyList>
-													<Property Name="Bypass" Type="bool" Value="True"/>
-												</PropertyList>
-												<ReferenceList>
-													<Reference Name="Effect" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
-														<ObjectRef Name="Hall_Medium_Bright" ID="{3C3845B2-C76E-4634-9108-83FA43A5A7BC}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
-													</Reference>
-												</ReferenceList>
-											</EffectSlot>
-										</Local>
-									</Reference>
-								</ObjectList>
-							</ObjectLists>
 						</Bus>
 						<Bus Name="Music" ID="{2DB63E65-CE8A-49D8-9F81-C383F6B6DF3D}">
 							<ChildrenList>
@@ -273,6 +272,37 @@
 								</Bus>
 							</ChildrenList>
 						</Bus>
+						<AuxBus Name="Verb" ID="{145B2AED-EF77-4E7C-B2F0-BEF0483A4429}">
+							<PropertyList>
+								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+							</PropertyList>
+							<ObjectLists>
+								<ObjectList Name="Effects">
+									<Reference>
+										<Local>
+											<EffectSlot Name="" ID="{81C9C3B5-6FA8-47F3-9325-628ABEBFCB92}" ShortID="633327853">
+												<ReferenceList>
+													<Reference Name="Effect" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+														<ObjectRef Name="Hall_Medium_Bright" ID="{3C3845B2-C76E-4634-9108-83FA43A5A7BC}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+													</Reference>
+												</ReferenceList>
+											</EffectSlot>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<EffectSlot Name="" ID="{B1754D24-7EDF-4171-8A98-467E255A4224}" ShortID="864320625">
+												<ReferenceList>
+													<Reference Name="Effect" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+														<ObjectRef Name="Have_U_Ever_Been_Outside" ID="{FE29AE8D-FD86-4652-A95D-68D32F5760EC}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+													</Reference>
+												</ReferenceList>
+											</EffectSlot>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+						</AuxBus>
 					</ChildrenList>
 				</Bus>
 			</ChildrenList>

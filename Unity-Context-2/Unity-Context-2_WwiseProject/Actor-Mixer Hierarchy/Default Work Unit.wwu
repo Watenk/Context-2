@@ -7,6 +7,8 @@
 					<PropertyList>
 						<Property Name="3DSpatialization" Type="int16" Value="2"/>
 						<Property Name="Color" Type="int16" Value="15"/>
+						<Property Name="EnableAttenuation" Type="bool" Value="False"/>
+						<Property Name="ListenerRelativeRouting" Type="bool" Value="False"/>
 						<Property Name="OverrideColor" Type="bool" Value="True"/>
 						<Property Name="UserAuxSendVolume0" Type="Real64">
 							<ValueList>
@@ -675,6 +677,19 @@
 											</ActiveSourceList>
 										</Sound>
 									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Playlist">
+											<Reference>
+												<ObjectRef Name="chimes-community1A#" ID="{B288CEF3-1DE6-44EE-9522-75B8959C5216}" WorkUnitID="{7170A4AA-0716-459D-A833-37BA2C074759}"/>
+											</Reference>
+											<Reference>
+												<ObjectRef Name="chimes-community1C#" ID="{D5A41376-9CC6-4963-96F2-DBCCC064DEB4}" WorkUnitID="{7170A4AA-0716-459D-A833-37BA2C074759}"/>
+											</Reference>
+											<Reference>
+												<ObjectRef Name="chimes-community1D#" ID="{16911830-6463-48E6-A35D-5B62430CDB87}" WorkUnitID="{7170A4AA-0716-459D-A833-37BA2C074759}"/>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
 								</RandomSequenceContainer>
 								<Sound Name="chimes-community1Confused" ID="{593B57D3-AFBD-4B91-9C69-42E27F51B059}" ShortID="1012450204">
 									<ReferenceList>
@@ -1001,6 +1016,11 @@
 												<Value>-16</Value>
 											</ValueList>
 										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-1</Value>
+											</ValueList>
+										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Attenuation">
@@ -1308,6 +1328,11 @@
 								<RandomSequenceContainer Name="universal" ID="{DC523BA7-E3E5-460E-88D2-F2048DB8A011}" ShortID="488256050">
 									<PropertyList>
 										<Property Name="3DSpatialization" Type="int16" Value="2"/>
+										<Property Name="CenterPercentage" Type="int32">
+											<ValueList>
+												<Value>22</Value>
+											</ValueList>
+										</Property>
 										<Property Name="Color" Type="int16" Value="13"/>
 										<Property Name="OverrideColor" Type="bool" Value="True"/>
 										<Property Name="OverrideEffect" Type="bool" Value="True"/>
@@ -1331,7 +1356,7 @@
 										</Property>
 										<Property Name="UserAuxSendVolume1" Type="Real64">
 											<ValueList>
-												<Value>-17</Value>
+												<Value>-22</Value>
 											</ValueList>
 										</Property>
 										<Property Name="Volume" Type="Real64">
