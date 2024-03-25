@@ -43,7 +43,7 @@ public class AgentFollowingState : BaseState<Agent>
     }
 
     public override void OnUpdate(){
-        owner.Animator.SetFloat("Speed", owner.NavMeshAgent.speed);
+        owner.Animator.SetFloat("Speed", owner.NavMeshAgent.velocity.magnitude);
         FollowPlayer();
     }
 

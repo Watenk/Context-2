@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
     private float speed;
     private float rotationSpeed;
     private Queue<LoopingSound> activeSounds = new Queue<LoopingSound>();
+    private Animator animator;
 
     // References
     private InputHandler inputManager;
@@ -36,10 +37,19 @@ public class PlayerController : MonoBehaviour
         soundManager = GameManager.GetService<SoundManager>();
         speed = PlayerSettings.Instance.Speed;
         rotationSpeed = PlayerSettings.Instance.RotationSpeed;
+        animator = GetComponentInChildren<Animator>();
+
+        #if UNITY_EDITOR
+            if (animator == null) Debug.LogError("Player doesn't contain an animator");
+        #endif
 
         inputManager.OnPlayerMove += OnPlayerMove;
         inputManager.OnChimeDown += OnChimeDown;
         inputManager.OnChimeUp += OnChimeUp;
+    }
+
+    void Update(){
+        animator.SetFloat("Speed", rb.velocity.magnitude);
     }
 
     void OnTriggerEnter(Collider other){
