@@ -143,3 +143,8 @@ MonoBehaviour:
     - chimeInput: 3
       isLong: 1
     affectedCommunities: 01000000
+  - Name: Confused
+    chimeSequence: 15
+    chimeTask: 3
+    chimes: []
+    affectedCommunities: 

@@ -39,7 +39,7 @@ public class SolveEffectController : MonoBehaviour
             cutOffHeight += Time.deltaTime;
             foreach (MeshRenderer mesh in meshRenderers)
             {
-                mesh.material.SetFloat("_SphereSize", cutOffHeight);
+                mesh.material.SetFloat("_CutOffHeight", cutOffHeight);
             }
             yield return null;
         }
