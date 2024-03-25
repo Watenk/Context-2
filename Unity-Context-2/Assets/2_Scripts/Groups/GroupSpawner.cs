@@ -28,4 +28,10 @@ public class GroupSpawner : MonoBehaviour
         GameObject.Destroy(this.gameObject);
         return group;
     }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = IsActive ? Color.green : Color.red;
+        Gizmos.DrawSphere(transform.position, 2);
+    }
 }

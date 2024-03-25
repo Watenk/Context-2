@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5550932840489853858}
   - component: {fileID: 1606042325046920530}
   - component: {fileID: 5487906030840131809}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4842,7 +4842,7 @@ GameObject:
   - component: {fileID: 6195578225182117160}
   - component: {fileID: 1799556502171010192}
   - component: {fileID: 4341277283836511058}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: mush_round
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4938,7 +4938,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1688278278900637539}
   - component: {fileID: 405466123064091853}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mush Cross
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5052,15 +5052,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: BubbleEffectInstance
       objectReference: {fileID: 0}
+    - target: {fileID: 7849654839667712805, guid: eeae0068341e408468cdee529486f895,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7851352020869339445, guid: eeae0068341e408468cdee529486f895,
         type: 3}
       propertyPath: radius
-      value: 1.5
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 7851352020869339445, guid: eeae0068341e408468cdee529486f895,
         type: 3}
       propertyPath: growSpeed
-      value: 0.05
+      value: 0.02
       objectReference: {fileID: 0}
     - target: {fileID: 8202175629205144050, guid: eeae0068341e408468cdee529486f895,
         type: 3}
