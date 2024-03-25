@@ -36,7 +36,7 @@ public class SoundManager : IFixedUpdateable
         soundsGC.Clear();
     }
 
-    public LoopingSound PlayLoopingSound(PlayerSoundData loopingSoundData, Vector3 pos){
+    public LoopingSound PlayPlayerSound(PlayerSoundData loopingSoundData, Vector3 pos){
         GameObject soundGameObject = GameObject.Instantiate(soundPrefab, pos, Quaternion.identity);
         soundGameObject.transform.SetParent(GameManager.Instance.transform);
 
@@ -45,11 +45,14 @@ public class SoundManager : IFixedUpdateable
         return newLoopingSound;
     }
 
-    public Sound PlaySound(NPCSoundData soundData, Vector3 pos){
+    public Sound PlayNPCSound(NPCSoundData soundData, bool isLong, Vector3 pos){
         GameObject soundGameObject = GameObject.Instantiate(soundPrefab, pos, Quaternion.identity);
         soundGameObject.transform.SetParent(GameManager.Instance.transform);
 
-        Sound newSound = new Sound(this, soundGameObject, soundData.ShortChimeWwiseEvent);
+        Sound newSound;
+        if (isLong) newSound = new Sound(this, soundGameObject, soundData.ShortChimeWwiseEvent);
+        else newSound = new Sound(this, soundGameObject, soundData.LongChimeWwiseEvent);
+
         sounds.Add(newSound);
         return newSound;
     }
@@ -60,7 +63,7 @@ public class SoundManager : IFixedUpdateable
     }
 
     // You dont have to call StopSound Manually
-    public void StopSound(Sound sound){
+    public void StopNPCSound(Sound sound){
         GameObject.Destroy(sound.SoundGameObject);
         soundsGC.Add(sound);
     }
@@ -69,7 +72,11 @@ public class SoundManager : IFixedUpdateable
         return playerChimes.Find(chime => chime.ChimeInput == chimeInput);
     }
 
-    public NPCSoundData GetNPCSound(ChimeTasks chimeTask){
-        return npcChimes.Find(chime => chime.ChimeTask == chimeTask);
+    public NPCSoundData GetNPCSound(CommunityTypes communityType, ChimeTasks chimeTask){
+        return npcChimes.Find(current => current.CommunityType == communityType && current.ChimeTask == chimeTask);
+    }
+
+    public NPCSoundData GetNPCSound(CommunityTypes communityType){
+        return npcChimes.Find(chime => chime.CommunityType == communityType);
     }
 }

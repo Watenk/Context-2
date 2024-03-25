@@ -1,9 +1,11 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Group : IFixedUpdateable
 {
+    public Action OnFollow;
     public Community Community { get; private set; }
     public CommunityTypes CommunityType { get; private set; }
     public int Size { get; private set; }
@@ -57,6 +59,10 @@ public class Group : IFixedUpdateable
 
     //------------------------------------------------
 
+    private void Follow(){
+        OnFollow();
+    }
+
     private void InstanceAgents(bool isActive){
         
         AgentPrefab agentPrefab = GetAgentPrefab();
@@ -64,13 +70,19 @@ public class Group : IFixedUpdateable
         for (int i = 0; i < Size; i++){
 
             // Instance GameObject
-            GameObject randomPrefab = agentPrefab.prefabs[Random.Range(0, agentPrefab.prefabs.Count)];
-            Vector3 randomPosInRange = new Vector3(Home.x + Random.Range(-SpawnRadius, SpawnRadius), 0, Home.z + Random.Range(-SpawnRadius, SpawnRadius));
+            GameObject randomPrefab = agentPrefab.prefabs[UnityEngine.Random.Range(0, agentPrefab.prefabs.Count)];
+            Vector3 randomPosInRange = new Vector3(Home.x + UnityEngine.Random.Range(-SpawnRadius, SpawnRadius), 0, Home.z + UnityEngine.Random.Range(-SpawnRadius, SpawnRadius));
             GameObject agentInstance = GameObject.Instantiate(randomPrefab, randomPosInRange, Quaternion.identity);
             agentInstance.transform.SetParent(GameManager.Instance.transform);
+            Animator animator = agentInstance.GetComponentInChildren<Animator>();
 
-            Agent newAgent = new Agent(agentInstance, this);
+            #if UNITY_EDITOR
+                if (animator == null) { Debug.LogError(randomPrefab.name + " Doesn't contain a Animator"); }
+            #endif
+
+            Agent newAgent = new Agent(agentInstance, this, animator);
             if (isActive) { newAgent.fsm.SwitchState(typeof(AgentWanderingState)); }
+            newAgent.OnFollow += Follow;
             agents.Add(newAgent);
         }
     }
@@ -85,7 +97,7 @@ public class Group : IFixedUpdateable
         }
 
         #if UNITY_EDITOR
-            if (agentPrefab == null) { Debug.LogError("No AgentPrefab of type " + Community.ToString() + " found. Add this type in the AgentSettings"); }
+            if (agentPrefab == null) { Debug.LogError("No AgentPrefab of type " + Community.CommunityType.ToString() + " found. Add this type in the AgentSettings"); }
             if (agentPrefab.prefabs == null) { Debug.LogError("No prefabs of type " + Community.ToString() + " found. Add prefabs of this type in the AgentSettings"); }
         #endif
 
