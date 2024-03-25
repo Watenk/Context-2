@@ -74,8 +74,13 @@ public class Group : IFixedUpdateable
             Vector3 randomPosInRange = new Vector3(Home.x + UnityEngine.Random.Range(-SpawnRadius, SpawnRadius), 0, Home.z + UnityEngine.Random.Range(-SpawnRadius, SpawnRadius));
             GameObject agentInstance = GameObject.Instantiate(randomPrefab, randomPosInRange, Quaternion.identity);
             agentInstance.transform.SetParent(GameManager.Instance.transform);
+            Animator animator = agentInstance.GetComponentInChildren<Animator>();
 
-            Agent newAgent = new Agent(agentInstance, this);
+            #if UNITY_EDITOR
+                if (animator == null) { Debug.LogError(randomPrefab.name + " Doesn't contain a Animator"); }
+            #endif
+
+            Agent newAgent = new Agent(agentInstance, this, animator);
             if (isActive) { newAgent.fsm.SwitchState(typeof(AgentWanderingState)); }
             newAgent.OnFollow += Follow;
             agents.Add(newAgent);
