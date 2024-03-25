@@ -19,4 +19,5 @@ public enum ChimeSequences
     CrossFollow,
     CrossSolve,
     CrossLeave,
+    Confused
 }

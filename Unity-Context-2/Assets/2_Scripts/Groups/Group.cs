@@ -75,12 +75,16 @@ public class Group : IFixedUpdateable
             GameObject agentInstance = GameObject.Instantiate(randomPrefab, randomPosInRange, Quaternion.identity);
             agentInstance.transform.SetParent(GameManager.Instance.transform);
             Animator animator = agentInstance.GetComponentInChildren<Animator>();
+            ParticleSystem[] particleSystems = agentInstance.GetComponentsInChildren<ParticleSystem>();
+            BubbleController bubbleController = agentInstance.GetComponentInChildren<BubbleController>();
 
             #if UNITY_EDITOR
-                if (animator == null) { Debug.LogError(randomPrefab.name + " Doesn't contain a Animator"); }
-            #endif
+            if (animator == null) { Debug.LogError(randomPrefab.name + " Doesn't contain a Animator"); }
+            if (particleSystems.Length < 2) { Debug.LogError(randomPrefab.name + " Is missing a particle System"); }
+            if (bubbleController == null) { Debug.LogError(randomPrefab.name + " Doesn't contain a Bubble Controller "); }
+#endif
 
-            Agent newAgent = new Agent(agentInstance, this, animator);
+            Agent newAgent = new Agent(agentInstance, this, animator, particleSystems, bubbleController);
             if (isActive) { newAgent.fsm.SwitchState(typeof(AgentWanderingState)); }
             newAgent.OnFollow += Follow;
             agents.Add(newAgent);

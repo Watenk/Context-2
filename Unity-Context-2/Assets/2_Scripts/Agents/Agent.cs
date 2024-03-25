@@ -14,6 +14,9 @@ public class Agent : IFixedUpdateable
     public NavMeshAgent NavMeshAgent { get; private set; }
     public Fsm<Agent> fsm { get; private set; }
     public Animator Animator { get; private set; }
+    public ParticleSystem ConfusedParticleSystem { get; private set; }
+    public ParticleSystem TroubledParticleSystem { get; private set; }
+    public BubbleController BubbleController { get; private set; }
 
     // Pathfinding
     private List<Vector3> path = new List<Vector3>();
@@ -28,10 +31,13 @@ public class Agent : IFixedUpdateable
 
     //----------------------------------------
 
-    public Agent(GameObject gameObject, Group group, Animator animator){
+    public Agent(GameObject gameObject, Group group, Animator animator, ParticleSystem[] particleSystems, BubbleController bubbleController){
         GameObject = gameObject;
         Group = group;
         Animator = animator;
+        ConfusedParticleSystem = particleSystems[0];
+        TroubledParticleSystem = particleSystems[1];
+        BubbleController = bubbleController;
         NavMeshAgent = GameManager.GetComponent<NavMeshAgent>(GameObject);
         chimeSequencer = GameManager.GetService<ChimeSequencer>();
         soundManager = GameManager.GetService<SoundManager>();
@@ -93,7 +99,11 @@ public class Agent : IFixedUpdateable
     }
 
     private void OnChimeSequence(ChimeSequence chimeSequence){
-        
+        if(chimeSequence.chimeTask == ChimeTasks.Confused && fsm.currentState == fsm.GetState(typeof(AgentLookAtPlayerState)))
+        {
+            ConfusedParticleSystem.Play();
+        }
+
         if (!chimeSequence.affectedCommunities.Contains(Group.CommunityType)) { return; } // If community is affected
 
         ExecuteTask(chimeSequence);
@@ -109,6 +119,7 @@ public class Agent : IFixedUpdateable
                     // Sound
                     NPCSoundData soundData = soundManager.GetNPCSound(Group.CommunityType, ChimeTasks.follow);
                     soundManager.PlayNPCSound(soundData, false, GameObject.transform.position);
+                    BubbleController.StartBubble(Group.CommunityType,0.5f);
                 }
                 break;
             

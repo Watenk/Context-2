@@ -6,5 +6,6 @@ public enum ChimeTasks
 {
     follow,
     solveProblem,
-    leave
+    leave,
+    Confused
 }
