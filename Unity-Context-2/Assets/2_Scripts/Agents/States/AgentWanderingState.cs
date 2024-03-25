@@ -24,6 +24,11 @@ public class AgentWanderingState : BaseState<Agent>
         #endif
     }
 
+    public override void OnStart()
+    {
+        owner.Animator.SetBool("Inactive", false);
+    }
+
     public override void OnUpdate(){
         owner.Animator.SetFloat("Speed", owner.NavMeshAgent.velocity.magnitude);
         CheckState();

@@ -50,7 +50,7 @@ public class PlayerController : MonoBehaviour
 
     void Update(){
         animator.SetFloat("Speed", rb.velocity.magnitude);
-        animator.SetFloat("Mult", Mathf.InverseLerp(0, 7.6f, rb.velocity.magnitude));
+        animator.SetFloat("Mult", rb.velocity.magnitude/ 3.8f);
     }
 
     void OnTriggerEnter(Collider other){
