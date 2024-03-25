@@ -85,6 +85,6 @@ public class CommunityManager : IFixedUpdateable
     }
 
     private void Follow(){
-        OnFollow();
+        OnFollow?.Invoke();
     }
 }

@@ -8,4 +8,8 @@ public class AgentDepressedState : BaseState<Agent>
         owner.Animator.SetFloat("Speed", 0.0f);
         owner.Animator.SetBool("Inactive", true);
     }
+
+    public override void OnExit(){
+        owner.Animator.SetBool("Inactive", false);
+    }
 }
