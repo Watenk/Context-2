@@ -13,6 +13,7 @@ public class Agent : IFixedUpdateable
     public bool DestinationReached { get; private set; }
     public NavMeshAgent NavMeshAgent { get; private set; }
     public Fsm<Agent> fsm { get; private set; }
+    public Animator Animator { get; private set; }
 
     // Pathfinding
     private List<Vector3> path = new List<Vector3>();
@@ -27,9 +28,10 @@ public class Agent : IFixedUpdateable
 
     //----------------------------------------
 
-    public Agent(GameObject gameObject, Group group){
+    public Agent(GameObject gameObject, Group group, Animator animator){
         GameObject = gameObject;
         Group = group;
+        Animator = animator;
         NavMeshAgent = GameManager.GetComponent<NavMeshAgent>(GameObject);
         chimeSequencer = GameManager.GetService<ChimeSequencer>();
         soundManager = GameManager.GetService<SoundManager>();

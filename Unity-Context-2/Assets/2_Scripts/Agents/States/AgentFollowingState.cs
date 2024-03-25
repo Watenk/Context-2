@@ -34,6 +34,7 @@ public class AgentFollowingState : BaseState<Agent>
     }
 
     public override void OnStart(){
+        owner.Animator.SetBool("Inactive", false);
         normalAgentSpeed = owner.NavMeshAgent.speed;
         owner.NavMeshAgent.speed = followPlayerSpeed;
         spaceTimer = timerManager.AddLoopingTimer(0.5f);
@@ -42,6 +43,7 @@ public class AgentFollowingState : BaseState<Agent>
     }
 
     public override void OnUpdate(){
+        owner.Animator.SetFloat("Speed", owner.NavMeshAgent.speed);
         FollowPlayer();
     }
 

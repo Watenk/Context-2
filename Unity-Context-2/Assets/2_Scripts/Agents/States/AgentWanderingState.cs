@@ -25,7 +25,7 @@ public class AgentWanderingState : BaseState<Agent>
     }
 
     public override void OnUpdate(){
-        
+        owner.Animator.SetFloat("Speed", owner.NavMeshAgent.speed);
         CheckState();
         Wander();
     }
