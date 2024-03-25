@@ -1,12 +1,14 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using AK.Wwise;
 using UnityEditor.Rendering;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
     public GameObject Body;
+    public CommunityTypes CurrentCommunity; //{ get; private set; }
 
     private Rigidbody rb;
     private float speed;
@@ -38,6 +40,24 @@ public class PlayerController : MonoBehaviour
         inputManager.OnPlayerMove += OnPlayerMove;
         inputManager.OnChimeDown += OnChimeDown;
         inputManager.OnChimeUp += OnChimeUp;
+    }
+
+    void OnTriggerEnter(Collider other){
+        if (other.gameObject.layer == LayerMask.NameToLayer("TriangleCommunity")){
+            CurrentCommunity = CommunityTypes.triangle;
+        }
+
+        if (other.gameObject.layer == LayerMask.NameToLayer("SquareCommunity")){
+            CurrentCommunity = CommunityTypes.square;
+        }
+
+        if (other.gameObject.layer == LayerMask.NameToLayer("CircleCommunity")){
+            CurrentCommunity = CommunityTypes.circle;
+        }
+    }
+
+    void OnTriggerExit(){
+        CurrentCommunity = CommunityTypes.global;
     }
 
     //-----------------------------------------------
