@@ -6,7 +6,7 @@ using UnityEngine.AI;
 
 public class Agent : IFixedUpdateable
 {
-    public Action OnFollow;
+    public Action<CommunityTypes> OnFollow;
 
     public GameObject GameObject { get; private set; }
     public Group Group { get; private set; }
@@ -88,8 +88,8 @@ public class Agent : IFixedUpdateable
 
     //------------------------------------------
 
-    private void Follow(){
-        OnFollow();
+    private void Follow(CommunityTypes communityType){
+        OnFollow(communityType);
     }
 
     private void OnChimeSequence(ChimeSequence chimeSequence){

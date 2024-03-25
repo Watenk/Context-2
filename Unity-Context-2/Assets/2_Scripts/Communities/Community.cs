@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Community : IFixedUpdateable
 {
-    public Action OnFollow;
+    public Action<CommunityTypes> OnFollow;
     public CommunityTypes CommunityType { get; private set; }
     private List<Group> groups = new List<Group>();
     private List<Problem> problems = new List<Problem>();
@@ -55,7 +55,7 @@ public class Community : IFixedUpdateable
         }
     }
 
-    private void Follow(){
-        OnFollow();
+    private void Follow(CommunityTypes communityType){
+        OnFollow(communityType);
     }
 }

@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class CommunityManager : IFixedUpdateable
 {
-    public Action OnFollow;
+    public Action<CommunityTypes> OnFollow;
 
     private Dictionary<CommunityTypes, int> activeAgents = new Dictionary<CommunityTypes, int>();
     private Dictionary<CommunityTypes, Community> communities = new Dictionary<CommunityTypes, Community>();
@@ -70,6 +70,23 @@ public class CommunityManager : IFixedUpdateable
     public void RemoveProblem(CommunityTypes communityType, Problem problem){
         GetCommunity(communityType).RemoveProblem(problem);
 
+        AkSoundEngine.SetState(2447030866U, 788884573U);
+
+        switch (communityType){
+
+            case CommunityTypes.square:
+                AkSoundEngine.SetState(167474714U, 930712164U);
+                break;
+
+            case CommunityTypes.circle:
+                AkSoundEngine.SetState(1316677579U, 930712164U);
+                break;
+
+            case CommunityTypes.triangle:
+                AkSoundEngine.SetState(765250607U, 930712164U);
+                break;
+        }
+
         foreach (KeyValuePair<CommunityTypes, Community> kvp in communities){
             kvp.Value.ProblemSolved();
         }
@@ -84,7 +101,24 @@ public class CommunityManager : IFixedUpdateable
         activeAgents.Add(communityType, 0);
     }
 
-    private void Follow(){
-        OnFollow?.Invoke();
+    private void Follow(CommunityTypes communityType){
+        OnFollow?.Invoke(communityType);
+
+        AkSoundEngine.SetState(2447030866U, 1256202815U);
+
+        switch (communityType){
+
+            case CommunityTypes.square:
+                AkSoundEngine.SetState(167474714U, 1651971902U);
+                break;
+
+            case CommunityTypes.circle:
+                AkSoundEngine.SetState(1316677579U, 1651971902U);
+                break;
+
+            case CommunityTypes.triangle:
+                AkSoundEngine.SetState(765250607U, 1651971902U);
+                break;
+        }
     }
 }

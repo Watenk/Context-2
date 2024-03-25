@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Group : IFixedUpdateable
 {
-    public Action OnFollow;
+    public Action<CommunityTypes> OnFollow;
     public Community Community { get; private set; }
     public CommunityTypes CommunityType { get; private set; }
     public int Size { get; private set; }
@@ -59,8 +59,8 @@ public class Group : IFixedUpdateable
 
     //------------------------------------------------
 
-    private void Follow(){
-        OnFollow();
+    private void Follow(CommunityTypes communityType){
+        OnFollow(communityType);
     }
 
     private void InstanceAgents(bool isActive){

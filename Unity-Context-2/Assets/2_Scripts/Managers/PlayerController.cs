@@ -51,25 +51,28 @@ public class PlayerController : MonoBehaviour
     void Update(){
         animator.SetFloat("Speed", rb.velocity.magnitude);
         animator.SetFloat("Mult", Mathf.InverseLerp(0, 7.6f, rb.velocity.magnitude));
-        Debug.Log(Mathf.InverseLerp(0, 7.6f, rb.velocity.magnitude));
     }
 
     void OnTriggerEnter(Collider other){
         if (other.gameObject.layer == LayerMask.NameToLayer("TriangleCommunity")){
             CurrentCommunity = CommunityTypes.triangle;
+            AkSoundEngine.SetState(3607165242U, 438105790U);
         }
 
         if (other.gameObject.layer == LayerMask.NameToLayer("SquareCommunity")){
             CurrentCommunity = CommunityTypes.square;
+            AkSoundEngine.SetState(3607165242U, 438105790U);
         }
 
         if (other.gameObject.layer == LayerMask.NameToLayer("CircleCommunity")){
             CurrentCommunity = CommunityTypes.circle;
+            AkSoundEngine.SetState(3607165242U, 438105790U);
         }
     }
 
     void OnTriggerExit(){
         CurrentCommunity = CommunityTypes.global;
+        AkSoundEngine.SetState(3607165242U, 3553349781U);
     }
 
     //-----------------------------------------------
