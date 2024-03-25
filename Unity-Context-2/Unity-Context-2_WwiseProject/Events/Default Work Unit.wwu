@@ -50,12 +50,12 @@
 										</Action>
 									</ChildrenList>
 								</Event>
-								<Event Name="NPCChime1Long" ID="{ECDE23B3-35EE-44EA-92E1-61360ED7B128}">
+								<Event Name="NPCChime1Confused" ID="{8F6F361B-6379-44D5-87CF-76305CC6E3A6}">
 									<ChildrenList>
-										<Action Name="" ID="{7D8FE597-FC6D-4A93-A260-F48809698281}" ShortID="431937961">
+										<Action Name="" ID="{54E316F6-2E92-461B-B7CD-4CF337D5946D}" ShortID="568346772">
 											<ReferenceList>
 												<Reference Name="Target">
-													<ObjectRef Name="chimes-community1" ID="{0ABDDF13-931E-4BBA-8567-03605C5526F5}" WorkUnitID="{7170A4AA-0716-459D-A833-37BA2C074759}"/>
+													<ObjectRef Name="chimes-community1Confused" ID="{593B57D3-AFBD-4B91-9C69-42E27F51B059}" WorkUnitID="{7170A4AA-0716-459D-A833-37BA2C074759}"/>
 												</Reference>
 											</ReferenceList>
 										</Action>
@@ -66,7 +66,7 @@
 										<Action Name="" ID="{824D981C-D9E8-4BA2-A411-1053683432C1}" ShortID="374638372">
 											<ReferenceList>
 												<Reference Name="Target">
-													<ObjectRef Name="chimes-community1" ID="{0ABDDF13-931E-4BBA-8567-03605C5526F5}" WorkUnitID="{7170A4AA-0716-459D-A833-37BA2C074759}"/>
+													<ObjectRef Name="chimes-community1NPC" ID="{C184CA12-8512-46DC-85C9-39EA2D9CD3EC}" WorkUnitID="{7170A4AA-0716-459D-A833-37BA2C074759}"/>
 												</Reference>
 											</ReferenceList>
 										</Action>
@@ -89,18 +89,18 @@
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Target">
-													<ObjectRef Name="chimes-community1" ID="{0ABDDF13-931E-4BBA-8567-03605C5526F5}" WorkUnitID="{7170A4AA-0716-459D-A833-37BA2C074759}"/>
+													<ObjectRef Name="chimes-community1NPC" ID="{C184CA12-8512-46DC-85C9-39EA2D9CD3EC}" WorkUnitID="{7170A4AA-0716-459D-A833-37BA2C074759}"/>
 												</Reference>
 											</ReferenceList>
 										</Action>
 									</ChildrenList>
 								</Event>
-								<Event Name="NPCChime1Confused" ID="{8F6F361B-6379-44D5-87CF-76305CC6E3A6}">
+								<Event Name="NPCChime1Long" ID="{ECDE23B3-35EE-44EA-92E1-61360ED7B128}">
 									<ChildrenList>
-										<Action Name="" ID="{54E316F6-2E92-461B-B7CD-4CF337D5946D}" ShortID="568346772">
+										<Action Name="" ID="{7D8FE597-FC6D-4A93-A260-F48809698281}" ShortID="431937961">
 											<ReferenceList>
 												<Reference Name="Target">
-													<ObjectRef Name="chimes-community1Confused" ID="{593B57D3-AFBD-4B91-9C69-42E27F51B059}" WorkUnitID="{7170A4AA-0716-459D-A833-37BA2C074759}"/>
+													<ObjectRef Name="chimes-community1NPC" ID="{C184CA12-8512-46DC-85C9-39EA2D9CD3EC}" WorkUnitID="{7170A4AA-0716-459D-A833-37BA2C074759}"/>
 												</Reference>
 											</ReferenceList>
 										</Action>
@@ -119,7 +119,7 @@
 										<Action Name="" ID="{A704CB6B-D5F9-41F7-BBA4-0A0361A38BE8}" ShortID="221734898">
 											<ReferenceList>
 												<Reference Name="Target">
-													<ObjectRef Name="chimes-community2" ID="{B60C59FA-830D-45F7-AA90-F59BA50C4992}" WorkUnitID="{7170A4AA-0716-459D-A833-37BA2C074759}"/>
+													<ObjectRef Name="chimes-community2NPC" ID="{5223192A-635C-4E80-A47B-11838051C9BE}" WorkUnitID="{7170A4AA-0716-459D-A833-37BA2C074759}"/>
 												</Reference>
 											</ReferenceList>
 										</Action>
@@ -145,7 +145,7 @@
 										<Action Name="" ID="{3F22A1B3-064A-4732-AC89-4C391FA20E54}" ShortID="150559081">
 											<ReferenceList>
 												<Reference Name="Target">
-													<ObjectRef Name="chimes-community2" ID="{B60C59FA-830D-45F7-AA90-F59BA50C4992}" WorkUnitID="{7170A4AA-0716-459D-A833-37BA2C074759}"/>
+													<ObjectRef Name="chimes-community2NPC" ID="{5223192A-635C-4E80-A47B-11838051C9BE}" WorkUnitID="{7170A4AA-0716-459D-A833-37BA2C074759}"/>
 												</Reference>
 											</ReferenceList>
 										</Action>
@@ -169,7 +169,7 @@
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Target">
-													<ObjectRef Name="chimes-community2" ID="{B60C59FA-830D-45F7-AA90-F59BA50C4992}" WorkUnitID="{7170A4AA-0716-459D-A833-37BA2C074759}"/>
+													<ObjectRef Name="chimes-community2NPC" ID="{5223192A-635C-4E80-A47B-11838051C9BE}" WorkUnitID="{7170A4AA-0716-459D-A833-37BA2C074759}"/>
 												</Reference>
 											</ReferenceList>
 										</Action>
@@ -239,7 +239,7 @@
 										<Action Name="" ID="{63BFAF76-3BE7-4516-9ABD-4CD7953C3885}" ShortID="505171063">
 											<PropertyList>
 												<Property Name="ActionType" Type="int16" Value="2"/>
-												<Property Name="FadeTime" Type="Real64" Value="0.1"/>
+												<Property Name="FadeTime" Type="Real64" Value="0.2"/>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Target">
@@ -254,7 +254,7 @@
 										<Action Name="" ID="{76DFCEE7-F334-431A-8A56-F5DF6C86C982}" ShortID="611764339">
 											<ReferenceList>
 												<Reference Name="Target">
-													<ObjectRef Name="community3Start" ID="{09865357-1558-4078-B374-7DAB8558EA12}" WorkUnitID="{7170A4AA-0716-459D-A833-37BA2C074759}"/>
+													<ObjectRef Name="community3StartNPC" ID="{A3E43CB5-146A-4298-919A-86D7338F1461}" WorkUnitID="{7170A4AA-0716-459D-A833-37BA2C074759}"/>
 												</Reference>
 											</ReferenceList>
 										</Action>
@@ -265,7 +265,7 @@
 										<Action Name="" ID="{21D97EDA-8936-4898-A1E9-D7B0BE9C02D5}" ShortID="882045167">
 											<ReferenceList>
 												<Reference Name="Target">
-													<ObjectRef Name="community3Start" ID="{09865357-1558-4078-B374-7DAB8558EA12}" WorkUnitID="{7170A4AA-0716-459D-A833-37BA2C074759}"/>
+													<ObjectRef Name="community3StartNPC" ID="{A3E43CB5-146A-4298-919A-86D7338F1461}" WorkUnitID="{7170A4AA-0716-459D-A833-37BA2C074759}"/>
 												</Reference>
 											</ReferenceList>
 										</Action>
@@ -275,7 +275,7 @@
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Target">
-													<ObjectRef Name="community3End" ID="{528B735B-6DDE-473D-BD5F-19183E519AAF}" WorkUnitID="{7170A4AA-0716-459D-A833-37BA2C074759}"/>
+													<ObjectRef Name="community3EndNPC" ID="{271BB488-9D7A-4C13-A379-A1A2E0A05C76}" WorkUnitID="{7170A4AA-0716-459D-A833-37BA2C074759}"/>
 												</Reference>
 											</ReferenceList>
 										</Action>

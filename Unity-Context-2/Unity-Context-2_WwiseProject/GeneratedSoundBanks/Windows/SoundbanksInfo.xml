@@ -9,12 +9,13 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{322B1FDA-8D10-5E22-2869-03CF34DD5ED9}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{4C0A9EF8-569B-E607-1030-6F684B913D1D}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
 				<ShareSets>
 					<Plugin Id="48620415" Name="Have_U_Ever_Been_Outside" LibName="Wwise RoomVerb" LibId="7733251"/>
+					<Plugin Id="1520064353" Name="Hall_Medium_Bright" LibName="Wwise RoomVerb" LibId="7733251"/>
 					<Plugin Id="1588715066" Name="Echoes_Linear" LibName="Wwise Delay" LibId="6946819"/>
 				</ShareSets>
 				<AudioDevices>
@@ -24,13 +25,21 @@
 			</Plugins>
 			<Busses>
 				<Bus Id="85412153" Name="Ambience"/>
-				<Bus Id="240409309" Name="Circle" MaxAttenuation="30"/>
+				<Bus Id="240409309" Name="Circle" MaxAttenuation="10"/>
 				<Bus Id="1069431850" Name="Player"/>
-				<Bus Id="1818333208" Name="Square" MaxAttenuation="30"/>
-				<Bus Id="2326865361" Name="Triangle" MaxAttenuation="30"/>
+				<Bus Id="1818333208" Name="Square" MaxAttenuation="10"/>
+				<Bus Id="2160436325" Name="ChimesPlayer" MaxAttenuation="100"/>
+				<Bus Id="2326865361" Name="Triangle" MaxAttenuation="10"/>
 				<Bus Id="2447030866" Name="Fanfair"/>
-				<Bus Id="2590078866" Name="Chimes" MaxAttenuation="30"/>
+				<Bus Id="2590078866" Name="Chimes">
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="1520064353"/>
+						</ShareSets>
+					</PluginRefs>
+				</Bus>
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
+				<Bus Id="3859485035" Name="ChimesNPC" MaxAttenuation="10"/>
 				<Bus Id="3991942870" Name="Music"/>
 			</Busses>
 			<AuxBusses>
@@ -91,7 +100,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{25913456-0D90-8E17-30EA-12155D469BD6}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{C6FAC86D-AA1B-6516-8E96-498EFCABBD9B}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -271,6 +280,7 @@
 			<Plugins>
 				<ShareSets>
 					<Plugin Id="48620415" Name="Have_U_Ever_Been_Outside" LibName="Wwise RoomVerb" LibId="7733251"/>
+					<Plugin Id="1520064353" Name="Hall_Medium_Bright" LibName="Wwise RoomVerb" LibId="7733251"/>
 					<Plugin Id="1588715066" Name="Echoes_Linear" LibName="Wwise Delay" LibId="6946819"/>
 				</ShareSets>
 			</Plugins>
@@ -281,7 +291,7 @@
 						<MediaRef Id="1052460289"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3117609094" Name="Chime1Play" MaxAttenuation="30" DurationType="OneShot" DurationMin="1.0245572" DurationMax="1.413994">
+				<Event Id="3117609094" Name="Chime1Play" MaxAttenuation="10" DurationType="OneShot" DurationMin="1.0245572" DurationMax="1.413994">
 					<MediaRefs>
 						<MediaRef Id="200744382"/>
 						<MediaRef Id="234843785"/>
@@ -311,7 +321,7 @@
 						<AuxBusRef Id="841660990" Name="TestVerb"/>
 					</AuxBusRefs>
 				</Event>
-				<Event Id="408897957" Name="Chime2Play" MaxAttenuation="30" DurationType="OneShot" DurationMin="4" DurationMax="4">
+				<Event Id="408897957" Name="Chime2Play" MaxAttenuation="10" DurationType="OneShot" DurationMin="4" DurationMax="4">
 					<MediaRefs>
 						<MediaRef Id="78035267"/>
 						<MediaRef Id="211848107"/>
@@ -333,7 +343,7 @@
 						<AuxBusRef Id="841660990" Name="TestVerb"/>
 					</AuxBusRefs>
 				</Event>
-				<Event Id="120659352" Name="Chime3Play" MaxAttenuation="30" DurationType="OneShot" DurationMin="1.1666667" DurationMax="2.165">
+				<Event Id="120659352" Name="Chime3Play" MaxAttenuation="10" DurationType="OneShot" DurationMin="1.1666667" DurationMax="2.165">
 					<MediaRefs>
 						<MediaRef Id="274837946"/>
 						<MediaRef Id="535706050"/>
@@ -353,7 +363,7 @@
 						<AuxBusRef Id="841660990" Name="TestVerb"/>
 					</AuxBusRefs>
 				</Event>
-				<Event Id="1032095362" Name="ChimeUPlay" MaxAttenuation="30" DurationType="OneShot" DurationMin="1.3725834" DurationMax="2.1033542">
+				<Event Id="1032095362" Name="ChimeUPlay" MaxAttenuation="10" DurationType="OneShot" DurationMin="1.3725834" DurationMax="2.1033542">
 					<MediaRefs>
 						<MediaRef Id="85199183"/>
 						<MediaRef Id="146898835"/>
@@ -406,7 +416,7 @@
 					</MediaRefs>
 				</Event>
 				<Event Id="3374377342" Name="MusicFanfair_Stop" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="722374694" Name="NPCChime1Confused" MaxAttenuation="30" DurationType="OneShot" DurationMin="1.9324167" DurationMax="1.9324167">
+				<Event Id="722374694" Name="NPCChime1Confused" MaxAttenuation="10" DurationType="OneShot" DurationMin="1.9324167" DurationMax="1.9324167">
 					<MediaRefs>
 						<MediaRef Id="1040139626"/>
 					</MediaRefs>
@@ -414,7 +424,7 @@
 						<AuxBusRef Id="841660990" Name="TestVerb"/>
 					</AuxBusRefs>
 				</Event>
-				<Event Id="1795884461" Name="NPCChime1Long" MaxAttenuation="30" DurationType="OneShot" DurationMin="1.0245572" DurationMax="1.413994">
+				<Event Id="1795884461" Name="NPCChime1Long" MaxAttenuation="10" DurationType="OneShot" DurationMin="1.0245572" DurationMax="1.413994">
 					<MediaRefs>
 						<MediaRef Id="200744382"/>
 						<MediaRef Id="234843785"/>
@@ -429,7 +439,7 @@
 						<AuxBusRef Id="841660990" Name="TestVerb"/>
 					</AuxBusRefs>
 				</Event>
-				<Event Id="4090504235" Name="NPCChime1Short" MaxAttenuation="30" DurationType="OneShot" DurationMin="1.0245572" DurationMax="1.413994">
+				<Event Id="4090504235" Name="NPCChime1Short" MaxAttenuation="10" DurationType="OneShot" DurationMin="1.0245572" DurationMax="1.413994">
 					<MediaRefs>
 						<MediaRef Id="200744382"/>
 						<MediaRef Id="234843785"/>
@@ -444,7 +454,7 @@
 						<AuxBusRef Id="841660990" Name="TestVerb"/>
 					</AuxBusRefs>
 				</Event>
-				<Event Id="2993939861" Name="NPCChime2Confused" MaxAttenuation="30" DurationType="OneShot" DurationMin="4.8467293" DurationMax="4.8467293">
+				<Event Id="2993939861" Name="NPCChime2Confused" MaxAttenuation="10" DurationType="OneShot" DurationMin="4.8467293" DurationMax="4.8467293">
 					<MediaRefs>
 						<MediaRef Id="752477891"/>
 					</MediaRefs>
@@ -452,7 +462,7 @@
 						<AuxBusRef Id="841660990" Name="TestVerb"/>
 					</AuxBusRefs>
 				</Event>
-				<Event Id="1704435946" Name="NPCChime2Long" MaxAttenuation="30" DurationType="OneShot" DurationMin="4" DurationMax="4">
+				<Event Id="1704435946" Name="NPCChime2Long" MaxAttenuation="10" DurationType="OneShot" DurationMin="4" DurationMax="4">
 					<MediaRefs>
 						<MediaRef Id="78035267"/>
 						<MediaRef Id="211848107"/>
@@ -463,7 +473,7 @@
 						<AuxBusRef Id="841660990" Name="TestVerb"/>
 					</AuxBusRefs>
 				</Event>
-				<Event Id="2400837350" Name="NPCChime2Short" MaxAttenuation="30" DurationType="OneShot" DurationMin="4" DurationMax="4">
+				<Event Id="2400837350" Name="NPCChime2Short" MaxAttenuation="10" DurationType="OneShot" DurationMin="4" DurationMax="4">
 					<MediaRefs>
 						<MediaRef Id="78035267"/>
 						<MediaRef Id="211848107"/>
@@ -474,7 +484,7 @@
 						<AuxBusRef Id="841660990" Name="TestVerb"/>
 					</AuxBusRefs>
 				</Event>
-				<Event Id="1137344520" Name="NPCChime3Confused" MaxAttenuation="30" DurationType="OneShot" DurationMin="1.5295833" DurationMax="1.5295833">
+				<Event Id="1137344520" Name="NPCChime3Confused" MaxAttenuation="10" DurationType="OneShot" DurationMin="1.5295833" DurationMax="1.5295833">
 					<MediaRefs>
 						<MediaRef Id="780278558"/>
 					</MediaRefs>
@@ -482,7 +492,7 @@
 						<AuxBusRef Id="841660990" Name="TestVerb"/>
 					</AuxBusRefs>
 				</Event>
-				<Event Id="4264886911" Name="NPCChime3Long" MaxAttenuation="30" DurationType="OneShot" DurationMin="1.1666667" DurationMax="2.165">
+				<Event Id="4264886911" Name="NPCChime3Long" MaxAttenuation="10" DurationType="OneShot" DurationMin="1.1666667" DurationMax="2.165">
 					<MediaRefs>
 						<MediaRef Id="274837946"/>
 						<MediaRef Id="535706050"/>
@@ -493,7 +503,7 @@
 						<AuxBusRef Id="841660990" Name="TestVerb"/>
 					</AuxBusRefs>
 				</Event>
-				<Event Id="2846910609" Name="NPCChime3Short" MaxAttenuation="30" DurationType="OneShot" DurationMin="0.375" DurationMax="0.375">
+				<Event Id="2846910609" Name="NPCChime3Short" MaxAttenuation="10" DurationType="OneShot" DurationMin="0.375" DurationMax="0.375">
 					<MediaRefs>
 						<MediaRef Id="632147615"/>
 						<MediaRef Id="775312338"/>
@@ -502,7 +512,7 @@
 						<AuxBusRef Id="841660990" Name="TestVerb"/>
 					</AuxBusRefs>
 				</Event>
-				<Event Id="3686713601" Name="NPCChimeULong" MaxAttenuation="30" DurationType="OneShot" DurationMin="1.3725834" DurationMax="2.1033542">
+				<Event Id="3686713601" Name="NPCChimeULong" MaxAttenuation="10" DurationType="OneShot" DurationMin="1.3725834" DurationMax="2.1033542">
 					<MediaRefs>
 						<MediaRef Id="85199183"/>
 						<MediaRef Id="146898835"/>
@@ -520,7 +530,7 @@
 						<AuxBusRef Id="3268711830" Name="TestEcho"/>
 					</AuxBusRefs>
 				</Event>
-				<Event Id="3518065335" Name="NPCChimeUShort" MaxAttenuation="30" DurationType="OneShot" DurationMin="1.3725834" DurationMax="2.1033542">
+				<Event Id="3518065335" Name="NPCChimeUShort" MaxAttenuation="10" DurationType="OneShot" DurationMin="1.3725834" DurationMax="2.1033542">
 					<MediaRefs>
 						<MediaRef Id="85199183"/>
 						<MediaRef Id="146898835"/>
@@ -541,13 +551,21 @@
 			</Events>
 			<Busses>
 				<Bus Id="85412153" Name="Ambience"/>
-				<Bus Id="240409309" Name="Circle" MaxAttenuation="30"/>
+				<Bus Id="240409309" Name="Circle" MaxAttenuation="10"/>
 				<Bus Id="1069431850" Name="Player"/>
-				<Bus Id="1818333208" Name="Square" MaxAttenuation="30"/>
-				<Bus Id="2326865361" Name="Triangle" MaxAttenuation="30"/>
+				<Bus Id="1818333208" Name="Square" MaxAttenuation="10"/>
+				<Bus Id="2160436325" Name="ChimesPlayer" MaxAttenuation="100"/>
+				<Bus Id="2326865361" Name="Triangle" MaxAttenuation="10"/>
 				<Bus Id="2447030866" Name="Fanfair"/>
-				<Bus Id="2590078866" Name="Chimes" MaxAttenuation="30"/>
+				<Bus Id="2590078866" Name="Chimes">
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="1520064353"/>
+						</ShareSets>
+					</PluginRefs>
+				</Bus>
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
+				<Bus Id="3859485035" Name="ChimesNPC" MaxAttenuation="10"/>
 				<Bus Id="3991942870" Name="Music"/>
 			</Busses>
 			<AuxBusses>
@@ -595,5 +613,5 @@
 			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{8BD85630-46B3-B3AB-A684-BE5B62DA1970}</FileHash>
+	<FileHash>{D34F3F51-AC09-799B-3CC7-4E286116AD85}</FileHash>
 </SoundBanksInfo>

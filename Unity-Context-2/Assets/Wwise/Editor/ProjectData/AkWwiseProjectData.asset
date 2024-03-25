@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 8dc0b307ade8814aa929c27b28b93464
     GuidInternal: 
-    m_lastTime: -8584907630231732696
+    m_lastTime: -8584902392255305143
     List:
     - name: Ambience
       guid: 45bbfd6b2b78e94186b0109575ddfb5f
@@ -74,6 +74,46 @@ MonoBehaviour:
         ObjectType: 2
         guid: 083fc6d0a68aa44f8fbaed045e95e039
       Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Chimes
+    - name: ChimesNPC
+      guid: d993f085bb509a49b6fee17612afc377
+      id: 3859485035
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 8dc0b307ade8814aa929c27b28b93464
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: Chimes
+        ObjectType: 2
+        guid: 083fc6d0a68aa44f8fbaed045e95e039
+      - ElementName: ChimesNPC
+        ObjectType: 2
+        guid: d993f085bb509a49b6fee17612afc377
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Chimes\ChimesNPC
+    - name: ChimesPlayer
+      guid: dab8c04cdfdbbc48b5efffa80d869560
+      id: 2160436325
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 8dc0b307ade8814aa929c27b28b93464
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: Player
+        ObjectType: 2
+        guid: e76b9d45a7f0c04fa2f919390bc8cd30
+      - ElementName: ChimesPlayer
+        ObjectType: 2
+        guid: dab8c04cdfdbbc48b5efffa80d869560
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Player\ChimesPlayer
     - name: Circle
       guid: 27f2e4dbe32a2a42bbde18fcdc3d7b0b
       id: 240409309
@@ -308,7 +348,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 1829c11d708c3d4b85382b800fb51260
     GuidInternal: 
-    m_lastTime: -8584907657331285160
+    m_lastTime: -8584902415658688923
     List:
     - name: Ambience
       guid: 86f588cd638f484d8f4020eb95385ae6
@@ -367,7 +407,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: 5e001fa2a4320a4fb58b9ca2a6c61696
       Path: Events\Default Work Unit\Chimes\Community1\Chime1Play
-      maxAttenuation: 30
+      maxAttenuation: 10
       maxDuration: 1.413994
       minDuration: 1.0245572
     - name: Chime1Stop
@@ -413,7 +453,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: c29cba2ab5a1fa40b3d0dccf2ee172a7
       Path: Events\Default Work Unit\Chimes\Community2\Chime2Play
-      maxAttenuation: 30
+      maxAttenuation: 10
       maxDuration: 4
       minDuration: 4
     - name: Chime2Stop
@@ -459,7 +499,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: 7ee9d840f9e7f94e94f19fff01837773
       Path: Events\Default Work Unit\Chimes\Community3\Chime3Play
-      maxAttenuation: 30
+      maxAttenuation: 10
       maxDuration: 2.165
       minDuration: 1.1666667
     - name: Chime3Stop
@@ -522,7 +562,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: 0905f8e7d526a34d9fbba44f9c8c8969
       Path: Events\Default Work Unit\Chimes\Universal\ChimeUPlay
-      maxAttenuation: 30
+      maxAttenuation: 10
       maxDuration: 2.1033542
       minDuration: 1.3725834
     - name: ChimeUStop
@@ -685,7 +725,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: 1b366f8f7963d54487cf76305cc6e3a6
       Path: Events\Default Work Unit\Chimes\Community1\NPCChime1Confused
-      maxAttenuation: 30
+      maxAttenuation: 10
       maxDuration: 1.9324167
       minDuration: 1.9324167
     - name: NPCChime1Long
@@ -708,7 +748,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: b323deecee35ea4492e161360ed7b128
       Path: Events\Default Work Unit\Chimes\Community1\NPCChime1Long
-      maxAttenuation: 30
+      maxAttenuation: 10
       maxDuration: 1.413994
       minDuration: 1.0245572
     - name: NPCChime1Short
@@ -731,7 +771,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: 1051df10ed7d144a85244bf5f04b2205
       Path: Events\Default Work Unit\Chimes\Community1\NPCChime1Short
-      maxAttenuation: 30
+      maxAttenuation: 10
       maxDuration: 1.413994
       minDuration: 1.0245572
     - name: NPCChime2Confused
@@ -754,7 +794,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: a4c538227ad08944a07914fbecf2523b
       Path: Events\Default Work Unit\Chimes\Community2\NPCChime2Confused
-      maxAttenuation: 30
+      maxAttenuation: 10
       maxDuration: 4.8467293
       minDuration: 4.8467293
     - name: NPCChime2Long
@@ -777,7 +817,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: 8ac6a61984d7694d815cf48896769236
       Path: Events\Default Work Unit\Chimes\Community2\NPCChime2Long
-      maxAttenuation: 30
+      maxAttenuation: 10
       maxDuration: 4
       minDuration: 4
     - name: NPCChime2Short
@@ -800,7 +840,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: b09342059c215640be3d461a8ae48940
       Path: Events\Default Work Unit\Chimes\Community2\NPCChime2Short
-      maxAttenuation: 30
+      maxAttenuation: 10
       maxDuration: 4
       minDuration: 4
     - name: NPCChime3Confused
@@ -823,7 +863,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: 9ce7e56636ea4b438596eade0988959d
       Path: Events\Default Work Unit\Chimes\Community3\NPCChime3Confused
-      maxAttenuation: 30
+      maxAttenuation: 10
       maxDuration: 1.5295833
       minDuration: 1.5295833
     - name: NPCChime3Long
@@ -846,7 +886,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: 01e28e8a6c157b42ae7b3d90c111276d
       Path: Events\Default Work Unit\Chimes\Community3\NPCChime3Long
-      maxAttenuation: 30
+      maxAttenuation: 10
       maxDuration: 2.165
       minDuration: 1.1666667
     - name: NPCChime3Short
@@ -869,7 +909,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: 2d74e70aed2a7f498fcf1be1dba78a96
       Path: Events\Default Work Unit\Chimes\Community3\NPCChime3Short
-      maxAttenuation: 30
+      maxAttenuation: 10
       maxDuration: 0.375
       minDuration: 0.375
     - name: NPCChimeULong
@@ -892,7 +932,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: 36d8ac801b7d8548ad4c2293461d260f
       Path: Events\Default Work Unit\Chimes\Universal\NPCChimeULong
-      maxAttenuation: 30
+      maxAttenuation: 10
       maxDuration: 2.1033542
       minDuration: 1.3725834
     - name: NPCChimeUShort
@@ -915,7 +955,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: bd13d06c72c0c247876d0114894cab13
       Path: Events\Default Work Unit\Chimes\Universal\NPCChimeUShort
-      maxAttenuation: 30
+      maxAttenuation: 10
       maxDuration: 2.1033542
       minDuration: 1.3725834
     - name: Universal
@@ -1491,7 +1531,7 @@ MonoBehaviour:
     m_lastTime: -8584913668122320833
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 010000000500000006000000080000000a0000000b0000000c00000016000000190000001a0000001b0000001c00000020000000220000002500000026000000280000002c000000
+  ExpandedWaapiItemIds: 01000000050000000600000007000000080000000a0000000b0000000c0000000d00000016000000190000001a0000001b0000001c00000020000000220000002500000026000000280000002c000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

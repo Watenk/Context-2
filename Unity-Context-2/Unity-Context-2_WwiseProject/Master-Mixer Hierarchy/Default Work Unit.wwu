@@ -21,9 +21,50 @@
 								<Property Name="Color" Type="int16" Value="20"/>
 								<Property Name="OverrideColor" Type="bool" Value="True"/>
 							</PropertyList>
+							<ChildrenList>
+								<Bus Name="ChimesPlayer" ID="{4CC0B8DA-DBDF-48BC-B5EF-FFA80D869560}">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="BusVolume" Type="Real64">
+											<ValueList>
+												<Value>7</Value>
+											</ValueList>
+										</Property>
+										<Property Name="ListenerRelativeRouting" Type="bool" Value="True"/>
+										<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="0"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="PlayerChimes" ID="{13C8F7A6-1D1A-447A-BDD1-B87A870E6915}" WorkUnitID="{367E7C67-F63E-4EF5-89C2-DD807CEBB0F9}"/>
+										</Reference>
+									</ReferenceList>
+									<PositioningInfo>
+										<Panner Name="" ID="{4D6558E3-3791-4F0D-B24E-DF78ED8706D8}"/>
+										<Position Name="" ID="{596335E7-D2F4-4435-AF81-77E2C72BCC79}">
+											<ChildrenList>
+												<Path2D Name="ChimesPlayer_Path" ID="{7A31334B-3DCC-4DC8-94CA-8E8E63C15A5C}">
+													<PointList>
+														<Point>
+															<XPos>-0.88692</XPos>
+															<YPos>0.64935</YPos>
+															<Flags>12</Flags>
+															<Time>0</Time>
+														</Point>
+													</PointList>
+												</Path2D>
+											</ChildrenList>
+										</Position>
+									</PositioningInfo>
+								</Bus>
+							</ChildrenList>
 						</Bus>
 						<Bus Name="Ambience" ID="{6BFDBB45-782B-41E9-86B0-109575DDFB5F}">
 							<PropertyList>
+								<Property Name="BusVolume" Type="Real64">
+									<ValueList>
+										<Value>-10</Value>
+									</ValueList>
+								</Property>
 								<Property Name="Color" Type="int16" Value="4"/>
 								<Property Name="OverrideColor" Type="bool" Value="True"/>
 							</PropertyList>
@@ -32,7 +73,7 @@
 							<PropertyList>
 								<Property Name="3DSpatialization" Type="int16" Value="2"/>
 								<Property Name="Color" Type="int16" Value="15"/>
-								<Property Name="ListenerRelativeRouting" Type="bool" Value="True"/>
+								<Property Name="EnableAttenuation" Type="bool" Value="False"/>
 								<Property Name="OverrideColor" Type="bool" Value="True"/>
 							</PropertyList>
 							<ReferenceList>
@@ -75,11 +116,48 @@
 										</ObjectList>
 									</ObjectLists>
 								</AuxBus>
+								<Bus Name="ChimesNPC" ID="{85F093D9-50BB-499A-B6FE-E17612AFC377}">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="2"/>
+										<Property Name="BusVolume" Type="Real64">
+											<ValueList>
+												<Value>-10</Value>
+											</ValueList>
+										</Property>
+										<Property Name="ListenerRelativeRouting" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="NPCChimes" ID="{3FD4D0B4-7719-40F9-A7D7-66A1196736CA}" WorkUnitID="{367E7C67-F63E-4EF5-89C2-DD807CEBB0F9}"/>
+										</Reference>
+									</ReferenceList>
+									<PositioningInfo>
+										<Position Name="" ID="{AFB64038-8BDA-44B5-9A64-77C263FB9C3B}"/>
+									</PositioningInfo>
+								</Bus>
 							</ChildrenList>
 							<PositioningInfo>
 								<Panner Name="" ID="{16EA67E9-0DEC-47A1-AA4A-377E399A062C}"/>
 								<Position Name="" ID="{A019EF8D-80F9-4224-8BF2-5F49390D04E6}"/>
 							</PositioningInfo>
+							<ObjectLists>
+								<ObjectList Name="Effects">
+									<Reference>
+										<Local>
+											<EffectSlot Name="" ID="{658C45E5-D45B-4B19-A2D9-D21D0A993388}" ShortID="104719336">
+												<PropertyList>
+													<Property Name="Bypass" Type="bool" Value="True"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="Effect" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+														<ObjectRef Name="Hall_Medium_Bright" ID="{3C3845B2-C76E-4634-9108-83FA43A5A7BC}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+													</Reference>
+												</ReferenceList>
+											</EffectSlot>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
 						</Bus>
 						<Bus Name="Music" ID="{2DB63E65-CE8A-49D8-9F81-C383F6B6DF3D}">
 							<ChildrenList>
