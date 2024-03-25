@@ -1,9 +1,12 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class CommunityManager : IFixedUpdateable
 {
+    public Action OnFollow;
+
     private Dictionary<CommunityTypes, int> activeAgents = new Dictionary<CommunityTypes, int>();
     private Dictionary<CommunityTypes, Community> communities = new Dictionary<CommunityTypes, Community>();
 
@@ -75,7 +78,13 @@ public class CommunityManager : IFixedUpdateable
     //----------------------------------------------
 
     private void Add(CommunityTypes communityType){
-        communities.Add(communityType, new Community(communityType));
+        Community newCommunity = new Community(communityType);
+        newCommunity.OnFollow += Follow;
+        communities.Add(communityType, newCommunity);
         activeAgents.Add(communityType, 0);
+    }
+
+    private void Follow(){
+        OnFollow();
     }
 }

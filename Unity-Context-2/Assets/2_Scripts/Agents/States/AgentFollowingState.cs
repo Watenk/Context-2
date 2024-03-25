@@ -1,9 +1,12 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class AgentFollowingState : BaseState<Agent>
 {
+    public Action OnFollow;
+
     private Timer spaceTimer;
     private float followPlayerAtDistance;
     private float normalAgentSpeed;
@@ -35,6 +38,7 @@ public class AgentFollowingState : BaseState<Agent>
         owner.NavMeshAgent.speed = followPlayerSpeed;
         spaceTimer = timerManager.AddLoopingTimer(0.5f);
         communityManager.AddActiveAgent(owner.Group.CommunityType);
+        OnFollow();
     }
 
     public override void OnUpdate(){

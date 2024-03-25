@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,6 +6,8 @@ using UnityEngine.AI;
 
 public class Agent : IFixedUpdateable
 {
+    public Action OnFollow;
+
     public GameObject GameObject { get; private set; }
     public Group Group { get; private set; }
     public bool DestinationReached { get; private set; }
@@ -32,7 +35,7 @@ public class Agent : IFixedUpdateable
         soundManager = GameManager.GetService<SoundManager>();
         stepDistance = AgentSettings.Instance.StepDistance;
         wanderFromHomeDistance = AgentSettings.Instance.WanderFromHomeDistance;
-        NavMeshAgent.speed = Random.Range(AgentSettings.Instance.MinSpeed, AgentSettings.Instance.MaxSpeed);
+        NavMeshAgent.speed = UnityEngine.Random.Range(AgentSettings.Instance.MinSpeed, AgentSettings.Instance.MaxSpeed);
         DestinationReached = true;
 
         chimeSequencer.OnChimeSequence += OnChimeSequence;
@@ -45,6 +48,8 @@ public class Agent : IFixedUpdateable
            new AgentDepressedState()
         );
         fsm.SwitchState(typeof(AgentDepressedState));
+
+        ((AgentFollowingState)fsm.GetState(typeof(AgentFollowingState))).OnFollow += Follow;
 
         #if UNITY_EDITOR
             if (NavMeshAgent == null) { Debug.LogError(gameObject.name + " doesn't contain a navmeshAgent"); }
@@ -80,6 +85,10 @@ public class Agent : IFixedUpdateable
     }
 
     //------------------------------------------
+
+    private void Follow(){
+        OnFollow();
+    }
 
     private void OnChimeSequence(ChimeSequence chimeSequence){
         
