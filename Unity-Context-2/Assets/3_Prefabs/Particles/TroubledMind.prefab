@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5631516050555213740}
   - component: {fileID: 938644580070737201}
   - component: {fileID: 5365510808418553138}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TroubledMind
   m_TagString: Untagged
   m_Icon: {fileID: 0}
