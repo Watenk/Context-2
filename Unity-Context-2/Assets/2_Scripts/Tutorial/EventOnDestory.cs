@@ -10,6 +10,9 @@ public class EventOnDestory : MonoBehaviour
 
     private void OnDestroy()
     {
-        triggerEvent?.Invoke();
+        if (gameObject.scene.isLoaded) 
+        {
+            triggerEvent?.Invoke();
+        }
     }
 }
