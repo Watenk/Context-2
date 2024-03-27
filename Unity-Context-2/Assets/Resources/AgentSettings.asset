@@ -28,6 +28,7 @@ MonoBehaviour:
   LookAtPlayerDistance: 8
   FollowPlayerAtDistance: 8
   FollowPlayerSpeed: 8
+  WalkToLibChance: 3
   Prefabs:
   - CommunityType: 1
     prefabs:
@@ -41,4 +42,3 @@ MonoBehaviour:
   - CommunityType: 3
     prefabs:
     - {fileID: 7888470974323744715, guid: 00e98d8b055a4434185f4a029a74ea5a, type: 3}
-  StepDistance: 2

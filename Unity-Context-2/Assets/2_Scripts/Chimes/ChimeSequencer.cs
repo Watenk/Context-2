@@ -26,6 +26,8 @@ public class ChimeSequencer : IFixedUpdateable
         chimeSequences = ChimeSettings.Instance.ChimeSequences;
 
         inputManager.OnChime += OnChime;
+
+        EventManager.AddListener(Events.OnInput,() => chimeResetTimer.Reset());
     }
 
     public void OnFixedUpdate(){

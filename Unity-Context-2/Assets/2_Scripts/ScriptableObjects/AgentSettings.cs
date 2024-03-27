@@ -30,11 +30,8 @@ public class AgentSettings : ScriptableObject
     public float FollowPlayerAtDistance;
     [Tooltip("The Speed an agent follows the player at")]
     public float FollowPlayerSpeed;
+    public float WalkToLibChance;
 
     [Header("Prefabs")]
     public List<AgentPrefab> Prefabs = new List<AgentPrefab>();
-
-    [Header("Advanced Settings")]
-    [Tooltip("Max Distance between each 'step' in the agents path")]
-    public float StepDistance; 
 }

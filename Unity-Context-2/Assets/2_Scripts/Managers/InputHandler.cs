@@ -13,6 +13,7 @@ public class InputHandler : IUpdateable
 
     private Dictionary<string, Timer> chimeTimers = new Dictionary<string, Timer>();
     private Dictionary<string, bool> chimeBools = new Dictionary<string, bool>();
+    private bool mapButtonPressed;
 
     // References
     private TimerManager timerManager;
@@ -39,12 +40,25 @@ public class InputHandler : IUpdateable
         CheckChime("square");
         CheckChime("triangle");
         CheckChime("circle");
+
+        if (Input.GetAxis("Map") > 0){
+            if (!mapButtonPressed){
+                EventManager.Invoke(Events.OnMap);
+                mapButtonPressed = true;
+            }
+        }
+        else{
+            mapButtonPressed = false;
+        }
     }
 
     //---------------------------------------------------------
 
     private void CheckChime(string button){
         chimeBools.TryGetValue(button, out bool state);
+        if (Input.GetAxis(button) > 0){
+            EventManager.Invoke(Events.OnInput);
+        }
         if (Input.GetAxis(button) > 0 && !state && OnChime != null){
             IfChimeDown(button);
         }
