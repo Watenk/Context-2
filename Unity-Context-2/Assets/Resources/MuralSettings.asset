@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: MuralSettings
   m_EditorClassIdentifier: 
   DetectRange: 8
-  ShortChimePlayDelay: 0.3
+  ShortChimePlayDelay: 0.4
   LongChimePlayDelay: 1.5
   RepeatDelay: 3
   MushroomDistance: 1

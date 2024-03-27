@@ -8,14 +8,17 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance { get; private set; }
     public PlayerController Player;
 
-    private static Dictionary<Type, System.Object> services = new Dictionary<Type, System.Object>();
-    private static List<IUpdateable> updateables = new List<IUpdateable>();
-    private static List<IFixedUpdateable> fixedUpdateables = new List<IFixedUpdateable>();
+    private static Dictionary<Type, System.Object> services;
+    private static List<IUpdateable> updateables;
+    private static List<IFixedUpdateable> fixedUpdateables;
 
     //------------------------------------------------------------
 
     public void Awake(){
         Instance = this;
+        services = new Dictionary<Type, System.Object>();
+        updateables = new List<IUpdateable>();
+        fixedUpdateables = new List<IFixedUpdateable>();
 
         AddService(new TimerManager());
         AddService(new InputHandler());

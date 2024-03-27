@@ -20,10 +20,12 @@ public class SolveEffectController : MonoBehaviour
         foreach (MeshRenderer mesh in meshRenderers)
         {
             mesh.material.SetFloat("_CutOffHeight", cutOffHeight);
+            mesh.gameObject.SetActive(false);
         }
         foreach (SkinnedMeshRenderer mesh in skinnedMeshRenderers)
         {
             mesh.material.SetFloat("_CutOffHeight", cutOffHeight);
+            mesh.gameObject.SetActive(false);
         }
     }
 
@@ -40,7 +42,15 @@ public class SolveEffectController : MonoBehaviour
 
     private IEnumerator FadeIn()
     {
-        while(cutOffHeight < 60)
+        foreach (MeshRenderer mesh in meshRenderers)
+        {
+            mesh.gameObject.SetActive(true);
+        }
+        foreach (SkinnedMeshRenderer mesh in skinnedMeshRenderers)
+        {
+            mesh.gameObject.SetActive(true);
+        }
+        while (cutOffHeight < 60)
         {
             cutOffHeight += Time.deltaTime;
             foreach (MeshRenderer mesh in meshRenderers)
