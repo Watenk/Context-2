@@ -111,6 +111,7 @@ public class Problem : IFixedUpdateable
                 GameObject.Destroy(problemSolver.Mushroom);
             }
         }
+        EventManager.Invoke(Events.OnProblemSolved, communityType);
         GameObject.Destroy(gameObject);
     }
 

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AgentWanderingState : BaseState<Agent>
 {
-    private float wanderFromHomeDistance = 0;
+    private float wanderFromHomeDistance;
     private float lookAtPlayerDistance;
 
     // References
@@ -13,12 +13,11 @@ public class AgentWanderingState : BaseState<Agent>
     //---------------------------------------------
 
     public override void OnAwake(){
-        wanderFromHomeDistance = AgentSettings.Instance.WanderFromHomeDistance;
         lookAtPlayerDistance = AgentSettings.Instance.LookAtPlayerDistance;
         player = GameManager.Instance.Player;
+        wanderFromHomeDistance = owner.Group.WanderFromHomeDistance;
 
         #if UNITY_EDITOR
-            if (wanderFromHomeDistance == 0) { Debug.LogError("wanderFromHomeDistance is 0 in AgentSettings"); }
             if (lookAtPlayerDistance == 0) { Debug.LogError("LookAtPlayerDistance is 0 in AgentSettings"); }
             if (player == null) { Debug.LogError("Couldn't get player from GameManager"); }
         #endif

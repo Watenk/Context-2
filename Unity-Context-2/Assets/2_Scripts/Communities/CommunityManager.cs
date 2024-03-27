@@ -9,15 +9,32 @@ public class CommunityManager : IFixedUpdateable
 
     private Dictionary<CommunityTypes, int> activeAgents = new Dictionary<CommunityTypes, int>();
     private Dictionary<CommunityTypes, Community> communities = new Dictionary<CommunityTypes, Community>();
+    private Dictionary<CommunityTypes, AgentSpeedData> communitySpeedsData = new Dictionary<CommunityTypes, AgentSpeedData>();
+    private Dictionary<CommunityTypes, float> communitySpeeds = new Dictionary<CommunityTypes, float>();
+    private Dictionary<CommunityTypes, int> communityProblemsSolved = new Dictionary<CommunityTypes, int>();
 
     //-------------------------------------------
 
     public CommunityManager(){
 
+        foreach (AgentSpeedData current in AgentSettings.Instance.agentsSpeeds){
+            communitySpeeds.Add(current.communityType, current.initialSpeed);
+        }
+
+        foreach (AgentSpeedData current in AgentSettings.Instance.agentsSpeeds){
+            communitySpeedsData.Add(current.communityType, current);
+        }
+
+        foreach (AgentSpeedData current in AgentSettings.Instance.agentsSpeeds){
+            communityProblemsSolved.Add(current.communityType, 0);
+        }
+
         Add(CommunityTypes.circle);
         Add(CommunityTypes.triangle);
         Add(CommunityTypes.square);
         Add(CommunityTypes.global);
+
+        EventManager.AddListener<CommunityTypes>(Events.OnProblemSolved, (communityType) => RecalcSpeed(communityType));
     }
 
     public void OnFixedUpdate(){
@@ -59,8 +76,8 @@ public class CommunityManager : IFixedUpdateable
         activeAgents[communityType] -= 1;
     }
 
-    public Group AddGroup(CommunityTypes communityType, int size, Vector3 pos, float spawnRadius, bool isActive){
-        return GetCommunity(communityType).AddGroup(size, pos, spawnRadius, isActive);
+    public Group AddGroup(CommunityTypes communityType, int size, float wanderFromHomeDistance, Vector3 pos, float spawnRadius, bool isActive){
+        return GetCommunity(communityType).AddGroup(size, pos, wanderFromHomeDistance, spawnRadius, isActive);
     }
 
     public void AddProblem(CommunityTypes communityType, Problem problem){
@@ -92,7 +109,28 @@ public class CommunityManager : IFixedUpdateable
         }
     }
 
+    public float GetSpeed(CommunityTypes communityType){
+        communitySpeeds.TryGetValue(communityType, out float speed);
+        return speed;
+    }
+
     //----------------------------------------------
+
+    private void RecalcSpeed(CommunityTypes communityType){
+        communityProblemsSolved[communityType] += 1;
+        AgentSpeedData agentSpeedData = communitySpeedsData[communityType];
+        if (communityProblemsSolved[communityType] >= 3){
+            communitySpeeds[communityType] = agentSpeedData.problemsSolvedSpeed;
+        }
+        else{
+            float speedDifference = (agentSpeedData.problemsSolvedSpeed - agentSpeedData.initialSpeed) / 3;
+            communitySpeeds[communityType] = agentSpeedData.initialSpeed + (speedDifference * communityProblemsSolved[communityType]);
+        }
+
+        Debug.Log("Recalc CommunitySpeed");
+
+        EventManager.Invoke(Events.OnCommunitySpeedChange, communityType);
+    }
 
     private void Add(CommunityTypes communityType){
         Community newCommunity = new Community(communityType);
