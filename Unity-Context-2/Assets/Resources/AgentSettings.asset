@@ -27,7 +27,7 @@ MonoBehaviour:
     problemsSolvedSpeed: 0.3
   LookAtPlayerDistance: 8
   FollowPlayerAtDistance: 2
-  FollowPlayerSpeed: 6
+  FollowPlayerSpeed: 8
   Prefabs:
   - CommunityType: 1
     prefabs:
