@@ -50,7 +50,7 @@ public class SoundManager : IFixedUpdateable
         soundGameObject.transform.SetParent(GameManager.Instance.transform);
 
         Sound newSound;
-        if (isLong) newSound = new Sound(this, soundGameObject, soundData.ShortChimeWwiseEvent);
+        if (!isLong) newSound = new Sound(this, soundGameObject, soundData.ShortChimeWwiseEvent);
         else newSound = new Sound(this, soundGameObject, soundData.LongChimeWwiseEvent);
 
         sounds.Add(newSound);
