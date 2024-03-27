@@ -46,7 +46,7 @@ public class SoundManager : IFixedUpdateable
     }
 
     public Sound PlayNPCSound(NPCSoundData soundData, bool isLong, Vector3 pos){
-        GameObject soundGameObject = GameObject.Instantiate(soundPrefab, pos, Quaternion.identity);
+        GameObject soundGameObject = GameObject.Instantiate(soundPrefab, Camera.main.transform.position, Quaternion.identity);
         soundGameObject.transform.SetParent(GameManager.Instance.transform);
 
         Sound newSound;

@@ -16,12 +16,14 @@ public class AgentFollowingState : BaseState<Agent>
     private TimerManager timerManager;
     private PlayerController player;
     private CommunityManager communityManager;
+    private SoundManager soundManager;
 
     //-----------------------------------------
 
     public override void OnAwake(){
         timerManager = GameManager.GetService<TimerManager>();
         communityManager = GameManager.GetService<CommunityManager>();
+        soundManager = GameManager.GetService<SoundManager>();
         player = GameManager.Instance.Player;
         followPlayerAtDistance = AgentSettings.Instance.FollowPlayerAtDistance;
         followPlayerSpeed = AgentSettings.Instance.FollowPlayerSpeed;
@@ -46,6 +48,15 @@ public class AgentFollowingState : BaseState<Agent>
         owner.Animator.SetFloat("Speed", owner.NavMeshAgent.velocity.magnitude);
         owner.Animator.SetFloat("Mult", owner.NavMeshAgent.velocity.magnitude / 2f);
         FollowPlayer();
+
+        // Stop Following
+        if (player.CurrentCommunity != owner.Group.CommunityType && player.CurrentCommunity != CommunityTypes.global){
+            if (communityManager.IsLibraryProblemSolved(owner.Group.CommunityType)) return;
+
+            NPCSoundData soundData = soundManager.GetNPCSound(owner.Group.CommunityType, ChimeTasks.follow);
+            soundManager.PlayNPCSound(soundData, false, owner.GameObject.transform.position);
+            fsm.SwitchState(typeof(AgentWanderingState));
+        }
     }
 
     public override void OnExit(){
