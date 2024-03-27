@@ -45,6 +45,9 @@ public class InputHandler : IUpdateable
 
     private void CheckChime(string button){
         chimeBools.TryGetValue(button, out bool state);
+        if (Input.GetAxis(button) > 0){
+            EventManager.Invoke(Events.OnInput);
+        }
         if (Input.GetAxis(button) > 0 && !state && OnChime != null){
             IfChimeDown(button);
         }
