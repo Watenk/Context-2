@@ -30,7 +30,7 @@ public class ChimeSequencer : IFixedUpdateable
 
     public void OnFixedUpdate(){
         if (playerIsEntering && chimeResetTimer.IsDone()){
-            ClearSequence();
+            ClearSequence(true);
         }
     }
 
@@ -64,9 +64,10 @@ public class ChimeSequencer : IFixedUpdateable
         }
     }
 
-    private void ClearSequence(){
+    private void ClearSequence(bool timedClear = false){
         currentChimes.Clear();
         playerIsEntering = false;
+        if (timedClear) { OnChimeSequence?.Invoke(chimeSequences[chimeSequences.Count - 1]); }
     }
 
     private bool ChimeSequencesAreEqual(List<Chime> list1, List<Chime> list2)

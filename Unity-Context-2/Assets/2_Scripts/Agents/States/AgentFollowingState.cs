@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class AgentFollowingState : BaseState<Agent>
 {
-    public Action OnFollow;
+    public Action<CommunityTypes> OnFollow;
 
     private Timer spaceTimer;
     private float followPlayerAtDistance;
@@ -39,11 +39,11 @@ public class AgentFollowingState : BaseState<Agent>
         owner.NavMeshAgent.speed = followPlayerSpeed;
         spaceTimer = timerManager.AddLoopingTimer(0.5f);
         communityManager.AddActiveAgent(owner.Group.CommunityType);
-        OnFollow();
+        OnFollow(owner.Group.CommunityType);
     }
 
     public override void OnUpdate(){
-        owner.Animator.SetFloat("Speed", owner.NavMeshAgent.speed);
+        owner.Animator.SetFloat("Speed", owner.NavMeshAgent.velocity.magnitude);
         FollowPlayer();
     }
 

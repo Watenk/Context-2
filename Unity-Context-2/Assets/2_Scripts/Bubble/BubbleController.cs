@@ -48,6 +48,32 @@ public class BubbleController : MonoBehaviour
         activeEffect.SetBool("ActiveBool", true);
     }
 
+    public void StartBubble(CommunityTypes community, float duration)
+    {
+        if (activeEffect != null)
+        {
+            activeEffect.SetBool("ActiveBool", false);
+            Destroy(activeEffect.gameObject, 1);
+        }
+        activeEffect = Instantiate(visualEffect, visualEffect.transform.parent);
+
+        switch (community)
+        {
+            case CommunityTypes.circle:
+                activeEffect.SetVector4("Color", Color.yellow);
+                break;
+            case CommunityTypes.square:
+                activeEffect.SetVector4("Color", Color.blue);
+                break;
+            case CommunityTypes.triangle:
+                activeEffect.SetVector4("Color", Color.red);
+                break;
+        }
+        activeEffect.Play();
+        activeEffect.SetBool("ActiveBool", true);
+        StartCoroutine(StopAfterTime(duration));
+    }
+
 
     public void StopBubble()
     {
@@ -58,4 +84,10 @@ public class BubbleController : MonoBehaviour
         }
     }
 
+
+    private IEnumerator StopAfterTime(float duration)
+    {
+        yield return new WaitForSeconds(duration);
+        StopBubble();
+    }
 }

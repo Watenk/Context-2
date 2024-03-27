@@ -49,11 +49,11 @@ public class EmotionalWorldSwitcher : MonoBehaviour
         {
             if(timeNotMoved > 0)
             {
-                timeNotMoved -= Time.deltaTime;
+                timeNotMoved -= Time.deltaTime*3;
             }
         }
 
-        Color color = new Color(0, 0, 0, Mathf.InverseLerp(1, timeNeeded, timeNotMoved));
+        Color color = new Color(0, 0, 0, Mathf.InverseLerp(6, timeNeeded, timeNotMoved));
         // Ak send color alpha value
         overlayImage.color = color;
 

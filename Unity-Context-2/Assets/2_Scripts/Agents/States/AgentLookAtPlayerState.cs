@@ -24,6 +24,7 @@ public class AgentLookAtPlayerState : BaseState<Agent>
     public override void OnUpdate(){
         RotateTowardsPlayer();
         CheckState();
+        owner.Animator.SetFloat("Speed", 0);
     }
 
     public override void OnExit(){

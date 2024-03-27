@@ -10,7 +10,7 @@ public class GroupFollowDetector : MonoBehaviour
     private bool isTriggered;
 
     void Start(){
-        GameManager.GetService<CommunityManager>().OnFollow += OnFollow;
+        //GameManager.GetService<CommunityManager>().OnFollow += OnFollow;
     }
 
     private void OnFollow(){
