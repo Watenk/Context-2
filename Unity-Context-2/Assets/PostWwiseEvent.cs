@@ -8,6 +8,7 @@ public class PostWwiseEvent : MonoBehaviour
     // Start is called before the first frame update
     public void PlayPlayerFootstepSound()
     {
+        if(MyEvent == null) { return; }
         MyEvent.Post(gameObject);
     }
 

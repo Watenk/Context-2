@@ -623,8 +623,7 @@ MonoBehaviour:
   MyEvent:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 020278780e3e869479818a188d5e2496,
-      type: 2}
+    WwiseObjectReference: {fileID: 0}
 --- !u!1001 &6396218970960696533
 PrefabInstance:
   m_ObjectHideFlags: 0
