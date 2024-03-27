@@ -10,10 +10,10 @@ public class GroupFollowDetector : MonoBehaviour
     private bool isTriggered;
 
     void Start(){
-        //GameManager.GetService<CommunityManager>().OnFollow += OnFollow;
+        GameManager.GetService<CommunityManager>().OnFollow += OnFollow;
     }
 
-    private void OnFollow(){
+    private void OnFollow(CommunityTypes community){
         Debug.Log("OnFollow");
         if (isTriggered) return;
         triggerEvent?.Invoke();
