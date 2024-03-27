@@ -24,9 +24,7 @@ MonoBehaviour:
     - chimeInput: 0
       isLong: 0
     - chimeInput: 2
-      isLong: 0
-    - chimeInput: 2
-      isLong: 0
+      isLong: 1
     affectedCommunities: 02000000
   - Name: CircleFollow
     chimeSequence: 6
@@ -35,8 +33,6 @@ MonoBehaviour:
     - chimeInput: 0
       isLong: 0
     - chimeInput: 0
-      isLong: 0
-    - chimeInput: 3
       isLong: 0
     - chimeInput: 3
       isLong: 0
@@ -61,7 +57,7 @@ MonoBehaviour:
     - chimeInput: 0
       isLong: 1
     - chimeInput: 2
-      isLong: 0
+      isLong: 1
     affectedCommunities: 02000000
   - Name: CircleSolveProblem
     chimeSequence: 7
