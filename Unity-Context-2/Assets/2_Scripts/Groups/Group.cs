@@ -11,15 +11,17 @@ public class Group : IFixedUpdateable
     public int Size { get; private set; }
     public Vector3 Home { get; private set; }
     public float SpawnRadius { get; private set; }
+    public float WanderFromHomeDistance { get; private set; }
 
     private List<Agent> agents = new List<Agent>();
     private List<AgentPrefab> agentPrefabs = new List<AgentPrefab>();
 
     //-----------------------------------------------
 
-    public Group(Community community, CommunityTypes communityType, int groupSize, Vector3 homePos, float spawnRadius, bool isActive){
+    public Group(Community community, CommunityTypes communityType, int groupSize, float wanderFromHomeDistance, Vector3 homePos, float spawnRadius, bool isActive){
         Community = community;
         CommunityType = communityType;
+        WanderFromHomeDistance = wanderFromHomeDistance;
         Size = groupSize;
         Home = homePos;
         SpawnRadius = spawnRadius;
@@ -46,6 +48,7 @@ public class Group : IFixedUpdateable
         foreach (Agent current in agents){
             GameObject.Destroy(current.GameObject);
         }
+        EventManager.Invoke(Events.OnProblemSolved, CommunityType);
     }
 
     public void FreeAgents(){

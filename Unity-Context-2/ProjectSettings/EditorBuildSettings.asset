@@ -5,7 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+  - enabled: 0
+    path: Assets/1_Scenes/Beginscherm.unity
+    guid: 18fd87886ae6dcf4c87daef911d7058f
+  - enabled: 0
+    path: Assets/1_Scenes/Tutorial.unity
+    guid: c9040ad59fb6de64cbba28d7b68d8b44
   - enabled: 1
-    path: Assets/1_Scenes/Ivar.unity
-    guid: 99c9720ab356a0642a771bea13969a05
+    path: Assets/1_Scenes/Mia.unity
+    guid: bca315653b13d7549876ecd05871c282
   m_configObjects: {}

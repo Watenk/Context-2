@@ -19,11 +19,14 @@ public class Problem : IFixedUpdateable
     private bool playerInRange;
     private Vector3 mushroomScale;
     private List<Group> freedGroups;
+    private Timer animationDelayTimer;
+    private bool kejwbf;
 
     // References
     private PlayerController player;
     private CommunityManager communityManager;
     private ChimeSequencer chimeSequencer;
+    private TimerManager timerManager;
 
     //-------------------------------------------------
 
@@ -35,13 +38,15 @@ public class Problem : IFixedUpdateable
 
         communityManager = GameManager.GetService<CommunityManager>();
         chimeSequencer = GameManager.GetService<ChimeSequencer>();
+        timerManager = GameManager.GetService<TimerManager>();
         player = GameManager.Instance.Player;
-        detectRange = ProblemSettings.Instance.ProblemDetectRange;
         mushroomSpawnRadius = ProblemSettings.Instance.MushroomSpawnRadius;
         mushroomPrefabs = ProblemSettings.Instance.MushroomPrefabs;
         mushroomScale = new Vector3(ProblemSettings.Instance.MushroomSize, ProblemSettings.Instance.MushroomSize, ProblemSettings.Instance.MushroomSize);
+        detectRange = ProblemSettings.Instance.ProblemDetectRange;
 
         chimeSequencer.OnChimeSequence += OnChimeSequence;
+        animationDelayTimer = timerManager.AddTimer(0.00001f);
 
         // Init Dicts
         communityAmount = communityManager.GetCommunityAmount();
@@ -57,12 +62,30 @@ public class Problem : IFixedUpdateable
         SpawnMushrooms(solverCommunityTypes);
 
         #if UNITY_EDITOR
-            if (detectRange == 0) { Debug.LogWarning("ProblemDetectRange in ProblemSettings is 0"); }
             if (mushroomSpawnRadius == 0) { Debug.LogWarning("mushroomSpawnRadius in ProblemSettings is 0"); }
         #endif
+
+        foreach (CommunityTypes currentCommunity in communityAmount){
+            List<ProblemSolver> solvers = problemSolvers[currentCommunity];
+            foreach (ProblemSolver currentSolver in solvers){
+                currentSolver.Animator.SetBool("Active", true);
+            }
+        }
     }
 
+
     public void OnFixedUpdate(){
+
+        if (animationDelayTimer.IsDone() && !kejwbf){
+
+            foreach (CommunityTypes currentCommunity in communityAmount){
+                List<ProblemSolver> solvers = problemSolvers[currentCommunity];
+                foreach (ProblemSolver currentSolver in solvers){
+                    currentSolver.Animator.SetBool("Active", false);
+                }
+            }
+            kejwbf = true;
+        }
 
         if (Vector3.Distance(pos, player.gameObject.transform.position) < detectRange){ 
             playerInRange = true;
@@ -71,6 +94,7 @@ public class Problem : IFixedUpdateable
             foreach (CommunityTypes currentCommunity in communityAmount){
                 List<ProblemSolver> solvers = problemSolvers[currentCommunity];
                 int followingAmount = GetFollowingAmount(currentCommunity);
+
 
                 foreach (ProblemSolver currentSolver in solvers){
                     if (followingAmount > 0){
@@ -98,7 +122,6 @@ public class Problem : IFixedUpdateable
 
             playerInRange = false;
         }
-
     }
 
     public void Remove(){
@@ -111,6 +134,7 @@ public class Problem : IFixedUpdateable
                 GameObject.Destroy(problemSolver.Mushroom);
             }
         }
+        EventManager.Invoke(Events.OnProblemSolved, communityType);
         GameObject.Destroy(gameObject);
     }
 

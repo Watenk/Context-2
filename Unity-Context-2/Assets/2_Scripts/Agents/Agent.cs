@@ -28,6 +28,7 @@ public class Agent : IFixedUpdateable
     // References
     private ChimeSequencer chimeSequencer;
     private SoundManager soundManager;
+    private CommunityManager communityManager;
 
     //----------------------------------------
 
@@ -38,12 +39,13 @@ public class Agent : IFixedUpdateable
         ConfusedParticleSystem = particleSystems[0];
         TroubledParticleSystem = particleSystems[1];
         BubbleController = bubbleController;
+        communityManager = GameManager.GetService<CommunityManager>();
         NavMeshAgent = GameManager.GetComponent<NavMeshAgent>(GameObject);
         chimeSequencer = GameManager.GetService<ChimeSequencer>();
         soundManager = GameManager.GetService<SoundManager>();
         stepDistance = AgentSettings.Instance.StepDistance;
-        wanderFromHomeDistance = AgentSettings.Instance.WanderFromHomeDistance;
-        NavMeshAgent.speed = UnityEngine.Random.Range(AgentSettings.Instance.MinSpeed, AgentSettings.Instance.MaxSpeed);
+        wanderFromHomeDistance = Group.WanderFromHomeDistance;;
+        NavMeshAgent.speed = communityManager.GetSpeed(Group.CommunityType);
         DestinationReached = true;
 
         chimeSequencer.OnChimeSequence += OnChimeSequence;
@@ -61,11 +63,10 @@ public class Agent : IFixedUpdateable
 
         #if UNITY_EDITOR
             if (NavMeshAgent == null) { Debug.LogError(gameObject.name + " doesn't contain a navmeshAgent"); }
-            if (AgentSettings.Instance.MaxSpeed == 0) { Debug.LogError("MaxSpeed is 0 in AgentSettings"); }
-            if (AgentSettings.Instance.MinSpeed == 0) { Debug.LogError("MinSpeed is 0 in AgentSettings"); }
             if (stepDistance == 0) { Debug.LogError("StepDistance is 0 in AgentSettings"); }
-            if (wanderFromHomeDistance == 0) { Debug.LogError("WanderFromHome is 0 in AgentSettings"); }
         #endif
+
+        EventManager.AddListener<CommunityTypes>(Events.OnCommunitySpeedChange,(communityType) => UpdateSpeed(communityType));
     }
 
     public void OnFixedUpdate(){
@@ -93,6 +94,14 @@ public class Agent : IFixedUpdateable
     }
 
     //------------------------------------------
+
+    private void UpdateSpeed(CommunityTypes communityType){
+        if (communityType != Group.CommunityType) return;
+
+        Debug.Log("Updated Speed");
+
+        NavMeshAgent.speed = communityManager.GetSpeed(communityType);
+    }
 
     private void Follow(CommunityTypes communityType){
         OnFollow(communityType);

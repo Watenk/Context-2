@@ -26,8 +26,10 @@ public class Mural : IFixedUpdateable
     // Times
     private Timer chimeTimer;
     private Timer repeatTimer;
+    private Timer kusfhTimer;
     private float shortChimeTime;
     private float longChimeTime;
+    private bool kejwbf;
 
     // References
     private PlayerController player;
@@ -51,6 +53,7 @@ public class Mural : IFixedUpdateable
 
         chimeTimer = timerManager.AddLoopingTimer(shortChimeTime);
         repeatTimer = timerManager.AddTimer(MuralSettings.Instance.RepeatDelay);
+        kusfhTimer = timerManager.AddTimer(0.5f);
         repeatTimer.ChangeCurrentTime(0);
 
         if (!libraryMural) SpawnMushrooms();
@@ -61,6 +64,13 @@ public class Mural : IFixedUpdateable
     }
 
     public void OnFixedUpdate(){
+
+        if (kusfhTimer.IsDone() && !kejwbf){
+            foreach(var current in mushroomAnimators){
+                current.SetBool("Active", false);
+            }
+            kejwbf = true;
+        }
 
         if (playingIndex == 0){
             if (Vector3.Distance(gameObject.transform.position, player.gameObject.transform.position) > detectRange) { return; }
@@ -116,6 +126,12 @@ public class Mural : IFixedUpdateable
             mushroomAnimators.Add(mushroomAnimator);
             mushroomBubbles.Add(mushroomBubble);
             mushroomSounds.Add(default);
+        }
+
+        kusfhTimer.Reset();
+        kejwbf = false;
+        foreach(var current in mushroomAnimators){
+           current.SetBool("Active", true);
         }
     }
 

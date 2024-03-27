@@ -27,19 +27,25 @@ Audio Bus	ID	Name			Wwise Object Path	Notes
 	240409309	Circle			\Default Work Unit\Master Audio Bus\Music\Fanfair\Circle	
 	1069431850	Player			\Default Work Unit\Master Audio Bus\Player	
 	1818333208	Square			\Default Work Unit\Master Audio Bus\Music\Fanfair\Square	
+	2129636626	Movement			\Default Work Unit\Master Audio Bus\Player\Movement	
+	2160436325	ChimesPlayer			\Default Work Unit\Master Audio Bus\Player\ChimesPlayer	
 	2326865361	Triangle			\Default Work Unit\Master Audio Bus\Music\Fanfair\Triangle	
+	2385628198	Footsteps			\Default Work Unit\Master Audio Bus\Player\Movement\Footsteps	
 	2447030866	Fanfair			\Default Work Unit\Master Audio Bus\Music\Fanfair	
 	2590078866	Chimes			\Default Work Unit\Master Audio Bus\Chimes	
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
+	3859485035	ChimesNPC			\Default Work Unit\Master Audio Bus\Chimes\ChimesNPC	
 	3991942870	Music			\Default Work Unit\Master Audio Bus\Music	
 
 Auxiliary Bus	ID	Name			Wwise Object Path	Notes
 	841660990	TestVerb			\Default Work Unit\Master Audio Bus\Chimes\TestVerb	
 	3268711830	TestEcho			\Default Work Unit\Master Audio Bus\Chimes\TestEcho	
 	3477531017	EmotionsDimension			\Default Work Unit\Master Audio Bus\EmotionsDimension	
+	3657263530	Verb			\Default Work Unit\Master Audio Bus\Verb	
 
 Effect plug-ins	ID	Name	Type				Notes
 	48620415	Have_U_Ever_Been_Outside	Wwise RoomVerb			
+	1520064353	Hall_Medium_Bright	Wwise RoomVerb			
 	1588715066	Echoes_Linear	Wwise Delay			
 
 Audio Devices	ID	Name	Type				Notes

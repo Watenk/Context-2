@@ -7,10 +7,11 @@ public class Community : IFixedUpdateable
 {
     public Action<CommunityTypes> OnFollow;
     public CommunityTypes CommunityType { get; private set; }
+    public float Speed { get; private set; }
+
     private List<Group> groups = new List<Group>();
     private List<Problem> problems = new List<Problem>();
     private List<Problem> problemsGC = new List<Problem>();
-    // TODO: Add Affection for other communities
 
     //------------------------------------------------
 
@@ -34,8 +35,8 @@ public class Community : IFixedUpdateable
         problemsGC.Clear();
     }
 
-    public Group AddGroup(int size, Vector3 pos, float spawnRadius, bool isActive){
-        Group newGroup = new Group(this, CommunityType, size, pos, spawnRadius, isActive);
+    public Group AddGroup(int size, Vector3 pos, float wanderFromHomeDistance, float spawnRadius, bool isActive){
+        Group newGroup = new Group(this, CommunityType, size, wanderFromHomeDistance, pos, spawnRadius, isActive);
         groups.Add(newGroup);
         newGroup.OnFollow += Follow;
         return newGroup;
