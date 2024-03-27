@@ -22,7 +22,7 @@
 								<Property Name="OverrideColor" Type="bool" Value="True"/>
 								<Property Name="UserAuxSendVolume0" Type="Real64">
 									<ValueList>
-										<Value>-4</Value>
+										<Value>-8</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -65,6 +65,28 @@
 											</ChildrenList>
 										</Position>
 									</PositioningInfo>
+								</Bus>
+								<Bus Name="Movement" ID="{F66FBA42-E65D-47D8-A59F-1D49FAE61BF6}">
+									<ChildrenList>
+										<Bus Name="Footsteps" ID="{A1031DBE-2425-461A-9BB6-039CB54870E5}">
+											<PropertyList>
+												<Property Name="BusVolume" Type="Real64">
+													<ValueList>
+														<Value>-22</Value>
+													</ValueList>
+												</Property>
+												<Property Name="ListenerRelativeRouting" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Attenuation">
+													<ObjectRef Name="PlayerChimes2" ID="{ADCCA8AF-F345-4C3C-9847-2E3671FF176E}" WorkUnitID="{367E7C67-F63E-4EF5-89C2-DD807CEBB0F9}"/>
+												</Reference>
+											</ReferenceList>
+											<PositioningInfo>
+												<Position Name="" ID="{D0C1281C-C17F-495E-B5D0-B4A880E52E3D}"/>
+											</PositioningInfo>
+										</Bus>
+									</ChildrenList>
 								</Bus>
 							</ChildrenList>
 						</Bus>

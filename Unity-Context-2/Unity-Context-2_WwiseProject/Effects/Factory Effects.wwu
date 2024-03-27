@@ -662,7 +662,8 @@
 										<Property Name="FilterTypeBand1" Type="int32" Value="1"/>
 										<Property Name="FilterTypeBand2" Type="int32" Value="3"/>
 										<Property Name="FilterTypeBand3" Type="int32" Value="0"/>
-										<Property Name="FrequencyBand1" Type="Real32" Value="500"/>
+										<Property Name="FrequencyBand1" Type="Real32" Value="715"/>
+										<Property Name="FrequencyBand3" Type="Real32" Value="7531"/>
 										<Property Name="OnOffBand2" Type="bool" Value="False"/>
 									</PropertyList>
 								</Effect>
@@ -827,7 +828,7 @@
 												<CustomState Name="" ID="{EB39A9DC-BD2C-46D9-B6EF-9ADAEDCF7D76}" ShortID="108537884">
 													<PropertyList>
 														<Property Name="DryLevel" Type="Real32" Value="85"/>
-														<Property Name="ReverbLevel" Type="Real32" Value="7"/>
+														<Property Name="ReverbLevel" Type="Real32" Value="2"/>
 													</PropertyList>
 												</CustomState>
 											</CustomState>

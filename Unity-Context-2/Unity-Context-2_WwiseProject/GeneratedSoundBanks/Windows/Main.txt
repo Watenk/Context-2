@@ -8,6 +8,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	1032095362	ChimeUPlay			\Default Work Unit\Chimes\Universal\ChimeUPlay	
 	1137344520	NPCChime3Confused			\Default Work Unit\Chimes\Community3\NPCChime3Confused	
 	1675108316	ChimeUStop			\Default Work Unit\Chimes\Universal\ChimeUStop	
+	1681012287	PlayerFootsteps			\Default Work Unit\Player\Movement\PlayerFootsteps	
 	1704435946	NPCChime2Long			\Default Work Unit\Chimes\Community2\NPCChime2Long	
 	1791974179	Chime2Stop			\Default Work Unit\Chimes\Community2\Chime2Stop	
 	1795884461	NPCChime1Long			\Default Work Unit\Chimes\Community1\NPCChime1Long	
@@ -54,8 +55,10 @@ Audio Bus	ID	Name			Wwise Object Path	Notes
 	240409309	Circle			\Default Work Unit\Master Audio Bus\Music\Fanfair\Circle	
 	1069431850	Player			\Default Work Unit\Master Audio Bus\Player	
 	1818333208	Square			\Default Work Unit\Master Audio Bus\Music\Fanfair\Square	
+	2129636626	Movement			\Default Work Unit\Master Audio Bus\Player\Movement	
 	2160436325	ChimesPlayer			\Default Work Unit\Master Audio Bus\Player\ChimesPlayer	
 	2326865361	Triangle			\Default Work Unit\Master Audio Bus\Music\Fanfair\Triangle	
+	2385628198	Footsteps			\Default Work Unit\Master Audio Bus\Player\Movement\Footsteps	
 	2447030866	Fanfair			\Default Work Unit\Master Audio Bus\Music\Fanfair	
 	2590078866	Chimes			\Default Work Unit\Master Audio Bus\Chimes	
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
@@ -78,7 +81,9 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	78035267	chimes-community2-3	C:\Users\LvanE\GameDev\Context-2\Unity-Context-2\Unity-Context-2_WwiseProject\.cache\Windows\SFX\community2\chimes-community2-3_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chimes\community2\chimes-community2\chimes-community2-3		768096
 	85199183	chimes-universal9	C:\Users\LvanE\GameDev\Context-2\Unity-Context-2\Unity-Context-2_WwiseProject\.cache\Windows\SFX\universal\chimes-universal9_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chimes\Universal\universal\chimes-universal9		263632
 	146898835	chimes-universal2	C:\Users\LvanE\GameDev\Context-2\Unity-Context-2\Unity-Context-2_WwiseProject\.cache\Windows\SFX\universal\chimes-universal2_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chimes\Universal\universal\chimes-universal2		378596
+	173779365	Footsteps, Human, Tile, Walk SND62089 6	C:\Users\LvanE\GameDev\Context-2\Unity-Context-2\Unity-Context-2_WwiseProject\.cache\Windows\SFX\Footsteps, Human, Tile, Walk SND62089 6_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Movement\Footsteps\Footsteps, Human, Tile, Walk SND62089 6		60638
 	200744382	chimes-community1C#High	C:\Users\LvanE\GameDev\Context-2\Unity-Context-2\Unity-Context-2_WwiseProject\.cache\Windows\SFX\community1\chimes-community1C#High_09CA549B.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chimes\community1\chimes-community1\chimes-community1C#High		196812
+	202315228	Footsteps, Human, Tile, Walk SND62089 11	C:\Users\LvanE\GameDev\Context-2\Unity-Context-2\Unity-Context-2_WwiseProject\.cache\Windows\SFX\Footsteps, Human, Tile, Walk SND62089 11_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Movement\Footsteps\Footsteps, Human, Tile, Walk SND62089 11		52430
 	211848107	chimes-community2-2	C:\Users\LvanE\GameDev\Context-2\Unity-Context-2\Unity-Context-2_WwiseProject\.cache\Windows\SFX\community2\chimes-community2-2_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chimes\community2\chimes-community2\chimes-community2-2		768096
 	217292502	chimes-universal10	C:\Users\LvanE\GameDev\Context-2\Unity-Context-2\Unity-Context-2_WwiseProject\.cache\Windows\SFX\universal\chimes-universal10_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chimes\Universal\universal\chimes-universal10		374096
 	234843785	chimes-community1C	C:\Users\LvanE\GameDev\Context-2\Unity-Context-2\Unity-Context-2_WwiseProject\.cache\Windows\SFX\community1\chimes-community1C_4B72FBFF.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chimes\community1\chimes-community1\chimes-community1C		204512
@@ -91,7 +96,9 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	444608073	1Circle	C:\Users\LvanE\GameDev\Context-2\Unity-Context-2\Unity-Context-2_WwiseProject\.cache\Windows\SFX\FF_part1_circle1_FBC78EF0.wem		\Interactive Music Hierarchy\Default Work Unit\Fanfair\MusicFanfair\MusicFanfair1\1Circle		3233784
 	444656573	chimes-universal1	C:\Users\LvanE\GameDev\Context-2\Unity-Context-2\Unity-Context-2_WwiseProject\.cache\Windows\SFX\universal\chimes-universal1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chimes\Universal\universal\chimes-universal1		402096
 	507717878	2Triangle	C:\Users\LvanE\GameDev\Context-2\Unity-Context-2\Unity-Context-2_WwiseProject\.cache\Windows\SFX\FF_part2_triangle1_FBC78EF0.wem		\Interactive Music Hierarchy\Default Work Unit\Fanfair\MusicFanfair\MusicFanfair1\2Triangle		3233784
+	530226235	Footsteps, Human, Tile, Walk SND62089 4	C:\Users\LvanE\GameDev\Context-2\Unity-Context-2\Unity-Context-2_WwiseProject\.cache\Windows\SFX\Footsteps, Human, Tile, Walk SND62089 4_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Movement\Footsteps\Footsteps, Human, Tile, Walk SND62089 4		62690
 	535706050	chimes-community3End2	C:\Users\LvanE\GameDev\Context-2\Unity-Context-2\Unity-Context-2_WwiseProject\.cache\Windows\SFX\community3\chimes-community3End2_793AF748.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chimes\community3\community3End\chimes-community3End2		343776
+	611723112	Footsteps, Human, Tile, Walk SND62089 5	C:\Users\LvanE\GameDev\Context-2\Unity-Context-2\Unity-Context-2_WwiseProject\.cache\Windows\SFX\Footsteps, Human, Tile, Walk SND62089 5_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Movement\Footsteps\Footsteps, Human, Tile, Walk SND62089 5		68848
 	622743481	2Triangle	C:\Users\LvanE\GameDev\Context-2\Unity-Context-2\Unity-Context-2_WwiseProject\.cache\Windows\SFX\FF_part3_triangle1_FBC78EF0.wem		\Interactive Music Hierarchy\Default Work Unit\Fanfair\MusicFanfair\MusicFanfair1\2Triangle		1616940
 	631739992	chimes-universal5	C:\Users\LvanE\GameDev\Context-2\Unity-Context-2\Unity-Context-2_WwiseProject\.cache\Windows\SFX\universal\chimes-universal5_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chimes\Universal\universal\chimes-universal5		316280
 	632147615	chimes-community3Start2	C:\Users\LvanE\GameDev\Context-2\Unity-Context-2\Unity-Context-2_WwiseProject\.cache\Windows\SFX\community3\chimes-community3Start2_20F57A42.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chimes\community3\community3Start\chimes-community3Start2		72096
@@ -105,6 +112,9 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	775169254	chimes-community1F	C:\Users\LvanE\GameDev\Context-2\Unity-Context-2\Unity-Context-2_WwiseProject\.cache\Windows\SFX\community1\chimes-community1F_82D80226.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chimes\community1\chimes-community1\chimes-community1F		271584
 	775312338	chimes-community3Start1	C:\Users\LvanE\GameDev\Context-2\Unity-Context-2\Unity-Context-2_WwiseProject\.cache\Windows\SFX\community3\chimes-community3Start1_7B5979CE.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chimes\community3\community3Start\chimes-community3Start1		72096
 	780278558	chimes-community3Confused	C:\Users\LvanE\GameDev\Context-2\Unity-Context-2\Unity-Context-2_WwiseProject\.cache\Windows\SFX\community3\chimes-community3Confused_9F1A7E5A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chimes\community3\chimes-community3Confused		293776
+	792138461	Footsteps, Human, Tile, Walk SND62089 8	C:\Users\LvanE\GameDev\Context-2\Unity-Context-2\Unity-Context-2_WwiseProject\.cache\Windows\SFX\Footsteps, Human, Tile, Walk SND62089 8_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Movement\Footsteps\Footsteps, Human, Tile, Walk SND62089 8		56534
+	793187245	Footsteps, Human, Tile, Walk SND62089 7	C:\Users\LvanE\GameDev\Context-2\Unity-Context-2\Unity-Context-2_WwiseProject\.cache\Windows\SFX\Footsteps, Human, Tile, Walk SND62089 7_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Movement\Footsteps\Footsteps, Human, Tile, Walk SND62089 7		51404
+	798236077	Footsteps, Human, Tile, Walk SND62089 3	C:\Users\LvanE\GameDev\Context-2\Unity-Context-2\Unity-Context-2_WwiseProject\.cache\Windows\SFX\Footsteps, Human, Tile, Walk SND62089 3_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Movement\Footsteps\Footsteps, Human, Tile, Walk SND62089 3		62178
 	817811054	chimes-community1F#	C:\Users\LvanE\GameDev\Context-2\Unity-Context-2\Unity-Context-2_WwiseProject\.cache\Windows\SFX\community1\chimes-community1F#_F13B1AE7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chimes\community1\chimes-community1\chimes-community1F#		254884
 	829828492	2Triangle	C:\Users\LvanE\GameDev\Context-2\Unity-Context-2\Unity-Context-2_WwiseProject\.cache\Windows\SFX\FF_part1_triangle1_FBC78EF0.wem		\Interactive Music Hierarchy\Default Work Unit\Fanfair\MusicFanfair\MusicFanfair1\2Triangle		3233784
 	851559997	chimes-universal7	C:\Users\LvanE\GameDev\Context-2\Unity-Context-2\Unity-Context-2_WwiseProject\.cache\Windows\SFX\universal\chimes-universal7_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chimes\Universal\universal\chimes-universal7		326596
@@ -113,6 +123,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	955222108	chimes-community2-4	C:\Users\LvanE\GameDev\Context-2\Unity-Context-2\Unity-Context-2_WwiseProject\.cache\Windows\SFX\community2\chimes-community2-4_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chimes\community2\chimes-community2\chimes-community2-4		768096
 	973327438	2Triangle	C:\Users\LvanE\GameDev\Context-2\Unity-Context-2\Unity-Context-2_WwiseProject\.cache\Windows\SFX\FF_intro1_square1_FBC78EF0.wem		\Interactive Music Hierarchy\Default Work Unit\Fanfair\MusicFanfair\MusicFanfair1\2Triangle		404308
 	997782913	chimes-universal4	C:\Users\LvanE\GameDev\Context-2\Unity-Context-2\Unity-Context-2_WwiseProject\.cache\Windows\SFX\universal\chimes-universal4_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chimes\Universal\universal\chimes-universal4		384076
+	1028822725	Footsteps, Human, Tile, Walk SND62089 2	C:\Users\LvanE\GameDev\Context-2\Unity-Context-2\Unity-Context-2_WwiseProject\.cache\Windows\SFX\Footsteps, Human, Tile, Walk SND62089 2_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Movement\Footsteps\Footsteps, Human, Tile, Walk SND62089 2		62178
 	1040139626	chimes-community1Confused	C:\Users\LvanE\GameDev\Context-2\Unity-Context-2\Unity-Context-2_WwiseProject\.cache\Windows\SFX\community1\chimes-community1Confused_DAF55585.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chimes\community1\chimes-community1Confused		371120
 	1050643609	chimes-community1G#	C:\Users\LvanE\GameDev\Context-2\Unity-Context-2\Unity-Context-2_WwiseProject\.cache\Windows\SFX\community1\chimes-community1G#_616D30F2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chimes\community1\chimes-community1\chimes-community1G#		225936
 	1052460289	ambience-empty	C:\Users\LvanE\GameDev\Context-2\Unity-Context-2\Unity-Context-2_WwiseProject\.cache\Windows\SFX\ambience\ambience-empty_52785B11.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\ambience\ambience-empty		16051344

@@ -411,6 +411,25 @@
 						<Event Name="MusicFanfair_Stop" ID="{BA3964E9-A3E6-4E97-B660-E60043557F8A}"/>
 					</ChildrenList>
 				</Folder>
+				<Folder Name="Player" ID="{44B38ABF-1EFB-4B18-9A5C-B30047FA90CA}" ShortID="874079779">
+					<ChildrenList>
+						<Folder Name="Movement" ID="{410AE554-AD84-4DCE-BD16-D4DD5A71D887}" ShortID="976742957">
+							<ChildrenList>
+								<Event Name="PlayerFootsteps" ID="{365DA830-742F-47CE-8E32-CA881A32EA2C}">
+									<ChildrenList>
+										<Action Name="" ID="{75BA9748-E72D-4AEB-99AE-E04BA123A010}" ShortID="96809271">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Footsteps" ID="{252C7A90-8BD4-453B-9D9E-189ECC3BCB27}" WorkUnitID="{7170A4AA-0716-459D-A833-37BA2C074759}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
