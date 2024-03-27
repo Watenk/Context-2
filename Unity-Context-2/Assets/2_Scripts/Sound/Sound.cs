@@ -25,7 +25,7 @@ public class Sound : IFixedUpdateable
 
     public void OnFixedUpdate(){
         if (existTimer.IsDone()){
-            soundManager.StopSound(this);
+            soundManager.StopNPCSound(this);
         }
     }
 }

@@ -12,12 +12,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cb3d2d9ce7023f4bb52fba377654e41, type: 3}
   m_Name: AgentSettings
   m_EditorClassIdentifier: 
-  MaxSpeed: 2
-  MinSpeed: 3
-  WanderFromHomeDistance: 10
+  agentsSpeeds:
+  - communityType: 0
+    initialSpeed: 6
+    problemsSolvedSpeed: 3
+  - communityType: 1
+    initialSpeed: 1
+    problemsSolvedSpeed: 3
+  - communityType: 2
+    initialSpeed: 2
+    problemsSolvedSpeed: 3
+  - communityType: 3
+    initialSpeed: 0.3
+    problemsSolvedSpeed: 0.3
   LookAtPlayerDistance: 8
-  FollowPlayerAtDistance: 3
-  FollowPlayerSpeed: 6
+  FollowPlayerAtDistance: 8
+  FollowPlayerSpeed: 8
   Prefabs:
   - CommunityType: 1
     prefabs:

@@ -9,6 +9,7 @@ public class ProblemSpawner : MonoBehaviour
     public List<GroupSpawner> FreedGroups;
     [Tooltip("What kind and how many community members are needed to solve this problem")]
     public List<CommunityTypes> ProblemSolvers;
+    public bool LibraryProblem;
 
     private List<Group> groups = new List<Group>();
 
@@ -20,7 +21,12 @@ public class ProblemSpawner : MonoBehaviour
             groups.Add(current.GetGroup());
         }
 
-        GameManager.GetService<CommunityManager>().AddProblem(CommunityType, new Problem(ProblemSolvers, CommunityType, groups, this.gameObject, transform.position));
+        GameManager.GetService<CommunityManager>().AddProblem(CommunityType, new Problem(ProblemSolvers, CommunityType, groups, this.gameObject, transform.position, LibraryProblem));
         Destroy(this);
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawSphere(transform.position, 1);
     }
 }

@@ -7,14 +7,21 @@
 					<ObjectInclusionList>
 						<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{07B3C08D-E8AD-4A81-A929-C27B28B93464}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Chimes" ID="{9C89A6D4-98A5-419A-B8C4-E456FE1EF824}" WorkUnitID="{7170A4AA-0716-459D-A833-37BA2C074759}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Interactive Music Hierarchy" ID="{49FED366-B530-42A8-993B-924873AAB707}" WorkUnitID="{49FED366-B530-42A8-993B-924873AAB707}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Community2" ID="{29615E9C-93DA-43FB-A150-95A8A4C5FB63}" WorkUnitID="{1DC12918-8C70-4B3D-8538-2B800FB51260}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Default Work Unit" ID="{7170A4AA-0716-459D-A833-37BA2C074759}" WorkUnitID="{7170A4AA-0716-459D-A833-37BA2C074759}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Master-Mixer Hierarchy" ID="{2388DAEA-9775-46C6-A2ED-C5222A397756}" WorkUnitID="{2388DAEA-9775-46C6-A2ED-C5222A397756}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Chimes" ID="{9365FD5A-7C07-46E5-9D64-005F7E78831E}" WorkUnitID="{1DC12918-8C70-4B3D-8538-2B800FB51260}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Chime1Stop" ID="{67B8DECF-0FA0-4938-8D45-11996745434B}" WorkUnitID="{1DC12918-8C70-4B3D-8538-2B800FB51260}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="ChimesNPC" ID="{85F093D9-50BB-499A-B6FE-E17612AFC377}" WorkUnitID="{07B3C08D-E8AD-4A81-A929-C27B28B93464}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Actor-Mixer Hierarchy" ID="{5EA7BBF8-64C0-4A50-8821-A07E8BE21D68}" WorkUnitID="{5EA7BBF8-64C0-4A50-8821-A07E8BE21D68}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Default Work Unit" ID="{1DC12918-8C70-4B3D-8538-2B800FB51260}" WorkUnitID="{1DC12918-8C70-4B3D-8538-2B800FB51260}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="chimes-community1" ID="{0ABDDF13-931E-4BBA-8567-03605C5526F5}" WorkUnitID="{7170A4AA-0716-459D-A833-37BA2C074759}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Community3" ID="{4F9E9005-18BB-4BF9-AA68-8BD8E9517D98}" WorkUnitID="{1DC12918-8C70-4B3D-8538-2B800FB51260}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="TestEcho" ID="{7E763664-D897-4CA7-A1E9-BD5C3FEC870C}" WorkUnitID="{07B3C08D-E8AD-4A81-A929-C27B28B93464}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="TestVerb" ID="{ED37ADA7-DCDC-4D31-95FC-1ED7AA1AD070}" WorkUnitID="{07B3C08D-E8AD-4A81-A929-C27B28B93464}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Chime1Play" ID="{A21F005E-32A4-4F0A-B58B-9CA2A6C61696}" WorkUnitID="{1DC12918-8C70-4B3D-8538-2B800FB51260}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Chimes" ID="{D0C63F08-8AA6-4FA4-8FBA-ED045E95E039}" WorkUnitID="{07B3C08D-E8AD-4A81-A929-C27B28B93464}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AgentWanderingState : BaseState<Agent>
 {
-    private float wanderFromHomeDistance = 0;
+    private float wanderFromHomeDistance;
     private float lookAtPlayerDistance;
 
     // References
@@ -13,25 +13,30 @@ public class AgentWanderingState : BaseState<Agent>
     //---------------------------------------------
 
     public override void OnAwake(){
-        wanderFromHomeDistance = AgentSettings.Instance.WanderFromHomeDistance;
         lookAtPlayerDistance = AgentSettings.Instance.LookAtPlayerDistance;
         player = GameManager.Instance.Player;
+        wanderFromHomeDistance = owner.Group.WanderFromHomeDistance;
 
         #if UNITY_EDITOR
-            if (wanderFromHomeDistance == 0) { Debug.LogError("wanderFromHomeDistance is 0 in AgentSettings"); }
             if (lookAtPlayerDistance == 0) { Debug.LogError("LookAtPlayerDistance is 0 in AgentSettings"); }
             if (player == null) { Debug.LogError("Couldn't get player from GameManager"); }
         #endif
     }
 
+    public override void OnStart()
+    {
+        owner.Animator.SetBool("Inactive", false);
+    }
+
     public override void OnUpdate(){
-        
+        owner.Animator.SetFloat("Speed", owner.NavMeshAgent.velocity.magnitude);
+        owner.Animator.SetFloat("Mult", owner.NavMeshAgent.velocity.magnitude / 2f);
         CheckState();
         Wander();
     }
 
     public override void OnExit(){
-        owner.SetDestination(owner.GameObject.transform.position, 0.1f);
+        owner.SetDestination(owner.GameObject.transform.position, 0.5f);
         owner.NavMeshAgent.isStopped = true;
     }
 
@@ -41,12 +46,19 @@ public class AgentWanderingState : BaseState<Agent>
         if (Vector3.Distance(owner.GameObject.transform.position, player.transform.position) < lookAtPlayerDistance){
             owner.fsm.SwitchState(typeof(AgentLookAtPlayerState));
         }
+
+        if (Vector3.Distance(owner.GameObject.transform.position, owner.Group.Home) > owner.Group.WanderFromHomeDistance){
+            owner.NavMeshAgent.speed = 15;
+        }
+        else{
+            owner.NavMeshAgent.speed = owner.communityManager.GetSpeed(owner.Group.CommunityType);
+        }
     }
 
     private void Wander(){
         if (owner.DestinationReached){
             Vector3 newDestination = new Vector3(owner.Group.Home.x + Random.Range(-wanderFromHomeDistance, wanderFromHomeDistance), 0, owner.Group.Home.z + Random.Range(-wanderFromHomeDistance, wanderFromHomeDistance));
-            owner.SetDestination(newDestination, 0.1f);
+            owner.SetDestination(newDestination, 0.5f);
         }
     }
 }

@@ -38,11 +38,17 @@ public class MuralManager : IFixedUpdateable
         else return mural;
     }
 
+    public Mural GetMural(ChimeSequences chimeSequence){
+        
+        Mural mural = murals.Find(mural => mural.ChimeSequence.chimeSequence == chimeSequence);
+
+        if (mural == null) return null;
+        else return mural;
+    }
+
     //-------------------------------------------------
 
     private void OnChimeSequence(ChimeSequence chimeSequence){
-
-        Debug.Log(chimeSequence.chimeSequence);
 
         foreach (Mural current in inactiveMurals){
             if (current.ChimeSequence == chimeSequence){

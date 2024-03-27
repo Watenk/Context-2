@@ -66,6 +66,7 @@ MonoBehaviour:
         type: 2}
   NPCChimes:
   - Name: GlobalChime
+    CommunityType: 3
     ChimeTask: 0
     ShortChimeWwiseEvent:
       idInternal: 0
@@ -78,6 +79,7 @@ MonoBehaviour:
       WwiseObjectReference: {fileID: 11400000, guid: 7d2fa4a5fcd54da4990d829da6bef4f0,
         type: 2}
   - Name: TriangleChime
+    CommunityType: 0
     ChimeTask: 0
     ShortChimeWwiseEvent:
       idInternal: 0
@@ -90,6 +92,7 @@ MonoBehaviour:
       WwiseObjectReference: {fileID: 11400000, guid: c780f95db9bdde84a86b4153b21ae9c8,
         type: 2}
   - Name: SquareChime
+    CommunityType: 2
     ChimeTask: 0
     ShortChimeWwiseEvent:
       idInternal: 0
@@ -102,14 +105,15 @@ MonoBehaviour:
       WwiseObjectReference: {fileID: 11400000, guid: 0c44a56464942a241ae692602b517f95,
         type: 2}
   - Name: CircleChime
+    CommunityType: 1
     ChimeTask: 0
     ShortChimeWwiseEvent:
       idInternal: 0
       valueGuidInternal: 
-      WwiseObjectReference: {fileID: 11400000, guid: ae40f8e08bac233489a5c96d04eb1e34,
+      WwiseObjectReference: {fileID: 11400000, guid: dad44bc0a90195a4b989726c52d0fc15,
         type: 2}
     LongChimeWwiseEvent:
       idInternal: 0
       valueGuidInternal: 
-      WwiseObjectReference: {fileID: 11400000, guid: 3dc01b0433815a6448386c03d8f950a9,
+      WwiseObjectReference: {fileID: 11400000, guid: 5fda643836c563441802034c7f45886c,
         type: 2}

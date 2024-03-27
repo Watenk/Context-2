@@ -22,11 +22,9 @@ public class AgentSettings : ScriptableObject
     //------------------------------------------------------------------
 
     [Header("Settings")]
-    public float MaxSpeed;
-    public float MinSpeed;
+    public List<AgentSpeedData> agentsSpeeds = new List<AgentSpeedData>();
+
     [Tooltip("Distance an agent will wander from their home")]
-    public float WanderFromHomeDistance;
-    [Tooltip("Distance an agent must be from the player to stop and look at the player")]
     public float LookAtPlayerDistance;
     [Tooltip("The Distance an agent follows the player at")]
     public float FollowPlayerAtDistance;

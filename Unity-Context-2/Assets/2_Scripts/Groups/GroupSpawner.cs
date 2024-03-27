@@ -9,6 +9,7 @@ public class GroupSpawner : MonoBehaviour
     [Tooltip("Range around the GroupSpawner agents will spawn in")]
     public float SpawnRadius; 
     [Tooltip("Is the group availible to command or is the group inactive")]
+    public float WanderFromHomeDistance;
     public bool IsActive;
 
     private Group group;
@@ -16,7 +17,7 @@ public class GroupSpawner : MonoBehaviour
     //--------------------------------------------------------
     
     public void Start(){
-        group = GameManager.GetService<CommunityManager>().AddGroup(CommunityType, GroupSize, transform.position, SpawnRadius, IsActive);        
+        group = GameManager.GetService<CommunityManager>().AddGroup(CommunityType, GroupSize, WanderFromHomeDistance, transform.position, SpawnRadius, IsActive);        
     }
 
     public Group GetGroup(){
@@ -27,5 +28,11 @@ public class GroupSpawner : MonoBehaviour
 
         GameObject.Destroy(this.gameObject);
         return group;
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = IsActive ? Color.green : Color.red;
+        Gizmos.DrawSphere(transform.position, 2);
     }
 }

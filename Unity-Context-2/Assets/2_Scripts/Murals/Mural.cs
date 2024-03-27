@@ -14,7 +14,7 @@ public class Mural : IFixedUpdateable
     // Mushrooms
     private List<Animator> mushroomAnimators = new List<Animator>();
     private List<BubbleController> mushroomBubbles = new List<BubbleController>();
-    private List<LoopingSound> mushroomSounds = new List<LoopingSound>();
+    private List<Sound> mushroomSounds = new List<Sound>();
     private List<MuralMushroomPrefab> mushroomPrefabs;
     private float mushroomDistance;
 
@@ -26,8 +26,10 @@ public class Mural : IFixedUpdateable
     // Times
     private Timer chimeTimer;
     private Timer repeatTimer;
+    private Timer kusfhTimer;
     private float shortChimeTime;
     private float longChimeTime;
+    private bool kejwbf;
 
     // References
     private PlayerController player;
@@ -51,6 +53,7 @@ public class Mural : IFixedUpdateable
 
         chimeTimer = timerManager.AddLoopingTimer(shortChimeTime);
         repeatTimer = timerManager.AddTimer(MuralSettings.Instance.RepeatDelay);
+        kusfhTimer = timerManager.AddTimer(0.5f);
         repeatTimer.ChangeCurrentTime(0);
 
         if (!libraryMural) SpawnMushrooms();
@@ -61,6 +64,13 @@ public class Mural : IFixedUpdateable
     }
 
     public void OnFixedUpdate(){
+
+        if (kusfhTimer.IsDone() && !kejwbf){
+            foreach(var current in mushroomAnimators){
+                current.SetBool("Active", false);
+            }
+            kejwbf = true;
+        }
 
         if (playingIndex == 0){
             if (Vector3.Distance(gameObject.transform.position, player.gameObject.transform.position) > detectRange) { return; }
@@ -77,7 +87,7 @@ public class Mural : IFixedUpdateable
         }
 
         // Chimes
-        PlayChime();
+        PlayChime(ChimeSequence);
         StopChime();
 
         // Set timer lenght
@@ -117,24 +127,50 @@ public class Mural : IFixedUpdateable
             mushroomBubbles.Add(mushroomBubble);
             mushroomSounds.Add(default);
         }
+
+        kusfhTimer.Reset();
+        kejwbf = false;
+        foreach(var current in mushroomAnimators){
+           current.SetBool("Active", true);
+        }
     }
 
     //----------------------------------------
 
-    private void PlayChime(){
+    private void PlayChime(ChimeSequence chimeSequence){
         if (playingIndex >= ChimeSequence.chimes.Count) { return; }
 
         mushroomAnimators[playingIndex].SetBool("Active", true);
         mushroomBubbles[playingIndex].StartBubble(ChimeSequence.chimes[playingIndex].chimeInput);
-        PlayerSoundData playerSoundData = soundManager.GetPlayerSound(ChimeSequence.chimes[playingIndex].chimeInput);
-        mushroomSounds[playingIndex] = soundManager.PlayLoopingSound(playerSoundData, gameObject.transform.position);
+        NPCSoundData npcSoundData = soundManager.GetNPCSound(ChimeInputToCommunityType(chimeSequence.chimes[playingIndex].chimeInput));
+        mushroomSounds[playingIndex] = soundManager.PlayNPCSound(npcSoundData, chimeSequence.chimes[playingIndex].isLong, Camera.main.transform.position);
     }
 
     private void StopChime(){
         if (playingIndex == 0) { return; }
 
-        mushroomSounds[playingIndex - 1].StopSound();
         mushroomAnimators[playingIndex - 1].SetBool("Active", false);
         mushroomBubbles[playingIndex - 1].StopBubble();
+    }
+
+    private CommunityTypes ChimeInputToCommunityType(ChimeInputs chimeInput){
+        
+        switch (chimeInput){
+
+            case ChimeInputs.global:
+                return CommunityTypes.global;
+
+            case ChimeInputs.circle:
+                return CommunityTypes.circle;
+
+            case ChimeInputs.triangle:
+                return CommunityTypes.triangle;
+
+            case ChimeInputs.square:
+                return CommunityTypes.square;
+
+            default:
+                return CommunityTypes.global;
+        }
     }
 }

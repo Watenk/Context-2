@@ -11,13 +11,13 @@ GameObject:
   - component: {fileID: 8324242737424404424}
   - component: {fileID: 4212306373775919483}
   - component: {fileID: 1795044984229051389}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8324242737424404424
 Transform:
   m_ObjectHideFlags: 0
@@ -4840,7 +4840,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5213893279062155292}
   - component: {fileID: -5236594647317684268}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mush Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4957,12 +4957,27 @@ PrefabInstance:
     - target: {fileID: 7851352020869339445, guid: eeae0068341e408468cdee529486f895,
         type: 3}
       propertyPath: radius
-      value: 1.5
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 7851352020869339445, guid: eeae0068341e408468cdee529486f895,
         type: 3}
       propertyPath: growSpeed
-      value: 0.05
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 8202175629205144050, guid: eeae0068341e408468cdee529486f895,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8202175629205144050, guid: eeae0068341e408468cdee529486f895,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8202175629205144050, guid: eeae0068341e408468cdee529486f895,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8202175629205144050, guid: eeae0068341e408468cdee529486f895,
         type: 3}
@@ -5107,6 +5122,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: mush_square
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1cbd3ad5304633f42a1b6e6f3a85f5a9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

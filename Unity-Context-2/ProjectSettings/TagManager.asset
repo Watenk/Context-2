@@ -8,16 +8,16 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - BothWorldObject
   - Water
   - UI
   - Editor
   - EWorld
-  - 
-  - 
-  - 
-  - 
-  - 
+  - SoundEffect
+  - TriangleCommunity
+  - SquareCommunity
+  - CircleCommunity
+  - GlobalCommunity
   - 
   - 
   - 

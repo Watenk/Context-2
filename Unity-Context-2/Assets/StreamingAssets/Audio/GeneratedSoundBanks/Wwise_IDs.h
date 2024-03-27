@@ -35,6 +35,7 @@ namespace AK
         static const AkUniqueID NPCCHIME3SHORT = 2846910609U;
         static const AkUniqueID NPCCHIMEULONG = 3686713601U;
         static const AkUniqueID NPCCHIMEUSHORT = 3518065335U;
+        static const AkUniqueID PLAYERFOOTSTEPS = 1681012287U;
     } // namespace EVENTS
 
     namespace STATES
@@ -116,9 +117,13 @@ namespace AK
     {
         static const AkUniqueID AMBIENCE = 85412153U;
         static const AkUniqueID CHIMES = 2590078866U;
+        static const AkUniqueID CHIMESNPC = 3859485035U;
+        static const AkUniqueID CHIMESPLAYER = 2160436325U;
         static const AkUniqueID CIRCLE = 240409309U;
         static const AkUniqueID FANFAIR = 2447030866U;
+        static const AkUniqueID FOOTSTEPS = 2385628198U;
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
+        static const AkUniqueID MOVEMENT = 2129636626U;
         static const AkUniqueID MUSIC = 3991942870U;
         static const AkUniqueID PLAYER = 1069431850U;
         static const AkUniqueID SQUARE = 1818333208U;
@@ -130,6 +135,7 @@ namespace AK
         static const AkUniqueID EMOTIONSDIMENSION = 3477531017U;
         static const AkUniqueID TESTECHO = 3268711830U;
         static const AkUniqueID TESTVERB = 841660990U;
+        static const AkUniqueID VERB = 3657263530U;
     } // namespace AUX_BUSSES
 
     namespace AUDIO_DEVICES

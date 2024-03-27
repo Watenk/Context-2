@@ -1,17 +1,19 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Rendering;
+using AK.Wwise;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
     public GameObject Body;
+    public CommunityTypes CurrentCommunity; //{ get; private set; }
 
     private Rigidbody rb;
     private float speed;
     private float rotationSpeed;
     private Queue<LoopingSound> activeSounds = new Queue<LoopingSound>();
+    private Animator animator;
 
     // References
     private InputHandler inputManager;
@@ -34,10 +36,43 @@ public class PlayerController : MonoBehaviour
         soundManager = GameManager.GetService<SoundManager>();
         speed = PlayerSettings.Instance.Speed;
         rotationSpeed = PlayerSettings.Instance.RotationSpeed;
+        animator = GetComponentInChildren<Animator>();
+
+        #if UNITY_EDITOR
+            if (animator == null) Debug.LogError("Player doesn't contain an animator");
+        #endif
 
         inputManager.OnPlayerMove += OnPlayerMove;
         inputManager.OnChimeDown += OnChimeDown;
         inputManager.OnChimeUp += OnChimeUp;
+    }
+
+    void Update(){
+        animator.SetFloat("Speed", rb.velocity.magnitude);
+        animator.SetFloat("Mult", rb.velocity.magnitude/ 3.8f);
+    }
+
+    void OnTriggerEnter(Collider other){
+
+        if (other.gameObject.layer == LayerMask.NameToLayer("GlobalCommunity")){
+            CurrentCommunity = CommunityTypes.global;
+            AkSoundEngine.SetState(3607165242U, 3553349781U);
+        }
+
+        if (other.gameObject.layer == LayerMask.NameToLayer("TriangleCommunity")){
+            CurrentCommunity = CommunityTypes.triangle;
+            AkSoundEngine.SetState(3607165242U, 438105790U);
+        }
+
+        if (other.gameObject.layer == LayerMask.NameToLayer("SquareCommunity")){
+            CurrentCommunity = CommunityTypes.square;
+            AkSoundEngine.SetState(3607165242U, 438105790U);
+        }
+
+        if (other.gameObject.layer == LayerMask.NameToLayer("CircleCommunity")){
+            CurrentCommunity = CommunityTypes.circle;
+            AkSoundEngine.SetState(3607165242U, 438105790U);
+        }
     }
 
     //-----------------------------------------------
@@ -61,7 +96,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnChimeDown(ChimeInputs chimeInput){
         PlayerSoundData soundData = soundManager.GetPlayerSound(chimeInput);
-        LoopingSound sound = soundManager.PlayLoopingSound(soundData, gameObject.transform.position);
+        LoopingSound sound = soundManager.PlayPlayerSound(soundData, Camera.main.transform.position);
         activeSounds.Enqueue(sound);
         bubbleController.StartBubble(chimeInput);
     }
