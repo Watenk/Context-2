@@ -96,7 +96,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnChimeDown(ChimeInputs chimeInput){
         PlayerSoundData soundData = soundManager.GetPlayerSound(chimeInput);
-        LoopingSound sound = soundManager.PlayPlayerSound(soundData, gameObject.transform.position);
+        LoopingSound sound = soundManager.PlayPlayerSound(soundData, Camera.main.transform.position);
         activeSounds.Enqueue(sound);
         bubbleController.StartBubble(chimeInput);
     }

@@ -28,7 +28,7 @@ public class Agent : IFixedUpdateable
     // References
     private ChimeSequencer chimeSequencer;
     private SoundManager soundManager;
-    private CommunityManager communityManager;
+    public CommunityManager communityManager { get; private set; }
 
     //----------------------------------------
 
@@ -98,8 +98,6 @@ public class Agent : IFixedUpdateable
     private void UpdateSpeed(CommunityTypes communityType){
         if (communityType != Group.CommunityType) return;
 
-        Debug.Log("Updated Speed");
-
         NavMeshAgent.speed = communityManager.GetSpeed(communityType);
     }
 
@@ -139,6 +137,10 @@ public class Agent : IFixedUpdateable
                     NPCSoundData soundData = soundManager.GetNPCSound(Group.CommunityType, ChimeTasks.follow);
                     soundManager.PlayNPCSound(soundData, false, GameObject.transform.position);
                 }
+                break;
+
+            case ChimeTasks.leave:
+                    fsm.currentState = fsm.GetState(typeof(AgentWanderingState));
                 break;
         }
     }
