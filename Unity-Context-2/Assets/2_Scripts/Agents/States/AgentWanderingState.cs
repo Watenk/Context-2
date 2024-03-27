@@ -35,7 +35,7 @@ public class AgentWanderingState : BaseState<Agent>
     }
 
     public override void OnExit(){
-        owner.SetDestination(owner.GameObject.transform.position, 0.1f);
+        owner.SetDestination(owner.GameObject.transform.position, 0.5f);
         owner.NavMeshAgent.isStopped = true;
     }
 
@@ -50,7 +50,7 @@ public class AgentWanderingState : BaseState<Agent>
     private void Wander(){
         if (owner.DestinationReached){
             Vector3 newDestination = new Vector3(owner.Group.Home.x + Random.Range(-wanderFromHomeDistance, wanderFromHomeDistance), 0, owner.Group.Home.z + Random.Range(-wanderFromHomeDistance, wanderFromHomeDistance));
-            owner.SetDestination(newDestination, 0.1f);
+            owner.SetDestination(newDestination, 0.5f);
         }
     }
 }

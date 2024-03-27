@@ -60,6 +60,13 @@ public class Problem : IFixedUpdateable
             if (detectRange == 0) { Debug.LogWarning("ProblemDetectRange in ProblemSettings is 0"); }
             if (mushroomSpawnRadius == 0) { Debug.LogWarning("mushroomSpawnRadius in ProblemSettings is 0"); }
         #endif
+
+        foreach (CommunityTypes currentCommunity in communityAmount){
+            List<ProblemSolver> solvers = problemSolvers[currentCommunity];
+            foreach (ProblemSolver currentSolver in solvers){
+                currentSolver.Animator.SetBool("Active", true);
+            }
+        }
     }
 
     public void OnFixedUpdate(){
