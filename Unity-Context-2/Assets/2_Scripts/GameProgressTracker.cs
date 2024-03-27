@@ -11,7 +11,7 @@ public class GameProgressTracker : MonoBehaviour
     public void UpdateProgress()
     {
         progress++;
-        if(progress > 9)
+        if(progress >= 9)
         {
             StartCoroutine(DelayedEnding());
         }
