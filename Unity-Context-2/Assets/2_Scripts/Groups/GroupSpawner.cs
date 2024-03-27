@@ -34,5 +34,6 @@ public class GroupSpawner : MonoBehaviour
     {
         Gizmos.color = IsActive ? Color.green : Color.red;
         Gizmos.DrawSphere(transform.position, 2);
+        Gizmos.DrawWireSphere(transform.position, WanderFromHomeDistance);
     }
 }
