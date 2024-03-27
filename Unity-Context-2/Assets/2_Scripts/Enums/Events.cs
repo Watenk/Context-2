@@ -7,5 +7,6 @@ public enum Events
     OnProblemSolved,
     OnCommunitySpeedChange,
     OnLibProblemSolved,
-    OnInput
+    OnInput,
+    OnMap
 }
