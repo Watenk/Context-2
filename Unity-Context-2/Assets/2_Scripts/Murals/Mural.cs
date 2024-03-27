@@ -143,7 +143,7 @@ public class Mural : IFixedUpdateable
         mushroomAnimators[playingIndex].SetBool("Active", true);
         mushroomBubbles[playingIndex].StartBubble(ChimeSequence.chimes[playingIndex].chimeInput);
         NPCSoundData npcSoundData = soundManager.GetNPCSound(ChimeInputToCommunityType(chimeSequence.chimes[playingIndex].chimeInput));
-        mushroomSounds[playingIndex] = soundManager.PlayNPCSound(npcSoundData, chimeSequence.chimes[playingIndex].isLong, gameObject.transform.position);
+        mushroomSounds[playingIndex] = soundManager.PlayNPCSound(npcSoundData, chimeSequence.chimes[playingIndex].isLong, Camera.main.transform.position);
     }
 
     private void StopChime(){

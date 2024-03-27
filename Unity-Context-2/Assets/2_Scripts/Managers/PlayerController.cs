@@ -2,7 +2,6 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using AK.Wwise;
-using UnityEditor.Rendering;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -54,6 +53,12 @@ public class PlayerController : MonoBehaviour
     }
 
     void OnTriggerEnter(Collider other){
+
+        if (other.gameObject.layer == LayerMask.NameToLayer("GlobalCommunity")){
+            CurrentCommunity = CommunityTypes.global;
+            AkSoundEngine.SetState(3607165242U, 3553349781U);
+        }
+
         if (other.gameObject.layer == LayerMask.NameToLayer("TriangleCommunity")){
             CurrentCommunity = CommunityTypes.triangle;
             AkSoundEngine.SetState(3607165242U, 438105790U);
@@ -68,11 +73,6 @@ public class PlayerController : MonoBehaviour
             CurrentCommunity = CommunityTypes.circle;
             AkSoundEngine.SetState(3607165242U, 438105790U);
         }
-    }
-
-    void OnTriggerExit(){
-        CurrentCommunity = CommunityTypes.global;
-        AkSoundEngine.SetState(3607165242U, 3553349781U);
     }
 
     //-----------------------------------------------
@@ -96,7 +96,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnChimeDown(ChimeInputs chimeInput){
         PlayerSoundData soundData = soundManager.GetPlayerSound(chimeInput);
-        LoopingSound sound = soundManager.PlayPlayerSound(soundData, gameObject.transform.position);
+        LoopingSound sound = soundManager.PlayPlayerSound(soundData, Camera.main.transform.position);
         activeSounds.Enqueue(sound);
         bubbleController.StartBubble(chimeInput);
     }

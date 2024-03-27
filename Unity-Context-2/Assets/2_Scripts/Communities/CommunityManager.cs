@@ -12,6 +12,7 @@ public class CommunityManager : IFixedUpdateable
     private Dictionary<CommunityTypes, AgentSpeedData> communitySpeedsData = new Dictionary<CommunityTypes, AgentSpeedData>();
     private Dictionary<CommunityTypes, float> communitySpeeds = new Dictionary<CommunityTypes, float>();
     private Dictionary<CommunityTypes, int> communityProblemsSolved = new Dictionary<CommunityTypes, int>();
+    private Dictionary<CommunityTypes, bool> libProblemSolved = new Dictionary<CommunityTypes, bool>();
 
     //-------------------------------------------
 
@@ -19,14 +20,9 @@ public class CommunityManager : IFixedUpdateable
 
         foreach (AgentSpeedData current in AgentSettings.Instance.agentsSpeeds){
             communitySpeeds.Add(current.communityType, current.initialSpeed);
-        }
-
-        foreach (AgentSpeedData current in AgentSettings.Instance.agentsSpeeds){
             communitySpeedsData.Add(current.communityType, current);
-        }
-
-        foreach (AgentSpeedData current in AgentSettings.Instance.agentsSpeeds){
             communityProblemsSolved.Add(current.communityType, 0);
+            libProblemSolved.Add(current.communityType, false);
         }
 
         Add(CommunityTypes.circle);
@@ -35,6 +31,7 @@ public class CommunityManager : IFixedUpdateable
         Add(CommunityTypes.global);
 
         EventManager.AddListener<CommunityTypes>(Events.OnProblemSolved, (communityType) => RecalcSpeed(communityType));
+        EventManager.AddListener<CommunityTypes>(Events.OnLibProblemSolved, (communityType) => libProblemSolved[communityType] = true);
     }
 
     public void OnFixedUpdate(){
@@ -112,6 +109,10 @@ public class CommunityManager : IFixedUpdateable
     public float GetSpeed(CommunityTypes communityType){
         communitySpeeds.TryGetValue(communityType, out float speed);
         return speed;
+    }
+
+    public bool IsLibraryProblemSolved(CommunityTypes communityType){
+        return libProblemSolved[communityType];
     }
 
     //----------------------------------------------

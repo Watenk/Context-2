@@ -46,6 +46,13 @@ public class AgentWanderingState : BaseState<Agent>
         if (Vector3.Distance(owner.GameObject.transform.position, player.transform.position) < lookAtPlayerDistance){
             owner.fsm.SwitchState(typeof(AgentLookAtPlayerState));
         }
+
+        if (Vector3.Distance(owner.GameObject.transform.position, owner.Group.Home) > owner.Group.WanderFromHomeDistance){
+            owner.NavMeshAgent.speed = 15;
+        }
+        else{
+            owner.NavMeshAgent.speed = owner.communityManager.GetSpeed(owner.Group.CommunityType);
+        }
     }
 
     private void Wander(){

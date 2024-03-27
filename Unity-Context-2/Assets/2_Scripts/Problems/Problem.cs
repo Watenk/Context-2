@@ -21,6 +21,7 @@ public class Problem : IFixedUpdateable
     private List<Group> freedGroups;
     private Timer animationDelayTimer;
     private bool kejwbf;
+    private bool libProblem;
 
     // References
     private PlayerController player;
@@ -30,11 +31,12 @@ public class Problem : IFixedUpdateable
 
     //-------------------------------------------------
 
-    public Problem(List<CommunityTypes> solverCommunityTypes, CommunityTypes communityType, List<Group> freedGroups, GameObject gameObject, Vector3 pos){
+    public Problem(List<CommunityTypes> solverCommunityTypes, CommunityTypes communityType, List<Group> freedGroups, GameObject gameObject, Vector3 pos, bool libProblem){
         this.communityType = communityType;
         this.freedGroups = freedGroups;
         this.gameObject = gameObject;
         this.pos = pos;
+        this.libProblem = libProblem;
 
         communityManager = GameManager.GetService<CommunityManager>();
         chimeSequencer = GameManager.GetService<ChimeSequencer>();
@@ -174,6 +176,7 @@ public class Problem : IFixedUpdateable
             current.FreeAgents();
         }
 
+        if (libProblem) { EventManager.Invoke(Events.OnLibProblemSolved, communityType); }
         communityManager.RemoveProblem(communityType, this);
     }
 
