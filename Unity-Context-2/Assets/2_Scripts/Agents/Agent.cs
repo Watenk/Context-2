@@ -19,11 +19,7 @@ public class Agent : IFixedUpdateable
     public BubbleController BubbleController { get; private set; }
 
     // Pathfinding
-    private List<Vector3> path = new List<Vector3>();
-    private int pathIndex;
     private float wanderFromHomeDistance;
-    private float stepDistance;
-    private float stopDistance;
 
     // References
     private ChimeSequencer chimeSequencer;
@@ -43,7 +39,6 @@ public class Agent : IFixedUpdateable
         NavMeshAgent = GameManager.GetComponent<NavMeshAgent>(GameObject);
         chimeSequencer = GameManager.GetService<ChimeSequencer>();
         soundManager = GameManager.GetService<SoundManager>();
-        stepDistance = AgentSettings.Instance.StepDistance;
         wanderFromHomeDistance = Group.WanderFromHomeDistance;;
         NavMeshAgent.speed = communityManager.GetSpeed(Group.CommunityType);
         DestinationReached = true;
@@ -63,7 +58,6 @@ public class Agent : IFixedUpdateable
 
         #if UNITY_EDITOR
             if (NavMeshAgent == null) { Debug.LogError(gameObject.name + " doesn't contain a navmeshAgent"); }
-            if (stepDistance == 0) { Debug.LogError("StepDistance is 0 in AgentSettings"); }
         #endif
 
         EventManager.AddListener<CommunityTypes>(Events.OnCommunitySpeedChange,(communityType) => UpdateSpeed(communityType));
@@ -71,25 +65,12 @@ public class Agent : IFixedUpdateable
 
     public void OnFixedUpdate(){
         fsm.OnUpdate();
-        UpdatePath();
+        if (NavMeshAgent.remainingDistance <= NavMeshAgent.stoppingDistance) DestinationReached = true;
     }
 
     public void SetDestination(Vector3 pos, float stopDistance){
-        this.stopDistance = stopDistance;
-        NavMeshPath navMeshPath = new NavMeshPath();
-        NavMeshAgent.CalculatePath(pos, navMeshPath);
-
-        List<Vector3> path = new List<Vector3>();
-        for (int i = 0; i < navMeshPath.corners.Length; i++){
-            path.Add(navMeshPath.corners[i]);
-        }
-
-        path = DividePathIntoSteps(path);
-        // path = GravitateTowardsSimilarAgents(path);
-        // path = RemovePointsOutsideNavMesh(path);
-
-        pathIndex = 0;
-        this.path = path;
+        NavMeshAgent.stoppingDistance = stopDistance;
+        NavMeshAgent.SetDestination(pos);
         DestinationReached = false;
     }
 
@@ -144,52 +125,4 @@ public class Agent : IFixedUpdateable
                 break;
         }
     }
-
-    private void UpdatePath(){
-        if (pathIndex != path.Count){
-            if (NavMeshAgent.remainingDistance <= stopDistance){
-                NavMeshAgent.SetDestination(path[pathIndex]);
-                pathIndex++;
-            }
-        }
-        else{
-            DestinationReached = true;
-        }
-    }
-
-    private List<Vector3> DividePathIntoSteps(List<Vector3> currentPath){
-        
-        List<Vector3> newPath = new List<Vector3>();
-        Vector3 previousPos = NavMeshAgent.transform.position;
-
-        for (int i = 0; i < currentPath.Count; i++){
-            Vector3 currentPos = currentPath[i];
-
-            // If distance between previous and current pos is too large
-            float distance = Vector3.Distance(previousPos, currentPos);
-            if (distance > stepDistance){
-                int newStepsAmount = Mathf.CeilToInt(distance / stepDistance);
-
-                for (int j = 0; j < newStepsAmount; j++){
-                    float t = (float)j / (newStepsAmount + 1);
-                    Vector3 newStep = Vector3.Lerp(previousPos, currentPos, t);
-                    newPath.Add(newStep);
-                }
-            }
-            else{
-                newPath.Add(currentPos);
-            }
-            previousPos = currentPos;
-        }
-        return newPath;
-    }
-
-    // private List<Vector3> GravitateTowardsSimilarAgents(List<Vector3> currentPath){
-    //     return currentPath;
-    // }
-
-    // private List<Vector3> RemovePointsOutsideNavMesh(List<Vector3> currentPath){
-    //     // navMesh.SamplePosition to check if point is on navmesh
-    //     return currentPath;
-    // }
 }
