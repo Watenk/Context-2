@@ -110,10 +110,10 @@ MonoBehaviour:
     ShortChimeWwiseEvent:
       idInternal: 0
       valueGuidInternal: 
-      WwiseObjectReference: {fileID: 11400000, guid: ae40f8e08bac233489a5c96d04eb1e34,
+      WwiseObjectReference: {fileID: 11400000, guid: dad44bc0a90195a4b989726c52d0fc15,
         type: 2}
     LongChimeWwiseEvent:
       idInternal: 0
       valueGuidInternal: 
-      WwiseObjectReference: {fileID: 11400000, guid: 3dc01b0433815a6448386c03d8f950a9,
+      WwiseObjectReference: {fileID: 11400000, guid: 5fda643836c563441802034c7f45886c,
         type: 2}
