@@ -19,14 +19,14 @@ MonoBehaviour:
   MushroomDistance: 1
   MushroomPrefabs:
   - chimeInputs: 0
-    gameObject: {fileID: 3184000485588933114, guid: d006672e6f0610b4784a847479bb6e2c,
+    gameObject: {fileID: 3025257905652792737, guid: 34f0ba83590c3584394d193e06c69507,
       type: 3}
   - chimeInputs: 1
-    gameObject: {fileID: 2320427230618635907, guid: c00c0515d06d61e4fb9fb11c6b23318c,
+    gameObject: {fileID: 6213021991783508132, guid: ec543bf8c5f104d42b7987a9ae6ee68c,
       type: 3}
   - chimeInputs: 2
-    gameObject: {fileID: 9189569027086241631, guid: cf2cb3fa555349247946d91a05f1fedf,
+    gameObject: {fileID: 3609663913105719560, guid: ef236adc25f11ff4d914212e0a4a74fc,
       type: 3}
   - chimeInputs: 3
-    gameObject: {fileID: 5079394165848749211, guid: 03abc6b7f89ecc34fbe68951e17d1216,
+    gameObject: {fileID: 5275744642995205214, guid: e6bd750d3d8d454489720bc652111d0e,
       type: 3}

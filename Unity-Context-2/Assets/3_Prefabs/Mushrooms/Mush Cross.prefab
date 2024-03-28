@@ -4938,6 +4938,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1688278278900637539}
   - component: {fileID: 405466123064091853}
+  - component: {fileID: 7560380743894727695}
   m_Layer: 3
   m_Name: Mush Cross
   m_TagString: Untagged
@@ -4984,6 +4985,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &7560380743894727695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3184000485588933114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93386d44b11d3b643a9b5dd9c53cf5c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 0}
 --- !u!1001 &3444770974098376433
 PrefabInstance:
   m_ObjectHideFlags: 0

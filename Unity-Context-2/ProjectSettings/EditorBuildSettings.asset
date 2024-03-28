@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/1_Scenes/Mia.unity
     guid: bca315653b13d7549876ecd05871c282
+  - enabled: 1
+    path: Assets/1_Scenes/Outro.unity
+    guid: 3532af98a08924e4e93a320393dd69ff
   m_configObjects: {}
