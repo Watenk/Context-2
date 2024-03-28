@@ -7,7 +7,6 @@ using UnityEngine.VFX;
 public class Mural : IFixedUpdateable
 {
     public event Action OnSequenceDone;
-    public Action<ChimeSequences> OnPlayer;
     public bool LibraryMural { get; private set; }
 
     private GameObject gameObject;
@@ -75,7 +74,6 @@ public class Mural : IFixedUpdateable
 
         if (playingIndex == 0){
             if (Vector3.Distance(gameObject.transform.position, player.gameObject.transform.position) > detectRange) { return; }
-            OnPlayer(ChimeSequence.chimeSequence);
         }
         if (!repeatTimer.IsDone()) { return; }
         if (!chimeTimer.IsDone()) { return; }
